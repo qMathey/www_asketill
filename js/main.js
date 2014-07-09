@@ -10,4 +10,6 @@ $(document).ready(function() { // when document ready
 	
 	DisposeElements.init();
 	
+	// StartBD
+	ComicManager.start();
 });

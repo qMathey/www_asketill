@@ -30,11 +30,17 @@ Menu.show = function () {
 	// ajoute l'info comme quoi le menu est visible
 	Menu.$wrapper().data("isVisible", true);
 }
-
-// Propriétés
+/**
+ * recupère l'objet jQuery contenant le menu
+ * @return jQuery object contenant le div contenant le menu
+ */
 Menu.$wrapper = function () {
 	return $("#menu_wrapper");
 }
+/**
+ * recupère l'objet jQuery contenant le marqueur
+ * @return jQuery object contenant le div contenant le menu
+ */
 Menu.$mark = function () {
 	return $("#menu_mark");
 }

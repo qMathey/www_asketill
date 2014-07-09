@@ -17,6 +17,13 @@ body {
 		position:absolute;
 		height:100%;
 		width:100%;
+		
+		.pictBG {
+			margin:0 auto;
+			max-width:100%;
+			max-height:100%;
+			display:block;
+		}
 	}
 	
 	#webgl_wrapper {
@@ -29,13 +36,14 @@ body {
 	#menu_wrapper {
 		width:100%;
 		z-index:1000;
-		position:absolute;
+		position:fixed;
 		bottom:0px;
 		overflow:hidden;
 		
 		// text
 		line-height:1.4em;
 		#menu_mark {
+			background-color:#fff;
 			position:absolute;
 			z-index:1000;
 			margin:0px auto 0px auto;
@@ -48,10 +56,14 @@ body {
 			cursor:pointer;
 		}
 		.col3 {
+			background-color:#fff;
 			padding:0 3%;
 			height:100%;
 			width:27.3%;
 			float:left;
+			h3 {
+				text-align:center;
+			}
 		}
 	}
 }

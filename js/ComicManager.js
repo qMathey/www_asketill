@@ -17,4 +17,8 @@ ComicManager.start = function() {
 		$("#html_wrapper").html(reponse);
 	});
 	
+	// met le HTML en avant
+	$("#html_wrapper").css("z-index", 30);
+	$("#webgl_wrapper").css("z-index", 20);
+	
 }

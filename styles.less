@@ -1,0 +1,82 @@
+﻿/**
+ * Styles utilisés pour le site
+ */
+
+// import
+@import url(lib/resetCSS/reset.css);
+ 
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker); // font-family: 'Permanent Marker', cursive;
+
+// Main styles
+body {
+	
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	#html_wrapper {
+		z-index:10;
+		position:absolute;
+		height:100%;
+		width:100%;
+	}
+	
+	#webgl_wrapper {
+		z-index:20;
+		position:absolute;
+		height:100%;
+		width:100%;
+	}
+	
+	#menu_wrapper {
+		width:100%;
+		z-index:1000;
+		position:absolute;
+		bottom:0px;
+		overflow:hidden;
+		
+		// text
+		line-height:1.4em;
+		#menu_mark {
+			position:absolute;
+			z-index:1000;
+			margin:0px auto 0px auto;
+			text-align:center;
+			background-image:url(images/menu_mark.png);
+			background-repeat:no-repeat;
+			background-position:center center;
+			height:50px;
+			width:50px;
+			cursor:pointer;
+		}
+		.col3 {
+			padding:0 3%;
+			height:100%;
+			width:27.3%;
+			float:left;
+		}
+	}
+}
+
+// Utils
+.dialog {
+	font-family: 'Permanent Marker', cursive;
+}
+
+.clear {
+	clear:both;
+}
+.spacer {
+	width:100%;
+	display:block;
+}
+.center {
+	text-align:center;
+}
+h1, h2, h3, strong {
+	margin:20px 0px 20px 0;
+	font-weight:bold;
+}
+h3 {
+	font-size:24px;
+}
+
+// Media queries

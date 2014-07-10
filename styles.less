@@ -4,6 +4,7 @@
 
 // import
 @import url(lib/resetCSS/reset.css);
+@import url(lib/animateCSS/animate.css);
  
 // Fonts
 @import url(http://fonts.googleapis.com/css?family=Permanent+Marker); // font-family: 'Permanent Marker', cursive;
@@ -17,12 +18,47 @@ body {
 		position:absolute;
 		height:100%;
 		width:100%;
+		background-color:#fff;
 		
 		.pictBG {
 			margin:0 auto;
 			max-width:100%;
 			max-height:100%;
 			display:block;
+		}
+		
+		#startAdventure {
+			/* fait boucler l'animation css */
+			-webkit-animation-iteration-count: infinite;
+			-moz-animation-iteration-count: infinite;
+			-ms-animation-iteration-count: infinite;
+			-o-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+			/* modifie la durée à 2.5s */
+			-webkit-animation-duration: 2.5s;
+			-moz-animation-durationt: 2.5s;
+			-ms-animation-durationt: 2.5s;
+			-o-animation-durationt: 2.5s;
+			animation-durationt: 2.5s;
+		}
+		
+		#introWrapper {
+			background-color:#fff;
+			height:100%;
+			width:100%;
+			.pictBG {
+				cursor:pointer;
+			}
+			.introDialog {
+				color:#000;
+				text-shadow:0px 0px 7px rgba(255, 255, 255, 0.75);
+			}
+			#introText {
+				position:absolute;
+				z-index:1000;
+				bottom:7%;
+				padding:0 10% 0 10%;
+			}
 		}
 	}
 	
@@ -89,6 +125,11 @@ h1, h2, h3, strong {
 }
 h3 {
 	font-size:24px;
+}
+a {
+	text-decoration:none;
+	color:#000;
+	
 }
 
 // Media queries

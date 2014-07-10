@@ -1,11 +1,15 @@
 ﻿<html>
 	<head>
 		<!-- Head information -->
+		<title>Asketill, le Chaudron des Dieux</title>
 		<!-- Styles -->
 		<link rel="stylesheet/less" type="text/css" href="styles.less" />
 		<!-- include librairies -->
 		<script type="text/javascript" src="./lib/jQuery/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="./lib/less/less-1.7.3.min.js"></script>
+		<script type="text/javascript" src="./lib/threeJS/three.min.js"></script>
+		<script type="text/javascript" src="./lib/threeJS/TrackballControls.js"></script>
+		<script type="text/javascript" src="./lib/threeJS/stats.min.js"></script>
 
 		<!-- JavaScript App -->
 		<script type="text/javascript" src="./js/main.js"></script>
@@ -13,14 +17,17 @@
 		<script type="text/javascript" src="./js/EventListenersManager.js"></script>
 		<script type="text/javascript" src="./js/DisposeElements.js"></script>
 		<script type="text/javascript" src="./js/ComicManager.js"></script>
+		<script type="text/javascript" src="./js/WebglSceneManager.js"></script>
+		<script type="text/javascript" src="./js/WebglSceneMaker.js"></script>
 	</head>
 	<body>
 		<!-- display HMTL contents -->
 		<section id="html_wrapper">
+			<div id="html_content">
+			</div>
 		</section>
 		<!-- display WebGL contents -->
 		<section id="webgl_wrapper">
-		
 		</section>
 		<!-- menu -->
 		<section id="menu_wrapper">

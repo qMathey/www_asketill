@@ -1,0 +1,36 @@
+<intro>
+	<case>
+		<!--<background>naratives/images/intro01.jpg</background>-->
+		<background>images/comics/img_test2.jpg</background>
+		<dialogs>
+			<dialog>
+				<author>
+					Un narateur
+				</author>
+				<text>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at diam aliquet, euismod tortor non, iaculis lacus. Mauris nec interdum augue, et pretium neque. Curabitur id quam pharetra, vehicula lacus et, euismod mi. Suspendisse ac dignissim magna. Nullam lacinia mollis orci, in tempus neque tempus sit amet. Praesent sodales leo ut elit sollicitudin, et egestas ipsum malesuada. Ut sed leo ante. Curabitur mattis purus nec iaculis tempus. Sed commodo quam commodo, feugiat ante tincidunt, consectetur turpis. Sed vehicula imperdiet pharetra. Nulla quis urna at mi venenatis ornare. Donec feugiat aliquam tortor, a ultrices libero. Suspendisse diam magna, facilisis at ante a, pulvinar tristique magna. Donec quis metus vestibulum, sagittis neque quis, tincidunt enim. Phasellus faucibus hendrerit massa.
+				</text>
+			</dialog>
+			<dialog>
+				<author>
+					Un narateur 2
+				</author>
+				<text>
+					Cras id diam ligula. Sed vel tellus sit amet lorem iaculis molestie. Etiam rhoncus, lorem in dictum lobortis, odio ligula consectetur ipsum, vel cursus purus nunc ac tortor. Vivamus eu mattis libero. Nunc tincidunt nisl nisl, et bibendum tellus semper non. Proin consectetur, nisl congue ultricies dictum, ipsum nisi eleifend tellus, nec facilisis libero augue vel dui. Aenean aliquam libero vel commodo tincidunt.
+				</text>
+			</dialog>
+		</dialogs>
+	</case>
+	<case>					
+		<!--<background>naratives/images/intro01.jpg</background>-->
+		<background>images/comics/img_test.jpg</background>
+		<dialog>
+			<author>
+				Un narateur 2
+			</author>
+			<text>
+				Cras id diam ligula. Sed vel tellus sit amet lorem iaculis molestie. Etiam rhoncus, lorem in dictum lobortis, odio ligula consectetur ipsum, vel cursus purus nunc ac tortor. Vivamus eu mattis libero. Nunc tincidunt nisl nisl, et bibendum tellus semper non. Proin consectetur, nisl congue ultricies dictum, ipsum nisi eleifend tellus, nec facilisis libero augue vel dui. Aenean aliquam libero vel commodo tincidunt.
+			</text>
+		</dialog>
+	</case>
+</intro>

@@ -4,12 +4,15 @@
  */
 
 $(document).ready(function() { // when document ready
-	
-	// initialise les écouteurs d'événements
+
+	// Initialise les écouteurs d'événements
 	EventListenersManager.init();
 	
+	// Dispose les éléments par défaut
 	DisposeElements.init();
 	
 	// StartBD
 	ComicManager.start();
+	// Init WebGL
+	//WebglSceneManager.init();
 });

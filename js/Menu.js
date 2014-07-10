@@ -16,8 +16,6 @@ Menu.animSpeed = 400;
  * Affiche le menu
  */
 Menu.show = function () {
-	console.log("menu show!");
-
 	// astuce pour récupérer la hauteur initiale du menu
 	Menu.$wrapper().css("height", "auto");
 	var menuHeight = Menu.$wrapper().height();
@@ -49,7 +47,6 @@ Menu.$mark = function () {
  * Masque le menu
  */
 Menu.hide = function () {
-	console.log("menu hide!");
 	// anime la fermeture du menu
 	Menu.$wrapper().animate({
 		height: Menu.closeHeight+"px"

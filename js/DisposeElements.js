@@ -21,4 +21,9 @@ DisposeElements.init = function () {
 	// ferme le menu par défaut
 	Menu.$wrapper().css("height", Menu.closeHeight+"px");
 	Menu.hide();
+	
+	// Dispose la scène threeJS
+	WebglSceneManager.disposeScene();
+	
 }
+

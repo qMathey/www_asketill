@@ -50,9 +50,11 @@ WebglSceneManager.init = function() {
 	WebglSceneManager.scene.add( WebglSceneManager.camera );
 	// recule la camera
 	WebglSceneManager.camera.position.z = 300;
+	WebglSceneManager.camera.position.y = 100;
 		
 	// Initialise les controles trackball
-	WebglSceneManager.initTrackballControls();
+	//WebglSceneManager.initTrackballControls();
+	WebglSceneManager.initOrbitControls();
 	
 	// Ajoute le module de statistiques
 	WebglSceneManager.addStatistics();
@@ -71,6 +73,7 @@ WebglSceneManager.init = function() {
 	
 	// 1er appel de mise à jour
 	WebglSceneManager.updateScene();
+	
 }
 
 WebglSceneManager.updateScene = function() {
@@ -78,7 +81,7 @@ WebglSceneManager.updateScene = function() {
 	requestAnimFrame( WebglSceneManager.updateScene );
 	
 	if( WebglSceneManager.controls != undefined) {
-		WebglSceneManager.controls.update();
+		//WebglSceneManager.controls.update();
 	}
 }
 
@@ -86,6 +89,7 @@ WebglSceneManager.updateScene = function() {
  * Effectue un rendu
  */
 WebglSceneManager.render = function () {
+	// le renderer fait un rendu de la scène avec notre camera
 	WebglSceneManager.renderer.render(WebglSceneManager.scene, WebglSceneManager.camera);
 	
 	// si le module de statistiques est activé
@@ -135,7 +139,7 @@ WebglSceneManager.disposeScene = function () {
 	
 	// si les controles sont définis
 	if(WebglSceneManager.controls != undefined) {
-		WebglSceneManager.controls.handleResize();
+		//WebglSceneManager.controls.handleResize();
 	}
 	
 	// si le module de statistiques est définit
@@ -148,21 +152,40 @@ WebglSceneManager.disposeScene = function () {
  * Initialise les controls Trackball pour la camera
  */
 WebglSceneManager.initTrackballControls = function () {
-	WebglSceneManager.controls = new THREE.TrackballControls( WebglSceneManager.camera );
-
+	// Instancie les contrôles
+	WebglSceneManager.controls = new THREE.TrackballControls( WebglSceneManager.camera, WebglSceneManager.renderer.domElement );
+	// Paramètre les controles
 	WebglSceneManager.controls.rotateSpeed = 1.0;
 	WebglSceneManager.controls.zoomSpeed = 1.2;
 	WebglSceneManager.controls.panSpeed = 0.8;
 
 	WebglSceneManager.controls.noZoom = false;
-	WebglSceneManager.controls.noPan = false;
+	WebglSceneManager.controls.noPan = true;
+	WebglSceneManager.controls.noRoll = true;
+	WebglSceneManager.controls.noRotate  = false;
 
-	WebglSceneManager.controls.staticMoving = true;
+	WebglSceneManager.controls.staticMoving = false;
 	WebglSceneManager.controls.dynamicDampingFactor = 0.3;
 
 	WebglSceneManager.controls.keys = [ 65, 83, 68 ];
-
+	// ajoute un e
 	WebglSceneManager.controls.addEventListener( 'change', WebglSceneManager.render ); // appel à la méthode WebglSceneManager.render()
+}
+/**
+ * Initialise les controls Orbit pour la camera
+ */
+WebglSceneManager.initOrbitControls = function () {
+	
+	WebglSceneManager.controls = new THREE.OrbitControls( WebglSceneManager.camera);
+	//WebglSceneManager.controls.addEventListener( 'change', WebglSceneManager.render ); // appel à la méthode WebglSceneManager.render()
+	WebglSceneManager.controls.addEventListener( 'change', WebglSceneManager.render );
+	
+		// Range is 0 to Math.PI radians.
+	WebglSceneManager.controls.minPolarAngle = 0.5; // radians
+	WebglSceneManager.controls.maxPolarAngle = Math.PI/2.1; // radians
+	
+	WebglSceneManager.controls.minDistance = 150;
+	WebglSceneManager.controls.maxDistance = 400;
 }
 
 /**
@@ -209,8 +232,11 @@ WebglSceneManager.addPointLight = function () {
 
 	// set its position
 	pointLight.position.x = 10;
-	pointLight.position.y = 50;
-	pointLight.position.z = 130;
+	pointLight.position.y = 98.60;
+	pointLight.position.z = 3.95;
+	
+	// met l'intensité à 
+	pointLight.intensity = 0.22;
 
 	// add to the scene
 	WebglSceneManager.scene.add(pointLight);

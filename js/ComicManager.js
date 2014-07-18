@@ -81,12 +81,13 @@ ComicManager.intro = function() {
 	
 	// Quand l'intro est finie, on la masque au profit de la carte 3D
 	ComicManager.$introWrapper.on("introFinished", function(event) {
-		// Masque l'enveloppe de l'intro
-		ComicManager.$introWrapper.fadeOut(function(){
-			// Affiche la scène ThreeJS
-			WebglSceneManager.showWebglScene();
-		});
-		
+			// Actualise l'affichage de WebGL
+			WebglSceneManager.render();
+			console.log("fini de charger!");
+			$("#html_wrapper").fadeOut(function() {
+				// Affiche la scène ThreeJS
+				WebglSceneManager.showWebglScene();
+			});
 	});
 	
 }
@@ -134,7 +135,6 @@ ComicManager.introDisplayCase = function ( index ) {
 		// vide les contenus déjà présents
 		ComicManager.$introWrapper.find("#introText").html("");
 		
-		console.log($arrayDialog);
 		// inserts les dialogues
 		$arrayDialog.each(function() {
 			var author = $(this).find("author").text();

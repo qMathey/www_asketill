@@ -38,11 +38,12 @@ EventListenersManager.addHomepageEventListeners = function () {
 	// BD Quand on clique sur "Démarrer l'aventure"
 	$(document).on("click", "#startAdventure", function() {
 		
-		$(this).fadeOut();
-		// Lance l'introduction
-		ComicManager.intro();
-		// Préchage la scène WebGL
-		WebglSceneManager.init();
+		$(this).fadeOut(function() {
+			// Lance l'introduction
+			ComicManager.intro();
+			// Préchage la scène WebGL
+			WebglSceneManager.init();
+		});
 		// Masque la scène ThreeJS
 		WebglSceneManager.hideWebglScene();
 	});

@@ -226,20 +226,12 @@ WebglSceneManager.addTestSphere = function () {
  * Ajoute un point lumineux
  */
 WebglSceneManager.addPointLight = function () {
-	// create a point light
-	var pointLight =
-	new THREE.PointLight(0xFFFFFF);
-
-	// set its position
-	pointLight.position.x = 10;
-	pointLight.position.y = 98.60;
-	pointLight.position.z = 3.95;
-	
-	// met l'intensité à 
-	pointLight.intensity = 0.22;
+	// Add light
+        var directionalLight = new THREE.DirectionalLight(0xffff55, 0.5);
+        directionalLight.position.set(-400, 100, -500);
 
 	// add to the scene
-	WebglSceneManager.scene.add(pointLight);
+	WebglSceneManager.scene.add(directionalLight);
 }
 
 

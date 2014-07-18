@@ -1,18 +1,18 @@
 /**
- * Class WebglSceneManager permet de gérer la scène 3D avec WebGL et ThreeJS
+ * Class WebglSceneManager permet de gï¿½rer la scï¿½ne 3D avec WebGL et ThreeJS
  */
 
 function WebglSceneMaker() {
 }
 
-// Propriétés
+// Propriï¿½tï¿½s
 WebglSceneMaker.jsonLoader = undefined;
 
 // divers
 WebglSceneMaker.defaultEmissiveColor = new THREE.Color("rgb(214,214,214)");
 
-// Matériaux
-WebglSceneMaker.globalMaterial = undefined; // matériel général
+// Matï¿½riaux
+WebglSceneMaker.globalMaterial = undefined; // matï¿½riel gï¿½nï¿½ral
 // maison
 WebglSceneMaker.mat_maisonSimple = undefined;
 WebglSceneMaker.mat_harbor = undefined;
@@ -28,34 +28,35 @@ WebglSceneMaker.mat_chaudron = undefined;
 // nature
 WebglSceneMaker.mat_island = undefined;
 WebglSceneMaker.mat_water = undefined;
+WebglSceneMaker.mat_water_opaque = undefined;
 WebglSceneMaker.mat_deadTree = undefined;
 WebglSceneMaker.mat_sapin = undefined;
-// sphère cliquable
+// sphï¿½re cliquable
 WebglSceneMaker.mat_sphere = undefined; 
 
-// Geométries redondantes
+// Geomï¿½tries redondantes
 
 // Textures redondantes
 
 
 // Static methods
 /**
- * Construit la scène de l'île
+ * Construit la scï¿½ne de l'ï¿½le
  */
 WebglSceneMaker.buildScene = function() {
 
-	// Si la scène est définie, nous pouvons la constuire.
+	// Si la scï¿½ne est dï¿½finie, nous pouvons la constuire.
 	if( WebglSceneManager.scene != undefined ) {
 	
-		// Instancie un "chargeur" de géométrie au format JSON
+		// Instancie un "chargeur" de gï¿½omï¿½trie au format JSON
 		WebglSceneMaker.jsonLoader = new THREE.JSONLoader();
 		
-		// Charge les matériaux (avec texture)
+		// Charge les matï¿½riaux (avec texture)
 		WebglSceneMaker.setMaterials();
 		
-		// Charge les géométries, crées les objets 3D (mesh), applique les matériaux (inclus texture) et les dispose dans la scène
+		// Charge les gï¿½omï¿½tries, crï¿½es les objets 3D (mesh), applique les matï¿½riaux (inclus texture) et les dispose dans la scï¿½ne
 
-		// île
+		// ï¿½le
 		WebglSceneMaker.loadIsland();
 		
 		// Plan d'eau
@@ -70,11 +71,14 @@ WebglSceneMaker.buildScene = function() {
 		
 		// divers
 		WebglSceneMaker.loadChaudron();
+                
+                // Skybox
+                WebglSceneMaker.addSkyBox();
 		
 	}
 }
 /**
- * Charge l'île et lui applique sa texture
+ * Charge l'ï¿½le et lui applique sa texture
  */
 WebglSceneMaker.loadIsland = function() {
 	var mesh = undefined;
@@ -83,26 +87,32 @@ WebglSceneMaker.loadIsland = function() {
 		mesh = new THREE.Mesh( geometry, WebglSceneMaker.mat_island );
 		mesh.scale.set(14,14,14);
 		// pas de modification de la position (0,0,0);
-		// ajoute la mesh à la scène
+		// ajoute la mesh ï¿½ la scï¿½ne
 		WebglSceneManager.scene.add(mesh);
-		// met à jour le rendu
+		// met ï¿½ jour le rendu
 		WebglSceneManager.render();
 	});// load
 }
 /**
- * Charge l'eau et lui applique son matériel
+ * Charge l'eau et lui applique son matï¿½riel
  */
 WebglSceneMaker.loadWater = function() {
-	var mesh = undefined;
 	
-	// crée un plan d'eau
-	mesh = new THREE.Mesh(new THREE.PlaneGeometry(2000, 2000), WebglSceneMaker.mat_water);
-	mesh.scale.set(5,5,5);
-	mesh.position.y = 1.14;
-	mesh.rotation.x = -1.57;
+	// crï¿½e un plan d'eau
+	var meshPlanEauTrasnparent = new THREE.Mesh(new THREE.PlaneGeometry(4000, 4000), WebglSceneMaker.mat_water);
+	//mesh.scale.set(5,5,5);
+	meshPlanEauTrasnparent.position.y = 1.14;
+	meshPlanEauTrasnparent.rotation.x = -1.57;
+        
+        // plan d'eau opaque
+        
+        var meshPlanEauOpaque = new THREE.Mesh(new THREE.PlaneGeometry(4000, 4000), WebglSceneMaker.mat_water_opaque);
+	meshPlanEauOpaque.position.y = 0;
+	meshPlanEauOpaque.rotation.x = -1.57;
 	
-	// ajoute la mesh à la scène
-	WebglSceneManager.scene.add(mesh);
+	// ajoute la mesh ï¿½ la scï¿½ne
+	WebglSceneManager.scene.add(meshPlanEauTrasnparent);
+	//WebglSceneManager.scene.add(meshPlanEauOpaque);
 	
 }
 /**
@@ -133,30 +143,26 @@ WebglSceneMaker.loadHouses = function () {
 	WebglSceneMaker.loadVikingChiefHouse();
 }
 /**
- * Charge l'île et lui applique sa texture
+ * Charge l'ï¿½le et lui applique sa texture
  */
 WebglSceneMaker.loadVikingHouse1 = function() {
-	// charge le modèle JSON
+	// charge le modï¿½le JSON
 	WebglSceneMaker.jsonLoader.load( "webgl/models/vikingHouse1.js", function(geometry) {
-		// données geo data
+		// donnï¿½es geo data
 		var dataPos = {
 			1 : {
-				"position" :  new THREE.Vector3( -15.65, 7.0, 71.87 ),
-				"rotation" :  new THREE.Vector3( 3.14, -0.24, 3.14 )
+				"position" :  new THREE.Vector3( -8.97, 7.0,23.55 ),
+				"rotation" :  new THREE.Vector3( 3.14, 0.44, 3.14 )
 			},
 			2 : {
-				"position" :  new THREE.Vector3( -18.19, 7.0, 55.76 ),
-				"rotation" :  new THREE.Vector3( 3.14, 0.10, 3.14 )
+				"position" :  new THREE.Vector3( -18.07, 7.00, 53.37 ),
+				"rotation" :  new THREE.Vector3( 3.14, -0.24, 3.14 )
 			},
 			3 : {
 				"position" :  new THREE.Vector3( 21.98, 7.0, 28.20 ),
 				"rotation" :  new THREE.Vector3( 0.00, 0.58, 0.00 )
 			},
 			4 : {
-				"position" :  new THREE.Vector3(11.23, 6.90, -12.07 ),
-				"rotation" :  new THREE.Vector3( 0.00, 0.98, 0.00 )
-			},
-			5 : {
 				"position" :  new THREE.Vector3( -75.72, 7.0, -39.14 ),
 				"rotation" :  new THREE.Vector3( 3.14, 0.82, 3.14 )
 			}
@@ -169,11 +175,11 @@ WebglSceneMaker.loadVikingHouse1 = function() {
 				meshHouse1.scale.set(4,4,4);
 				meshHouse1.position = dataPos[key]["position"];
 				meshHouse1.rotation.set(dataPos[key]["rotation"].x, dataPos[key]["rotation"].y, dataPos[key]["rotation"].z) ;
-			// ajoute la mesh à la scène
+			// ajoute la mesh ï¿½ la scï¿½ne
 			WebglSceneManager.scene.add(meshHouse1);
 		}
 		
-		// met à jour le rendu
+		// met ï¿½ jour le rendu
 		WebglSceneManager.render();
 	});// load
 }
@@ -182,7 +188,7 @@ WebglSceneMaker.loadVikingHouse1 = function() {
  * Charge le port viking et lui applique sa texture
  */
 WebglSceneMaker.loadVikingHarbor = function() {
-	// charge le modèle JSON
+	// charge le modï¿½le JSON
 	WebglSceneMaker.jsonLoader.load( "webgl/models/vikingPort.js", function(geometry) {
 		// Objet 3D
 		var mesh = new THREE.Mesh( geometry, WebglSceneMaker.mat_harbor );
@@ -190,10 +196,10 @@ WebglSceneMaker.loadVikingHarbor = function() {
 			mesh.position.set(5.26, 6.84, 94.85);
 			mesh.rotation.set(0, 1.50, 0) ;
 			
-		// ajoute la mesh à la scène
+		// ajoute la mesh ï¿½ la scï¿½ne
 		WebglSceneManager.scene.add(mesh);
 			
-		// met à jour le rendu
+		// met ï¿½ jour le rendu
 		WebglSceneManager.render();
 	});// load
 }
@@ -201,18 +207,18 @@ WebglSceneMaker.loadVikingHarbor = function() {
  * Charge la forge viking et lui applique sa texture
  */
 WebglSceneMaker.loadVikingForge = function() {
-	// charge le modèle JSON
+	// charge le modï¿½le JSON
 	WebglSceneMaker.jsonLoader.load( "webgl/models/vikingForge.js", function(geometry) {
 		// Objet 3D
 		var mesh = new THREE.Mesh( geometry, WebglSceneMaker.mat_forge );
 			mesh.scale.set(4,4,4);
-			mesh.position.set(-14.93, 7.5, 33.13);
-			mesh.rotation.set(3.14, 0.56, 3.14) ;
+			mesh.position.set(-16.22, 7.50, 37.44);
+			mesh.rotation.set(3.14, 0.38, 3.14) ;
 			
-		// ajoute la mesh à la scène
+		// ajoute la mesh ï¿½ la scï¿½ne
 		WebglSceneManager.scene.add(mesh);
 			
-		// met à jour le rendu
+		// met ï¿½ jour le rendu
 		WebglSceneManager.render();
 	});// load
 }
@@ -220,7 +226,7 @@ WebglSceneMaker.loadVikingForge = function() {
  * Charge la taverne viking et lui applique sa texture
  */
 WebglSceneMaker.loadVikingTaverne = function() {
-	// charge le modèle JSON
+	// charge le modï¿½le JSON
 	WebglSceneMaker.jsonLoader.load( "webgl/models/vikingTaverne.js", function(geometry) {
 		// Objet 3D
 		var mesh = new THREE.Mesh( geometry, WebglSceneMaker.mat_taverne );
@@ -228,10 +234,10 @@ WebglSceneMaker.loadVikingTaverne = function() {
 			mesh.position.set(-0.23, 6.88, 21.08);
 			mesh.rotation.set(3.14, -1.48, 3.14) ;
 			
-		// ajoute la mesh à la scène
+		// ajoute la mesh ï¿½ la scï¿½ne
 		WebglSceneManager.scene.add(mesh);
 			
-		// met à jour le rendu
+		// met ï¿½ jour le rendu
 		WebglSceneManager.render();
 	});// load
 }
@@ -239,7 +245,7 @@ WebglSceneMaker.loadVikingTaverne = function() {
  * Charge la ferme viking et lui applique sa texture
  */
 WebglSceneMaker.loadVikingFarm = function() {
-	// charge le modèle JSON
+	// charge le modï¿½le JSON
 	WebglSceneMaker.jsonLoader.load( "webgl/models/vikingFerme.js", function(geometry) {
 		// Objet 3D
 		var mesh = new THREE.Mesh( geometry, WebglSceneMaker.mat_farm );
@@ -247,10 +253,10 @@ WebglSceneMaker.loadVikingFarm = function() {
 			mesh.position.set(39.47, 6.93, 35.66);
 			mesh.rotation.set(0, -1.46, 0) ;
 			
-		// ajoute la mesh à la scène
+		// ajoute la mesh ï¿½ la scï¿½ne
 		WebglSceneManager.scene.add(mesh);
 			
-		// met à jour le rendu
+		// met ï¿½ jour le rendu
 		WebglSceneManager.render();
 	});// load
 }
@@ -259,9 +265,9 @@ WebglSceneMaker.loadVikingFarm = function() {
  * Charge les clotures entourant la ferme viking
  */
 WebglSceneMaker.loadVikingFarmClotures = function() {
-	// charge le modèle JSON
+	// charge le modï¿½le JSON
 	WebglSceneMaker.jsonLoader.load( "webgl/models/barriere.js", function(geometry) {
-		// données geo data
+		// donnï¿½es geo data
 		var dataPos = {
 			1 : {
 				"position" :  new THREE.Vector3( 34.85, 6.83, 39.46 ),
@@ -324,11 +330,11 @@ WebglSceneMaker.loadVikingFarmClotures = function() {
 				meshHouse1.scale.set(4,4,4);
 				meshHouse1.position = dataPos[key]["position"];
 				meshHouse1.rotation.set(dataPos[key]["rotation"].x, dataPos[key]["rotation"].y, dataPos[key]["rotation"].z) ;
-			// ajoute la mesh à la scène
+			// ajoute la mesh ï¿½ la scï¿½ne
 			WebglSceneManager.scene.add(meshHouse1);
 		}
 		
-		// met à jour le rendu
+		// met ï¿½ jour le rendu
 		WebglSceneManager.render();
 	});// load
 }
@@ -337,7 +343,7 @@ WebglSceneMaker.loadVikingFarmClotures = function() {
  * Charge le puit du village et lui applique sa texture
  */
 WebglSceneMaker.loadPuit = function() {
-	// charge le modèle JSON
+	// charge le modï¿½le JSON
 	WebglSceneMaker.jsonLoader.load( "webgl/models/puit.js", function(geometry) {
 		// Objet 3D
 		var mesh = new THREE.Mesh( geometry, WebglSceneMaker.mat_puit );
@@ -345,10 +351,10 @@ WebglSceneMaker.loadPuit = function() {
 			mesh.position.set(6.73, 7.09, 42.91);
 			mesh.rotation.set(0, -1.38, 0) ;
 			
-		// ajoute la mesh à la scène
+		// ajoute la mesh ï¿½ la scï¿½ne
 		WebglSceneManager.scene.add(mesh);
 			
-		// met à jour le rendu
+		// met ï¿½ jour le rendu
 		WebglSceneManager.render();
 	});// load
 }
@@ -358,7 +364,7 @@ WebglSceneMaker.loadPuit = function() {
  * Charge la maison du chef viking et lui applique sa texture
  */
 WebglSceneMaker.loadVikingChiefHouse = function() {
-	// charge le modèle JSON
+	// charge le modï¿½le JSON
 	WebglSceneMaker.jsonLoader.load( "webgl/models/vikingChefHouse.js", function(geometry) {
 		// Objet 3D
 		var mesh = new THREE.Mesh( geometry, WebglSceneMaker.mat_chiefHouse );
@@ -366,10 +372,10 @@ WebglSceneMaker.loadVikingChiefHouse = function() {
 			mesh.position.set(24.25, 33.50, -78.17);
 			mesh.rotation.set(0, -0.76, 0) ;
 			
-		// ajoute la mesh à la scène
+		// ajoute la mesh ï¿½ la scï¿½ne
 		WebglSceneManager.scene.add(mesh);
 			
-		// met à jour le rendu
+		// met ï¿½ jour le rendu
 		WebglSceneManager.render();
 	});// load
 }
@@ -378,9 +384,9 @@ WebglSceneMaker.loadVikingChiefHouse = function() {
  * Charge les arbres morts (6)
  */
 WebglSceneMaker.loadDeadTrees = function() {
-	// charge le modèle JSON
+	// charge le modï¿½le JSON
 	WebglSceneMaker.jsonLoader.load( "webgl/models/tree1.js", function(geometry) {
-		// données geo data
+		// donnï¿½es geo data
 		var dataPos = {
 			1 : {
 				"position" :  new THREE.Vector3(38.07, 6.84, 14.76),
@@ -415,30 +421,30 @@ WebglSceneMaker.loadDeadTrees = function() {
 				mesh.scale.set(4,4,4);
 				mesh.position = dataPos[key]["position"];
 				mesh.rotation.set(dataPos[key]["rotation"].x, dataPos[key]["rotation"].y, dataPos[key]["rotation"].z) ;
-			// ajoute la mesh à la scène
+			// ajoute la mesh ï¿½ la scï¿½ne
 			WebglSceneManager.scene.add(mesh);
 		}
 		
-		// met à jour le rendu
+		// met ï¿½ jour le rendu
 		WebglSceneManager.render();
 	});// load
 }
 
 /**
- * Charge le chaudron (placé sur le plateau supérieur) et lui applique sa texture
+ * Charge le chaudron (placï¿½ sur le plateau supï¿½rieur) et lui applique sa texture
  */
 WebglSceneMaker.loadChaudron = function() {
-	// charge le modèle JSON
+	// charge le modï¿½le JSON
 	WebglSceneMaker.jsonLoader.load( "webgl/models/chaudron.js", function(geometry) {
 		// Objet 3D
 		var mesh = new THREE.Mesh( geometry, WebglSceneMaker.mat_chaudron );
 			mesh.scale.set(4,4,4);
 			mesh.position.set(-19.43, 33.65, -79.02);
 			
-		// ajoute la mesh à la scène
+		// ajoute la mesh ï¿½ la scï¿½ne
 		WebglSceneManager.scene.add(mesh);
 			
-		// met à jour le rendu
+		// met ï¿½ jour le rendu
 		WebglSceneManager.render();
 	});// load
 } 
@@ -447,9 +453,9 @@ WebglSceneMaker.loadChaudron = function() {
  * Charge tous les sapins
  */
 WebglSceneMaker.loadSapins = function() {
-	// charge le modèle JSON
+	// charge le modï¿½le JSON
 	WebglSceneMaker.jsonLoader.load( "webgl/models/sapin.js", function(geometry) {
-		// données geo data
+		// donnï¿½es geo data
 		var dataPos = {
 			1 : {
 				"position" :  new THREE.Vector3(-88.30, 7.55, -17.50),
@@ -560,8 +566,85 @@ WebglSceneMaker.loadSapins = function() {
 				"rotation" :  new THREE.Vector3(0, -0.82, 0)
 			},
 			28 : {
-				"position" :  new THREE.Vector3(-30.37, 7.55, -20.38),
+				"position" :  new THREE.Vector3(-10.87, 7.55, -29.05),
+				"rotation" :  new THREE.Vector3(0, 0.72, 0)
+			},
+			29 : {
+				"position" :  new THREE.Vector3(-1.49, 7.55, -19.40),
+				"rotation" :  new THREE.Vector3(0, -1.28, 0),
+                                "scale" : new THREE.Vector3(4.62, 4.62, 4.62)
+			},
+			30 : {
+				"position" :  new THREE.Vector3(9.42, 7.55, -12.81),
+				"rotation" :  new THREE.Vector3(0, -1.76, 0)
+			},
+			31 : {
+				"position" :  new THREE.Vector3(20.45, 7.55, -7.99),
+				"rotation" :  new THREE.Vector3(0, 0.42, 0)
+			},
+			32 : {
+				"position" :  new THREE.Vector3(20.45, 7.55, 0.23),
+				"rotation" :  new THREE.Vector3(0, 0.02, 0)
+			},
+			33 : {
+				"position" :  new THREE.Vector3(22.81, 7.55, 8.06),
+				"rotation" :  new THREE.Vector3(0, 0.32, 0),
+                                "scale" : new THREE.Vector3(3.28, 3.28, 3.28)
+			},
+			34 : {
+				"position" :  new THREE.Vector3(-24.21, 7.55, 10.87),
+				"rotation" :  new THREE.Vector3(3.14, -1.78, 3.14)
+			},
+			35 : {
+				"position" :  new THREE.Vector3(-17.04, 7.55, 19.07),
+				"rotation" :  new THREE.Vector3(0, -2.6, 0)
+			},
+			36 : {
+				"position" :  new THREE.Vector3(-25.37, 7.55, 20.41),
+				"rotation" :  new THREE.Vector3(0, -1.68, 0),
+                                "scale" : new THREE.Vector3(5.04, 5.04, 5.04)
+			},
+			37 : {
+				"position" :  new THREE.Vector3(-32.05, 7.55, 15.98),
+				"rotation" :  new THREE.Vector3(3.14, -0.78, 3.14)
+			},
+			38 : {
+				"position" :  new THREE.Vector3(-30.57, 7.55, 27.10),
 				"rotation" :  new THREE.Vector3(0, -1.14, 0)
+			},
+			39 : {
+				"position" :  new THREE.Vector3(-26.63, 7.55, 44.24),
+				"rotation" :  new THREE.Vector3(0, -1.14, 0)
+			},
+			40 : {
+				"position" :  new THREE.Vector3(12.06, 7.55, 49.32),
+				"rotation" :  new THREE.Vector3(0, -1.14, 0)
+			},
+			41 : {
+				"position" :  new THREE.Vector3(12.06, 7.55, 62.36),
+				"rotation" :  new THREE.Vector3(0, -0.64, 0),
+                                "scale" : new THREE.Vector3(5.14, 5.14, 5.14)
+			},
+			42 : {
+				"position" :  new THREE.Vector3(12.38, 7.55, 72.60),
+				"rotation" :  new THREE.Vector3(0, 0.34, 0)
+			},
+			43 : {
+				"position" :  new THREE.Vector3(15.36, 7.55, 79.82),
+				"rotation" :  new THREE.Vector3(0, 0.6, 0),
+                                "scale" : new THREE.Vector3(3.28, 3.28, 3.28)
+			},
+			44 : {
+				"position" :  new THREE.Vector3(43.06, 34.27, -82.77),
+				"rotation" :  new THREE.Vector3(0, -0.82, 0)
+			},
+			45 : {
+				"position" :  new THREE.Vector3(47.13, 34.27, -97.85),
+				"rotation" :  new THREE.Vector3(0,-1.6, 0)
+			},
+			46 : {
+				"position" :  new THREE.Vector3(35.03, 34.27, -100.12),
+				"rotation" :  new THREE.Vector3(3.14, -2.28, 3.14)
 			}
 		};
 	
@@ -572,11 +655,16 @@ WebglSceneMaker.loadSapins = function() {
 				mesh.scale.set(4,4,4);
 				mesh.position = dataPos[key]["position"];
 				mesh.rotation.set(dataPos[key]["rotation"].x, dataPos[key]["rotation"].y, dataPos[key]["rotation"].z) ;
-			// ajoute la mesh à la scène
+			
+                        // si le redimmensionnement est spÃ©cifiÃ©, alors on l'applique
+                        if(dataPos[key]["scale"] != undefined){
+                            mesh.scale.set(dataPos[key]["scale"].x,dataPos[key]["scale"].y, dataPos[key]["scale"].z) ;
+                        }
+                        // ajoute la mesh ï¿½ la scï¿½ne
 			WebglSceneManager.scene.add(mesh);
 		}
 		
-		// met à jour le rendu
+		// met ï¿½ jour le rendu
 		WebglSceneManager.render();
 	});// load
 }
@@ -585,7 +673,7 @@ WebglSceneMaker.loadSapins = function() {
  * Charge toutes les textures
  */
 WebglSceneMaker.setMaterials = function() {
-	// Matériel de test
+	// Matï¿½riel de test
 	WebglSceneMaker.globalMaterial = new THREE.MeshNormalMaterial();
 	
 	// Viking House 1
@@ -595,34 +683,34 @@ WebglSceneMaker.setMaterials = function() {
 		side : THREE.DoubleSide
 	}); // MeshLambertMaterial
 	
-	// Matériel port viking
+	// Matï¿½riel port viking
 	WebglSceneMaker.mat_harbor = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/vikingPort.png'),
 		emissive : WebglSceneMaker.defaultEmissiveColor,
 		side : THREE.DoubleSide
 		});
 	
-	// Matériel ferme viking
+	// Matï¿½riel ferme viking
 	WebglSceneMaker.mat_farm = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/vikingFerme.png'),
 		emissive : WebglSceneMaker.defaultEmissiveColor,
 		side : THREE.DoubleSide
 		});
-	// Matériel forge viking
+	// Matï¿½riel forge viking
 	WebglSceneMaker.mat_forge = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/vikingForge.png'),
 		emissive : WebglSceneMaker.defaultEmissiveColor,
 		side : THREE.DoubleSide
 		});
 		
-	// Matériel taverne viking
+	// Matï¿½riel taverne viking
 	WebglSceneMaker.mat_taverne = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/Taverne.png'),
 		emissive : WebglSceneMaker.defaultEmissiveColor,
 		side : THREE.DoubleSide
 		});
 		
-	// Matériel maison du chef viking
+	// Matï¿½riel maison du chef viking
 	WebglSceneMaker.mat_chiefHouse = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/vikingChefHouse.png'),
 		emissive : WebglSceneMaker.defaultEmissiveColor,
@@ -631,14 +719,14 @@ WebglSceneMaker.setMaterials = function() {
 	
 	// Divers
 	
-	// Matériel du puit
+	// Matï¿½riel du puit
 	WebglSceneMaker.mat_puit = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/puit.png'),
 		emissive : WebglSceneMaker.defaultEmissiveColor,
 		side : THREE.DoubleSide
 		});
 		
-	// Matériel du chaudron
+	// Matï¿½riel du chaudron
 	
 	WebglSceneMaker.mat_chaudron = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/chaudron.png'),
@@ -647,7 +735,7 @@ WebglSceneMaker.setMaterials = function() {
 		});
 	/*
 	*/
-	// Matériel des clotures entourant la ferme
+	// Matï¿½riel des clotures entourant la ferme
 	WebglSceneMaker.mat_cloture = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/barriere.jpg'),
 		emissive : WebglSceneMaker.defaultEmissiveColor,
@@ -656,37 +744,78 @@ WebglSceneMaker.setMaterials = function() {
 		
 	// Nature
 	
-	// Matériel de l'île
+	// Matï¿½riel de l'ï¿½le
 	WebglSceneMaker.mat_island = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/ile_troisiemeEssais.png'),
 		emissive : WebglSceneMaker.defaultEmissiveColor
 		});
 	
-	// Matériel de l'eau
+	// Matï¿½riel de l'eau
 	WebglSceneMaker.mat_water = new THREE.MeshPhongMaterial({
 		emissive : new THREE.Color("rgb(35,169,214)"),
 		transparent : true,
 		opacity : 0.68,
-		shininess : 30.00
+		shininess : 80.00
+                
+	});
+        WebglSceneMaker.mat_water_opaque = new THREE.MeshPhongMaterial({
+		emissive : new THREE.Color("rgb(35,169,214)"),
+		shininess : 80.00
 	});
 	
-	// Matériel des arbres morts
+	// Matï¿½riel des arbres morts
 	WebglSceneMaker.mat_deadTree = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/arbreMort.jpg'),
 		emissive : WebglSceneMaker.defaultEmissiveColor
 		});
-	// Matériel des sapins
+	// Matï¿½riel des sapins
 	WebglSceneMaker.mat_sapin = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/sapin.png'),
 		emissive : WebglSceneMaker.defaultEmissiveColor
 		});
 	/*
 	
-	// sphère cliquable
+	// sphï¿½re cliquable
 	//WebglSceneMaker.mat_sphere = undefined; 
 	*/
 	
-	// met à jour le rendu
+	// met ï¿½ jour le rendu
 	WebglSceneManager.render();
 }
 
+WebglSceneMaker.addSkyBox = function() {
+    var urls = [
+        'webgl/textures/skybox/0004.jpg',
+        'webgl/textures/skybox/0002.jpg',
+        'webgl/textures/skybox/0005.jpg',
+        'webgl/textures/skybox/0006.jpg',
+        'webgl/textures/skybox/0001.jpg',
+        'webgl/textures/skybox/0003.jpg'
+    ];
+
+    var cubemap = THREE.ImageUtils.loadTextureCube(urls); // load textures
+    cubemap.format = THREE.RGBFormat;
+
+    var shader = THREE.ShaderLib['cube']; // init cube shader from built-in lib
+    shader.uniforms['tCube'].value = cubemap; // apply textures to shader
+
+    // create shader material
+    var skyBoxMaterial = new THREE.ShaderMaterial( {
+        fragmentShader: shader.fragmentShader,
+        vertexShader: shader.vertexShader,
+        uniforms: shader.uniforms,
+        depthWrite: false,
+        side: THREE.BackSide
+    });
+
+    // create skybox mesh
+    var skybox = new THREE.Mesh(
+    new THREE.CubeGeometry(4000, 4000, 4000),
+        skyBoxMaterial
+    );
+    skybox.position.y = 0;
+
+    WebglSceneManager.scene.add(skybox);
+    
+    WebglSceneManager.render();
+}

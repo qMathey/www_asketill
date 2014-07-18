@@ -12,9 +12,9 @@ $(document).ready(function() { // when document ready
 	DisposeElements.init();
 	
 	// StartBD
-	ComicManager.start();
+	//ComicManager.start();
 	// Init WebGL
-	//WebglSceneManager.init();
+	WebglSceneManager.init();
         
         // Initialise le gestionnaire sonore
         AudioManager.start();

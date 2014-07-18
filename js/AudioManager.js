@@ -45,7 +45,7 @@ AudioManager.init = function() {
 AudioManager.start = function() {
     AudioManager.init();  
     
-    AudioManager.loadAndPlaySound("./sounds/crows_group.mp3");
+    //AudioManager.loadAndPlaySound("./sounds/crows_group.mp3");
     
 }
 

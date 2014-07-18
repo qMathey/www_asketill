@@ -10,6 +10,7 @@ ComicManager.TEMPLATE_URL = "templates/";
 ComicManager.NARATIVE_URL = "narative/";
 
 // Propriétés
+ComicManager.$htmlContent = undefined;
 ComicManager.$introWrapper = undefined;
 ComicManager.$xml = undefined;
 ComicManager.introCurrentSlide = 0;
@@ -41,6 +42,9 @@ ComicManager.intro = function() {
 	var $introContents = undefined;
 	ComicManager.introMaxSlide = 0;
 	ComicManager.introCurrentSlide = 0;
+        
+        // Définit le #html_content
+        ComicManager.$htmlContent = $("#html_content");
 	
 	// crée une enveloppe html pour l'intro
 	ComicManager.$introWrapper = $("<div>");
@@ -58,16 +62,16 @@ ComicManager.intro = function() {
 	// load le template dans introWrapper
 	ComicManager.introLoadTemplate(ComicManager.$introWrapper );
 	
-	// Quand le template est chargé, on l'insère dans l'enveloppe de l'intro
-	ComicManager.$introWrapper.on("templateLoaded", function(event, template) {
+	// Quand le template de l'intro est chargé, on l'insère dans l'enveloppe de l'intro
+	ComicManager.$introWrapper.on("templateIntroLoaded", function(event, template) {
 		// insère le template chargé dans l'enveloppe
 		ComicManager.$introWrapper.html(template);
 		// charge les contenus du slider
 		ComicManager.introLoadContents(ComicManager.$introWrapper);
 	});
 	
-	// Quand les contenus sont chargés
-	ComicManager.$introWrapper.on("contentsLoaded", function(event, content) {
+	// Quand les contenus de l'intro sont chargés
+	ComicManager.$introWrapper.on("contentIntroLoaded", function(event, content) {
 		// on note les contenus de l'intro
 		ComicManager.$xml = $(content);
 		// on note le nombre de case contenu dans l'intro
@@ -83,11 +87,18 @@ ComicManager.intro = function() {
 	ComicManager.$introWrapper.on("introFinished", function(event) {
 			// Actualise l'affichage de WebGL
 			WebglSceneManager.render();
-			console.log("fini de charger!");
 			$("#html_wrapper").fadeOut(function() {
 				// Affiche la scène ThreeJS
 				WebglSceneManager.showWebglScene();
 			});
+	});
+        
+        // Quand on charge un template quelconque 
+	ComicManager.$introWrapper.on("templateLoaded", function(event, template) {
+		// insère le template chargé dans l'enveloppe
+		ComicManager.$introWrapper.html(template);
+		// charge les contenus du slider
+		ComicManager.introLoadContents(ComicManager.$introWrapper);
 	});
 	
 }
@@ -97,7 +108,7 @@ ComicManager.intro = function() {
 ComicManager.introLoadTemplate = function( ) {
 	// charge le template de l'introduction
 	$.get(ComicManager.TEMPLATE_URL + "introduction.html", function(reponse) {
-		ComicManager.$introWrapper.trigger("templateLoaded", [ reponse ] );
+		ComicManager.$introWrapper.trigger("templateIntroLoaded", [ reponse ] );
 	}); // get
 }
 
@@ -107,7 +118,7 @@ ComicManager.introLoadTemplate = function( ) {
 ComicManager.introLoadContents = function() {
 	// charge les contenus de l'intro
 	$.get(ComicManager.NARATIVE_URL + "introduction.xml", function(reponse) {
-		ComicManager.$introWrapper.trigger("contentsLoaded", [ reponse ] );
+		ComicManager.$introWrapper.trigger("contentIntroLoaded", [ reponse ] );
 	}); // get
 }
 /**
@@ -169,3 +180,15 @@ ComicManager.introDisplayNextCase = function () {
 	} // else
 }
 
+/**
+ * Charge le template 
+ * @param templateName le nom du template
+ */
+ComicManager.loadTemplate = function ( templateName) {
+    
+    // charge les contenus de l'intro
+    $.get(ComicManager.TEMPLATE_URL + templateName+ ".html", function(reponse) {
+            ComicManager.$introWrapper.trigger("templateLoaded", [ reponse ] );
+    }); // get
+    
+}

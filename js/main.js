@@ -15,4 +15,7 @@ $(document).ready(function() { // when document ready
 	ComicManager.start();
 	// Init WebGL
 	//WebglSceneManager.init();
+        
+        // Initialise le gestionnaire sonore
+        AudioManager.start();
 });

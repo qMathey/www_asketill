@@ -30,10 +30,20 @@ TemplateManager.setCursorDefault = function() {
 /**
  * Appelle le template de la forge
  */
-TemplateManager.LoadTemplateForge = function() {
+TemplateManager.LoadTemplateZ6 = function() {
+   
+    TemplateManager.LoadTemplateHMTL("templates/zones/z6_marche.html");
+}
+
+/**
+ * Appelle le template de la forge
+ */
+TemplateManager.LoadTemplateZ6I4 = function() {
    
     TemplateManager.LoadTemplateHMTL("templates/zones/z6_forge.html");
 }
+
+
 
 /**
  * Charge un template HTML spécifié

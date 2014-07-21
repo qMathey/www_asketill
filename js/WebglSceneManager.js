@@ -287,7 +287,7 @@ WebglSceneManager.addPickingControls = function() {
                      case 'forge' :
                          // Applique une couleur rouge à la zone de la forge
                          obj.material.color = new THREE.Color("rgb(255,0,0)");
-                         WebglSceneManager.actionOnClick = TemplateManager.LoadTemplateForge;
+                         WebglSceneManager.actionOnClick = TemplateManager.LoadTemplateZ6;
                          // met le curseur en mode pointer (lien)
                          TemplateManager.setCursorPointer();
                          isPickingZoneFound = true;

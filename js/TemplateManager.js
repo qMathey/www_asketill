@@ -32,7 +32,7 @@ TemplateManager.setCursorDefault = function() {
  */
 TemplateManager.LoadTemplateZ6 = function() {
    
-    TemplateManager.LoadTemplateHMTL("templates/zones/z6_marche.html");
+    TemplateManager.LoadTemplateHMTL("templates/zones/Z6/z6_marche.html");
 }
 
 /**

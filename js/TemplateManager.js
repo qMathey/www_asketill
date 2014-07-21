@@ -31,7 +31,29 @@ TemplateManager.setCursorDefault = function() {
  * Appelle le template de la forge
  */
 TemplateManager.LoadTemplateForge = function() {
-    alert("display forge template");
+   
+    TemplateManager.LoadTemplateHMTL("templates/z6_forge.html");
 }
 
-
+/**
+ * Charge un template HTML spécifié
+ * @param URL du template
+ * @returns {undefined}
+ */
+TemplateManager.LoadTemplateHMTL = function ( templateURL) {
+    
+    // chargement ajax du template
+    $.get(templateURL, function(reponse) {
+        // on sucess
+        
+        // Masque la scène ThreeJS
+        WebglSceneManager.hideWebglScene();
+        
+        // fadeOut l'actuelle template
+        $("#html_content").fadeOut(function(){
+            // insert le template
+            $("#html_content").html(reponse);
+            $("#html_content").fadeIn();
+        });        
+    });
+}

@@ -85,12 +85,11 @@ ComicManager.intro = function() {
 	
 	// Quand l'intro est finie, on la masque au profit de la carte 3D
 	ComicManager.$introWrapper.on("introFinished", function(event) {
-			// Actualise l'affichage de WebGL
-			WebglSceneManager.render();
-			$("#html_wrapper").fadeOut(function() {
-				// Affiche la scène ThreeJS
-				WebglSceneManager.showWebglScene();
-			});
+            // Actualise l'affichage de WebGL
+            $("#html_wrapper").fadeOut(function() {
+                    // Affiche la scène ThreeJS
+                    WebglSceneManager.showWebglScene();
+            });
 	});
         
         // Quand on charge un template quelconque 

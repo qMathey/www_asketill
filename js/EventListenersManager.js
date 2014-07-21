@@ -26,6 +26,15 @@ EventListenersManager.init = function () {
 		WebglSceneManager.disposeScene();
 		
 	});
+        
+        // Quand on clique sur le bouton retour pour afficher la map
+        $(document).on("click", ".btn_retour", function() {
+            // affiche la carte
+            $("#html_wrapper").fadeOut(function() {
+                    // Affiche la scène ThreeJS
+                    WebglSceneManager.showWebglScene();
+            });
+        });
 	
 	//Désactive tous les liens par défaut dans #html_content
 	EventListenersManager.removeLinkEvent();

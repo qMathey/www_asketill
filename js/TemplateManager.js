@@ -53,6 +53,9 @@ TemplateManager.LoadTemplateHMTL = function ( templateURL) {
         $("#html_content").fadeOut(function(){
             // insert le template
             $("#html_content").html(reponse);
+            // insert le bouton retour sur la carte
+            $("#html_content").prepend('<div class="btn_retour"></div>');
+            $("#html_wrapper").fadeIn();
             $("#html_content").fadeIn();
         });        
     });

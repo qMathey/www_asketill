@@ -32,7 +32,7 @@ TemplateManager.setCursorDefault = function() {
  */
 TemplateManager.LoadTemplateForge = function() {
    
-    TemplateManager.LoadTemplateHMTL("templates/z6_forge.html");
+    TemplateManager.LoadTemplateHMTL("templates/zones/z6_forge.html");
 }
 
 /**

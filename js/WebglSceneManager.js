@@ -13,14 +13,22 @@ WebglSceneManager.FAR = 10000;
 
 
 // Propriétés
-WebglSceneManager.canvasWidth = 0;
-WebglSceneManager.canvasHeight = 0;
-WebglSceneManager.aspectRatio = 0;
+WebglSceneManager.canvasWidth = 0; // largeur du canvas (calculé automatique)
+WebglSceneManager.canvasHeight = 0; // hauteur du canvas
+WebglSceneManager.aspectRatio = 0; // Ratio de la camera 
 WebglSceneManager.scene = undefined; // la scene ThreeJS
 WebglSceneManager.renderer = undefined; // le renderer ThreeJS
 WebglSceneManager.camera = undefined; // la caméra ThreeJS
 WebglSceneManager.controls = undefined; // les contrôles ThreeJS
 WebglSceneManager.statistiques = undefined; // les statistiques ThreeJS (extension stats.min.js)
+WebglSceneManager.projector = undefined; // controles picking : Projecteur ThreeJS
+WebglSceneManager.mouseVector = undefined; // controle picking: Vecteur de position pour la souris
+WebglSceneManager.raycaster = undefined; // Controle picking : ray caster (droite infinie)
+WebglSceneManager.objectPicked = undefined; // controle picking : Objets survolés
+WebglSceneManager.actionOnClick = undefined; // controle picking : action à faire lors du clickj
+
+// Zone de jeu
+WebglSceneManager.zoneForge = undefined;
 
 // Static methods
 /**
@@ -55,12 +63,15 @@ WebglSceneManager.init = function() {
 	// Initialise les controles trackball
 	//WebglSceneManager.initTrackballControls();
 	WebglSceneManager.initOrbitControls();
-	
-	// Ajoute le module de statistiques
-	WebglSceneManager.addStatistics();
+        
+        // Initialise les controles de picking (survol des objets)
+        WebglSceneManager.addPickingControls();
 	
 	// Appelle le constructeur de scène
 	WebglSceneMaker.buildScene();
+	
+	// Ajoute le module de statistiques
+	WebglSceneManager.addStatistics();
 	
 	// ajoute une sphère de test
 	//WebglSceneManager.addTestSphere();
@@ -69,13 +80,18 @@ WebglSceneManager.init = function() {
 	WebglSceneManager.addPointLight();
 	
 	// Dessine la scène
-	WebglSceneManager.render();
+	//WebglSceneManager.render();
 	
 	// 1er appel de mise à jour
 	WebglSceneManager.updateScene();
+        
+        
 	
 }
 
+/**
+ * Met à jour la scène
+ */
 WebglSceneManager.updateScene = function() {
 	// appel quasi-récursif selon un setInterval pour chaque frame 
 	requestAnimFrame( WebglSceneManager.updateScene );
@@ -83,6 +99,8 @@ WebglSceneManager.updateScene = function() {
 	if( WebglSceneManager.controls != undefined) {
 		//WebglSceneManager.controls.update();
 	}
+        
+	WebglSceneManager.render();
 }
 
 /**
@@ -227,14 +245,121 @@ WebglSceneManager.addTestSphere = function () {
  */
 WebglSceneManager.addPointLight = function () {
 	// Add light
-        var directionalLight = new THREE.DirectionalLight(0xffff55, 0.5);
-        directionalLight.position.set(-400, 100, -500);
+        var directionalLight = new THREE.DirectionalLight(0xffff55, 0.4);
+        directionalLight.position.set(-900, 200, 200);
 
 	// add to the scene
 	WebglSceneManager.scene.add(directionalLight);
 }
 
+/**
+ * Ajoute les contrôles permettants de "prendre" des objets dans la vue 3D
+ * en l'occurence, permet de cliquer sur des batiments. 
+ */
+WebglSceneManager.addPickingControls = function() {
+    // instancie le projecteur et le vecteur de positionnement de la souris
+    WebglSceneManager.projector = new THREE.Projector();
+    WebglSceneManager.mouseVector = new THREE.Vector3();
+    
+    // quand la souris bouge, on ajoute un événement
+    $("#webgl_wrapper").on("mousemove", function( event ) {
+        
+        // Définit la position de la souris dans le plan 3D
+        WebglSceneManager.mouseVector.x = 2 * (event.clientX / WebglSceneManager.canvasWidth) - 1;
+        WebglSceneManager.mouseVector.y = 1 - 2 * ( event.clientY / WebglSceneManager.canvasHeight );
 
+        // crée un rayon infini
+        WebglSceneManager.raycaster = WebglSceneManager.projector.pickingRay( WebglSceneManager.mouseVector.clone(), WebglSceneManager.camera );
+        // détecte les colisions entre le rayons infini 
+        WebglSceneManager.objectPicked = WebglSceneManager.raycaster.intersectObjects( WebglSceneManager.scene.children );
+        
+        var isPickingZoneFound = false;
+        
+        
+        // reset la couleur de tous les éléments de la scene
+        WebglSceneManager.resetColorAllObjectFromScene();
+
+         for( var i = 0; i < WebglSceneManager.objectPicked.length; i++ ) {
+                 var intersection = WebglSceneManager.objectPicked[ i ],
+                         obj = intersection.object;
+                 // tests au cas par cas de l'objet intercepté
+                 switch(obj.zone) {
+                     case 'forge' :
+                         // Applique une couleur rouge à la zone de la forge
+                         obj.material.color = new THREE.Color("rgb(255,0,0)");
+                         WebglSceneManager.actionOnClick = TemplateManager.LoadTemplateForge;
+                         // met le curseur en mode pointer (lien)
+                         TemplateManager.setCursorPointer();
+                         isPickingZoneFound = true;
+                         break;
+                     default :
+                            // par défaut rien.
+                            WebglSceneManager.actionOnClick = function(){};
+                            // remet le curseur normal
+                            TemplateManager.setCursorDefault();
+                         break;
+                 }
+                 
+                 // si on a trouvé un objet cliquable alors, on quitte la boucle
+                 if(isPickingZoneFound) {
+                     break; // on ne s'inètresse qu'au premier object
+                 }
+                 
+                 
+                 //obj.material.color.setRGB( 1.0 - i / intersects.length, 0, 0 );
+         } // for
+    });
+    
+     $("#webgl_wrapper").on("click", function( event ) {
+          WebglSceneManager.actionOnClick();
+     });
+
+}
+
+/**
+ * Reset la couleur de tous les objets de la scene
+ * @returns {undefined}
+ */
+WebglSceneManager.resetColorAllObjectFromScene = function () {
+    var children = WebglSceneManager.scene.children;
+    for(var i = 0; i < children.length; i++){
+        // si l'enfant possède une zone définie
+        if(children[i].zone != undefined) {
+            try {
+                children[i].material.color = WebglSceneMaker.globalMaterial.color;
+            }catch (exception){
+
+            }
+        }
+    }
+    /*
+    // pour chaque zone on lui applique la couleur par défaut
+    
+    // village/forge+ habit
+    WebglSceneManager.setColorForObjectNode(WebglSceneManager.scene, ;
+    */
+}
+
+
+/**
+ * Applique à aux objets du noeud une couleur
+ * @param objectNode le noeud d'objet à transformer
+ * @param Color la couleur à appliquer
+ * @returns {undefined}
+ */
+WebglSceneManager.setColorForObjectNode = function (objectNode, color) {
+    
+    var objects3D = objectNode.children;
+    
+    // pour chaque objet 3D
+    for(var i = 0; i < objects3D.lengthM; i++){
+        var objet3D = objects3D[i];
+        
+        objet3D.color = color;
+        console.log("done + ");
+    }
+    
+}
 /**
  * shim layer with setTimeout fallback
  */

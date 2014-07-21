@@ -31,10 +31,10 @@ WebglSceneMaker.mat_water = undefined;
 WebglSceneMaker.mat_water_opaque = undefined;
 WebglSceneMaker.mat_deadTree = undefined;
 WebglSceneMaker.mat_sapin = undefined;
-// sph�re cliquable
+// sphère cliquable
 WebglSceneMaker.mat_sphere = undefined; 
 
-// Geom�tries redondantes
+// Zones 3D
 
 // Textures redondantes
 
@@ -152,11 +152,13 @@ WebglSceneMaker.loadVikingHouse1 = function() {
 		var dataPos = {
 			1 : {
 				"position" :  new THREE.Vector3( -8.97, 7.0,23.55 ),
-				"rotation" :  new THREE.Vector3( 3.14, 0.44, 3.14 )
+				"rotation" :  new THREE.Vector3( 3.14, 0.44, 3.14 ),
+                                "zone" : "forge"
 			},
 			2 : {
 				"position" :  new THREE.Vector3( -18.07, 7.00, 53.37 ),
-				"rotation" :  new THREE.Vector3( 3.14, -0.24, 3.14 )
+				"rotation" :  new THREE.Vector3( 3.14, -0.24, 3.14 ),
+                                "zone" : "forge"
 			},
 			3 : {
 				"position" :  new THREE.Vector3( 21.98, 7.0, 28.20 ),
@@ -171,10 +173,14 @@ WebglSceneMaker.loadVikingHouse1 = function() {
 		// Ajoute les maisons
 		for( var key in dataPos){
 			// meshHouse1_1
-			var meshHouse1 = new THREE.Mesh( geometry, WebglSceneMaker.mat_maisonSimple );
+			var meshHouse1 = new THREE.Mesh( geometry, WebglSceneMaker.mat_maisonSimple.clone() );
 				meshHouse1.scale.set(4,4,4);
 				meshHouse1.position = dataPos[key]["position"];
 				meshHouse1.rotation.set(dataPos[key]["rotation"].x, dataPos[key]["rotation"].y, dataPos[key]["rotation"].z) ;
+                        // si une zone est spécifiée, alors on l'applique     
+                        if(dataPos[key]["zone"] != undefined){
+                            meshHouse1.zone = dataPos[key]["zone"]
+                        }
 			// ajoute la mesh � la sc�ne
 			WebglSceneManager.scene.add(meshHouse1);
 		}
@@ -214,12 +220,12 @@ WebglSceneMaker.loadVikingForge = function() {
 			mesh.scale.set(4,4,4);
 			mesh.position.set(-16.22, 7.50, 37.44);
 			mesh.rotation.set(3.14, 0.38, 3.14) ;
+                        // ajoute l'attribut zone
+                        mesh.zone = "forge";
 			
-		// ajoute la mesh � la sc�ne
-		WebglSceneManager.scene.add(mesh);
-			
-		// met � jour le rendu
-		WebglSceneManager.render();
+		// ajoute la forge à la zone Forge (trois maisons)
+                WebglSceneManager.scene.add(mesh);
+                
 	});// load
 }
 /**
@@ -234,11 +240,8 @@ WebglSceneMaker.loadVikingTaverne = function() {
 			mesh.position.set(-0.23, 6.88, 21.08);
 			mesh.rotation.set(3.14, -1.48, 3.14) ;
 			
-		// ajoute la mesh � la sc�ne
+		// ajoute la mesh à la scène
 		WebglSceneManager.scene.add(mesh);
-			
-		// met � jour le rendu
-		WebglSceneManager.render();
 	});// load
 }
 /**
@@ -255,9 +258,6 @@ WebglSceneMaker.loadVikingFarm = function() {
 			
 		// ajoute la mesh � la sc�ne
 		WebglSceneManager.scene.add(mesh);
-			
-		// met � jour le rendu
-		WebglSceneManager.render();
 	});// load
 }
 
@@ -333,9 +333,6 @@ WebglSceneMaker.loadVikingFarmClotures = function() {
 			// ajoute la mesh � la sc�ne
 			WebglSceneManager.scene.add(meshHouse1);
 		}
-		
-		// met � jour le rendu
-		WebglSceneManager.render();
 	});// load
 }
 
@@ -353,9 +350,6 @@ WebglSceneMaker.loadPuit = function() {
 			
 		// ajoute la mesh � la sc�ne
 		WebglSceneManager.scene.add(mesh);
-			
-		// met � jour le rendu
-		WebglSceneManager.render();
 	});// load
 }
 
@@ -374,9 +368,6 @@ WebglSceneMaker.loadVikingChiefHouse = function() {
 			
 		// ajoute la mesh � la sc�ne
 		WebglSceneManager.scene.add(mesh);
-			
-		// met � jour le rendu
-		WebglSceneManager.render();
 	});// load
 }
 
@@ -424,9 +415,6 @@ WebglSceneMaker.loadDeadTrees = function() {
 			// ajoute la mesh � la sc�ne
 			WebglSceneManager.scene.add(mesh);
 		}
-		
-		// met � jour le rendu
-		WebglSceneManager.render();
 	});// load
 }
 
@@ -443,9 +431,6 @@ WebglSceneMaker.loadChaudron = function() {
 			
 		// ajoute la mesh � la sc�ne
 		WebglSceneManager.scene.add(mesh);
-			
-		// met � jour le rendu
-		WebglSceneManager.render();
 	});// load
 } 
 
@@ -663,9 +648,6 @@ WebglSceneMaker.loadSapins = function() {
                         // ajoute la mesh � la sc�ne
 			WebglSceneManager.scene.add(mesh);
 		}
-		
-		// met � jour le rendu
-		WebglSceneManager.render();
 	});// load
 }
 
@@ -674,7 +656,10 @@ WebglSceneMaker.loadSapins = function() {
  */
 WebglSceneMaker.setMaterials = function() {
 	// Mat�riel de test
-	WebglSceneMaker.globalMaterial = new THREE.MeshNormalMaterial();
+	WebglSceneMaker.globalMaterial = new THREE.MeshLambertMaterial({
+            color: new THREE.Color ("rgb(255,255,255)")
+        });
+        
 	
 	// Viking House 1
 	WebglSceneMaker.mat_maisonSimple = new THREE.MeshLambertMaterial({ 
@@ -752,10 +737,12 @@ WebglSceneMaker.setMaterials = function() {
 	
 	// Mat�riel de l'eau
 	WebglSceneMaker.mat_water = new THREE.MeshPhongMaterial({
-		emissive : new THREE.Color("rgb(35,169,214)"),
+                map : THREE.ImageUtils.loadTexture('webgl/textures/water_texture.jpg'),
+		color : new THREE.Color("rgb(58, 72, 165)"),
+                emissive : new THREE.Color("rgb(255, 255, 255)"),
+                shininess: 100,
 		transparent : true,
-		opacity : 0.68,
-		shininess : 80.00
+		opacity : 0.68
                 
 	});
         WebglSceneMaker.mat_water_opaque = new THREE.MeshPhongMaterial({
@@ -773,14 +760,7 @@ WebglSceneMaker.setMaterials = function() {
 		map: THREE.ImageUtils.loadTexture('webgl/textures/sapin.png'),
 		emissive : WebglSceneMaker.defaultEmissiveColor
 		});
-	/*
 	
-	// sph�re cliquable
-	//WebglSceneMaker.mat_sphere = undefined; 
-	*/
-	
-	// met � jour le rendu
-	WebglSceneManager.render();
 }
 
 WebglSceneMaker.addSkyBox = function() {
@@ -810,12 +790,11 @@ WebglSceneMaker.addSkyBox = function() {
 
     // create skybox mesh
     var skybox = new THREE.Mesh(
-    new THREE.CubeGeometry(4000, 4000, 4000),
+    new THREE.BoxGeometry(4000, 4000, 4000),
         skyBoxMaterial
     );
     skybox.position.y = 0;
 
     WebglSceneManager.scene.add(skybox);
     
-    WebglSceneManager.render();
 }

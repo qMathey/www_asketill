@@ -345,7 +345,7 @@ WebglSceneMaker.loadPuit = function() {
 		// Objet 3D
 		var mesh = new THREE.Mesh( geometry, WebglSceneMaker.mat_puit );
 			mesh.scale.set(2, 2, 2);
-			mesh.position.set(6.73, 7.09, 42.91);
+			mesh.position.set(5.62, 7.09, 37.74);
 			mesh.rotation.set(0, -1.38, 0) ;
 			
 		// ajoute la mesh � la sc�ne

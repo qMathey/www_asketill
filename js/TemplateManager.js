@@ -70,3 +70,19 @@ TemplateManager.LoadTemplateHMTL = function ( templateURL) {
         });        
     });
 }
+
+/**
+ * Dispose le template
+ * @returns {undefined}
+ */
+TemplateManager.disposeTemplate = function() {
+    try {
+        $(".templateOverlay").css("width", $("#html_content .narativeBackground img").width()+"px");
+        $(".templateOverlay").css("height", $("#html_content .narativeBackground img").height()+"px");
+        
+        console.log( $("#html_content .narativeBackground img").height());
+        
+    } catch (exception){
+        //...
+    }
+}

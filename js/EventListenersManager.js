@@ -24,6 +24,8 @@ EventListenersManager.init = function () {
 		Menu.disposeMark();
 		// met à jour la scène ThreeJS
 		WebglSceneManager.disposeScene();
+                // met à jour le template
+                TemplateManager.disposeTemplate();
 		
 	});
         

@@ -1,5 +1,5 @@
 /**
- * Class DisposeElements permet de disposer les éléments HMTL
+ * Class DisposeElements permet de disposer les Ã©lÃ©ments HMTL
  */
 
 
@@ -12,18 +12,21 @@ var menuHeight = 0;
 // Static methods
 
 /**
- * Initialise tous les écouteurs
+ * Initialise tous les ï¿½couteurs
  */
 DisposeElements.init = function () {
 	// place le marqueur du menu
 	Menu.disposeMark();
 	
-	// ferme le menu par défaut
+	// ferme le menu par dï¿½faut
 	Menu.$wrapper().css("height", Menu.closeHeight+"px");
 	Menu.hide();
 	
-	// Dispose la scène threeJS
+	// Dispose la scï¿½ne threeJS
 	WebglSceneManager.disposeScene();
+        
+        // dispose le template
+        TemplateManager.disposeTemplate();
 	
 }
 

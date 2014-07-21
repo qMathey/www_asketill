@@ -33,6 +33,7 @@ EventListenersManager.init = function () {
             $("#html_wrapper").fadeOut(function() {
                     // Affiche la scène ThreeJS
                     WebglSceneManager.showWebglScene();
+                    $("#html_content").html("");
             });
         });
 	

@@ -87,7 +87,7 @@ WebglSceneMaker.loadIsland = function() {
 		mesh = new THREE.Mesh( geometry, WebglSceneMaker.mat_island );
 		mesh.scale.set(14,14,14);
 		// pas de modification de la position (0,0,0);
-		 ajoute la mesh à la scène
+		// ajoute la mesh à la scène
 		WebglSceneManager.scene.add(mesh);
 		// met � jour le rendu
 		WebglSceneManager.render();
@@ -110,7 +110,7 @@ WebglSceneMaker.loadWater = function() {
 	meshPlanEauOpaque.position.y = 0;
 	meshPlanEauOpaque.rotation.x = -1.57;
 	
-	 ajoute la mesh à la scène
+	// ajoute la mesh à la scène
 	WebglSceneManager.scene.add(meshPlanEauTrasnparent);
 	//WebglSceneManager.scene.add(meshPlanEauOpaque);
 	
@@ -181,7 +181,7 @@ WebglSceneMaker.loadVikingHouse1 = function() {
                         if(dataPos[key]["zone"] != undefined){
                             meshHouse1.zone = dataPos[key]["zone"]
                         }
-			 ajoute la mesh à la scène
+			// ajoute la mesh à la scène
 			WebglSceneManager.scene.add(meshHouse1);
 		}
 		
@@ -202,7 +202,7 @@ WebglSceneMaker.loadVikingHarbor = function() {
 			mesh.position.set(5.26, 6.84, 94.85);
 			mesh.rotation.set(0, 1.50, 0) ;
 			
-		 ajoute la mesh à la scène
+		// ajoute la mesh à la scène
 		WebglSceneManager.scene.add(mesh);
 			
 		// met � jour le rendu
@@ -240,7 +240,7 @@ WebglSceneMaker.loadVikingTaverne = function() {
 			mesh.position.set(-0.23, 6.88, 21.08);
 			mesh.rotation.set(3.14, -1.48, 3.14) ;
 			
-		// ajoute la mesh à la scène
+		//// ajoute la mesh à la scène
 		WebglSceneManager.scene.add(mesh);
 	});// load
 }
@@ -256,7 +256,7 @@ WebglSceneMaker.loadVikingFarm = function() {
 			mesh.position.set(39.47, 6.93, 35.66);
 			mesh.rotation.set(0, -1.46, 0) ;
 			
-		 ajoute la mesh à la scène
+		// ajoute la mesh à la scène
 		WebglSceneManager.scene.add(mesh);
 	});// load
 }
@@ -330,7 +330,7 @@ WebglSceneMaker.loadVikingFarmClotures = function() {
 				meshHouse1.scale.set(4,4,4);
 				meshHouse1.position = dataPos[key]["position"];
 				meshHouse1.rotation.set(dataPos[key]["rotation"].x, dataPos[key]["rotation"].y, dataPos[key]["rotation"].z) ;
-			 ajoute la mesh à la scène
+			// ajoute la mesh à la scène
 			WebglSceneManager.scene.add(meshHouse1);
 		}
 	});// load
@@ -348,7 +348,7 @@ WebglSceneMaker.loadPuit = function() {
 			mesh.position.set(5.62, 7.09, 37.74);
 			mesh.rotation.set(0, -1.38, 0) ;
 			
-		 ajoute la mesh à la scène
+		// ajoute la mesh à la scène
 		WebglSceneManager.scene.add(mesh);
 	});// load
 }
@@ -366,7 +366,7 @@ WebglSceneMaker.loadVikingChiefHouse = function() {
 			mesh.position.set(24.25, 33.50, -78.17);
 			mesh.rotation.set(0, -0.76, 0) ;
 			
-		 ajoute la mesh à la scène
+		// ajoute la mesh à la scène
 		WebglSceneManager.scene.add(mesh);
 	});// load
 }
@@ -412,7 +412,7 @@ WebglSceneMaker.loadDeadTrees = function() {
 				mesh.scale.set(4,4,4);
 				mesh.position = dataPos[key]["position"];
 				mesh.rotation.set(dataPos[key]["rotation"].x, dataPos[key]["rotation"].y, dataPos[key]["rotation"].z) ;
-			// ajoute la mesh à la scène
+			//// ajoute la mesh à la scène
 			WebglSceneManager.scene.add(mesh);
 		}
 	});// load
@@ -429,7 +429,7 @@ WebglSceneMaker.loadChaudron = function() {
 			mesh.scale.set(4,4,4);
 			mesh.position.set(-19.43, 33.65, -79.02);
 			
-		 ajoute la mesh à la scène
+		// ajoute la mesh à la scène
 		WebglSceneManager.scene.add(mesh);
 	});// load
 } 
@@ -645,7 +645,7 @@ WebglSceneMaker.loadSapins = function() {
                         if(dataPos[key]["scale"] != undefined){
                             mesh.scale.set(dataPos[key]["scale"].x,dataPos[key]["scale"].y, dataPos[key]["scale"].z) ;
                         }
-                         ajoute la mesh à la scène
+                        // ajoute la mesh à la scène
 			WebglSceneManager.scene.add(mesh);
 		}
 	});// load

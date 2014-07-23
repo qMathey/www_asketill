@@ -1,9 +1,51 @@
+<!-- image de fond -->
 <div class="narativeBackground">
     <img src="templates/zones/Z6/z6_marche_web.jpg" />
 </div>
+<!-- ambiance -->
 <audio loop autoplay>
   <source src="sounds/bruit_forge.mp3" type="audio/mpeg">
 </audio>
+<!-- 
+
+Surcouche interaction
+
+ajouter la classe .dialog pour l'effet de texte BD
+
+ajouter la classe .hide pour masquer l'élément
+
+ajouter la classe .dev pour avoir un fond rouge transparent
+
+ajouter la classe .clickZone pour avoir le curseur
+
+-->
 <div class="templateOverlay">
-    <div class="infoTemplate dialog hide" id="infoChasseur" style="margin-top:30%;margin-left:10%">Il s'agit du stand du chasseur, il ne semble pas être là...</div>
+    <!-- Lien vers un autre template -->
+    
+    
+    <!-- interaction du template -->
+    <div class="indice dialog hide" id="infoChasseur" style="margin-top:30%;margin-left:10%">Il s'agit du stand du chasseur, il ne semble pas être là...</div>
+    <div class="indice dialog hide" id="infoPecheur" style="margin-top:30%;margin-left:81%">On dirait l'échoppe du pécheur, personne ne répond.</div>
+    <div id="tenteChasseur" class="clickZone" style="width:15%;height:34%;margin-left:5%;margin-top:23%;"></div>
+    <div id="tentePecheur" class="clickZone" style="width:6%;height:15%;margin-left:92%;margin-top:25%;"></div>
+    
 </div>
+
+<!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    // Stand du chasseur
+    $(document).on("click", "#tenteChasseur", function() {
+        // Indique que le chasseur n'est pas là
+        TemplateManager.showIndice("#infoChasseur");
+    });
+    
+    // stand Marin
+    $(document).on("click", "#tentePecheur", function() {
+        // Indique que le chasseur n'est pas là
+        TemplateManager.showIndice("#infoPecheur");
+    });
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

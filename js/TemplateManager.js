@@ -86,3 +86,21 @@ TemplateManager.disposeTemplate = function() {
         //...
     }
 }
+
+/**
+ * Affiche brièvement un indice 
+ * @param identificant HTML de l'indice
+ * @returns {undefined}
+ */
+TemplateManager.showIndice = function (indiceID) {       
+    var $indice = $(indiceID);
+    // clear la queue (stop les animation en queue)
+   $indice.clearQueue();
+    // affiche l'indice, attend 4 secondes puis disparaît
+    $(indiceID).fadeIn(function(){
+        $(this).addClass("active");
+        $(this).delay(3000).queue(function() {
+            $(this).stop().fadeOut();
+        })
+    })
+}

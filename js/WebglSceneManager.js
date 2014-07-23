@@ -278,7 +278,6 @@ WebglSceneManager.addPickingControls = function() {
         
         // reset la couleur de tous les éléments de la scene
         WebglSceneManager.resetColorAllObjectFromScene();
-        console.log("mouse move");
         
         for( var i = 0; i < WebglSceneManager.objectPicked.length; i++ ) {
                 var intersection = WebglSceneManager.objectPicked[ i ],

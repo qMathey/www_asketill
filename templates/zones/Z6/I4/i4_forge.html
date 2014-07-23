@@ -1,0 +1,58 @@
+<!-- image de fond -->
+<div class="narativeBackground">
+    <img src="templates/zones/Z6/I4/I4-forge_web.jpg" />
+</div>
+<!-- ambiance -->
+<audio loop autoplay>
+  <source src="sounds/bruit_forge.mp3" type="audio/mpeg">
+</audio>
+<!-- 
+
+Surcouche interaction
+
+ajouter la classe .dialog pour l'effet de texte BD
+
+ajouter la classe .hide pour masquer l'élément
+
+ajouter la classe .dev pour avoir un fond rouge transparent
+
+ajouter la classe .clickZone pour avoir le curseur
+
+-->
+<div class="templateOverlay">
+    <!-- Lien vers un autre template -->
+    <div id="personnageForgeron" class="clickZone" style="width:22%;height:94%;margin-left:54%;margin-top:2%;"></div>
+    
+    <!-- interaction du template -->
+
+    <div id="dagueBlessureBarde" style="width:10%;height:3%;margin-left:42%;margin-top:35%;"></div>
+    <div class="indice dialog hide" id="indiceBlessureBarde" style="margin-top:37%;margin-left:39%">Ce couteau pourrait être celui de la blessure du barde.</div>
+</div>
+
+<!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    // Si l'utilisateur a vu le corp du barde alors, la dague est cliquable
+    if(ComicManager.doesUserKnow("vue_C3")) {
+        // rend l'indice de la dague cliquable
+        $("#indiceBlessureBarde").addClass("clickZone");
+        
+        // indice dague sur le click
+        $(document).on("click", "#dagueBlessureBarde", function() {
+            // Indique que la dague pourrait être celui de la blessure du barde
+            TemplateManager.showIndice("#indiceBlessureBarde");
+
+            // l'utilisateur sait pour la dague
+            ComicManager.userKnowledge.push("indice_i4_dague");
+        });
+    }
+    
+    // Conversation forgeron
+    $(document).on("click", "#personnageForgeron", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z6/I4/C10/c10_forgeron.html");
+    });
+    
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

@@ -16,6 +16,8 @@ ComicManager.$xml = undefined;
 ComicManager.introCurrentSlide = 0;
 ComicManager.introMaxSlide = 0;
 
+ComicManager.userKnowledge = [];
+
 // Static methods
 /**
  * Charge l'accueil de la bande dessinée
@@ -189,5 +191,60 @@ ComicManager.loadTemplate = function ( templateName) {
     $.get(ComicManager.TEMPLATE_URL + templateName+ ".html", function(reponse) {
             ComicManager.$introWrapper.trigger("templateLoaded", [ reponse ] );
     }); // get
+    
+}
+
+/**
+ * Est-ce que l'utilisateur sait si il connait ce fait ?
+ * @param String knowWhat le fait à connaitre 
+ * @returns boolean vrai/faux
+ */
+ComicManager.doesUserKnow = function ( knowWhat ){
+    
+    var doesUserKnow = false; 
+    
+    // si l'élément figure dans les connaissance de l'utilisateur
+    if(ComicManager.userKnowledge.indexOf(knowWhat) != -1)
+    {  
+       doesUserKnow = true; 
+    }
+    
+    return doesUserKnow;
+}
+
+/**
+ * Charge les conversations et les affiches dans le div .wrapperConverdsation
+ * @param String URL du fichier XML
+ * @returns void
+ */
+ComicManager.loadConversation = function ( URL ) {
+    
+    $.get(URL, function(reponse) {
+        
+        var $xml = $(reponse).find("conversation");
+        
+        var arrayQuestion = [];
+        
+        // pour chaque dialogue
+        $(reponse).find("dialog").each(function(key, value) {
+            
+            
+        });
+        
+        
+        // ajoute des événements spécifiques aux réponses
+        $(document).on("click", ".titre", function(event){
+            $(".reponse").animate({
+                height:"0px"
+            });
+            $(this).find(".reponse").animate({
+                height:"auto"
+            });
+        });
+        
+        
+    }, function() {
+        alert("XML spécifié "+URL+" INTROUVABLE.");
+    })
     
 }

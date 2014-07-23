@@ -25,7 +25,7 @@ WebglSceneManager.projector = undefined; // controles picking : Projecteur Three
 WebglSceneManager.mouseVector = undefined; // controle picking: Vecteur de position pour la souris
 WebglSceneManager.raycaster = undefined; // Controle picking : ray caster (droite infinie)
 WebglSceneManager.objectPicked = undefined; // controle picking : Objets survolés
-WebglSceneManager.actionOnClick = undefined; // controle picking : action à faire lors du clickj
+WebglSceneManager.actionOnClick = function() {}; // controle picking : action à faire lors du clickj
 
 // Zone de jeu
 WebglSceneManager.zoneForge = undefined;
@@ -278,36 +278,34 @@ WebglSceneManager.addPickingControls = function() {
         
         // reset la couleur de tous les éléments de la scene
         WebglSceneManager.resetColorAllObjectFromScene();
+        console.log("mouse move");
+        
+        for( var i = 0; i < WebglSceneManager.objectPicked.length; i++ ) {
+                var intersection = WebglSceneManager.objectPicked[ i ],
+                        obj = intersection.object;
+                // tests au cas par cas de l'objet intercepté
+                switch(obj.zone) {
+                    case 'forge' :
+                        // Applique une couleur rouge à la zone de la forge
+                        obj.material.color = new THREE.Color("rgb(255,0,0)");
+                        WebglSceneManager.actionOnClick = TemplateManager.LoadTemplateZ6;
+                        // met le curseur en mode pointer (lien)
+                        TemplateManager.setCursorPointer();
+                        isPickingZoneFound = true;
+                        break;
+                    default :
+                           // par défaut rien.
+                           WebglSceneManager.actionOnClick = function(){};
+                           // remet le curseur normal
+                           TemplateManager.setCursorDefault();
+                        break;
+                } // switch
 
-         for( var i = 0; i < WebglSceneManager.objectPicked.length; i++ ) {
-                 var intersection = WebglSceneManager.objectPicked[ i ],
-                         obj = intersection.object;
-                 // tests au cas par cas de l'objet intercepté
-                 switch(obj.zone) {
-                     case 'forge' :
-                         // Applique une couleur rouge à la zone de la forge
-                         obj.material.color = new THREE.Color("rgb(255,0,0)");
-                         WebglSceneManager.actionOnClick = TemplateManager.LoadTemplateZ6;
-                         // met le curseur en mode pointer (lien)
-                         TemplateManager.setCursorPointer();
-                         isPickingZoneFound = true;
-                         break;
-                     default :
-                            // par défaut rien.
-                            WebglSceneManager.actionOnClick = function(){};
-                            // remet le curseur normal
-                            TemplateManager.setCursorDefault();
-                         break;
-                 }
-                 
-                 // si on a trouvé un objet cliquable alors, on quitte la boucle
-                 if(isPickingZoneFound) {
-                     break; // on ne s'inètresse qu'au premier object
-                 }
-                 
-                 
-                 //obj.material.color.setRGB( 1.0 - i / intersects.length, 0, 0 );
-         } // for
+                // si on a trouvé un objet cliquable alors, on quitte la boucle
+                if(isPickingZoneFound) {
+                    break; // on ne s'inètresse qu'au premier object
+                }
+        } // for
     });
     
      $("#webgl_wrapper").on("click", function( event ) {

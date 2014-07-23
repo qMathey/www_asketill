@@ -33,9 +33,10 @@ ajouter la classe .clickZone pour avoir le curseur
 <script type="text/javascript">
     
     // Si l'utilisateur a vu le corp du barde alors, la dague est cliquable
+    
     if(ComicManager.doesUserKnow("vue_C3")) {
         // rend l'indice de la dague cliquable
-        $("#indiceBlessureBarde").addClass("clickZone");
+        $("#dagueBlessureBarde").addClass("clickZone");
         
         // indice dague sur le click
         $(document).on("click", "#dagueBlessureBarde", function() {

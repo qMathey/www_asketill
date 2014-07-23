@@ -218,9 +218,9 @@ ComicManager.doesUserKnow = function ( knowWhat ){
  * @returns void
  */
 ComicManager.loadConversation = function ( URL ) {
-    
+    // chargement ajax du XML
     $.get(URL, function(reponse) {
-        
+            
         var $xml = $(reponse).find("conversation");
         
         var arrayQuestion = [];
@@ -228,23 +228,78 @@ ComicManager.loadConversation = function ( URL ) {
         // pour chaque dialogue
         $(reponse).find("dialog").each(function(key, value) {
             
+            var isValidQuestion = true;
             
-        });
+            if($(this).attr("mustKnow") !== undefined){
+                // si l'utilisateur ne connait pas ce qu'il devrait savoir
+                if( ! ComicManager.doesUserKnow($(this).attr("mustKnow"))){
+                    isValidQuestion = false; // alors la question n'est pas valide
+                }// if
+            }// if
+            
+            // vérifie si l'utilisateur peut connaître la question
+            if(isValidQuestion){
+                // objet question
+                var question = {
+                    "id" : $(this).attr("id"),
+                    "question" : $(this).find("question").text(),
+                    "reponse" : $(this).find("reponse").text(),
+                    "isNew": false
+                };
+                // si la question n'est pas connue de l'utilisateur,
+                // on la marque comme isNew = true (par défaut non)
+                // et on l'insère au début du tableau
+                if( ! ComicManager.doesUserKnow(question.id) ){
+                    question.isNew = true;
+                    arrayQuestion.unshift(question);
+                }else { // sinon on met la question à la fin
+                    arrayQuestion.push(question);
+                } // else
+            }// if
+        }); // dialog
+        
+        // vide les questions qui peuvent exister
+        $(".convesationWrapper").html("");
+        
+        // ajoute les questions à la conversation
+        for(var i = 0; i < arrayQuestion.length; i++){
+            // la question
+            var $question = $("<div>");
+                $question.addClass("question")
+                         .addClass("dialog")
+                         .data("id", arrayQuestion[i].id);
+            
+            // le titre de la question
+            var $titre = $("<div>");
+                $titre.addClass("titre")
+                $titre.html(arrayQuestion[i].question);
+            
+            // si la question est nouvelle, on lui ajoute la classe strong
+            if(arrayQuestion[i].isNew){
+                $titre.addClass("strong");
+            }
+            
+            // la réponse à la question
+            var $reponse = $("<div>");
+                $reponse.addClass("reponse");
+                $reponse.html(arrayQuestion[i].reponse);
+            
+            $question.append($titre)
+                     .append($reponse);
+            
+            // ajoute les éléments dans la page
+            $(".convesationWrapper").append($question);
+        }// for
+        // évite les problèmes d'affichage
+        $(".convesationWrapper").append('<div class="clear"></div>');
+        
+        // ajoute les événements associés aux conversations
+        EventListenersManager.addConversationEventListeners();
         
         
-        // ajoute des événements spécifiques aux réponses
-        $(document).on("click", ".titre", function(event){
-            $(".reponse").animate({
-                height:"0px"
-            });
-            $(this).find(".reponse").animate({
-                height:"auto"
-            });
-        });
-        
-        
-    }, function() {
+    }).fail(function() {
+        // on fail
         alert("XML spécifié "+URL+" INTROUVABLE.");
-    })
+    });
     
 }

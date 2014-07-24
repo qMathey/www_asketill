@@ -80,8 +80,6 @@ TemplateManager.disposeTemplate = function() {
         $(".templateOverlay").css("width", $("#html_content .narativeBackground img").width()+"px");
         $(".templateOverlay").css("height", $("#html_content .narativeBackground img").height()+"px");
         
-        console.log( $("#html_content .narativeBackground img").height());
-        
     } catch (exception){
         //...
     }

@@ -745,6 +745,9 @@ WebglSceneMaker.setMaterials = function() {
 		opacity : 0.68
                 
 	});
+        console.log(WebglSceneMaker.mat_water.map.offset.y);
+        
+        
         WebglSceneMaker.mat_water_opaque = new THREE.MeshPhongMaterial({
 		emissive : new THREE.Color("rgb(35,169,214)"),
 		shininess : 80.00

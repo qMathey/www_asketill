@@ -9,7 +9,7 @@ function WebglSceneManager() {
 WebglSceneManager.VIEW_ANGLE = 45; 
 WebglSceneManager.NEAR = 0.1; // vue 
 WebglSceneManager.FAR = 10000;
-
+WebglSceneManager.VITESSE_DEFILEMENT_WATER = 0.002;
 
 
 // Propriétés
@@ -26,6 +26,7 @@ WebglSceneManager.mouseVector = undefined; // controle picking: Vecteur de posit
 WebglSceneManager.raycaster = undefined; // Controle picking : ray caster (droite infinie)
 WebglSceneManager.objectPicked = undefined; // controle picking : Objets survolés
 WebglSceneManager.actionOnClick = function() {}; // controle picking : action à faire lors du clickj
+WebglSceneManager.clock = undefined; // horolge de ThreeJS (indispensable pour les animations)
 
 // Zone de jeu
 WebglSceneManager.zoneForge = undefined;
@@ -78,9 +79,9 @@ WebglSceneManager.init = function() {
 	
 	// ajoute une lumière (point lumineux)
 	WebglSceneManager.addPointLight();
-	
-	// Dessine la scène
-	//WebglSceneManager.render();
+        
+        // initialise l'horloge 
+        WebglSceneManager.clock = new THREE.Clock();
 	
 	// 1er appel de mise à jour
 	WebglSceneManager.updateScene();
@@ -95,12 +96,17 @@ WebglSceneManager.init = function() {
 WebglSceneManager.updateScene = function() {
 	// appel quasi-récursif selon un setInterval pour chaque frame 
 	requestAnimFrame( WebglSceneManager.updateScene );
+        
+        var delta = WebglSceneManager.clock.getDelta();
 	
 	if( WebglSceneManager.controls != undefined) {
 		//WebglSceneManager.controls.update();
 	}
         
 	WebglSceneManager.render();
+        
+        // anime l'eau
+        WebglSceneManager.animateWater(delta);
 }
 
 /**
@@ -357,6 +363,23 @@ WebglSceneManager.setColorForObjectNode = function (objectNode, color) {
     }
     
 }
+
+/**
+ * Anime l'eau en faisant "glisser" la texture sur 1 axe
+ * @param {int} delta nombre de milisecondes écoulée entre chaque frame
+ * @returns {undefined}
+ */
+WebglSceneManager.animateWater = function( delta ) {
+    
+    if(WebglSceneMaker.mat_water != undefined) {
+        
+        WebglSceneMaker.mat_water.map.offset.y += delta * WebglSceneManager.VITESSE_DEFILEMENT_WATER;
+        
+        if(WebglSceneMaker.mat_water.map.offset.y > 1024)
+            WebglSceneMaker.mat_water.map.offset.y = 0;
+    }
+}
+
 /**
  * shim layer with setTimeout fallback
  */

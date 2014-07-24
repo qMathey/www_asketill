@@ -9,6 +9,9 @@ function TemplateManager() {
 
 
 // Propriétés
+// note la location
+TemplateManager.previousLocation = undefined;
+TemplateManager.currentLocation = undefined;
 
 // Static methods
 
@@ -50,11 +53,17 @@ TemplateManager.LoadTemplateZ6I4 = function() {
  * @param URL du template
  * @returns {undefined}
  */
-TemplateManager.LoadTemplateHMTL = function ( templateURL) {
+TemplateManager.LoadTemplateHMTL = function ( templateURL ) {
     
     // chargement ajax du template
     $.get(templateURL, function(reponse) {
         // on sucess
+        
+        // note la location précédente
+        TemplateManager.previousLocation = TemplateManager.currentLocation;
+        
+        // note la location
+        TemplateManager.currentLocation = templateURL;
         
         // Masque la scène ThreeJS
         WebglSceneManager.hideWebglScene();
@@ -63,8 +72,13 @@ TemplateManager.LoadTemplateHMTL = function ( templateURL) {
         $("#html_content").fadeOut(function(){
             // insert le template
             $("#html_content").html(reponse);
+            
+            
+            if(TemplateManager.previousLocation != undefined) {
+                $("#html_content").prepend('<div class="btn_retour_template grow" title="retourner sur le carte"></div>');
+            }
             // insert le bouton retour sur la carte
-            $("#html_content").prepend('<div class="btn_retour"></div>');
+                $("#html_content").prepend('<div class="btn_retour_map grow" title="retourner sur le template précédent"></div>');
             
             
             $("#html_wrapper").fadeIn();
@@ -72,6 +86,7 @@ TemplateManager.LoadTemplateHMTL = function ( templateURL) {
                 // dispose le template quand les contenus HMTL sont affichés
                 TemplateManager.disposeTemplate();
             });
+            
             
         });        
     });

@@ -5,6 +5,7 @@
 // import
 @import url(lib/resetCSS/reset.css);
 @import url(lib/animateCSS/animate.css);
+@import url(lib/hoverCSS/hover-min.css);
  
 // Fonts
 @import url(http://fonts.googleapis.com/css?family=Permanent+Marker); // font-family: 'Permanent Marker', cursive;
@@ -108,9 +109,9 @@ body {
                             }
                         }
                     }
-                    .btn_retour {
-                        margin:0 10px 10px 0;
-                        border:10px solid white;
+                    .btn_retour_map, .btn_retour_template {
+                        margin:40px 40px 40px 40px;
+                        border:10px solid #ccc;
                         z-index:100;
                         display:block;
                         position:absolute;
@@ -118,12 +119,22 @@ body {
                         width:82px;
                         height:77px;
                         background-image:url(images/btn_retour.png);
+                        background-repeat:no-repeat;
 						*/
                         width:94px;
                         height:130px;
                         background-image:url(images/btn_retour_map.png);
+                        background-repeat:no-repeat;
 						
                         cursor:pointer;
+                    }
+                    .btn_retour_template {
+                        background-image:url(images/btn_retour_template.png);
+                        background-color:#fff;
+                        background-position:center center;
+                        height:63px;
+                        margin-top:250px;
+                        
                     }
                     audio {
                         position:absolute;

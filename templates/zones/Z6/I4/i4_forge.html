@@ -21,11 +21,11 @@ ajouter la classe .clickZone pour avoir le curseur
 -->
 <div class="templateOverlay">
     <!-- Lien vers un autre template -->
-    <div id="personnageForgeron" class="clickZone dev" style="width:22%;height:94%;margin-left:66%;margin-top:2%;"></div>
+    <div id="personnageForgeron" class="clickZone" style="width:22%;height:94%;margin-left:51%;margin-top:2%;"></div>
     
     <!-- interaction du template -->
 
-    <div id="dagueBlessureBarde" class="" style="width:10%;height:3%;margin-left:42%;margin-top:43%;"></div>
+    <div id="dagueBlessureBarde" class="" style="width:10%;height:3%;margin-left:40%;margin-top:41.5%;"></div>
     <div class="indice dialog hide" id="indiceBlessureBarde" style="margin-top:39%;margin-left:39%">Ce couteau pourrait être celui de la blessure du barde.</div>
 </div>
 
@@ -33,7 +33,6 @@ ajouter la classe .clickZone pour avoir le curseur
 <script type="text/javascript">
     
     // Si l'utilisateur a vu le corp du barde alors, la dague est cliquable
-    
     if(ComicManager.doesUserKnow("vue_C3")) {
         // rend l'indice de la dague cliquable
         $("#dagueBlessureBarde").addClass("clickZone");

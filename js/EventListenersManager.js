@@ -30,12 +30,23 @@ EventListenersManager.init = function () {
 	});
         
         // Quand on clique sur le bouton retour pour afficher la map
-        $(document).on("click", ".btn_retour", function() {
+        $(document).on("click", ".btn_retour_map", function() {
             // affiche la carte
             $("#html_wrapper").fadeOut(function() {
                     // Affiche la scène ThreeJS
                     WebglSceneManager.showWebglScene();
                     $("#html_content").html("");
+                    
+                    // supprime l'info d'endroit précédent
+                    TemplateManager.previousLocation = undefined;
+            });
+        });
+        
+        // Quand on clique sur le bouton retour pour afficher un template
+        $(document).on("click", ".btn_retour_template", function() {
+            // affiche le template précédent
+            $("#html_wrapper").fadeOut(function() {
+                TemplateManager.LoadTemplateHMTL(TemplateManager.previousLocation);
             });
         });
 	

@@ -655,7 +655,7 @@ WebglSceneMaker.loadSapins = function() {
  * Charge toutes les textures
  */
 WebglSceneMaker.setMaterials = function() {
-	// Mat�riel de test
+	// Matériel de test
 	WebglSceneMaker.globalMaterial = new THREE.MeshLambertMaterial({
             color: new THREE.Color ("rgb(255,255,255)")
         });
@@ -668,34 +668,34 @@ WebglSceneMaker.setMaterials = function() {
 		side : THREE.DoubleSide
 	}); // MeshLambertMaterial
 	
-	// Mat�riel port viking
+	// Matériel port viking
 	WebglSceneMaker.mat_harbor = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/vikingPort.png'),
 		emissive : WebglSceneMaker.defaultEmissiveColor,
 		side : THREE.DoubleSide
 		});
 	
-	// Mat�riel ferme viking
+	// Matériel ferme viking
 	WebglSceneMaker.mat_farm = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/vikingFerme.png'),
 		emissive : WebglSceneMaker.defaultEmissiveColor,
 		side : THREE.DoubleSide
 		});
-	// Mat�riel forge viking
+	// Matériel forge viking
 	WebglSceneMaker.mat_forge = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/vikingForge.png'),
 		emissive : WebglSceneMaker.defaultEmissiveColor,
 		side : THREE.DoubleSide
 		});
 		
-	// Mat�riel taverne viking
+	// Matériel taverne viking
 	WebglSceneMaker.mat_taverne = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/Taverne.png'),
 		emissive : WebglSceneMaker.defaultEmissiveColor,
 		side : THREE.DoubleSide
 		});
 		
-	// Mat�riel maison du chef viking
+	// Matériel maison du chef viking
 	WebglSceneMaker.mat_chiefHouse = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/vikingChefHouse.png'),
 		emissive : WebglSceneMaker.defaultEmissiveColor,
@@ -704,14 +704,14 @@ WebglSceneMaker.setMaterials = function() {
 	
 	// Divers
 	
-	// Mat�riel du puit
+	// Matériel du puit
 	WebglSceneMaker.mat_puit = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/puit.png'),
 		emissive : WebglSceneMaker.defaultEmissiveColor,
 		side : THREE.DoubleSide
 		});
 		
-	// Mat�riel du chaudron
+	// Matériel du chaudron
 	
 	WebglSceneMaker.mat_chaudron = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/chaudron.png'),
@@ -720,7 +720,7 @@ WebglSceneMaker.setMaterials = function() {
 		});
 	/*
 	*/
-	// Mat�riel des clotures entourant la ferme
+	// Matériel des clotures entourant la ferme
 	WebglSceneMaker.mat_cloture = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/barriere.jpg'),
 		emissive : WebglSceneMaker.defaultEmissiveColor,
@@ -729,15 +729,18 @@ WebglSceneMaker.setMaterials = function() {
 		
 	// Nature
 	
-	// Mat�riel de l'�le
+	// Matériel de l'�le
 	WebglSceneMaker.mat_island = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/ile_troisiemeEssais.png'),
 		emissive : WebglSceneMaker.defaultEmissiveColor
 		});
 	
-	// Mat�riel de l'eau
+	// Matériel de l'eau
+        var textureWater = THREE.ImageUtils.loadTexture('webgl/textures/water_texture.jpg');
+        textureWater.wrapS = textureWater.wrapT = THREE.RepeatWrapping;
+        textureWater.repeat.set(0.2, 0.2);
 	WebglSceneMaker.mat_water = new THREE.MeshPhongMaterial({
-                map : THREE.ImageUtils.loadTexture('webgl/textures/water_texture.jpg'),
+                map : textureWater,
 		color : new THREE.Color("rgb(58, 72, 165)"),
                 emissive : new THREE.Color("rgb(255, 255, 255)"),
                 shininess: 100,
@@ -753,12 +756,12 @@ WebglSceneMaker.setMaterials = function() {
 		shininess : 80.00
 	});
 	
-	// Mat�riel des arbres morts
+	// Matériel des arbres morts
 	WebglSceneMaker.mat_deadTree = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/arbreMort.jpg'),
 		emissive : WebglSceneMaker.defaultEmissiveColor
 		});
-	// Mat�riel des sapins
+	// Matériel des sapins
 	WebglSceneMaker.mat_sapin = new THREE.MeshLambertMaterial({ 
 		map: THREE.ImageUtils.loadTexture('webgl/textures/sapin.png'),
 		emissive : WebglSceneMaker.defaultEmissiveColor

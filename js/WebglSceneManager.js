@@ -39,7 +39,7 @@ WebglSceneManager.init = function() {
 	// on dispose la scène (au cas où ça ne serait pas fait)
 	WebglSceneManager.disposeScene();
 	// Instancie un renderer
-	WebglSceneManager.renderer = new THREE.WebGLRenderer(); 
+	WebglSceneManager.renderer = new THREE.WebGLRenderer({ antialiasing: true }); 
 	// paramètre le renderer
 	WebglSceneManager.renderer.setSize(WebglSceneManager.canvasWidth, WebglSceneManager.canvasHeight);
 	WebglSceneManager.renderer.setClearColor( 0xffffff, 1 ); // background #fff
@@ -375,7 +375,7 @@ WebglSceneManager.animateWater = function( delta ) {
         
         WebglSceneMaker.mat_water.map.offset.y += delta * WebglSceneManager.VITESSE_DEFILEMENT_WATER;
         
-        if(WebglSceneMaker.mat_water.map.offset.y > 1024)
+        if(WebglSceneMaker.mat_water.map.offset.y >= 0.8)
             WebglSceneMaker.mat_water.map.offset.y = 0;
     }
 }

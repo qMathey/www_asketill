@@ -32,13 +32,16 @@ ajouter la classe .clickZone pour avoir le curseur
 <!-- Evenements sur le template -->
 <script type="text/javascript">
     
+    // BOUTON DE RETOUR
+    TemplateManager.addButtonRetour("templates/zones/Z6/z6_marche.html");
+    
     // Si l'utilisateur a vu le corp du barde alors, la dague est cliquable
     if(ComicManager.doesUserKnow("vue_C3")) {
         // rend l'indice de la dague cliquable
         $("#dagueBlessureBarde").addClass("clickZone");
         
         // indice dague sur le click
-        $(document).on("click", "#dagueBlessureBarde", function() {
+        EventListenersManager.registerEvent("click", "#dagueBlessureBarde", function() {
             // Indique que la dague pourrait être celui de la blessure du barde
             TemplateManager.showIndice("#indiceBlessureBarde");
 
@@ -48,7 +51,7 @@ ajouter la classe .clickZone pour avoir le curseur
     }
     
     // Conversation forgeron
-    $(document).on("click", "#personnageForgeron", function() {
+    EventListenersManager.registerEvent("click", "#personnageForgeron", function() {
         TemplateManager.LoadTemplateHMTL("templates/zones/Z6/I4/C10/c10_forgeron.html");
     });
     

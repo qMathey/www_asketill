@@ -1,42 +1,9 @@
 <!-- image de fond -->
 <div class="conversationBackground">
-    <img src="templates/zones/Z6/I4/C10/c10-forgeron_web.jpg" style="max-width:686px;max-height:900px"/>
+    <img src="templates/zones/Z6/I4/C10/c10-forgeron_web.jpg"/>
 </div>
 <div class="convesationWrapper">
-    <!--
-    <div class="question dialog">
-        <div class="titre strong">
-                Question 1
-        </div>
-        <div class="reponse">
-                Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
-        </div>
-    </div>
-    <div class="question dialog">
-        <div class="titre strong">
-                Question 2
-        </div>
-        <div class="reponse">
-                Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
-        </div>
-    </div>
-    <div class="question dialog">
-        <div class="titre">
-                Question 3
-        </div>
-        <div class="reponse">
-                Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
-        </div>
-    </div>
-    <div class="question dialog">
-        <div class="titre">
-                Question 4
-        </div>
-        <div class="reponse">
-                Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
-        </div>
-    </div>
-    -->
+   
     <div class="clear"></div>
 </div>
 <div class="clear"></div>
@@ -48,6 +15,10 @@
 <!-- Evenements sur le template -->
 <script type="text/javascript">
     
+    // BOUTON DE RETOUR
+    TemplateManager.addButtonRetour("templates/zones/Z6/I4/i4_forge.html");
+    
+    // Charge la conversation 
     ComicManager.loadConversation("narative/forgeron.xml");
     
     // Jouer un son

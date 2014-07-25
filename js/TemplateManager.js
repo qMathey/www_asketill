@@ -54,16 +54,9 @@ TemplateManager.LoadTemplateZ6I4 = function() {
  * @returns {undefined}
  */
 TemplateManager.LoadTemplateHMTL = function ( templateURL ) {
-    
     // chargement ajax du template
     $.get(templateURL, function(reponse) {
         // on sucess
-        
-        // note la location précédente
-        TemplateManager.previousLocation = TemplateManager.currentLocation;
-        
-        // note la location
-        TemplateManager.currentLocation = templateURL;
         
         // Masque la scène ThreeJS
         WebglSceneManager.hideWebglScene();
@@ -73,23 +66,17 @@ TemplateManager.LoadTemplateHMTL = function ( templateURL ) {
             // insert le template
             $("#html_content").html(reponse);
             
-            
-            if(TemplateManager.previousLocation != undefined) {
-                $("#html_content").prepend('<div class="btn_retour_template grow" title="retourner sur le carte"></div>');
-            }
             // insert le bouton retour sur la carte
-                $("#html_content").prepend('<div class="btn_retour_map grow" title="retourner sur le template précédent"></div>');
+            $("#html_content").prepend('<div class="btn_retour_map grow" title="retourner sur le carte"></div>');
             
-            
+            // affiche les contenus
             $("#html_wrapper").fadeIn();
             $("#html_content").fadeIn(function() {
                 // dispose le template quand les contenus HMTL sont affichés
                 TemplateManager.disposeTemplate();
-            });
-            
-            
-        });        
-    });
+            }); // fadeIn
+        }); // FadeOut       
+    }); // Ajax Get
 }
 
 /**
@@ -122,4 +109,12 @@ TemplateManager.showIndice = function (indiceID) {
             $(this).stop().fadeOut();
         })
     })
+}
+/**
+ * Ajoute un bouton retour
+ * @param {String} templateURL l'url du template sur lequel pointer
+ * @returns {undefined}
+ */
+TemplateManager.addButtonRetour = function( templateURL ){
+    $("#html_content").prepend('<div class="btn_retour_template grow" title="retourner sur le template précédent" data-previousLocation="'+templateURL+'"></div>');
 }

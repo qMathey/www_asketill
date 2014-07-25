@@ -35,18 +35,18 @@ ajouter la classe .clickZone pour avoir le curseur
 <script type="text/javascript">
     
     // Intérieur forgeron
-    $(document).on("click", "#interieurForgeron", function() {
+    EventListenersManager.registerEvent("click", "#interieurForgeron", function() {
         TemplateManager.LoadTemplateHMTL("templates/zones/Z6/I4/i4_forge.html");
     });
     
     // Stand du chasseur
-    $(document).on("click", "#tenteChasseur", function() {
+    EventListenersManager.registerEvent("click", "#tenteChasseur", function() {
         // Indique que le chasseur n'est pas là
         TemplateManager.showIndice("#infoChasseur");
     });
     
     // stand Marin
-    $(document).on("click", "#tentePecheur", function() {
+    EventListenersManager.registerEvent("click", "#tentePecheur", function() {
         // Indique que le chasseur n'est pas là
         TemplateManager.showIndice("#infoPecheur");
     });

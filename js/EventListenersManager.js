@@ -8,6 +8,9 @@ function EventListenersManager() {
 
 // Static methods
 
+// Propriete
+EventListenersManager.eventRegistered = [];
+
 /**
  * Initialise tous les écouteurs
  */
@@ -44,10 +47,9 @@ EventListenersManager.init = function () {
         
         // Quand on clique sur le bouton retour pour afficher un template
         $(document).on("click", ".btn_retour_template", function() {
-            // affiche le template précédent
-            $("#html_wrapper").fadeOut(function() {
-                TemplateManager.LoadTemplateHMTL(TemplateManager.previousLocation);
-            });
+            // charge le template précédent et cache le bouton de retour
+            TemplateManager.LoadTemplateHMTL($(this).attr("data-previousLocation"));
+            
         });
 	
 	//Désactive tous les liens par défaut dans #html_content
@@ -121,4 +123,57 @@ EventListenersManager.addConversationEventListeners = function() {
         ComicManager.userKnowledge.push($(this).data("id"));
     });
 }
-	
+
+/**
+ * 
+ * @param {type} elementTargeted
+ * @param {type} action
+ * @returns {undefined}
+ */
+EventListenersManager.registerEvent = function (eventType, elementTargeted, action){
+    
+    // Vérifie si l'event n'est pas déjà enregistré
+    if( ! EventListenersManager.isEventIsAlreadyRegistered(eventType, elementTargeted) ){
+        
+        // Prépare l'événement à enregistré
+        var eventRegistered = {
+            "eventType" : eventType,
+            "elementTargeted" : elementTargeted
+        }
+        
+        // applique l'événement
+        $(document).on(eventType, elementTargeted, action);
+        
+        // enregistre que l'événement a été appliqué
+        EventListenersManager.eventRegistered.push(eventRegistered);
+        
+    } // if
+    
+    
+}
+
+
+/**
+ * Vérifie si l'événement n'est pas déjà enregistré
+ * @param {string} eventType le type d'évenment, ex "click"
+ * @param {string} ElementTargeted l'élément visé, ex "#target"
+ * @return {boolean} indique si l'événement est déjà enregistré
+ */
+EventListenersManager.isEventIsAlreadyRegistered = function (eventType, elementTargeted){
+    // par défaut un événement n'est pas déjà enregistré
+    var isAlreadyRegistered = false;
+    
+    // parcourt tous les événements enregistrés
+    for(var i = 0; i < EventListenersManager.eventRegistered.length; i++){
+        // si un événement pointe sur le même élément (ex "#target")
+        if(EventListenersManager.eventRegistered[i].elementTargeted === elementTargeted) {
+            // et qu'il est du même type (ex "click")
+            if(EventListenersManager.eventRegistered[i].eventType === eventType) {
+                // alors, on marque l'événement comme déjà enregistré
+                isAlreadyRegistered = true;
+            }// if
+        }// if
+    }// for
+    // retourne l'information
+    return isAlreadyRegistered;
+}

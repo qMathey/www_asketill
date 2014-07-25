@@ -298,6 +298,14 @@ WebglSceneManager.addPickingControls = function() {
                         TemplateManager.setCursorPointer();
                         isPickingZoneFound = true;
                         break;
+                    case 'chiefHouse' :
+                        // Applique une couleur rouge à la zone de la maison du chef
+                        obj.material.color = new THREE.Color("rgb(255,0,0)");
+                        WebglSceneManager.actionOnClick = TemplateManager.LoadTemplateZ1;
+                        // met le curseur en mode pointer (lien)
+                        TemplateManager.setCursorPointer();
+                        isPickingZoneFound = true;
+                        break;
                     default :
                            // par défaut rien.
                            WebglSceneManager.actionOnClick = function(){};

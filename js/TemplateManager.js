@@ -39,11 +39,11 @@ TemplateManager.LoadTemplateZ6 = function() {
 }
 
 /**
- * Appelle le template de la forge
+ * Appelle le template de la maison du chef
+ * @returns {undefined}
  */
-TemplateManager.LoadTemplateZ6I4 = function() {
-   
-    TemplateManager.LoadTemplateHMTL("templates/zones/z6_forge.html");
+TemplateManager.LoadTemplateZ1 = function() {
+    TemplateManager.LoadTemplateHMTL("templates/accusation.html");
 }
 
 

@@ -1,0 +1,164 @@
+  <!-- image de fond -->
+<div class="narativeBackground">
+    <img src="templates/zones/Z6/z6_marche_web.jpg" style="" />
+</div>
+<div class="templateOverlay">
+    
+    <div class="portraitsAccusations">
+        <div style="text-align:center;margin:30px 0px;" class="dialog"><span class="info">Votre décision doit être certaine car il en va de votre vie, étranger !</span></div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="etranger">
+            <img src="templates/portraits/test_etranger.jpg" title="L'étranger"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="portrait grow" data-id="testPersonnage">
+            <img src="templates/portraits/test.png" title="personnage test"/>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="formulaireAccusation">
+        <div style="text-align:center" class="description dialog"></div>
+        <form>
+        <div class="dialog" style="margin-top:20px;color:#ccc;font-style:italic">Optionnel : Donnez les raisons de votre accusation (public)</div>
+        <textarea></textarea>
+        </form>
+        <div class="button dialog shadow-radial">Soumettre</div>
+    </div>
+    <div class="finAccusation">
+        <div class="dialog text1">Je prend note de vos dires, le conseil se réunira à la prochaine lune et nous déciderons si nous nous débarrasseons de vous ou de lui!</div>
+        <div class="autre">
+            <div class="facebook grow"><a href="https://www.facebook.com/asketill" target="_blank"><img src="images/bann-fb.png" alt="fb ban" title="Allez, viens !" /></a></div>
+            <div class="statistiques grow"><img src="images/accusationStat.jpg" alt="acu stats" title="acusation" /></div>
+            <div class="clear"></div>
+        </div>
+        <div class="dialog" style="margin-top:40px;color:#2980b9">Vous connaîtrez la suite de l'histoire dans quelques temps, le conseils se débarrasera probablement de celui qui fut le plus accusés par les autres internautes ! Merci d'avoir joué ! N'hésitez pas à nous donner vos feedbacks sur la page facebook !</div>
+        <br /><br /><a class="dialog getBackHomepage grow-rotate" style="margin-top:40px;color:#2980b9" href="#" class="">Retourner à l'accueil</a>
+    </div>
+</div>
+  
+  
+  <!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    var textAleatoire = [
+        "Comment ?! Vous êtes sûr ? Je ne l'aurais jamais imaginé faire une telle atrocité !",
+        "C'est bien ce que je pensais...",
+        "Vous vous foutez de moi ? Comment osez-vous ! Je devrais vous tuer sur le champ ! Enfin bon, je n'ai qu'une parole.",
+        "Comment pouvez vous affirmer une chose pareille ? J'attends vos explications !"
+    ]
+    
+    // BOUTON DE RETOUR
+    TemplateManager.addButtonRetour("templates/zones/Z1//I1/i1_salleTrone.html");
+    
+    // portraits
+    
+    EventListenersManager.registerEvent("click", ".portraitsAccusations .portrait", function() {
+        
+       // le charatere accusé
+       var accusedCharater = $(this).data("id");
+        
+        // envoie une requête pour statistiques
+        
+        // masque la possibilté de retour sur la map et de revenir en arrière
+        $(".btn_retour_map").fadeOut(function(){ $(this).remove(); });
+        $(".btn_retour_template").fadeOut(function(){ $(this).remove(); });
+        
+        // masque les portraits à accuser
+        $(".portraitsAccusations").fadeOut(function() {
+            // quand l'animation est finie, on met un texte aleatoire de fin
+            
+            // spécificité, si on s'accuse soi-même, on a un text spécifique
+            if(accusedCharater == "etranger"){
+                $(".formulaireAccusation .description").html("Vous avouez ? Vous êtes vraiment plus bête que je ne l'avais imaginé !");
+            }
+            else { // text aleatoire de fin
+                $(".formulaireAccusation .description").html(textAleatoire[Math.floor(Math.random() * (textAleatoire.length-1)) + 0]);
+            }
+            
+            // on affiche le formulaire pour détailler l'acte
+            $(".formulaireAccusation").fadeIn(function() {
+                // focus sur le text area
+                $(".formulaireAccusation textarea").first().focus();
+            });
+        })
+        
+    });
+    
+    // Si on clique sur le bouton "soumettre" du formulaire d'accusation
+    EventListenersManager.registerEvent("click", ".formulaireAccusation .button", function() {
+       $(".formulaireAccusation").fadeOut(function() {
+           $(".finAccusation").fadeIn();
+       });
+    });
+    
+    
+    // Si on clique sur l'image facebook
+    EventListenersManager.registerEvent("click", ".facebook a", function() {
+          document.location.href = $(".facebook a").first().attr("href");
+    });
+    
+    // Si on clique sur l'image des statistiques
+    EventListenersManager.registerEvent("click", ".statistiques", function() {
+          alert("bientot!");
+    });
+    
+    // Si on clique sur "retour à la page d'accueil"
+    EventListenersManager.registerEvent("click", ".getBackHomepage", function() {
+          location.reload();
+    });
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

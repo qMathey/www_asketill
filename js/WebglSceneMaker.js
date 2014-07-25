@@ -365,7 +365,7 @@ WebglSceneMaker.loadVikingChiefHouse = function() {
 			mesh.scale.set(4,4,4);
 			mesh.position.set(24.25, 33.50, -78.17);
 			mesh.rotation.set(0, -0.76, 0) ;
-			
+                mesh.zone = "chiefHouse";
 		// ajoute la mesh à la scène
 		WebglSceneManager.scene.add(mesh);
 	});// load

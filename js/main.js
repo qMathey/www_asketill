@@ -14,8 +14,11 @@ $(document).ready(function() { // when document ready
 	// StartBD
         ComicManager.start();
 	// Init WebGL
-	//WebglSceneManager.init();
         
         // Initialise le gestionnaire sonore
         AudioManager.start();
+        
+        // DEV MODE 
+        $('head').append('<style type="text/css">.clickZone {background-color:red;opacity:0.5}</style>');
+	//WebglSceneManager.init();
 });

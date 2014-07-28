@@ -27,6 +27,7 @@ WebglSceneManager.raycaster = undefined; // Controle picking : ray caster (droit
 WebglSceneManager.objectPicked = undefined; // controle picking : Objets survolés
 WebglSceneManager.actionOnClick = function() {}; // controle picking : action à faire lors du clickj
 WebglSceneManager.clock = undefined; // horolge de ThreeJS (indispensable pour les animations)
+WebglSceneManager.canUserPlayWebgl = true; // indique si l'utilisateur arrive à lancer WebGL
 
 // Zone de jeu
 WebglSceneManager.zoneForge = undefined;
@@ -36,6 +37,7 @@ WebglSceneManager.zoneForge = undefined;
  * Initialise la scène 3D de ThreeJS (WebGL)
  */
 WebglSceneManager.init = function() {
+        try {
 	// on dispose la scène (au cas où ça ne serait pas fait)
 	WebglSceneManager.disposeScene();
 	// Instancie un renderer
@@ -86,7 +88,11 @@ WebglSceneManager.init = function() {
 	// 1er appel de mise à jour
 	WebglSceneManager.updateScene();
         
-        
+        }
+        catch(exception){
+            WebglSceneManager.canUserPlayWebgl = false;
+            alert("Il semblerait que vous ne puissez pas exécuter WebGL. Nous vous conseillons d'utiliser le navigateur Chrome pour profiter pleinement de cette expérience!")
+        }
 	
 }
 

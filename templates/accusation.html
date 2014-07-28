@@ -72,7 +72,7 @@
         <div style="text-align:center" class="description dialog"></div>
         <form>
         <div class="dialog" style="margin-top:20px;color:#ccc;font-style:italic">Optionnel : Donnez les raisons de votre accusation (public)</div>
-        <textarea></textarea>
+        <textarea class="raisonAccusation"></textarea>
         </form>
         <div class="button dialog shadow-radial">Soumettre</div>
     </div>
@@ -84,13 +84,15 @@
             <div class="clear"></div>
         </div>
         <div class="dialog" style="margin-top:40px;color:#2980b9">Vous connaîtrez la suite de l'histoire dans quelques temps, le conseils se débarrasera probablement de celui qui fut le plus accusés par les autres internautes ! Merci d'avoir joué ! N'hésitez pas à nous donner vos feedbacks sur la page facebook !</div>
-        <br /><br /><a class="dialog getBackHomepage grow-rotate" style="margin-top:40px;color:#2980b9" href="#" class="">Retourner à l'accueil</a>
+        <br /><br /><a class="dialog getBackHomepage grow-rotate" style="margin-top:40px;color:#2980b9" href="#" >Retourner à l'accueil</a>
     </div>
 </div>
   
   
   <!-- Evenements sur le template -->
 <script type="text/javascript">
+    
+    var idPartieInsere = 0;
     
     var textAleatoire = [
         "Comment ?! Vous êtes sûr ? Je ne l'aurais jamais imaginé faire une telle atrocité !",
@@ -110,6 +112,14 @@
        var accusedCharater = $(this).data("id");
         
         // envoie une requête pour statistiques
+        $.get("serveur/bootstrap.php?action=insertPartie", {
+            "suspect" : $(this).attr("data-id"),
+            "raison" : "",
+            "canPlayWebgl" : WebglSceneManager.canUserPlayWebgl
+        }, function(reponse) {
+            idPartieInsere = reponse;
+            console.log("element inséré avec l'id : "+idPartieInsere)
+        });
         
         // masque la possibilté de retour sur la map et de revenir en arrière
         $(".btn_retour_map").fadeOut(function(){ $(this).remove(); });
@@ -139,7 +149,19 @@
     // Si on clique sur le bouton "soumettre" du formulaire d'accusation
     EventListenersManager.registerEvent("click", ".formulaireAccusation .button", function() {
        $(".formulaireAccusation").fadeOut(function() {
-           $(".finAccusation").fadeIn();
+           
+            var raisonInsere = $(".raisonAccusation").first().val();
+
+            // si il y a plus de 30 charactères insérés dans la raison, alors on fait une requête ajax pour la noteer
+            if(raisonInsere.length > 30) {
+                $.get("serveur/bootstrap.php?action=updateRaison", {
+                    "idPartie" : idPartieInsere,
+                    "raison" : raisonInsere
+                }, function(reponse) {
+                    console.log("element mis à jour avec l'id : "+reponse);
+                });
+            } // if
+            $(".finAccusation").fadeIn();
        });
     });
     

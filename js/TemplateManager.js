@@ -95,8 +95,6 @@ TemplateManager.disposeTemplate = function() {
     // template de conversation
     try {
         
-        console.log("dispose template");
-        console.log($(".convesationWrapper").length);
         
         if( $(".convesationWrapper").length > 0 ){
             

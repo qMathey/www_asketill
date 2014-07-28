@@ -111,9 +111,15 @@ EventListenersManager.addConversationEventListeners = function() {
             height:"0px"
         });
         
-        // ouvre la réponse souhaitée
+        // ouvre la réponse souhaitée instannnément
+        $(this).find(".reponse").css("height", "auto");
+        // récupère la hauteur
+        var reponseHeight = $(this).find(".reponse").height();
+        // referme instanément la réponse
+        $(this).find(".reponse").css("height", "0px");
+        // anime l'ouverture
         $(this).find(".reponse").animate({
-            height:"200px"
+            height:reponseHeight+"px"
         });
         
         // enleve la classe strong si elle était présente

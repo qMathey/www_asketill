@@ -91,6 +91,27 @@ TemplateManager.disposeTemplate = function() {
     } catch (exception){
         //...
     }
+    
+    // template de conversation
+    try {
+        
+        console.log("dispose template");
+        console.log($(".convesationWrapper").length);
+        
+        if( $(".convesationWrapper").length > 0 ){
+            
+            var conversationHeight = $(".convesationWrapper").height();
+            
+            var marginTop = $(window).height() /2 - conversationHeight / 2;
+            
+            // applique margin top
+             $(".convesationWrapper").css("margin-top", marginTop+"px");
+        }
+        
+    }catch (exception) {
+        
+        
+    } // catch
 }
 
 /**

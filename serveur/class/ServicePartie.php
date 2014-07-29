@@ -73,7 +73,7 @@ class ServicePartie {
     public static function getNbVoteBySuspect() {
        $dbManager = new DatabaseManager(DB_DNS, DB_USER, DB_PASSWORD);
        
-       $arrayNbVotesBySuspect = $dbManager->getObjectsFromQuery("SELECT suspect, count(*) FROM partie" );
+       $arrayNbVotesBySuspect = $dbManager->getObjectsFromQuery("SELECT suspect, count(*) as nbVotes FROM partie" );
        
        return $arrayNbVotesBySuspect;
         

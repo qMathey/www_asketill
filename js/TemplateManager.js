@@ -85,8 +85,16 @@ TemplateManager.LoadTemplateHMTL = function ( templateURL ) {
  */
 TemplateManager.disposeTemplate = function() {
     try {
-        $(".templateOverlay").css("width", $("#html_content .narativeBackground img").width()+"px");
-        $(".templateOverlay").css("height", $("#html_content .narativeBackground img").height()+"px");
+        
+        var width = $("#html_wrapper").width();
+        var height = $("#html_wrapper").height();
+        
+        $("#html_content .wrapper_pictBG").css("width", width+"px");
+        $("#html_content .wrapper_pictBG").css("height", height+"px");
+        
+        
+        $(".templateOverlay").css("width", $("#html_content .wrapper_pictBG img").width()+"px");
+        $(".templateOverlay").css("height", $("#html_content .wrapper_pictBG img").height()+"px");
         
     } catch (exception){
         //...

@@ -12,7 +12,7 @@ if(isset($_GET['action'])){
     switch($action) {
         case 'insertPartie' :
             
-            $lastInsertedId =  ServicePartie::insertPartie($_GET["suspect"], $_GET["raison"]  , $_GET["canPlayWebgl"]);
+            $lastInsertedId = ServicePartie::insertPartie($_GET["suspect"], $_GET["raison"], $_GET["canPlayWebgl"]);
             echo $lastInsertedId;
             break;
         case 'updateRaison' :
@@ -20,8 +20,21 @@ if(isset($_GET['action'])){
             echo $id;
             break;
         case 'getNbParties' :
+            $nbParties = ServicePartie::getCountParties();
+            echo $nbParties;
             break;
         case 'getNbVoteBySuspect':
+            
+            $arraySuspect = ServicePartie::getNbVoteBySuspect();
+            
+            echo "<suspects>";
+            foreach($arraySuspect as $suspect) {
+                echo "<suspect nbVote=\"".$suspect->nbVotes."\">";
+                    echo $suspect->suspect;
+                echo "</suspect>";
+            }
+            echo "</suspects>";
+            
             break;
     }// switch
     

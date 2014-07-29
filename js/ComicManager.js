@@ -157,8 +157,14 @@ ComicManager.introDisplayCase = function ( index ) {
 	
 	// faot disparaître les contenus précédents
 	ComicManager.$introWrapper.find("#introImages").fadeOut(function(){
+            
+                
+                var $bgImage = $('<img src="'+backgroundImage+'" class="pictBG" style="display:none"/>').load(function() {
+                   $(this).fadeIn(); 
+                });
+            
 		// insert les nouveaux contenus
-		$(this).html('<img src="'+backgroundImage+'" class="pictBG" />');
+		$(this).html($bgImage);
 		
 		// vide les contenus déjà présents
 		ComicManager.$introWrapper.find("#introText").html("");
@@ -275,7 +281,7 @@ ComicManager.loadConversation = function ( URL ) {
         }); // dialog
         
         // vide les questions qui peuvent exister
-        $(".convesationWrapper").html("");
+        $(".convesationTextWrapper").html("");
         
         // ajoute les questions à la conversation
         for(var i = 0; i < arrayQuestion.length; i++){
@@ -304,10 +310,10 @@ ComicManager.loadConversation = function ( URL ) {
                      .append($reponse);
             
             // ajoute les éléments dans la page
-            $(".convesationWrapper").append($question);
+            $(".convesationTextWrapper").append($question);
         }// for
         // évite les problèmes d'affichage
-        $(".convesationWrapper").append('<div class="clear"></div>');
+        $(".convesationTextWrapper").append('<div class="clear"></div>');
         
         // ajoute les événements associés aux conversations
         EventListenersManager.addConversationEventListeners();

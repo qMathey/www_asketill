@@ -69,6 +69,11 @@ TemplateManager.LoadTemplateHMTL = function ( templateURL ) {
             // insert le bouton retour sur la carte
             $("#html_content").prepend('<div class="btn_retour_map grow" title="retourner sur le carte"></div>');
             
+            $("#html_content").show();
+            // dispose le template quand les contenus HMTL sont affichés
+            TemplateManager.disposeTemplate();
+            $("#html_content").hide();
+            
             // affiche les contenus
             $("#html_wrapper").fadeIn();
             $("#html_content").fadeIn(function() {
@@ -105,14 +110,14 @@ TemplateManager.disposeTemplate = function() {
     try {
         
         
-        if( $(".convesationWrapper").length > 0 ){
+        if( $(".convesationTextWrapper").length > 0 ){
             
-            var conversationHeight = $(".convesationWrapper").height();
+            var conversationHeight = $(".convesationTextWrapper").height();
             
             var marginTop = $(window).height() /2 - conversationHeight / 2;
             
             // applique margin top
-             $(".convesationWrapper").css("margin-top", marginTop+"px");
+             $(".convesationTextWrapper").css("margin-top", marginTop+"px");
         }
         
     }catch (exception) {

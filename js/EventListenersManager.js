@@ -66,8 +66,10 @@ EventListenersManager.addHomepageEventListeners = function () {
 		$(this).fadeOut(function() {
 			// Lance l'introduction
 			ComicManager.intro();
-			// Préchage la scène WebGL
-			WebglSceneManager.init();
+			// Préchage la scène WebGL de façon asynchrone
+                        setTimeout( function() {
+                            WebglSceneManager.init();
+                        }, 10);
 		});
 		// Masque la scène ThreeJS
 		WebglSceneManager.hideWebglScene();
@@ -102,12 +104,12 @@ EventListenersManager.addIntroEventListeners = function () {
  */
 EventListenersManager.addConversationEventListeners = function() {
     // ajoute des événements spécifiques aux réponses
-    $(document).on("click", ".convesationWrapper .question", function(event){
+    $(document).on("click", ".convesationTextWrapper .question", function(event){
         // clear queue
-        $(".convesationWrapper .reponse").clearQueue();
+        $(".convesationTextWrapper .reponse").clearQueue();
         
         // ferme toutes les réponses
-        $(".convesationWrapper .reponse").animate({
+        $(".convesationTextWrapper .reponse").animate({
             height:"0px"
         });
         

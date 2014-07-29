@@ -92,9 +92,10 @@ TemplateManager.disposeTemplate = function() {
         $("#html_content .wrapper_pictBG").css("width", width+"px");
         $("#html_content .wrapper_pictBG").css("height", height+"px");
         
-        
+        // surcouche interaction du template
         $(".templateOverlay").css("width", $("#html_content .wrapper_pictBG img").width()+"px");
         $(".templateOverlay").css("height", $("#html_content .wrapper_pictBG img").height()+"px");
+        $(".templateOverlay").css("margin-left", (width - $(".templateOverlay").width()) / 2 +"px");
         
     } catch (exception){
         //...

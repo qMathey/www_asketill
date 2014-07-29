@@ -1,0 +1,87 @@
+  <!-- image de fond -->
+<div class="narativeBackground">
+    <img src="templates/zones/Z6/z6_marche_web.jpg" style="" />
+</div>
+<div class="templateOverlay">
+    
+    <div class="portraitsAccusations statistiques">
+        <div style="text-align:center;margin:30px 0px;" class="dialog"><span class="info">Découvrez ceux dont les internautes suspectent le plus!</span></div>
+        
+    </div>
+    <div class="details">
+    </div>
+    
+</div>
+  
+  
+  <!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    var nbPartiesJouees = 0;
+    
+    var arraySuspect = [];
+    
+    // Charge le nombre de parties jouées
+    $.get("serveur/bootstrap.php?action=getNbParties", {
+    }, function(reponse){
+        nbPartiesJouees = reponse;
+        
+        // charge les statistiques 
+        $.get("serveur/bootstrap.php?action=getNbVoteBySuspect", {
+        }, function(reponse) {
+            var $xml = $(reponse).find("suspect");
+            
+            
+            var index = 0;
+            var nbSuspects = $xml.length;
+            
+            $xml.each(function() {
+                
+                
+                var color = parseInt(index * 255 / nbSuspects);
+                var pourcentageVote = Math.floor(parseInt($(this).attr("nbVotes")) * 100 / nbPartiesJouees);
+                
+                
+                console.log('background-color:rgb(255, '+color+', 0)');
+                
+                $suspect = $("<div>");
+                $suspect.addClass("portrait")
+                        .addClass("grow")
+                        .append('<div style="background-color:rgb(255, '+color+', 0);" class="pourcentageVote">'+pourcentageVote+'%</div>')
+                        //.append('<img src="" />');
+                        .append('<img src="templates/portraits/test_etranger.jpg" />')
+                        .data("id", $(this).text())
+                        .data("nbVotes", pourcentageVote)
+                        .attr("title", "voir ce que les internautes ont décrits");
+                $(".portraitsAccusations.statistiques").append($suspect);
+                
+                index ++;
+            })
+        })
+        
+    });
+    
+    // au survol des portaits, on affiche les statistiques
+    EventListenersManager.registerEvent("mouseenter", ".statistiques .portrait", function() {
+        
+        $(".pourcentageVote").clearQueue();
+        
+        $(".pourcentageVote").animate({
+            "opacity" : 0.7
+        }, 300);;
+        $(this).find(".pourcentageVote").animate({
+            "opacity" : 0.0
+        }, 300);
+    });
+    
+    // lorsqu'on quitte le survoll
+    EventListenersManager.registerEvent("mouseleave", ".statistiques .portrait", function() {
+        $(".pourcentageVote").clearQueue();
+        $(".pourcentageVote").animate({
+            "opacity" : 0.7
+        }, 300);
+    });
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

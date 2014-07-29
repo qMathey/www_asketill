@@ -173,7 +173,7 @@
     
     // Si on clique sur l'image des statistiques
     EventListenersManager.registerEvent("click", ".statistiques", function() {
-          alert("bientot!");
+        TemplateManager.LoadTemplateHMTL("templates/statistiques.html");
     });
     
     // Si on clique sur "retour à la page d'accueil"

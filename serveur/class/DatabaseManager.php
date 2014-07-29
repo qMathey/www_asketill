@@ -58,7 +58,7 @@ class DatabaseManager {
         }       
         
         //retourne les résultats
-        return $retrunArray;
+        return $returnArray;
     }
     
     

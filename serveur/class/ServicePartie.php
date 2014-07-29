@@ -29,7 +29,7 @@ class ServicePartie {
        
        $parties = $dbManager->getObjectsFromQuery("SELECT count(*) AS countPartie FROM partie");
        
-       $nbParties = $parties[0].countPartie;
+       $nbParties = $parties[0]->countPartie;
        return $nbParties;
         
     } // getCountParties
@@ -73,7 +73,7 @@ class ServicePartie {
     public static function getNbVoteBySuspect() {
        $dbManager = new DatabaseManager(DB_DNS, DB_USER, DB_PASSWORD);
        
-       $arrayNbVotesBySuspect = $dbManager->getObjectsFromQuery("SELECT suspect, count(*) as nbVotes FROM partie ORDER BY nbVotes DESC" );
+       $arrayNbVotesBySuspect = $dbManager->getObjectsFromQuery("SELECT suspect, count(*) as nbVotes FROM partie GROUP BY suspect ORDER BY nbVotes DESC" );
        
        return $arrayNbVotesBySuspect;
         

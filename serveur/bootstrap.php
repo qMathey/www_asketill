@@ -29,7 +29,7 @@ if(isset($_GET['action'])){
             
             echo "<suspects>";
             foreach($arraySuspect as $suspect) {
-                echo "<suspect nbVote=\"".$suspect->nbVotes."\">";
+                echo "<suspect nbVotes=\"".$suspect->nbVotes."\">";
                     echo $suspect->suspect;
                 echo "</suspect>";
             }

@@ -183,6 +183,14 @@ ComicManager.introDisplayCase = function ( index ) {
 			
 		});
 		
+                if($requireCase.find("audios").length > 0){
+                    
+                    $requireCase.find("audios").find("audio").each(function() {
+                        AudioManager.loadAndPlaySound($(this).text());
+                    })
+                    
+                    
+                }
 		
 		$(this).fadeIn();
 	});

@@ -266,7 +266,7 @@ ComicManager.loadConversation = function ( URL ) {
             // la question
             var $question = $("<div>");
                 $question.addClass("question")
-                         .addClass("dialog")
+                         .addClass("conversation")
                          .data("id", arrayQuestion[i].id);
             
             // le titre de la question

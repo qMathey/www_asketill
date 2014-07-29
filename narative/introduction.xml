@@ -1,6 +1,38 @@
 <intro>
+        <case>
+		<background>narative/introduction/p2-web.jpg</background>
+		<dialogs>
+			<dialog>
+				<author></author>
+				<text>Au lever du soleil durant un hiver froid, le silence est rompu par le croassement des corbeaux affamés...</text>
+			</dialog>
+		</dialogs>
+	</case>
+        <case>
+		<background>narative/introduction/p3-web.jpg</background>
+	</case>
+        
+        <case>
+		<background>narative/introduction/p4-web.jpg</background>
+	</case>
+        
+        <case>
+		<background>narative/introduction/p5-web.jpg</background>
+	</case>
+        
+        <case>
+		<background>narative/introduction/p6-web.jpg</background>
+	</case>
+        <case>
+		<background>narative/introduction/p7-web.jpg</background>
+	</case>
+        <case>
+		<background>narative/introduction/p8-web.jpg</background>
+	</case>
+        
+
+       <!-- 
 	<case>
-		<!--<background>naratives/images/intro01.jpg</background>-->
 		<background>images/comics/img_test2.jpg</background>
 		<dialogs>
 			<dialog>
@@ -22,7 +54,6 @@
 		</dialogs>
 	</case>
 	<case>					
-		<!--<background>naratives/images/intro01.jpg</background>-->
 		<background>images/comics/img_test.jpg</background>
 		<dialog>
 			<author>
@@ -33,4 +64,5 @@
 			</text>
 		</dialog>
 	</case>
+        -->
 </intro>

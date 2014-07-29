@@ -72,8 +72,12 @@ Menu.toggle = function () {
  * Place le marqueur du menu de façon centrée
  */
 Menu.disposeMark = function () {
+        
 	// calcul la marge
-	var marginLeft = Menu.$wrapper().width() / 2 - Menu.$mark().width() / 2;
+	var marginLeft = Menu.$wrapper().width() / 2 - 25;
 	// Place le marqueur du menu avec la marge calculée
 	Menu.$mark().css("margin-left", marginLeft+"px");
+        
+        console.log("dispose mark! "+Menu.$wrapper().width() / 2 + " - "+ Menu.$mark().innerWidth() / 2);
+        
 }

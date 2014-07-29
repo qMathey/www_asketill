@@ -34,7 +34,9 @@ ComicManager.start = function() {
 	// met le HTML en avant
 	$("#html_wrapper").css("z-index", 30);
 	$("#webgl_wrapper").css("z-index", 20);
-	
+        
+        // appelle une fois le resize de la page (force le replacement des éléments)
+        $(window).trigger("resize");
 }
 
 /**
@@ -80,6 +82,9 @@ ComicManager.intro = function() {
 		ComicManager.introMaxSlide =ComicManager.$xml.find("case").length;
 		// On affiche la première case (ComicManager.introCurrentSlide = 0)
 		ComicManager.introDisplayCase(ComicManager.introCurrentSlide );
+                
+                // precharge les autres images de l'intro
+                ComicManager.preloadIntroImages();
 		
 		// Ajoute les évènements click sur les slides
 		EventListenersManager.addIntroEventListeners();
@@ -122,6 +127,17 @@ ComicManager.introLoadContents = function() {
 		ComicManager.$introWrapper.trigger("contentIntroLoaded", [ reponse ] );
 	}); // get
 }
+
+/**
+ * Precharge les images de l'introduction en les insérant dans une balise masquée
+ * @returns {undefined}
+ */
+ComicManager.preloadIntroImages = function () {
+    $(ComicManager.$xml.find("case")).each(function() {
+        $("#html_wrapper").append('<img src="'+$(this).find("background").text()+'" style="display:none" />');
+    });
+}
+
 /**
  * Affiche un contenu de l'intro selon son index
  * @param index de la case à afficher

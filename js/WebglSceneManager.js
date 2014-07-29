@@ -9,7 +9,7 @@ function WebglSceneManager() {
 WebglSceneManager.VIEW_ANGLE = 45; 
 WebglSceneManager.NEAR = 0.1; // vue 
 WebglSceneManager.FAR = 10000;
-WebglSceneManager.VITESSE_DEFILEMENT_WATER = 0.002;
+WebglSceneManager.VITESSE_DEFILEMENT_WATER = 0.0009;
 
 
 // Propriétés

@@ -118,6 +118,9 @@
         
        // le charatere accusé
        var accusedCharater = $(this).data("id");
+       
+       // vide les éléments dans Storage
+       StorageManager.clear();
         
         // envoie une requête pour statistiques
         $.get("serveur/bootstrap.php?action=insertPartie", {

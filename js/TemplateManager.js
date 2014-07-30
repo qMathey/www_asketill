@@ -43,7 +43,9 @@ TemplateManager.LoadTemplateZ6 = function() {
  * @returns {undefined}
  */
 TemplateManager.LoadTemplateZ1 = function() {
-    TemplateManager.LoadTemplateHMTL("templates/accusation.html");
+    //TemplateManager.LoadTemplateHMTL("templates/accusation.html");
+    TemplateManager.LoadTemplateHMTL("templates/zones/Z1/z1-maisonchef.html");
+    
 }
 
 

@@ -190,7 +190,18 @@ ComicManager.introDisplayCase = function ( index ) {
                 if($requireCase.find("audios").length > 0){
                     
                     $requireCase.find("audios").find("audio").each(function() {
-                        AudioManager.loadAndPlaySound($(this).text());
+                        
+                        var $audio = $("<audio>");
+                            $audio.attr("autoplay");
+                        var $source = $("<source>");
+                            $source.attr("src", $(this).text())
+                                   .attr("type", "audio/mpeg");
+                           
+                           $audio.append($source);
+                           $("#introImages").append($audio);
+                            
+                        
+                        //AudioManager.loadAndPlaySound($(this).text());
                     })
                     
                     

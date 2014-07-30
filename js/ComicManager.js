@@ -176,6 +176,7 @@ ComicManager.introDisplayCase = function ( index ) {
 			
 			var $dialog = $("<div>");
 				$dialog.addClass("introDialog")
+                                       .addClass("arrondi")
 				       .append("<br /><strong>"+author+"</strong>")
                                        .append("<p>"+text+"</p>")
                                        .delay(10000).fadeOut(5000);

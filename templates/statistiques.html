@@ -63,8 +63,8 @@
                 $suspect.addClass("portrait")
                         .addClass("grow")
                         .append('<div style="background-color:rgb(255, '+color+', 0);" class="pourcentageVote">'+pourcentageVote+'%</div>')
-                        //.append('<img src="" />');
-                        .append('<img src="templates/portraits/test_etranger.jpg" />')
+                        .append('<img src="templates/portraits/'+$(this).text()+'.jpg" />')
+                        //.append('<img src="templates/portraits/test_etranger.jpg" />')
                         .attr("data-suspectName", $(this).text())
                         .attr("data-nbVotes", pourcentageVote)
                         .attr("title", "voir ce que les internautes ont décrits");

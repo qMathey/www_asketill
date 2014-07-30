@@ -1,70 +1,70 @@
   <!-- image de fond -->
 <div class="narativeBackground">
-    <img src="templates/zones/Z1/I1/i1-salletrone-web.jpg" style="" />
+    <img src="webgl/textures/skybox_facelat2.jpg">
 </div>
 <div class="templateOverlay">
     
     <div class="portraitsAccusations">
         <div style="text-align:center;margin:30px 0px;" class="dialog"><span class="info">Votre décision doit être certaine car il en va de votre vie, étranger !</span></div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
-        </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
-        </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
-        </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
-        </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
-        </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
-        </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
-        </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
-        </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
-        </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
-        </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
-        </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
-        </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
-        </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
-        </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
-        </div>
         <div class="portrait grow" data-id="etranger">
-            <img src="templates/portraits/test_etranger.jpg" title="L'étranger"/>
+            <img src="templates/portraits/etranger.jpg"/>
         </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
+        <div class="portrait grow" data-id="gils">
+            <img src="templates/portraits/gils.jpg"/>
         </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
+        <div class="portrait grow" data-id="refill">
+            <img src="templates/portraits/refill.jpg"/>
         </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
+        <div class="portrait grow" data-id="hansa">
+            <img src="templates/portraits/hansa.jpg"/>
         </div>
-        <div class="portrait grow" data-id="testPersonnage">
-            <img src="templates/portraits/test.png" title="personnage test"/>
+        <div class="portrait grow" data-id="rignes">
+            <img src="templates/portraits/rignes.jpg"/>
+        </div>
+        <div class="portrait grow" data-id="vermundr">
+            <img src="templates/portraits/vermundr.jpg"/>
+        </div>
+        <div class="portrait grow" data-id="slyna">
+            <img src="templates/portraits/slyna.jpg"/>
+        </div>
+        <div class="portrait grow" data-id="lames">
+            <img src="templates/portraits/lames.jpg"/>
+        </div>
+        <div class="portrait grow" data-id="solgi">
+            <img src="templates/portraits/solgi.jpg"/>
+        </div>
+        <div class="portrait grow" data-id="inga">
+            <img src="templates/portraits/inga.jpg"/>
+        </div>
+        <div class="portrait grow" data-id="grans">
+            <img src="templates/portraits/grans.jpg"/>
+        </div>
+        <div class="portrait grow" data-id="thord">
+            <img src="templates/portraits/thord.jpg"/>
+        </div>
+        <div class="portrait grow" data-id="otrygg">
+            <img src="templates/portraits/otrygg.jpg"/>
+        </div>
+        <div class="portrait grow" data-id="arnvidar">
+            <img src="templates/portraits/arnvidar.jpg"/>
+        </div>
+        <div class="portrait grow" data-id="tosk">
+            <img src="templates/portraits/tosk.jpg"/>
+        </div>
+        <div class="portrait grow" data-id="skamel">
+            <img src="templates/portraits/skamel.jpg"/>
+        </div>
+        <div class="portrait grow" data-id="rafli">
+            <img src="templates/portraits/rafli.jpg"/>
+        </div>
+        <div class="portrait grow" data-id="kotel">
+            <img src="templates/portraits/kotel.jpg"/>
+        </div>
+        <div class="portrait grow" data-id="jav">
+            <img src="templates/portraits/jav.jpg"/>
+        </div>
+        <div class="portrait grow" data-id="griss">
+            <img src="templates/portraits/griss.jpg"/>
         </div>
         <div class="clear"></div>
     </div>
@@ -104,8 +104,16 @@
     // BOUTON DE RETOUR
     TemplateManager.addButtonRetour("templates/zones/Z1//I1/i1_salleTrone.html");
     
-    // portraits
+    // affichage agréable des portraits
+    var indexPortraitAccusation = 1;
+    $(".portraitsAccusations .portrait").each(function() {
+        $(this).hide();
+        $(this).delay(indexPortraitAccusation * 300).fadeIn();
+        
+        indexPortraitAccusation++;
+    })
     
+    // click sur un portraits portraits
     EventListenersManager.registerEvent("click", ".portraitsAccusations .portrait", function() {
         
        // le charatere accusé

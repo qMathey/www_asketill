@@ -192,13 +192,15 @@ ComicManager.introDisplayCase = function ( index ) {
                     $requireCase.find("audios").find("audio").each(function() {
                         
                         var $audio = $("<audio>");
-                            $audio.attr("autoplay");
+                            $audio.attr("autoplay", "autoplay");
                         var $source = $("<source>");
                             $source.attr("src", $(this).text())
                                    .attr("type", "audio/mpeg");
-                           
+                           // insère la source dans la balise audio
                            $audio.append($source);
+                           // insère l'audio dans la page
                            $("#introImages").append($audio);
+                           console.log("son inséré : "+ $(this).text());
                             
                         
                         //AudioManager.loadAndPlaySound($(this).text());

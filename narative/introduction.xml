@@ -1,4 +1,5 @@
 <intro>
+
         <case>
 		<background>narative/introduction/p2-web.jpg</background>
 		<dialogs>
@@ -9,12 +10,16 @@
 		</dialogs>
 		<audios>
 			<audio>sounds/chien.mp3</audio>
-				
 			<audio>sounds/crows_group.mp3</audio>
 		</audios>
 	</case>
-        <case>
+	
+     <case>
 		<background>narative/introduction/p3-web.jpg</background>
+			<audios>
+			<audio>sounds/chien.mp3</audio>
+			<audio>sounds/crows_group.mp3</audio>
+		</audios>
 	</case>
         
         <case>

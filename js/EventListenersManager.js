@@ -51,9 +51,23 @@ EventListenersManager.init = function () {
             TemplateManager.LoadTemplateHMTL($(this).attr("data-previousLocation"));
             
         });
+        
+        // Quand on clique sur le bouton nouvelle partie
+        $(document).on("click", ".btn_facebook", function() {
+            // redirection sur la page facebook d'asketill
+            location = "https://www.facebook.com/asketill";
+        });
+        
+        // Quand on clique sur le bouton nouvelle partie
+        $(document).on("click", ".btn_newGame", function() {
+            //recharge la page
+            location.reload();
+        });
 	
 	//Désactive tous les liens par défaut dans #html_content
 	EventListenersManager.removeLinkEvent();
+        
+        
 }
 /**
  * Ajoute un écouteur sur le lien "Commencer l'aventure"

@@ -78,6 +78,21 @@ class ServicePartie {
        return $arrayNbVotesBySuspect;
         
     } // getNbVoteBySuspect
+    
+    /**
+     * Permet de récupérer les raisons pour un suspect
+     * @param type $idSuspect l'identifiant du suspect
+     * @param type $nbRaison$ le nombre de raison recherchée
+     * @return array Tableau d'objets avec les raisons des suspect
+     */
+    public static function getRaisonForSuspects( $idSuspect, $nbRaison){
+        
+       $dbManager = new DatabaseManager(DB_DNS, DB_USER, DB_PASSWORD);
+       
+       $arrayRaison = $dbManager->getObjectsFromQuery("SELECT raison FROM partie WHERE suspect = '".$idSuspect."' AND raison != '' ORDER BY id DESC LIMIT ".$nbRaison);
+        
+       return $arrayRaison;
+    }
 }
 
 ?>

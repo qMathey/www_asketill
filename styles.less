@@ -20,7 +20,7 @@ body {
 		position:absolute;
 		height:100%;
 		width:100%;
-		background-color:#fff;
+		background-color:#FAFAFA;
                 overflow:hidden;
                 background-image:url(images/loader.gif);
                 background-repeat:no-repeat;
@@ -106,7 +106,7 @@ body {
                         }
                     }
                     .conversationWrapper {
-                        background-color:#fff;
+                        background-color:#FAFAFA;
                        
                     }
                     .conversationBG {
@@ -139,7 +139,7 @@ body {
                             }
                         }
                     }
-                    .btn_retour_map, .btn_retour_template {
+                    .btn_retour_map, .btn_retour_template, .btn_newGame, .btn_facebook {
                         bottom:2%;
                         left:14%;
                         border:10px solid #ccc;
@@ -163,6 +163,14 @@ body {
                         left:4%;
                         
                     }
+                    .btn_newGame {
+                        background-image:url(images/btn_retour.png);
+                        left:19%;
+                    }
+                    .btn_facebook {
+                        background-image:url(images/fb_bouton.png);
+                        left:26%;
+                    }
                     audio {
                         position:absolute;
                     }
@@ -175,10 +183,14 @@ body {
 			margin:0 auto;
                         .indice {
                             position:absolute;
-                            background-color:#fff;
+                            background-color:#000;
+                            color:#fff;
+                            padding:15px;
                             z-index:101;
+                            /*
                             border:10px solid grey;
                             padding:10px;
+                            */
                             width:13%;
                         }
                         .clickZone {
@@ -191,7 +203,7 @@ body {
                             }
                         }
                     }
-                    .portraitsAccusations {
+                    .portraitsAccusations, .portraitsStatistiques {
                         margin-top:10%;
                         width:auto;
                         margin-left:200px;
@@ -212,7 +224,7 @@ body {
                         margin-left:200px;
                         margin-right:200px;
                         display:none;
-                        background-color:#fff;
+                        background-color:#FAFAFA;
                         padding:2%;
                         textarea {
                             z-index:200;
@@ -234,7 +246,7 @@ body {
                         width:auto;
                         margin-left:200px;
                         margin-right:200px;
-                        background-color:#fff;
+                        background-color:#FAFAFA;
                         padding:2%;
                         
                         .autre {
@@ -258,6 +270,28 @@ body {
                         }
                         
                     }
+                    /* STATISTIQUES */
+                    .details { 
+                        margin-top:4%;
+                        display:none;
+                        .accusation {
+                            margin:0.5%;
+                            padding:1%;
+                            background-color:#000;
+                            color:#fff;
+                            font-style:italic;
+                            float: left;
+                            width: 46%;
+                            
+                        }
+                        .retourStatistiques {
+                            display:inline-block;
+                            padding:1%;
+                            background-color:#FAFAFA;
+                            font-weight:bold;
+                            cursor:pointer;
+                        }
+                    }
                 }
 	}
 	
@@ -278,7 +312,7 @@ body {
 		// text
 		line-height:1.4em;
 		#menu_mark {
-			background-color:#fff;
+			background-color:#FAFAFA;
 			position:absolute;
 			z-index:1000;
 			margin:0px auto 0px auto;
@@ -291,7 +325,7 @@ body {
 			cursor:pointer;
 		}
                 #menuBG {
-			background-color:#fff;
+			background-color:#FAFAFA;
                 }
 		.col3 {
 			padding:0 3%;
@@ -317,7 +351,8 @@ body {
         font-family: 'Lato', sans-serif;
 }
 .info {
-    background-color:#fff;
+    background-color:#000;
+    color:#fff;
     padding:15px;
 }
 

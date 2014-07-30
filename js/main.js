@@ -12,7 +12,7 @@ $(document).ready(function() { // when document ready
 	DisposeElements.init();
 	
 	// StartBD
-        ComicManager.start();
+        //ComicManager.start();
 	// Init WebGL
         
         // Initialise le gestionnaire sonore
@@ -20,5 +20,5 @@ $(document).ready(function() { // when document ready
         
         // DEV MODE 
         $('head').append('<style type="text/css">.clickZone {background-color:red;opacity:0.5}</style>');
-	//WebglSceneManager.init();
+	WebglSceneManager.init();
 });

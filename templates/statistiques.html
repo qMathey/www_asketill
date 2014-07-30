@@ -4,11 +4,23 @@
 </div>
 <div class="templateOverlay">
     
-    <div class="portraitsAccusations statistiques">
-        <div style="text-align:center;margin:30px 0px;" class="dialog"><span class="info">Découvrez ceux dont les internautes suspectent le plus!</span></div>
+    <div class="portraitsStatistiques">
+        <div style="text-align:center;margin:30px 0px;" class="dialog"><span class="info">Découvrez ceux dont les internautes suspectent le plus !</span></div>
         
     </div>
     <div class="details">
+        <div class="accusation dialog">Suspendisse ligula erat, tincidunt sit amet ipsum sed, iaculis malesuada sapien. Aliquam erat volutpat. Suspendisse facilisis cursus nulla sed iaculis. Quisque nec risus sed orci aliquet iaculis vel quis neque. Quisque porta quam et tristique viverra. Praesent eu turpis quis tortor luctus ullamcorper. Praesent id accumsan purus.</div>
+        <div class="accusation dialog">Suspendisse ligula erat, tincidunt sit amet ipsum sed, iaculis malesuada sapien. Aliquam erat volutpat. Suspendisse facilisis cursus nulla sed iaculis. Quisque nec risus sed orci aliquet iaculis vel quis neque. Quisque porta quam et tristique viverra. Praesent eu turpis quis tortor luctus ullamcorper. Praesent id accumsan purus.</div>
+        <div class="accusation dialog">Suspendisse ligula erat, tincidunt sit amet ipsum sed, iaculis malesuada sapien. Aliquam erat volutpat. Suspendisse facilisis cursus nulla sed iaculis. Quisque nec risus sed orci aliquet iaculis vel quis neque. Quisque porta quam et tristique viverra. Praesent eu turpis quis tortor luctus ullamcorper. Praesent id accumsan purus.</div>
+        <div class="accusation dialog">Suspendisse ligula erat, tincidunt sit amet ipsum sed, iaculis malesuada sapien. Aliquam erat volutpat. Suspendisse facilisis cursus nulla sed iaculis. Quisque nec risus sed orci aliquet iaculis vel quis neque. Quisque porta quam et tristique viverra. Praesent eu turpis quis tortor luctus ullamcorper. Praesent id accumsan purus.</div>
+        <div class="accusation dialog">Suspendisse ligula erat, tincidunt sit amet ipsum sed, iaculis malesuada sapien. Aliquam erat volutpat. Suspendisse facilisis cursus nulla sed iaculis. Quisque nec risus sed orci aliquet iaculis vel quis neque. Quisque porta quam et tristique viverra. Praesent eu turpis quis tortor luctus ullamcorper. Praesent id accumsan purus.</div>
+        <div class="accusation dialog">Suspendisse ligula erat, tincidunt sit amet ipsum sed, iaculis malesuada sapien. Aliquam erat volutpat. Suspendisse facilisis cursus nulla sed iaculis. Quisque nec risus sed orci aliquet iaculis vel quis neque. Quisque porta quam et tristique viverra. Praesent eu turpis quis tortor luctus ullamcorper. Praesent id accumsan purus.</div>
+        <div class="accusation dialog">Suspendisse ligula erat, tincidunt sit amet ipsum sed, iaculis malesuada sapien. Aliquam erat volutpat. Suspendisse facilisis cursus nulla sed iaculis. Quisque nec risus sed orci aliquet iaculis vel quis neque. Quisque porta quam et tristique viverra. Praesent eu turpis quis tortor luctus ullamcorper. Praesent id accumsan purus.</div>
+        <div class="accusation dialog">Suspendisse ligula erat, tincidunt sit amet ipsum sed, iaculis malesuada sapien. Aliquam erat volutpat. Suspendisse facilisis cursus nulla sed iaculis. Quisque nec risus sed orci aliquet iaculis vel quis neque. Quisque porta quam et tristique viverra. Praesent eu turpis quis tortor luctus ullamcorper. Praesent id accumsan purus.</div>
+        <div class="clear"></div>
+        <div style="text-align:center">
+            <div class="retourStatistiques grow">Retourner à la liste des personnages</div>
+        </div>
     </div>
     
 </div>
@@ -20,10 +32,17 @@
     var nbPartiesJouees = 0;
     
     var arraySuspect = [];
+    var pourcentageAffiche = 0;
+    
     
     // Charge le nombre de parties jouées
     $.get("serveur/bootstrap.php?action=getNbParties", {
     }, function(reponse){
+        
+        // masque la possibilté de retour sur la map et de revenir en arrière
+        $(".btn_retour_map").fadeOut(function(){ $(this).remove(); });
+        $(".btn_retour_template").fadeOut(function(){ $(this).remove(); });
+        
         nbPartiesJouees = reponse;
         
         // charge les statistiques 
@@ -33,55 +52,121 @@
             
             
             var index = 0;
+            
+            // nombre total de suspect
             var nbSuspects = $xml.length;
             
+            // pour chaque suspect
             $xml.each(function() {
-                
-                
+                // prepare une couleur allant du rouge (le plus suspecté) au jaune (le moins suspecté)
                 var color = parseInt(index * 255 / nbSuspects);
+                // caclul le pourcentage du vote
                 var pourcentageVote = Math.floor(parseInt($(this).attr("nbVotes")) * 100 / nbPartiesJouees);
                 
+                // on comptabilise les pourcentage affiché, servira a bien vérifé qu'on obtient 100%
+                pourcentageAffiche += pourcentageVote;
                 
-                console.log('background-color:rgb(255, '+color+', 0)');
-                
+                // prepare et insère le suspect dans la liste
                 $suspect = $("<div>");
                 $suspect.addClass("portrait")
                         .addClass("grow")
                         .append('<div style="background-color:rgb(255, '+color+', 0);" class="pourcentageVote">'+pourcentageVote+'%</div>')
                         //.append('<img src="" />');
                         .append('<img src="templates/portraits/test_etranger.jpg" />')
-                        .data("id", $(this).text())
-                        .data("nbVotes", pourcentageVote)
+                        .attr("data-suspectName", $(this).text())
+                        .attr("data-nbVotes", pourcentageVote)
                         .attr("title", "voir ce que les internautes ont décrits");
-                $(".portraitsAccusations.statistiques").append($suspect);
+                        // affichage l'un après-l'autre (joli)
+                        $suspect.hide();
+                        $suspect.delay(300 * index).fadeIn();
+                // inspère le suspect dans la liste de portraits
+                $(".portraitsStatistiques").append($suspect);
                 
                 index ++;
-            })
-        })
+            }); // each
+            
+            // spécifique, on vérifie que le total fait 100%
+            if (100 - pourcentageAffiche != 0){
+                
+                var pourcentageCorrige = parseInt( $(".pourcentageVote").first().html() ) + (100 - pourcentageAffiche);
+                
+                // corrige le premier pourcentage affiché
+                $(".pourcentageVote").first().html(pourcentageCorrige+"%");
+                
+            }// if
+            
+        })// ajax get
         
-    });
+    }); // ajax get
     
     // au survol des portaits, on affiche les statistiques
-    EventListenersManager.registerEvent("mouseenter", ".statistiques .portrait", function() {
-        
+    EventListenersManager.registerEvent("mouseenter", ".portraitsStatistiques .portrait", function() {
+       
         $(".pourcentageVote").clearQueue();
         
+        // afficahge tous les pourcentages de votes
         $(".pourcentageVote").animate({
             "opacity" : 0.7
-        }, 300);;
+        }, 300);
+        
+        // masque le pourcentage de vote pour celui qu'on affiche
         $(this).find(".pourcentageVote").animate({
             "opacity" : 0.0
         }, 300);
     });
     
     // lorsqu'on quitte le survoll
-    EventListenersManager.registerEvent("mouseleave", ".statistiques .portrait", function() {
+    EventListenersManager.registerEvent("mouseleave", ".portraitsStatistiques .portrait", function() {
         $(".pourcentageVote").clearQueue();
         $(".pourcentageVote").animate({
             "opacity" : 0.7
         }, 300);
     });
     
+    // au clique sur un portait
+    EventListenersManager.registerEvent("click", ".portraitsStatistiques .portrait", function() {
+        
+        // masque les portraits statistiques
+        $(".portraitsStatistiques").fadeOut(function() {
+            
+            $(".details").fadeIn();
+            
+        })
+        
+        
+        $.get("serveur/bootstrap.php?action=getRaisonFromSuspect", {
+            "suspectID" : $(this).attr("data-suspectName")
+        }, function(reponse) {
+
+             var $xml = $(reponse);
+             console.log($xml);
+             
+             
+             $xml.find("raison").each(function() {
+                
+                $accusation = $("<div>");
+                $accusation.addClass("dialog")
+                           .addClass("accusation")
+                           .html('"'+$(this).text()+'"')
+                 // ajoute l'accusation aux détails présents
+                 $(".details").prepend($accusation);
+                 
+             });
+             
+             
+             
+        }) 
+    });
+    
+    
+    // si on clique sur "retourner à la liste des personnages
+    EventListenersManager.registerEvent("click", ".retourStatistiques", function() {
+        TemplateManager.LoadTemplateHMTL("templates/statistiques.html");
+    });
+    
+    // Ajout d'un bouton pour recommencer le jeu
+    $("#html_content").prepend('<div class="btn_newGame grow" title="Relancer une partie"></div>');
+    $("#html_content").prepend('<div class="btn_facebook grow" title="Nous retrouver sur Facebook"></div>');
     // Jouer un son
     //AudioManager.loadAndPlaySound("URL");
 </script>

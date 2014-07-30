@@ -178,7 +178,7 @@ ComicManager.introDisplayCase = function ( index ) {
 				$dialog.addClass("introDialog")
 				       .append("<br /><strong>"+author+"</strong>")
                                        .append("<p>"+text+"</p>")
-                                       .delay(5000).fadeOut();
+                                       .delay(10000).fadeOut(5000);
 			// ajoute dans le template le dialog
 			ComicManager.$introWrapper.find("#introText").append($dialog);
 			

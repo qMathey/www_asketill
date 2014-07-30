@@ -48,8 +48,8 @@
 	    <case>
 		<background>narative/introduction/p8-web.jpg</background>
 		<audios>
-			<audio>sounds/chien.mp3</audio>
-			<audio>sounds/crows_group.mp3</audio>
+			<audio>sounds/ventleger.mp3</audio>
+			
 		</audios>
 	</case>
   
@@ -68,8 +68,8 @@
         <case>
 		<background>narative/introduction/p12-web.jpg</background>
 		<audios>
-			<audio>sounds/chien.mp3</audio>
-			<audio>sounds/crows_group.mp3</audio>
+			<audio>sounds/ventleger.mp3</audio>
+			
 		</audios>
 	</case>
 
@@ -82,8 +82,8 @@
 			</dialog>
 		</dialogs>
 		<audios>
-			<audio>sounds/chien.mp3</audio>
-			<audio>sounds/crows_group.mp3</audio>
+			<audio>sounds/ventleger.mp3</audio>
+		
 		</audios>
 	</case>
 	

@@ -77,6 +77,11 @@ EventListenersManager.addHomepageEventListeners = function () {
 	// BD Quand on clique sur "Démarrer l'aventure"
 	$(document).on("click", "#startAdventure", function() {
             
+            // arrête l'animation de neige
+            if(snowStorm != undefined) {
+                snowStorm.stop();
+            }
+            
             // Est-ce que l'utilisateur a joué ?
             var userknowledgeFromStorage = StorageManager.getItem("userKnowledge");
             if(userknowledgeFromStorage == null){

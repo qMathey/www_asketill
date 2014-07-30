@@ -28,7 +28,6 @@ ComicManager.start = function() {
 		$("#html_content").html(reponse);
 	}); // get
         
-        
 	
 	// Ajoute les écouteurs spécifique à la homepage
 	EventListenersManager.addHomepageEventListeners();
@@ -159,10 +158,15 @@ ComicManager.introDisplayCase = function ( index ) {
 	
 	// faot disparaître les contenus précédents
 	ComicManager.$introWrapper.find("#introImages").fadeOut(function(){
+                
+                var delayIntro = 0;
             
+                if (index == 0) {
+                    var delayIntro = 5000;
+                }
                 
                 var $bgImage = $('<img src="'+backgroundImage+'" class="pictBG" style="display:none"/>').load(function() {
-                   $(this).fadeIn(); 
+                   $(this).delay(delayIntro).fadeIn(); 
                 });
             
 		// insert les nouveaux contenus
@@ -206,12 +210,11 @@ ComicManager.introDisplayCase = function ( index ) {
                             
                         
                         //AudioManager.loadAndPlaySound($(this).text());
-                    })
-                    
-                    
-                }
+                    });
+                }// if
 		
-		$(this).fadeIn();
+                // affiche
+		$(this).delay(delayIntro).fadeIn();
 	});
 }
 /**

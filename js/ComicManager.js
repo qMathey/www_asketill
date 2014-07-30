@@ -187,7 +187,10 @@ ComicManager.introDisplayCase = function ( index ) {
 			
 		});
 		
+                // si la balise audio est spécifiée, alors on ajoute les sons à la page
                 if($requireCase.find("audios").length > 0){
+                    
+                    $("#introAudio").html("");
                     
                     $requireCase.find("audios").find("audio").each(function() {
                         
@@ -199,8 +202,7 @@ ComicManager.introDisplayCase = function ( index ) {
                            // insère la source dans la balise audio
                            $audio.append($source);
                            // insère l'audio dans la page
-                           $("#introImages").append($audio);
-                           console.log("son inséré : "+ $(this).text());
+                           $("#introAudio").append($audio);
                             
                         
                         //AudioManager.loadAndPlaySound($(this).text());

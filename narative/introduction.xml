@@ -4,9 +4,14 @@
 		<dialogs>
 			<dialog>
 				<author></author>
-				<text>Au lever du soleil, après une froide nuit d'hiver, le silence est rompu par le croassement des corbeaux affamés...</text>
+				<text>Au lever du soleil, après une froide nuit d'hiver, le silence est rompu par le croassement de corbeaux affamés et le bacarme d'un chien agité...</text>
 			</dialog>
 		</dialogs>
+		<audios>
+			<audio>sounds/chien.mp3</audio>
+				
+			<audio>sounds/crows_group.mp3</audio>
+		</audios>
 	</case>
         <case>
 		<background>narative/introduction/p3-web.jpg</background>

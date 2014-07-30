@@ -4,7 +4,7 @@
 		<dialogs>
 			<dialog>
 				<author></author>
-				<text>Au lever du soleil durant un hiver froid, le silence est rompu par le croassement des corbeaux affamés...</text>
+				<text>Au lever du soleil, après une froide nuit d'hiver, le silence est rompu par le croassement des corbeaux affamés...</text>
 			</dialog>
 		</dialogs>
 	</case>
@@ -14,10 +14,17 @@
         
         <case>
 		<background>narative/introduction/p4-web.jpg</background>
+	
 	</case>
         
         <case>
 		<background>narative/introduction/p5-web.jpg</background>
+		<dialogs>
+			<dialog>
+				<author></author>
+				<text>Le mystérieux corbeau noir au regard de sang s'envole vers la place du village où des quelques personnes sont réunies autour d'une silouhette évanouie dans la neige...</text>
+			</dialog>
+		</dialogs>
 	</case>
         
         <case>
@@ -50,6 +57,12 @@
 
     <case>
 		<background>narative/introduction/p13-web.jpg</background>
+			<dialogs>
+			<dialog>
+				<author></author>
+				<text>Le mystérieux étranger soupire en haut des dangereux escaliers glacés, prêt à entreprendre une enquête qui s'annonce difficile...</text>
+			</dialog>
+		</dialogs>
 	</case>
 	
 	

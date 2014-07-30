@@ -27,6 +27,8 @@ ComicManager.start = function() {
 	$.get(ComicManager.TEMPLATE_URL + "homepage.html", function(reponse) {
 		$("#html_content").html(reponse);
 	}); // get
+        
+        
 	
 	// Ajoute les écouteurs spécifique à la homepage
 	EventListenersManager.addHomepageEventListeners();
@@ -242,6 +244,19 @@ ComicManager.doesUserKnow = function ( knowWhat ){
     }
     
     return doesUserKnow;
+}
+
+/**
+ * Indique que l'utilisateur sait quelque chose
+ * @param {type} $newItem
+ * @returns {undefined}
+ */
+ComicManager.userKnow = function ( $newItem ) {
+    // enregistre l'info    
+    ComicManager.userKnowledge.push( $newItem );
+    
+    // save l'info dans le storage du navigateur
+    StorageManager.saveItem('userKnowledge', ComicManager.userKnowledge);
 }
 
 /**

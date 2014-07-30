@@ -1,0 +1,41 @@
+  <!-- image de fond -->
+<div class="wrapper_pictBG">
+    <img src="narative/introduction/p2-web.jpg" class="pictBG" />
+</div>
+<div class="templateOverlay">
+    <div class="repriseJeu dialog arrondi">
+        <div class="dialog arrondi info repriseText">
+        <h2>Reprise du jeu</h2>
+        <p>Vous avez quittez le site sans avoir terminé le jeu, voulez-vous continuer ou recommencer votre partie ?</p>
+        </div>
+        <div class="recommencerJeu dialog arrondi info">Recommencer</div>
+        <div class="continuerJeu dialog arrondi info">Continuer</div>
+    </div>
+</div>
+  
+  
+  <!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    $(".repriseJeu").hide().delay(1000).fadeIn();
+    
+    // Préchage la scène WebGL de façon asynchrone
+    setTimeout( function() {
+        WebglSceneManager.init();
+    }, 10);
+    
+    // Si on clique recommencer le jeu
+    EventListenersManager.registerEvent("click", ".recommencerJeu", function() {
+        SotrageManager.clear();
+        location.reload();
+    });
+    
+    // Si on
+    EventListenersManager.registerEvent("click", ".continuerJeu", function() {
+        // Affiche la scène ThreeJS
+        WebglSceneManager.showWebglScene();
+    });
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

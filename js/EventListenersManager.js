@@ -76,8 +76,13 @@ EventListenersManager.init = function () {
 EventListenersManager.addHomepageEventListeners = function () {
 	// BD Quand on clique sur "Démarrer l'aventure"
 	$(document).on("click", "#startAdventure", function() {
-		
-		$(this).fadeOut(function() {
+            
+            // Est-ce que l'utilisateur a joué ?
+            var userknowledgeFromStorage = StorageManager.getItem("userKnowledge");
+            if(userknowledgeFromStorage == null){
+                
+                // fadeOut, commence l'intro
+                $(this).fadeOut(function() {
 			// Lance l'introduction
 			ComicManager.intro();
 			// Préchage la scène WebGL de façon asynchrone
@@ -87,6 +92,17 @@ EventListenersManager.addHomepageEventListeners = function () {
 		});
 		// Masque la scène ThreeJS
 		WebglSceneManager.hideWebglScene();
+                
+            }
+            else {
+                
+                ComicManager.userKnowledge = userknowledgeFromStorage;
+                // appelle directement le template repriseJeu
+                TemplateManager.LoadTemplateHMTL("templates/repriseJeu.html");                
+
+            } // else
+		
+		
 	});
 }
 
@@ -142,7 +158,7 @@ EventListenersManager.addConversationEventListeners = function() {
         $(this).find(".titre").removeClass("strong");
         
         // Ajoute la question dans la base de connaissance de l'utilisateur
-        ComicManager.userKnowledge.push($(this).data("id"));
+        ComicManager.userKnow($(this).data("id"));
     });
 }
 

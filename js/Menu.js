@@ -78,6 +78,4 @@ Menu.disposeMark = function () {
 	// Place le marqueur du menu avec la marge calculée
 	Menu.$mark().css("margin-left", marginLeft+"px");
         
-        console.log("dispose mark! "+Menu.$wrapper().width() / 2 + " - "+ Menu.$mark().innerWidth() / 2);
-        
 }

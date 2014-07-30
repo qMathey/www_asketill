@@ -89,7 +89,6 @@ TemplateManager.LoadTemplateHMTL = function ( templateURL ) {
  * @returns {undefined}
  */
 TemplateManager.disposeTemplate = function() {
-    console.log("dispose Template");
     try {
         
         var width = $("#html_wrapper").width();

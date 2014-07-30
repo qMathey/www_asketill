@@ -187,10 +187,10 @@ ComicManager.introDisplayCase = function ( index ) {
 			
 		});
 		
+                $("#introAudio").html("");
+                
                 // si la balise audio est spécifiée, alors on ajoute les sons à la page
                 if($requireCase.find("audios").length > 0){
-                    
-                    $("#introAudio").html("");
                     
                     $requireCase.find("audios").find("audio").each(function() {
                         

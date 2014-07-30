@@ -47,6 +47,10 @@
     
 	    <case>
 		<background>narative/introduction/p8-web.jpg</background>
+		<audios>
+			<audio>sounds/chien.mp3</audio>
+			<audio>sounds/crows_group.mp3</audio>
+		</audios>
 	</case>
   
         <case>
@@ -63,6 +67,10 @@
 
         <case>
 		<background>narative/introduction/p12-web.jpg</background>
+		<audios>
+			<audio>sounds/chien.mp3</audio>
+			<audio>sounds/crows_group.mp3</audio>
+		</audios>
 	</case>
 
     <case>
@@ -73,6 +81,10 @@
 				<text>Le mystérieux étranger soupire en haut des dangereux escaliers glacés, prêt à entreprendre une enquête qui s'annonce difficile...</text>
 			</dialog>
 		</dialogs>
+		<audios>
+			<audio>sounds/chien.mp3</audio>
+			<audio>sounds/crows_group.mp3</audio>
+		</audios>
 	</case>
 	
 	

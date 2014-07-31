@@ -1,0 +1,43 @@
+<div class="conversationWrapper">
+    <div class="convesationTextWrapper">
+
+        <div class="clear"></div>
+    </div>
+    <!-- image de fond -->
+    <div class="conversationBG">
+        <img src="templates/zones/Z1/I1/C1/c1-chef-web.jpg" class="pictBG"/>
+    </div>
+
+    <div class="clear"></div>
+</div>
+<!-- ambiance -->
+<audio loop autoplay>
+  <source src="sounds/bushFire.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    // BOUTON DE RETOUR
+    TemplateManager.addButtonRetour("templates/zones/Z1/I1/i1-salletrone.html");
+    
+    // Charge la conversation 
+    ComicManager.loadConversation("narative/chef.xml");
+    
+    // après deux secondes, propose de finir le jeu
+    $(".conversationWrapper").delay(2000).queue(function() {
+        console.log("ajouter action");
+        $actionDenoncer = $('<div style="text-align:center"><div class="info dialog action_denoncer grow">Je sais qui a tué le barde !</div></div>');
+        $(".convesationTextWrapper").append($actionDenoncer);
+        $actionDenoncer.hide().fadeIn();
+        
+        // si on clique sur denoncer un personnage
+        EventListenersManager.registerEvent("click", ".action_denoncer", function() {
+            // template pour accuser des personnages
+            TemplateManager.LoadTemplateHMTL("templates/accusation.html");
+        });
+    });
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

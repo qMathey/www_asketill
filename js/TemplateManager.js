@@ -30,6 +30,25 @@ TemplateManager.setCursorDefault = function() {
     $("#webgl_wrapper").css("cursor", "default");
 }
 
+
+/**
+ * Appelle le template de la maison du chef
+ * @returns {undefined}
+ */
+TemplateManager.LoadTemplateZ1 = function() {
+    TemplateManager.LoadTemplateHMTL("templates/zones/Z1/z1-maisonchef.html");
+    
+}
+
+/**
+ * Appelle le template de la foret ancienne
+ * @returns {undefined}
+ */
+TemplateManager.LoadTemplateZ2 = function() {
+    TemplateManager.LoadTemplateHMTL("templates/zones/Z2/z2-foretancienne.html");
+    
+}
+
 /**
  * Appelle le template de la forge
  */
@@ -38,15 +57,6 @@ TemplateManager.LoadTemplateZ6 = function() {
     TemplateManager.LoadTemplateHMTL("templates/zones/Z6/z6_marche.html");
 }
 
-/**
- * Appelle le template de la maison du chef
- * @returns {undefined}
- */
-TemplateManager.LoadTemplateZ1 = function() {
-    //TemplateManager.LoadTemplateHMTL("templates/accusation.html");
-    TemplateManager.LoadTemplateHMTL("templates/zones/Z1/z1-maisonchef.html");
-    
-}
 
 
 
@@ -128,6 +138,9 @@ TemplateManager.disposeTemplate = function() {
             
             // applique margin top
              $(".convesationTextWrapper").css("margin-top", marginTop+"px");
+             
+             // affiche la conversation
+             $(".convesationTextWrapper").clearQueue().fadeIn();
         }
         
     }catch (exception) {

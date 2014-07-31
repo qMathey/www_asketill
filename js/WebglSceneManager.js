@@ -291,6 +291,7 @@ WebglSceneManager.addPickingControls = function() {
         // reset la couleur de tous les éléments de la scene
         WebglSceneManager.resetColorAllObjectFromScene();
         
+        // on boucle sur chaque objet survolé
         for( var i = 0; i < WebglSceneManager.objectPicked.length; i++ ) {
                 var intersection = WebglSceneManager.objectPicked[ i ],
                         obj = intersection.object;
@@ -312,6 +313,15 @@ WebglSceneManager.addPickingControls = function() {
                         TemplateManager.setCursorPointer();
                         isPickingZoneFound = true;
                         break;
+                        
+                    case 'chaudron' :
+                        // Applique une couleur rouge à la zone de la maison du chef
+                        obj.material.color = new THREE.Color("rgb(255,0,0)");
+                        WebglSceneManager.actionOnClick = TemplateManager.LoadTemplateZ2;
+                        // met le curseur en mode pointer (lien)
+                        TemplateManager.setCursorPointer();
+                        isPickingZoneFound = true;
+                    break;
                     default :
                            // par défaut rien.
                            WebglSceneManager.actionOnClick = function(){};

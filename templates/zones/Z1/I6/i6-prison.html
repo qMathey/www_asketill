@@ -1,0 +1,42 @@
+<!-- image de fond -->
+<div class="wrapper_pictBG">
+    <img src="templates/zones/Z1/I6/i6-prison-web.jpg" class="pictBG" />
+</div>
+<!-- 
+
+Surcouche interaction
+
+ajouter la classe .dialog pour l'effet de texte BD
+
+ajouter la classe .hide pour masquer l'élément
+
+ajouter la classe .dev pour avoir un fond rouge transparent
+
+ajouter la classe .clickZone pour avoir le curseur
+
+-->
+<div class="templateOverlay">
+    <!-- Lien vers un autre template -->
+    <div id="conversationVoleur" class="clickZone" style="width: 17%;height: 76%;margin-left: 39%;margin-top: 10%;"></div>
+</div>
+
+<!-- ambiance -->
+<audio loop autoplay>
+  <!-- <source src="sounds/bushFire.mp3" type="audio/mpeg"> -->
+</audio>
+
+
+<!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    // conversation avec le voleur
+    EventListenersManager.registerEvent("click", "#conversationVoleur", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z1/I6/C20/c20-voleur.html");
+    });
+    
+    // ajout du bouton
+    TemplateManager.addButtonRetour("templates/zones/Z1/z1-maisonchef.html");
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

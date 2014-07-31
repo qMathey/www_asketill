@@ -358,6 +358,12 @@ ComicManager.loadConversation = function ( URL ) {
         // évite les problèmes d'affichage
         $(".convesationTextWrapper").append('<div class="clear"></div>');
         
+        // cache la conversation
+        $(".convesationTextWrapper").hide();
+        
+        // dispose le template
+        TemplateManager.disposeTemplate();
+        
         // ajoute les événements associés aux conversations
         EventListenersManager.addConversationEventListeners();
         

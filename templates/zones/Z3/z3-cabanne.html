@@ -1,0 +1,63 @@
+<!-- image de fond -->
+<div class="wrapper_pictBG">
+    <img src="templates/zones/Z3/z3-cabanne-web.jpg" class="pictBG" />
+</div>
+<!-- 
+
+Surcouche interaction
+
+ajouter la classe .dialog pour l'effet de texte BD
+
+ajouter la classe .hide pour masquer l'élément
+
+ajouter la classe .dev pour avoir un fond rouge transparent
+
+ajouter la classe .clickZone pour avoir le curseur
+
+-->
+<div class="templateOverlay">
+    <!-- Lien vers un autre template -->
+    <div id="conversationArnvidar" class="clickZone" style="width: 11%;height: 27%;margin-left: 26%;margin-top: 31%;"></div>
+    
+    <!-- interaction du template -->
+    <div id="cabanneCorbeau" class="clickZone" style="width: 3%;height: 6%;margin-left: 80%;margin-top: 8%;"></div>
+    <div id="cabanneOrnement" class="clickZone" style="width: 7%;height: 13%;margin-left: 59%;margin-top: 11%;"></div>
+    
+    <!-- indices -->
+    <div class="indice dialog arrondi hide" id="infoCabanneOrnement" style="margin-top: 21%;margin-left: 63%;">Mais qui réalise ces ornements ?</div>
+</div>
+
+<!-- ambiance -->
+<audio loop autoplay>
+  <source src="sounds/vieForet.mp3" type="audio/mpeg">
+</audio>
+
+<audio loop autoplay>
+  <source src="sounds/firePlace.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    // Intérieur salle du trone
+    EventListenersManager.registerEvent("click", "#conversationArnvidar", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z3/C15/c15-chasseur.html");
+    });
+    
+     // Clique sur le corbeau
+    EventListenersManager.registerEvent("click", "#cabanneCorbeau", function() {
+       AudioManager.loadAndPlaySound("sounds/crow_alone.mp3");
+    });
+    
+    // Clique sur a statue
+    EventListenersManager.registerEvent("click", "#cabanneOrnement", function() {
+        // Indique que les runes lui sont inconnues
+        TemplateManager.showIndice("#infoCabanneOrnement");
+        // L'utilisateur connait les runes de la zone 1
+        ComicManager.userKnow("z3-ornement");
+    });
+    
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

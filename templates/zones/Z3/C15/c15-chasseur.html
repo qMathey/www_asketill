@@ -1,0 +1,34 @@
+<div class="conversationWrapper">
+    <div class="convesationTextWrapper">
+
+        <div class="clear"></div>
+    </div>
+    <!-- image de fond -->
+    <div class="conversationBG">
+        <img src="templates/zones/Z3/C15/c15-chasseur-web.jpg" class="pictBG"/>
+    </div>
+
+    <div class="clear"></div>
+</div>
+
+<!-- ambiance -->
+<audio loop autoplay>
+  <source src="sounds/vieForet.mp3" type="audio/mpeg">
+</audio>
+
+<audio loop autoplay>
+  <source src="sounds/firePlace.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    // BOUTON DE RETOUR
+    TemplateManager.addButtonRetour("templates/zones/Z3/z3-cabanne.html");
+    
+    // Charge la conversation 
+    ComicManager.loadConversation("narative/arnvidar.xml");
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

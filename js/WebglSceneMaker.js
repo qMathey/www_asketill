@@ -162,11 +162,13 @@ WebglSceneMaker.loadVikingHouse1 = function() {
 			},
 			3 : {
 				"position" :  new THREE.Vector3( 21.98, 7.0, 28.20 ),
-				"rotation" :  new THREE.Vector3( 0.00, 0.58, 0.00 )
+				"rotation" :  new THREE.Vector3( 0.00, 0.58, 0.00 ),
+                                "zone" : "place_puit"
 			},
 			4 : {
 				"position" :  new THREE.Vector3( -75.72, 7.0, -39.14 ),
-				"rotation" :  new THREE.Vector3( 3.14, 0.82, 3.14 )
+				"rotation" :  new THREE.Vector3( 3.14, 0.82, 3.14 ),
+                                "zone" : "cabanne"
 			}
 		};
 	

@@ -49,6 +49,16 @@ TemplateManager.LoadTemplateZ2 = function() {
     
 }
 
+
+/**
+ * Appelle le template de la foret ancienne
+ * @returns {undefined}
+ */
+TemplateManager.LoadTemplateZ3 = function() {
+    TemplateManager.LoadTemplateHMTL("templates/zones/Z3/z3-cabanne.html");
+    
+}
+
 /**
  * Appelle le template de la forge
  */

@@ -165,7 +165,7 @@ ComicManager.introDisplayCase = function ( index ) {
 		var delayIntro = 0;
 	
 		if (index == 0) {
-			var delayIntro = 5000;
+			var delayIntro = 3000;
 		}
 		
 		// place les éléments à afficher dans le template

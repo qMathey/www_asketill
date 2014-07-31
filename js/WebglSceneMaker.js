@@ -428,6 +428,7 @@ WebglSceneMaker.loadChaudron = function() {
 		var mesh = new THREE.Mesh( geometry, WebglSceneMaker.mat_chaudron );
 			mesh.scale.set(4,4,4);
 			mesh.position.set(-19.43, 33.65, -79.02);
+                        mesh.zone = "chaudron";
 			
 		// ajoute la mesh à la scène
 		WebglSceneManager.scene.add(mesh);

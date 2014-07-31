@@ -1,0 +1,70 @@
+<!-- image de fond -->
+<div class="wrapper_pictBG">
+    <img src="templates/zones/Z2/z2-foretancienne-web.jpg" class="pictBG" />
+</div>
+<!-- 
+
+Surcouche interaction
+
+ajouter la classe .dialog pour l'effet de texte BD
+
+ajouter la classe .hide pour masquer l'élément
+
+ajouter la classe .dev pour avoir un fond rouge transparent
+
+ajouter la classe .clickZone pour avoir le curseur
+
+-->
+<div class="templateOverlay">
+    <!-- Lien vers un autre template -->
+    <div id="conversationOtrig" class="clickZone" style="width: 10%;height: 41%;margin-left: 17%;margin-top: 23%;"></div>
+    
+    <!-- interaction du template -->
+    <div id="chaudronSacre" class="clickZone" style="width: 19%;height: 18%;margin-left: 38%;margin-top: 43%;"></div>
+    <div id="statueSacree" class="clickZone" style="width: 14%;height: 22%;margin-left: 39%;margin-top: 4%;"></div>
+    <div id="loupSacre" class="clickZone" style="width: 14%;height: 17%;margin-left: 65%;margin-top: 38%;"></div>
+    
+    <!-- indices -->
+    <div class="indice dialog arrondi hide" id="infoStatue" style="margin-top: 15%;margin-left: 51%;">Une étrange statue couverte de glace, portant des écritures anciennes que je ne peux lire...</div>    
+    <div class="indice dialog arrondi hide" id="infoChaudron" style="margin-top: 45%;margin-left: 51%;">Ce chaudron est couvert de runes.</div>    
+    
+</div>
+
+<!-- ambiance -->
+<audio loop autoplay>
+  <source src="sounds/crows_group.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    // Intérieur salle du trone
+    EventListenersManager.registerEvent("click", "#conversationOtrig", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z2/C14/c14-otrygg.html");
+    });
+    
+     // Clique sur le loup
+    EventListenersManager.registerEvent("click", "#loupSacre", function() {
+       AudioManager.loadAndPlaySound("sounds/dogGrowl.mp3");
+    });
+    
+    // Clique sur a statue
+    EventListenersManager.registerEvent("click", "#statueSacree", function() {
+        // Indique que les runes lui sont inconnues
+        TemplateManager.showIndice("#infoStatue");
+        // L'utilisateur connait les runes de la zone 1
+        ComicManager.userKnow("z2-statue");
+    });
+    
+    // Clique sur le chaudron
+    EventListenersManager.registerEvent("click", "#chaudronSacre", function() {
+        // Indique que les runes lui sont inconnues
+        TemplateManager.showIndice("#infoChaudron");
+        // L'utilisateur connait les runes de la zone 1
+        ComicManager.userKnow("z2-chaudron");
+    });
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

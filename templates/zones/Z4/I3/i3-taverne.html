@@ -1,0 +1,69 @@
+<!-- image de fond -->
+<div class="wrapper_pictBG">
+    <img src="templates/zones/Z4/I3/i3-taverne-web.jpg" class="pictBG" />
+</div>
+<!-- 
+
+Surcouche interaction
+
+ajouter la classe .dialog pour l'effet de texte BD
+
+ajouter la classe .hide pour masquer l'élément
+
+ajouter la classe .dev pour avoir un fond rouge transparent
+
+ajouter la classe .clickZone pour avoir le curseur
+
+-->
+<div class="templateOverlay">
+    <!-- Lien vers un autre template -->
+    <div id="conversationRefill" class="clickZone" style="width: 7%;height: 16%;margin-left: 45%;margin-top: 18%;"></div>
+    <div id="conversationHansa" class="clickZone" style="width: 9%;height: 42%;margin-left: 66%;margin-top: 28%;"></div>
+    <div id="conversationRignes" class="clickZone" style="width: 10%;height: 36%;margin-left: 7%;margin-top: 31%;"></div>
+    <div id="conversationVermundr" class="clickZone" style="width: 8%;height: 37%;margin-left: 90%;margin-top: 17%;"></div>
+    <div id="conversationSlyna" class="clickZone" style="width: 8%;height: 35%;margin-left: 57%;margin-top: 19%;"></div>
+    <div id="conversationGuerriers1" class="clickZone" style="width: 21%;height: 18%;margin-left: 25%;margin-top: 35%;"></div>
+    <div id="conversationGuerriers2" class="clickZone" style="width: 10%;height: 26%;margin-left: 26%;margin-top: 40%;"></div>
+    <div id="conversationGuerriers3" class="clickZone" style="width: 7%;height: 21%;margin-left: 52%;margin-top: 44%;"></div>
+    
+    <!-- interaction du template 
+    <div id="casqueCorbeau" class="clickZone" style="width:6%;height: 11%;margin-left: 79%;margin-top: 27%;"></div>
+    -->
+    <!-- indices 
+    <div class="indice dialog arrondi hide" id="infoCasqueCorbeau" style="margin-top: 36%;margin-left: 78%;">Ce casque est recouvert de plumes de corbeau.</div>    
+    -->
+</div>
+
+<!-- ambiance -->
+<audio loop autoplay>
+  <source src="sounds/taverne_mod.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    // Intérieur salle du trone
+    EventListenersManager.registerEvent("click", "#conversationGils", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z1/I1/C2/c2-gilsgardien2.html");
+    });
+    
+    // Conversation avec Thord
+    EventListenersManager.registerEvent("click", "#conversationChef", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z1/I1/C1/c1-chef.html");
+    });
+    
+    // Clique sur le casque corbeau
+    EventListenersManager.registerEvent("click", "#casqueCorbeau", function() {
+        // Indique que le casque est recouvert de plume
+        TemplateManager.showIndice("#infoCasqueCorbeau");
+        // L'utilisateur connait les runes de la zone 1
+        ComicManager.userKnow("i1-casque");
+    });
+    
+    // ajout du bouton
+    TemplateManager.addButtonRetour("templates/zones/Z1/z1-maisonchef.html");
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

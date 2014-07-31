@@ -35,19 +35,19 @@ ajouter la classe .clickZone pour avoir le curseur
 
 <!-- ambiance -->
 <audio loop autoplay>
-  <source src="sounds/vieForet.mp3" type="audio/mpeg">
+  <source src="sounds/market_mod.mp3" type="audio/mpeg">
 </audio>
-
-<audio loop autoplay>
-  <source src="sounds/firePlace.mp3" type="audio/mpeg">
-</audio>
-
 <!-- Evenements sur le template -->
 <script type="text/javascript">
     
     // Conversation avec Tosk
     EventListenersManager.registerEvent("click", "#conversationTosk", function() {
         TemplateManager.LoadTemplateHMTL("templates/zones/Z4/C16/c16-tosk.html");
+    });
+    
+    // entrer dans la taverne
+    EventListenersManager.registerEvent("click", "#interieurTaverne", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z4/I3/i3-taverne.html");
     });
     
      // Clique sur le corbeau

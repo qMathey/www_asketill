@@ -64,6 +64,11 @@ EventListenersManager.init = function () {
             location.reload();
         });
 	
+        // Quand une image de fond d'un template est chargée, on dispose le template
+        EventListenersManager.registerEvent("load", ".pictBG", function() {
+            TemplateManager.disposeTemplate();
+        });
+        
 	//Désactive tous les liens par défaut dans #html_content
 	EventListenersManager.removeLinkEvent();
         

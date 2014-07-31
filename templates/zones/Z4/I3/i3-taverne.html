@@ -43,26 +43,33 @@ ajouter la classe .clickZone pour avoir le curseur
 <!-- Evenements sur le template -->
 <script type="text/javascript">
     
-    // Intérieur salle du trone
-    EventListenersManager.registerEvent("click", "#conversationGils", function() {
-        TemplateManager.LoadTemplateHMTL("templates/zones/Z1/I1/C2/c2-gilsgardien2.html");
+    // Conversation avec Refill
+    EventListenersManager.registerEvent("click", "#conversationRefill", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z4/I3/C4/c4-tavernier.html");
+    });
+    // Conversation avec Hansa
+    EventListenersManager.registerEvent("click", "#conversationHansa", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z4/I3/C5/c5-hansaserveuse1.html");
+    });
+    // Conversation avec Rignes
+    EventListenersManager.registerEvent("click", "#conversationRignes", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z4/I3/C6/c6-rignesserveuse2.html");
+    });
+    // Conversation avec Vermundr
+    EventListenersManager.registerEvent("click", "#conversationVermundr", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z4/I3/C7/c7-barde2.html");
+    });
+    // Conversation avec Slyna
+    EventListenersManager.registerEvent("click", "#conversationSlyna", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z4/I3/C8/c8-slyna.html");
+    });
+    // Conversation avec les guerriers
+    EventListenersManager.registerEvent("click", "#conversationGuerriers1, #conversationGuerriers2", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z4/I3/C9/c9-guerriers.html");
     });
     
-    // Conversation avec Thord
-    EventListenersManager.registerEvent("click", "#conversationChef", function() {
-        TemplateManager.LoadTemplateHMTL("templates/zones/Z1/I1/C1/c1-chef.html");
-    });
-    
-    // Clique sur le casque corbeau
-    EventListenersManager.registerEvent("click", "#casqueCorbeau", function() {
-        // Indique que le casque est recouvert de plume
-        TemplateManager.showIndice("#infoCasqueCorbeau");
-        // L'utilisateur connait les runes de la zone 1
-        ComicManager.userKnow("i1-casque");
-    });
-    
-    // ajout du bouton
-    TemplateManager.addButtonRetour("templates/zones/Z1/z1-maisonchef.html");
+    // ajout du bouton retour
+    TemplateManager.addButtonRetour("templates/zones/Z4/z4-placepuits.html");
     
     // Jouer un son
     //AudioManager.loadAndPlaySound("URL");

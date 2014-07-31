@@ -34,8 +34,7 @@
 				<author></author>
 				<text>Le mystérieux corbeau noir au regard de sang s'envole vers la place du village où des quelques personnes sont réunies autour d'une silouhette évanouie dans la neige...</text>
 			<audios>
-			<audio>souds/crow_alone.mp3</audio>
-		
+			<audio>sounds/crow_alone.mp3</audio>		
 			</audios>
 			</dialog>
 		</dialogs>
@@ -47,26 +46,37 @@
 	
         <case>
 		<background>narative/introduction/p7-web.jpg</background>
+		<audios>
+			<audio>sounds/ventleger.mp3</audio>
+		</audios>
 	</case>
     
 	    <case>
 		<background>narative/introduction/p8-web.jpg</background>
 		<audios>
-			<audio>sounds/ventleger.mp3</audio>
-			
+			<audio>sounds/ventleger.mp3</audio>			
 		</audios>
 	</case>
   
         <case>
 		<background>narative/introduction/p9-web.jpg</background>
+			<audios>
+			<audio>sounds/bushFire.mp3</audio>			
+		</audios>
 	</case>
 	
         <case>
 		<background>narative/introduction/p10-web.jpg</background>
+			<audios>
+			<audio>sounds/bushFire.mp3</audio>			
+		</audios>
 	</case>
 
         <case>
 		<background>narative/introduction/p11-web.jpg</background>
+			<audios>
+			<audio>sounds/bushFire.mp3</audio>			
+		</audios>
 	</case>
 
         <case>

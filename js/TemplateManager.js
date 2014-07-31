@@ -37,7 +37,6 @@ TemplateManager.setCursorDefault = function() {
  */
 TemplateManager.LoadTemplateZ1 = function() {
     TemplateManager.LoadTemplateHMTL("templates/zones/Z1/z1-maisonchef.html");
-    
 }
 
 /**
@@ -46,7 +45,6 @@ TemplateManager.LoadTemplateZ1 = function() {
  */
 TemplateManager.LoadTemplateZ2 = function() {
     TemplateManager.LoadTemplateHMTL("templates/zones/Z2/z2-foretancienne.html");
-    
 }
 
 
@@ -56,14 +54,20 @@ TemplateManager.LoadTemplateZ2 = function() {
  */
 TemplateManager.LoadTemplateZ3 = function() {
     TemplateManager.LoadTemplateHMTL("templates/zones/Z3/z3-cabanne.html");
-    
+}
+
+/**
+ * Appelle le template de la foret ancienne
+ * @returns {undefined}
+ */
+TemplateManager.LoadTemplateZ4 = function() {
+    TemplateManager.LoadTemplateHMTL("templates/zones/Z4/z4-placepuits.html");
 }
 
 /**
  * Appelle le template de la forge
  */
 TemplateManager.LoadTemplateZ6 = function() {
-   
     TemplateManager.LoadTemplateHMTL("templates/zones/Z6/z6_marche.html");
 }
 

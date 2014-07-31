@@ -241,6 +241,7 @@ WebglSceneMaker.loadVikingTaverne = function() {
 			mesh.scale.set(4,4,4);
 			mesh.position.set(-0.23, 6.88, 21.08);
 			mesh.rotation.set(3.14, -1.48, 3.14) ;
+                        mesh.zone = "place_puit";
 			
 		//// ajoute la mesh à la scène
 		WebglSceneManager.scene.add(mesh);
@@ -349,6 +350,7 @@ WebglSceneMaker.loadPuit = function() {
 			mesh.scale.set(2, 2, 2);
 			mesh.position.set(5.62, 7.09, 37.74);
 			mesh.rotation.set(0, -1.38, 0) ;
+                        mesh.zone = "place_puit";
 			
 		// ajoute la mesh à la scène
 		WebglSceneManager.scene.add(mesh);

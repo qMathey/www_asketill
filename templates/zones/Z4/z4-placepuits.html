@@ -1,0 +1,78 @@
+<!-- image de fond -->
+<div class="wrapper_pictBG">
+    <img src="templates/zones/Z4/z4-placepuits-web.jpg" class="pictBG" />
+</div>
+<!-- 
+
+Surcouche interaction
+
+ajouter la classe .dialog pour l'effet de texte BD
+
+ajouter la classe .hide pour masquer l'élément
+
+ajouter la classe .dev pour avoir un fond rouge transparent
+
+ajouter la classe .clickZone pour avoir le curseur
+
+-->
+<div class="templateOverlay">
+    <!-- Lien vers un autre template -->
+    <div id="conversationTosk" class="clickZone" style="width: 10%;height: 17%;margin-left: 31%;margin-top: 53%;"></div>
+    <div id="interieurTaverne" class="clickZone" style="width: 10%;height: 12%;margin-left: 20%;margin-top: 26%;"></div>
+    <div id="interieurMaisonBarde" class="clickZone" style="width: 4%;height: 11%;margin-left: 75%;margin-top: 29%;"></div>
+    
+    <!-- interaction du template -->
+    <div id="puitCorbeau" class="clickZone" style="width: 4%;height: 8%;margin-left: 56%;margin-top: 35.5%;"></div>
+    <div id="puitTonneaux" class="clickZone" style="width: 13%;height: 10%;margin-left: 43%;margin-top: 27%;"></div>
+    <div id="puitNomTaverneCouvert" class="clickZone" style="width: 10%;height: 6%;margin-left: 20%;margin-top: 20%;"></div>
+    <div id="puitEnseigne" class="clickZone" style="width: 2.5%;height: 3%;margin-left: 61.5%;margin-top: 22%;"></div>
+    
+    <!-- indices -->
+    <div class="indice dialog arrondi hide" id="infoPuitTonnaux" style="margin-left: 53%;margin-top: 21%;">Ces tonneaux sentent la gnôle à plein nez.</div>
+    <div class="indice dialog arrondi hide" id="infoPuitNomTaverneCouvert" style="margin-left: 32%;margin-top: 18%;">"La Taverne de Refill"... On dirait que l'ancien nom a été recouvert.</div>
+    <div class="indice dialog arrondi hide" id="infoPuitEnseigne" style="margin-left: 65%;margin-top: 19%;">Je distingue la gravure d'une plume noire.</div>
+</div>
+
+<!-- ambiance -->
+<audio loop autoplay>
+  <source src="sounds/vieForet.mp3" type="audio/mpeg">
+</audio>
+
+<audio loop autoplay>
+  <source src="sounds/firePlace.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    // Conversation avec Tosk
+    EventListenersManager.registerEvent("click", "#conversationTosk", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z4/C16/c16-tosk.html");
+    });
+    
+     // Clique sur le corbeau
+    EventListenersManager.registerEvent("click", "#puitCorbeau", function() {
+       AudioManager.loadAndPlaySound("sounds/crow_alone.mp3");
+    });
+    
+    
+    // Clique sur les tonneaux
+    EventListenersManager.registerEvent("click", "#puitTonneaux", function() {
+        // Indique que les tonnaux puent l'alcool
+        TemplateManager.showIndice("#infoPuitTonnaux");
+    });
+    
+    // Clique sur le nom de la taverne
+    EventListenersManager.registerEvent("click", "#puitNomTaverneCouvert", function() {
+        // Indique le nom de la taverne
+        TemplateManager.showIndice("#infoPuitNomTaverneCouvert");
+    });
+    
+    // Clique sur l'enseigne
+    EventListenersManager.registerEvent("click", "#puitEnseigne", function() {
+        // Indique le logo original
+        TemplateManager.showIndice("#infoPuitEnseigne");
+    });
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

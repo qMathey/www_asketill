@@ -22,9 +22,12 @@ ajouter la classe .clickZone pour avoir le curseur
     <!-- interaction du template -->
     <div id="cabanneCorbeau" class="clickZone" style="width: 3%;height: 6%;margin-left: 80%;margin-top: 8%;"></div>
     <div id="cabanneOrnement" class="clickZone" style="width: 7%;height: 13%;margin-left: 59%;margin-top: 11%;"></div>
+    <div id="cabannePorte" class="clickZone" style="width: 7%;height: 13%;margin-left: 57%;margin-top: 29%;"></div>
+    <div id="cabannePorte2" class="clickZone" style="width: 5%;height: 11%;margin-left: 82%;margin-top: 29%;"></div>
     
     <!-- indices -->
     <div class="indice dialog arrondi hide" id="infoCabanneOrnement" style="margin-top: 21%;margin-left: 63%;">Mais qui réalise ces ornements ?</div>
+    <div class="indice dialog arrondi hide" id="infoCabannePorte" style="margin-left: 66%;margin-top: 31%;">Je ne peux pas entrer dans sa cabane.</div>
 </div>
 
 <!-- ambiance -->
@@ -39,7 +42,7 @@ ajouter la classe .clickZone pour avoir le curseur
 <!-- Evenements sur le template -->
 <script type="text/javascript">
     
-    // Intérieur salle du trone
+    // Conversation avec Arnvidar
     EventListenersManager.registerEvent("click", "#conversationArnvidar", function() {
         TemplateManager.LoadTemplateHMTL("templates/zones/Z3/C15/c15-chasseur.html");
     });
@@ -49,11 +52,17 @@ ajouter la classe .clickZone pour avoir le curseur
        AudioManager.loadAndPlaySound("sounds/crow_alone.mp3");
     });
     
-    // Clique sur a statue
+    // clique sur la porte de la cabanne
+    EventListenersManager.registerEvent("click", "#cabannePorte, #cabannePorte2", function() {
+        // Indique qu'il e peut pas entrer chez le chasseur
+        TemplateManager.showIndice("#infoCabannePorte");
+    });
+    
+    // Clique sur l'ornement
     EventListenersManager.registerEvent("click", "#cabanneOrnement", function() {
         // Indique que les runes lui sont inconnues
         TemplateManager.showIndice("#infoCabanneOrnement");
-        // L'utilisateur connait les runes de la zone 1
+        // L'utilisateur connait les ornements de la zone 3
         ComicManager.userKnow("z3-ornement");
     });
     

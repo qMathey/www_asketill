@@ -87,3 +87,12 @@ AudioManager.playSound = function ( buffer ) {
     // play the sound
     AudioManager.source.start(0);  
 }
+
+/**
+ * Rend muet tous les sons utilisé à travers les balises audio de la page
+ */
+AudioManager.muteAllSounds = function() {
+	$("audio").each(function() { 
+		$(this).get()[0].muted = true; 
+	});
+}

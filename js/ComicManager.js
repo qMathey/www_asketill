@@ -93,11 +93,15 @@ ComicManager.intro = function() {
 	
 	// Quand l'intro est finie, on la masque au profit de la carte 3D
 	ComicManager.$introWrapper.on("introFinished", function(event) {
-            // Actualise l'affichage de WebGL
-            $("#html_wrapper").fadeOut(function() {
-                    // Affiche la scène ThreeJS
-                    WebglSceneManager.showWebglScene();
-            });
+	
+		// rend muet tous les sons
+		AudioManager.muteAllSounds();
+
+		// Actualise l'affichage de WebGL
+		$("#html_wrapper").fadeOut(function() {
+				// Affiche la scène ThreeJS
+				WebglSceneManager.showWebglScene();
+		});
 	});
         
         // Quand on charge un template quelconque 
@@ -190,12 +194,14 @@ ComicManager.introDisplayCase = function ( index ) {
 			ComicManager.$introWrapper.find("#introText").append($dialog);
 			
 		});
-		
+				// rend muet tous les sons
+				AudioManager.muteAllSounds();
+				// supprime les sons déclarés
                 $("#introAudio").html("");
                 
                 // si la balise audio est spécifiée, alors on ajoute les sons à la page
                 if($requireCase.find("audios").length > 0){
-                    
+                    // pour chaque élément audio spécifié, on ajoute une balise audio
                     $requireCase.find("audios").find("audio").each(function() {
                         
                         var $audio = $("<audio>");
@@ -207,9 +213,6 @@ ComicManager.introDisplayCase = function ( index ) {
                            $audio.append($source);
                            // insère l'audio dans la page
                            $("#introAudio").append($audio);
-                            
-                        
-                        //AudioManager.loadAndPlaySound($(this).text());
                     });
                 }// if
 		

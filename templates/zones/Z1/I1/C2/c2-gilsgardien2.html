@@ -1,0 +1,29 @@
+<div class="conversationWrapper">
+    <div class="convesationTextWrapper">
+
+        <div class="clear"></div>
+    </div>
+    <!-- image de fond -->
+    <div class="conversationBG">
+        <img src="templates/zones/Z1/I1/C2/c2-gilsgardien2-web.jpg" class="pictBG"/>
+    </div>
+
+    <div class="clear"></div>
+</div>
+<!-- ambiance -->
+<audio loop autoplay>
+  <source src="sounds/bushFire.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    // BOUTON DE RETOUR
+    TemplateManager.LoadTemplateHMTL("templates/zones/Z1/I1/i1-salletrone.html");
+    
+    // Charge la conversation 
+    ComicManager.loadConversation("narative/gils.xml");
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

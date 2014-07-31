@@ -22,14 +22,14 @@ ajouter la classe .clickZone pour avoir le curseur
 <div class="templateOverlay">
     <!-- Lien vers un autre template -->
     <div id="interieurSalleTrone" class="clickZone" style="width: 12%;height: 21%;margin-left: 38%;margin-top: 27%;">
-        
     </div><div id="conversationThord" class="clickZone" style="width: 12%;height: 40%;margin-left: 10%;margin-top: 29%;"></div>
     <div id="prisonTemple" class="clickZone" style="width:6%;height: 10%;margin-left: 88%;margin-top: 33%;"></div>
     
     <!-- interaction du template -->
-    <div class="indice dialog arrondi hide" id="infoChasseur" style="margin-top:34%;margin-left:10%">Il s'agit du stand du chasseur, il ne semble pas être là...</div>
-    <div class="indice dialog arrondi hide" id="infoPecheur" style="margin-top:34%;margin-left:81%">On dirait l'échoppe du pécheur, personne ne répond.</div>
-    
+    <div id="corbeauMaisonChef" class="clickZone" style="width: 3%;height: 7%;margin-left: 16%;margin-top: 14%;"></div>
+    <div id="runeMaisonChef" class="clickZone" style="width:6%;height: 22%;margin-left: 45%;margin-top: 45%;"></div>
+    <!-- indices -->
+    <div class="indice dialog arrondi hide" id="infoRuneMaisonChef" style="margin-top: 45%;margin-left: 51%;">On dirait des runes anciennes, je sais pas ce qu'elles représentent...</div>    
     
 </div>
 
@@ -43,7 +43,25 @@ ajouter la classe .clickZone pour avoir le curseur
     
     // Conversation avec Thord
     EventListenersManager.registerEvent("click", "#conversationThord", function() {
-        TemplateManager.LoadTemplateHMTL("templates/zones/Z1/C13/c13-thordgardien1");
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z1/C13/c13-thordgardien1.html");
+    });
+    
+    // intérieur de la prison
+    EventListenersManager.registerEvent("click", "#conversationThord", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z1/I6/i6-prison.html");
+    });
+    
+     // Clique sur le corbeau
+    EventListenersManager.registerEvent("click", "#corbeauMaisonChef", function() {
+       AudioManager.loadAndPlaySound("sounds/crow_alone.mp3");
+    });
+    
+    // Clique sur les runes
+    EventListenersManager.registerEvent("click", "#runeMaisonChef", function() {
+        // Indique que les runes lui sont inconnues
+        TemplateManager.showIndice("#infoRuneMaisonChef");
+        // L'utilisateur connait les runes de la zone 1
+        ComicManager.userKnow("z1-runes");
     });
     
     // Jouer un son

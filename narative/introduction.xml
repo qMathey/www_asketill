@@ -46,9 +46,6 @@
 	
         <case>
 		<background>narative/introduction/p7-web.jpg</background>
-		<audios>
-			<audio>sounds/ventleger.mp3</audio>
-		</audios>
 	</case>
     
 	    <case>

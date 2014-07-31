@@ -4,15 +4,18 @@
 <div class="templateOverlay">
     <a href="#" id="startAdventure" class="dialog grow" title="Débuter l'aventure"><img src="templates/homepage/logoasketill.png"/></a>
 </div>
-<script type="text/javascript" src="lib/snowstormJS/snowstorm-min.js"></script>
 <script type="text/javascript">
     
     // paramètre pour snowstorm fonctionne correctement
     $("#html_wrapper").css("z-index", "0");
     $("#startAdventure").css("z-index", "10");
     $("#webgl_wrapper").css("z-index", "-1");
+	
+	// si l'effet neige est présent, on met plus de flocons
+	if(snowStorm != undefined) {
+		snowStorm.flakesMaxActive = 96; 
+	}
     
-    snowStorm.flakesMaxActive = 96; 
     
     
 </script>

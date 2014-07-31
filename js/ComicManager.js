@@ -158,21 +158,21 @@ ComicManager.introDisplayCase = function ( index ) {
 	var backgroundImage = $requireCase.find("background").text();
 	var $arrayDialog = $requireCase.find("dialog");
 	
-	// place les éléments à afficher dans le template
 	
-	// faot disparaître les contenus précédents
+	// fait disparaître les contenus précédents
 	ComicManager.$introWrapper.find("#introImages").fadeOut(function(){
                 
-                var delayIntro = 0;
-            
-                if (index == 0) {
-                    var delayIntro = 5000;
-                }
-                
-                var $bgImage = $('<img src="'+backgroundImage+'" class="pictBG" style="display:none"/>').load(function() {
-                   $(this).delay(delayIntro).fadeIn(); 
-                });
-            
+		var delayIntro = 0;
+	
+		if (index == 0) {
+			var delayIntro = 5000;
+		}
+		
+		// place les éléments à afficher dans le template
+		var $bgImage = $('<img src="'+backgroundImage+'" class="pictBG" style="display:none"/>').load(function() {
+		   $(this).delay(delayIntro).fadeIn(); 
+		});
+	
 		// insert les nouveaux contenus
 		$(this).html($bgImage);
 		
@@ -194,31 +194,50 @@ ComicManager.introDisplayCase = function ( index ) {
 			ComicManager.$introWrapper.find("#introText").append($dialog);
 			
 		});
-				// rend muet tous les sons
-				AudioManager.muteAllSounds();
-				// supprime les sons déclarés
-                $("#introAudio").html("");
-                
-                // si la balise audio est spécifiée, alors on ajoute les sons à la page
-                if($requireCase.find("audios").length > 0){
-                    // pour chaque élément audio spécifié, on ajoute une balise audio
-                    $requireCase.find("audios").find("audio").each(function() {
-                        
-                        var $audio = $("<audio>");
-                            $audio.attr("autoplay", "autoplay");
-                        var $source = $("<source>");
-                            $source.attr("src", $(this).text())
-                                   .attr("type", "audio/mpeg");
-                           // insère la source dans la balise audio
-                           $audio.append($source);
-                           // insère l'audio dans la page
-                           $("#introAudio").append($audio);
-                    });
-                }// if
 		
-                // affiche
+		ComicManager.addIntroSounds($requireCase);
+		
+        // affiche
 		$(this).delay(delayIntro).fadeIn();
 	});
+}
+
+/**
+ * Ajoute les sons de l'introduction 
+ * @param xml contenant les balises audio avec les urls des sons
+ */
+ComicManager.addIntroSounds = function ( $xml ) {
+
+	// rend muet tous les sons
+	AudioManager.muteAllSounds();
+		
+	setTimeout(function() {
+
+
+		// si la balise audio est spécifiée, alors on ajoute les sons à la page
+		if($xml.find("audios").length > 0){
+			// pour chaque élément audio spécifié, on ajoute une balise audio
+			$xml.find("audios").find("audio").each(function() {
+				
+				var $audio = $("<audio>");
+					//$audio.attr("autoplay", "autoplay");
+				var $source = $("<source>");
+					$source.attr("src", $(this).text())
+						   .attr("type", "audio/mpeg");
+				   // insère la source dans la balise audio
+				   $audio.append($source);
+				   
+				   // insère l'audio dans la page
+				   $("#introAudio").append($audio);
+				
+			});
+			
+			// joue les sons insérés
+			$("#introAudio").find("audio").each(function(){
+				$(this)[0].play();
+			});
+		}// if
+	}, 400);
 }
 /**
  * Affiche la case suivante de l'intro

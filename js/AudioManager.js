@@ -92,7 +92,15 @@ AudioManager.playSound = function ( buffer ) {
  * Rend muet tous les sons utilisé à travers les balises audio de la page
  */
 AudioManager.muteAllSounds = function() {
+	console.log("mute all songs!");
+	// si une source sonore est définie, on la stoppe
+	if(AudioManager.source != undefined){
+		AudioManager.source.stop();
+	}
+	
+	// si des balises html5 audio sont présentes, on les rend muettes
 	$("audio").each(function() { 
 		$(this).get()[0].muted = true; 
 	});
+	
 }

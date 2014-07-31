@@ -143,12 +143,16 @@ TemplateManager.disposeTemplate = function() {
     // template de conversation
     try {
         
-        
         if( $(".convesationTextWrapper").length > 0 ){
             
             var conversationHeight = $(".convesationTextWrapper").height();
             
-            var marginTop = $(window).height() /2 - conversationHeight / 2;
+            var marginTop = $("#html_wrapper").height() /2 - conversationHeight / 2;
+			
+			// si pour une raison, marginTop < 0 alors, on fixe à 0
+			if( marginTop < 0 ) {
+				marginTop = 0;
+			}
             
             // applique margin top
              $(".convesationTextWrapper").css("margin-top", marginTop+"px");

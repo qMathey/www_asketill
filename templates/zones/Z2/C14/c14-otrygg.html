@@ -1,0 +1,29 @@
+<div class="conversationWrapper">
+    <div class="convesationTextWrapper">
+
+        <div class="clear"></div>
+    </div>
+    <!-- image de fond -->
+    <div class="conversationBG">
+        <img src="templates/zones/Z2/C14/c14-otrygg-web.jpg" class="pictBG"/>
+    </div>
+
+    <div class="clear"></div>
+</div>
+<!-- ambiance -->
+<audio loop autoplay>
+  <source src="sounds/crows_group.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    // BOUTON DE RETOUR
+    TemplateManager.addButtonRetour("templates/zones/Z2/z2-foretancienne.html");
+    
+    // Charge la conversation 
+    ComicManager.loadConversation("narative/otrygg.xml");
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

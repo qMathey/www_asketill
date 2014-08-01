@@ -21,13 +21,18 @@ ajouter la classe .clickZone pour avoir le curseur
 -->
 <div class="templateOverlay">
     <!-- Lien vers un autre template -->
-    <div id="interieurForgeron" class="clickZone" style="width:11%;height:18%;margin-left:47%;margin-top:30%;"></div>
+    <div id="interieurForgeron" class="clickZone" style="width: 4%;height: 15%;margin-left: 53%;margin-top:30%;"></div>
     
     <!-- interaction du template -->
-    <div class="indice dialog arrondi hide" id="infoChasseur" style="margin-top:34%;margin-left:10%">Il s'agit du stand du chasseur, il ne semble pas être là...</div>
-    <div class="indice dialog arrondi hide" id="infoPecheur" style="margin-top:34%;margin-left:81%">On dirait l'échoppe du pécheur, personne ne répond.</div>
-    <div id="tenteChasseur" class="clickZone" style="width:15%;height:34%;margin-left:5%;margin-top:28%;"></div>
-    <div id="tentePecheur" class="clickZone" style="width:6%;height:15%;margin-left:92%;margin-top:30%;"></div>
+    <div id="marcheEntreeForgeron" class="clickZone" style="width: 6%;height: 11%;margin-left: 37%;margin-top: 30%;"></div>
+    <div id="marcheTenteChasseur" class="clickZone" style="width:15%;height: 29%;margin-left:5%;margin-top:28%;"></div>
+    <div id="marcheMaisonPecheur" class="clickZone" style="width:6%;height:15%;margin-left:92%;margin-top:30%;"></div>
+    <div id="marcheOrnement" class="clickZone" style="width: 5%;height: 12%;margin-left: 8%;margin-top: 18%;"></div>
+    <div id="marcheCorbeau" class="clickZone" style="width:2%;height: 3%;margin-left: 18%;margin-top: 4%;"></div>
+    <div class="indice dialog arrondi hide" id="infoMarcheTenteChasseur" style="margin-top:34%;margin-left:10%">Il s'agit du stand du chasseur, il ne semble pas être là...</div>
+    <div class="indice dialog arrondi hide" id="infoMarcheMaisonPecheur" style="margin-top:34%;margin-left:81%">On dirait l'échoppe du pécheur, personne ne répond.</div>
+    <div class="indice dialog arrondi hide" id="infoMarcheOrnement" style="margin-top: 25%;margin-left: 14%;">Cette décoration, je l'ai certainement déjà vue ailleurs...</div>
+    <div class="indice dialog arrondi hide" id="infoMarcheEntreeForgeron" style="margin-top: 31%;margin-left: 22%;">Je ne peux pas entrer chez le forgeron.</div>
     
 </div>
 
@@ -40,15 +45,32 @@ ajouter la classe .clickZone pour avoir le curseur
     });
     
     // Stand du chasseur
-    EventListenersManager.registerEvent("click", "#tenteChasseur", function() {
+    EventListenersManager.registerEvent("click", "#marcheTenteChasseur", function() {
         // Indique que le chasseur n'est pas là
-        TemplateManager.showIndice("#infoChasseur");
+        TemplateManager.showIndice("#infoMarcheTenteChasseur");
+    });
+    
+    // Ornement du stand chasseur
+    EventListenersManager.registerEvent("click", "#marcheOrnement", function() {
+        // Indique que l'ornement ne lui est pas inconnu
+        TemplateManager.showIndice("#infoMarcheOrnement");
     });
     
     // stand Pécheur
-    EventListenersManager.registerEvent("click", "#tentePecheur", function() {
+    EventListenersManager.registerEvent("click", "#marcheMaisonPecheur", function() {
         // Indique que le pécheur n'est pas là
-        TemplateManager.showIndice("#infoPecheur");
+        TemplateManager.showIndice("#infoMarcheMaisonPecheur");
+    });
+    
+    // Entrée chez le forgeron
+    EventListenersManager.registerEvent("click", "#marcheEntreeForgeron", function() {
+        // Indique qu'on ne peut entrer chez le forgeron
+        TemplateManager.showIndice("#infoMarcheEntreeForgeron");
+    });
+    
+    // Clique sur le corbeau
+    EventListenersManager.registerEvent("click", "#marcheCorbeau", function() {
+       AudioManager.loadAndPlaySound("sounds/crow_alone.mp3");
     });
     
     // Jouer un son

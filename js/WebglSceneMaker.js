@@ -390,33 +390,44 @@ WebglSceneMaker.loadDeadTrees = function() {
 			},
 			2 : {
 				"position" :  new THREE.Vector3(-13.43, 33.09, -64.82 ),
-				"rotation" :  new THREE.Vector3(0, -0.66, 0)
+				"rotation" :  new THREE.Vector3(0, -0.66, 0),
+                                "zone" : "chaudron"
 			},
 			3 : {
 				"position" :  new THREE.Vector3(-27.34, 33.09, -69.48),
-				"rotation" :  new THREE.Vector3(3.14, 0.58, 3,14)
+				"rotation" :  new THREE.Vector3(3.14, 0.58, 3,14),
+                                "zone" : "chaudron"
 			},
 			4 : {
 				"position" :  new THREE.Vector3(-36.72, 31.36, -74.83),
-				"rotation" :  new THREE.Vector3(0, -0.36, 0)
+				"rotation" :  new THREE.Vector3(0, -0.36, 0),
+                                "zone" : "chaudron"
 			},
 			5 : {
 				"position" :  new THREE.Vector3(-37.67, 33.22, -86.25),
-				"rotation" :  new THREE.Vector3(3.14, 1.16, 3.14)
+				"rotation" :  new THREE.Vector3(3.14, 1.16, 3.14),
+                                "zone" : "chaudron"
 			},
 			6 : {
 				"position" :  new THREE.Vector3(-25.08, 32.85, -96.83),
-				"rotation" :  new THREE.Vector3(0, 0.62, 0)
+				"rotation" :  new THREE.Vector3(0, 0.62, 0),
+                                "zone" : "chaudron"
 			}
 		};
 	
-		// Ajoute les maisons
+		// Ajoute les arbres morts
 		for( var key in dataPos){
-			// meshHouse1_1
-			var mesh = new THREE.Mesh( geometry, WebglSceneMaker.mat_deadTree );
+			// arbre mort
+			var mesh = new THREE.Mesh( geometry, WebglSceneMaker.mat_deadTree.clone() );
 				mesh.scale.set(4,4,4);
 				mesh.position = dataPos[key]["position"];
 				mesh.rotation.set(dataPos[key]["rotation"].x, dataPos[key]["rotation"].y, dataPos[key]["rotation"].z) ;
+                                
+                        // si une zone est spécifiée, alors on l'applique     
+                        if(dataPos[key]["zone"] != undefined){
+                            mesh.zone = dataPos[key]["zone"]
+                        }
+                        
 			//// ajoute la mesh à la scène
 			WebglSceneManager.scene.add(mesh);
 		}

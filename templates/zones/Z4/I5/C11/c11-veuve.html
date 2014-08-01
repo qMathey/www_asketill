@@ -1,8 +1,8 @@
 <div class="conversationWrapper">
     <div class="personnageTitle dialog info arrondi">
-        <h3>Thord Alfarinn</h3>
-        <p class="role">Gardien des runes</p>
-        <p class="salutation conversation">... Rmpf ? Que voulez-vous profane ?</p>
+        <h3>Inga Surson</h3>
+        <p class="role">Veuve</p>
+        <p class="salutation conversation"> *Snif* Comment osez-vous ?! Vous avez tué mon mari !</p>
     </div>
     <div class="convesationTextWrapper">
 
@@ -10,24 +10,24 @@
     </div>
     <!-- image de fond -->
     <div class="conversationBG">
-        <img src="templates/zones/Z1/C13/c13-thordgardien1-web.jpg" class="pictBG"/>
+        <img src="templates/zones/Z4/I5/C11/c11-veuve-web.jpg" class="pictBG"/>
     </div>
 
     <div class="clear"></div>
 </div>
 <!-- ambiance -->
 <audio loop autoplay>
-  <source src="sounds/ventleger.mp3" type="audio/mpeg">
+  <source src="sounds/taverne_mod.mp3" type="audio/mpeg">
 </audio>
 
 <!-- Evenements sur le template -->
 <script type="text/javascript">
     
     // BOUTON DE RETOUR
-    TemplateManager.addButtonRetour("templates/zones/Z1/z1-maisonchef.html");
+    TemplateManager.addButtonRetour("templates/zones/Z4/I5/i5-maisonbarde.html");
     
     // Charge la conversation 
-    ComicManager.loadConversation("narative/thord.xml");
+    ComicManager.loadConversation("narative/inga.xml");
     
     // Jouer un son
     //AudioManager.loadAndPlaySound("URL");

@@ -1,0 +1,83 @@
+<!-- image de fond -->
+<div class="wrapper_pictBG">
+    <img src="templates/zones/Z4/I5/i5-maisonbarde-web.jpg" class="pictBG" />
+</div>
+<!-- 
+
+Surcouche interaction
+
+ajouter la classe .dialog pour l'effet de texte BD
+
+ajouter la classe .hide pour masquer l'élément
+
+ajouter la classe .dev pour avoir un fond rouge transparent
+
+ajouter la classe .clickZone pour avoir le curseur
+
+-->
+<div class="templateOverlay">
+    <!-- Lien vers un autre template -->
+    <div id="conversationInga" class="clickZone" style="width: 11%;height: 52%;margin-left: 22%;margin-top: 18%;"></div>
+    <div id="conversationGrans" class="clickZone" style="width: 9%;height: 52%;margin-left: 47%;margin-top: 7%;"></div>
+    
+    <!-- interaction du template -->
+    <div id="maisonBardeInstrument" class="clickZone" style="width: 5%;height: 20%;margin-left: 84%;margin-top: 45%;"></div>
+    <div id="maisonBardeOrnement" class="clickZone" style="width: 7%;height: 17%;margin-left: 7%;margin-top: 1%;"></div>
+    <div id="maisonBardeFeu" class="clickZone" style="width: 7%;height: 6%;margin-left: 87%;margin-top: 40.5%;"></div>
+    
+    <!-- indices -->
+    <div class="indice dialog arrondi hide" id="infoMaisonBardeInstrument" style="margin-top: 51%;margin-left: 68%;">Ce luthe cassé... Il me dit quelque chose...</div>    
+    <div class="indice dialog arrondi hide" id="infoMaisonBardeOrnement" style="margin-left: 14%;margin-top: 5%;">Il me semble avoir déjà vu ce genre d'ornement...</div>
+    <div class="indice dialog arrondi hide" id="infoMaisonBardeFeu" style="margin-left: 71%;margin-top: 39%;">Quelqu'un a jeté ces papiers sur le feu.</div>
+
+</div>
+
+<!-- ambiance -->
+<audio loop autoplay>
+  <source src="sounds/fireplace.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    // Conversation avec Refill
+    EventListenersManager.registerEvent("click", "#conversationInga", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z4/I5/C11/c11-veuve.html");
+    });
+    // Conversation avec Hansa
+    EventListenersManager.registerEvent("click", "#conversationGrans", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z4/I5/C12/c12-vieillepeau.html");
+    });
+    
+    // indice instrument de musique
+    EventListenersManager.registerEvent("click", "#maisonBardeInstrument", function() {
+        // Indique que l'instrument est cassé
+        TemplateManager.showIndice("#infoMaisonBardeInstrument");        
+        // L'utilisateur connait l'instrument de l'intérieur 5
+        ComicManager.userKnow("i5-instrument");
+    });
+    
+    // indice papier qui brulent dans le feu
+    EventListenersManager.registerEvent("click", "#maisonBardeFeu", function() {
+        // Indique que quelqu'un brule du papier
+        TemplateManager.showIndice("#infoMaisonBardeFeu");        
+        // L'utilisateur connait les papiers de l'intérieur 5
+        ComicManager.userKnow("i5-papier");
+    });
+    
+    // indice ornement
+    EventListenersManager.registerEvent("click", "#maisonBardeOrnement", function() {
+        // Indique qu'il a déjà vu l'ornment
+        TemplateManager.showIndice("#infoMaisonBardeOrnement");
+        
+        // L'utilisateur connait l'ornement de l'intérieur 5
+        ComicManager.userKnow("i5-ornement");
+    });
+    
+    // ajout du bouton retour
+    TemplateManager.addButtonRetour("templates/zones/Z4/z4-placepuits.html");
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

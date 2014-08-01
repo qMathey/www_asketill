@@ -50,6 +50,10 @@ ajouter la classe .clickZone pour avoir le curseur
         TemplateManager.LoadTemplateHMTL("templates/zones/Z4/I3/i3-taverne.html");
     });
     
+    // entrer dans la maison du barde
+    EventListenersManager.registerEvent("click", "#interieurMaisonBarde", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z4/I5/i5-maisonbarde.html");
+    });
      // Clique sur le corbeau
     EventListenersManager.registerEvent("click", "#puitCorbeau", function() {
        AudioManager.loadAndPlaySound("sounds/crow_alone.mp3");
@@ -72,6 +76,8 @@ ajouter la classe .clickZone pour avoir le curseur
     EventListenersManager.registerEvent("click", "#puitEnseigne", function() {
         // Indique le logo original
         TemplateManager.showIndice("#infoPuitEnseigne");
+        // L'utilisateur connait l'enseigne de la zone 4
+        ComicManager.userKnow("z4-enseigne");
     });
     // Jouer un son
     //AudioManager.loadAndPlaySound("URL");

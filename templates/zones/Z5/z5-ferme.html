@@ -1,0 +1,77 @@
+<!-- image de fond -->
+<div class="wrapper_pictBG">
+    <img src="templates/zones/Z5/z5-ferme-web.jpg" class="pictBG" />
+</div>
+<!-- 
+
+Surcouche interaction
+
+ajouter la classe .dialog pour l'effet de texte BD
+
+ajouter la classe .hide pour masquer l'élément
+
+ajouter la classe .dev pour avoir un fond rouge transparent
+
+ajouter la classe .clickZone pour avoir le curseur
+
+-->
+<div class="templateOverlay">
+    <!-- Lien vers un autre template -->
+    <div id="conversationSkamel" class="clickZone" style="width: 5%;height: 10%;margin-left: 43%;margin-top: 52%;"></div>
+    <div id="interieurGrange" class="clickZone" style="width: 7%;height: 7%;margin-left: 33.5%;margin-top: 43.5%;"></div>
+    
+    <!-- interaction du template -->
+    <div id="fermeEntree" class="clickZone" style="width: 3%;height: 6%;margin-left: 51%;margin-top: 45.5%;"></div>
+    <div id="fermeCorbeau" class="clickZone" style="width: 2%;height: 3%;margin-left: 80.5%;margin-top: 25%;"></div>
+    <div id="fermeMouton" class="clickZone" style="width: 3.5%;height: 3%;margin-left: 75%;margin-top: 44.5%;"></div>
+    <div id="fermeChien" class="clickZone" style="width: 5.5%;height: 5%;margin-left: 17%;margin-top: 56.5%;"></div>
+    
+    <!-- indices -->
+    <div class="indice dialog arrondi hide" id="infoFermeEntree" style="margin-left: 55%;margin-top: 45%;">Je ne peux pas entrer chez le fermier.</div>
+</div>
+
+<!-- ambiance -->
+<audio loop autoplay>
+  <source src="sounds/market_mod.mp3" type="audio/mpeg">
+</audio>
+<audio loop autoplay>
+  <source src="sounds/fermetroupeau.mp3" type="audio/mpeg">
+</audio>
+<!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    // Conversation avec Skamel
+    EventListenersManager.registerEvent("click", "#conversationSkamel", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z5/C17/c17-fermier.html");
+    });
+    
+    // entrer dans la grange
+    EventListenersManager.registerEvent("click", "#interieurGrange", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z5/I2/i2-grange.html");
+    });
+    
+    // Clique sur l'entrée de la ferme
+    EventListenersManager.registerEvent("click", "#fermeEntree", function() {
+        // Indique la ferme n'est pas accessible
+        TemplateManager.showIndice("#infoFermeEntree");
+    });
+    
+    // Clique sur le corbeau
+    EventListenersManager.registerEvent("click", "#fermeCorbeau", function() {
+       AudioManager.loadAndPlaySound("sounds/crow_alone.mp3");
+    });
+    
+    // Clique sur le mouton caché
+    EventListenersManager.registerEvent("click", "#fermeMouton", function() {
+       AudioManager.loadAndPlaySound("sounds/chevre_quentin.mp3");
+    });
+    
+    // Clique sur le chien
+    EventListenersManager.registerEvent("click", "#fermeChien", function() {
+        console.log("chien court sound!");
+       AudioManager.loadAndPlaySound("sounds/chienCourt.mp3");
+    });
+   
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

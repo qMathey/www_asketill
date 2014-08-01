@@ -65,6 +65,13 @@ TemplateManager.LoadTemplateZ4 = function() {
 }
 
 /**
+ * Appelle le template de la ferme
+ * @returns {undefined}
+ */
+TemplateManager.LoadTemplateZ5 = function() {
+    TemplateManager.LoadTemplateHMTL("templates/zones/Z5/z5-ferme.html");
+}
+/**
  * Appelle le template de la forge
  */
 TemplateManager.LoadTemplateZ6 = function() {

@@ -258,6 +258,7 @@ WebglSceneMaker.loadVikingFarm = function() {
 			mesh.scale.set(4,4,4);
 			mesh.position.set(39.47, 6.93, 35.66);
 			mesh.rotation.set(0, -1.46, 0) ;
+                        mesh.zone = "ferme";
 			
 		// ajoute la mesh à la scène
 		WebglSceneManager.scene.add(mesh);

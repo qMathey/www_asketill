@@ -9,8 +9,8 @@
  
 // Fonts
 @import url(http://fonts.googleapis.com/css?family=Permanent+Marker); // font-family: 'Permanent Marker', cursive;
-@import url(http://fonts.googleapis.com/css?family=Lato);
-
+@import url(http://fonts.googleapis.com/css?family=Lato); // font-family: 'Permanent Marker', cursive;
+ 
 // Main styles
 body {
 	
@@ -103,7 +103,22 @@ body {
                     }
                     .conversationWrapper {
                         background-color:#FAFAFA;
-                       
+
+                        .personnageTitle {
+                            margin-top:30px;
+                            width: 30%;
+                            position: absolute;
+                            margin-left: 7%;
+                            text-align: center;
+                            h3 {    
+                                margin-top:0px;
+                                font-size: 40px;
+                                margin-bottom:0px;
+                            }
+                        }
+                       .salutation {
+                            margin-top:11px;
+                       }
                     }
                     .conversationBG {
                         width: 50%;
@@ -147,7 +162,7 @@ body {
                     }
                     .btn_retour_map, .btn_retour_template, .btn_newGame, .btn_facebook {
                         bottom:50px;
-                        left:30px;
+                        left:40px;
                         z-index:100;
                         display:block;
                         position:absolute;
@@ -162,16 +177,16 @@ body {
                     .btn_retour_template {
                         background-image:url(images/btn_retour_template.png);
                         background-position:center center;
-                        left:125px;
+                        left:135px;
                         
                     }
                     .btn_newGame {
                         background-image:url(images/btn_retour.png);
-                        left:30px;
+                        left:40px;
                     }
                     .btn_facebook {
                         background-image:url(images/fb_bouton.png);
-                        left:125px;
+                        left:35px;
                     }
                     audio {
                         position:absolute;

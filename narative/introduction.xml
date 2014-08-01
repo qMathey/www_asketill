@@ -32,8 +32,10 @@
 		<dialogs>
 			<dialog>
 				<author></author>
-				<text>Le mystérieux corbeau noir au regard de sang s'envole vers la place du village où des quelques personnes sont réunies autour d'une silouhette évanouie dans la neige...</text>
+				<text>Le mystérieux corbeau noir au regard de sang s'envole vers la place du village où quelques personnes sont réunies autour d'une silouhette évanouie dans la neige...</text>
 			<audios>
+			<audio>sounds/crow_alone.mp3</audio>	
+			<audio>sounds/crow_alone.mp3</audio>	
 			<audio>sounds/crow_alone.mp3</audio>		
 			</audios>
 			</dialog>

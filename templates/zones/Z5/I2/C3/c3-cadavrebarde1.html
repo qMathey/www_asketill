@@ -1,0 +1,105 @@
+<!-- image de fond -->
+<div class="wrapper_pictBG">
+    <img src="templates/zones/Z5/I2/C3/c3-cadavrebarde1-web.jpg" class="pictBG" />
+</div>
+<!-- 
+
+Surcouche interaction
+
+ajouter la classe .dialog pour l'effet de texte BD
+
+ajouter la classe .hide pour masquer l'élément
+
+ajouter la classe .dev pour avoir un fond rouge transparent
+
+ajouter la classe .clickZone pour avoir le curseur
+
+-->
+<div class="templateOverlay">
+    <!-- Lien vers un autre template -->
+    
+    <!-- interaction du template -->
+    <div id="cadavreVisageBlessure" class="clickZone" style="width: 2%;height: 6%;margin-left: 68%;margin-top: 11%;"></div>
+    <div id="cadavreMain" class="clickZone" style="width: 3%;height: 10%;margin-left: 79.5%;margin-top: 38%;"></div>
+    <div id="cadavreBlessureAbdomen" class="clickZone" style="width: 2%;height: 3%;margin-left: 72.5%;margin-top: 26%;"></div>
+    <div id="cadavreNoeud" class="clickZone" style="width: 2%;height: 12%;margin-left: 75%;margin-top: 5%;"></div>
+    <div id="cadavreLangue" class="clickZone" style="width: 1.5%;height: 3%;margin-left: 70.5%;margin-top: 13.5%;"></div>
+    
+    <!-- indices -->
+    <div class="indice dialog arrondi hide" id="infoCadavreVisageBlessure" style="margin-top: 16%;margin-left: 54%;">Il est bien ammochés.</div>    
+    <div class="indice dialog arrondi hide" id="infoCadavreMain" style="margin-left: 63%;margin-top: 39%;">Ces mains montrent bien qu'il s'est battu.</div>
+    <div class="indice dialog arrondi hide" id="infoCadavreBlessureAbdomen" style="margin-left: 58%;margin-top: 28%;">Cela n'a l'air pas très profond, cette blessure a du être infligée avec une petite lame tranchante.</div>
+    <div class="indice dialog arrondi hide" id="infoCadavreNoeud" style="margin-left: 78%;margin-top: 7%;">Je n'ai jamais vu un noeud pareil.</div>
+    <div class="indice dialog arrondi hide" id="infoCadavreLangue" style="margin-left: 72%;margin-top: 15%;">Sa langue est étrangement verte!</div>
+
+</div>
+
+<!-- ambiance -->
+<audio loop autoplay>
+  <source src="sounds/market_mod.mp3" type="audio/mpeg">
+</audio>
+<audio loop autoplay>
+  <source src="sounds/fermetroupeau.mp3" type="audio/mpeg">
+</audio>
+<audio loop autoplay>
+  <source src="sounds/ferme.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    // met le volume moins fort (intérieur
+    $("audio").each(function() {
+        $(this).get()[0].volume = 0.5;
+    });
+    
+    // indice visage
+    EventListenersManager.registerEvent("click", "#cadavreVisageBlessure", function() {
+        // Indique que le visage est bien amoché
+        TemplateManager.showIndice("#infoCadavreVisageBlessure");        
+        // L'utilisateur connait les blessures du visage conversation 3
+        ComicManager.userKnow("c3-visage");
+    });
+    
+    // indice main
+    EventListenersManager.registerEvent("click", "#cadavreMain", function() {
+        // Indique que la main porte des traces de lutte
+        TemplateManager.showIndice("#infoCadavreMain");        
+        // L'utilisateur connait les blessures à la main de la conversation 3
+        ComicManager.userKnow("c3-main");
+    });
+    
+    // indice abdomen
+    EventListenersManager.registerEvent("click", "#cadavreBlessureAbdomen", function() {
+        // Indique la blessure à l'abdomen
+        TemplateManager.showIndice("#infoCadavreBlessureAbdomen");
+        
+        // L'utilisateur connait la blessure à l'abdomen de la conversation 3
+        ComicManager.userKnow("c3-abdomen");
+    });
+    
+    // indice langue
+    EventListenersManager.registerEvent("click", "#cadavreLangue", function() {
+        // Indique que la langue est verte
+        TemplateManager.showIndice("#infoCadavreLangue");
+        
+        // L'utilisateur connait langue du cadavre de la conversation 3
+        ComicManager.userKnow("c3-langue");
+    });
+    
+    // indice noeud
+    EventListenersManager.registerEvent("click", "#cadavreNoeud", function() {
+        // Indique que le noeud est étrange
+        TemplateManager.showIndice("#infoCadavreNoeud");
+        
+        // L'utilisateur connait le noeud de la conversation 3
+        ComicManager.userKnow("c3-noeud");
+    });
+    
+    // ajout du bouton retour
+    TemplateManager.addButtonRetour("templates/zones/Z5/I2/i2-grange.html");
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

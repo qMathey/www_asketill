@@ -1,0 +1,89 @@
+<!-- image de fond -->
+<div class="wrapper_pictBG">
+    <img src="templates/zones/Z5/I2/i2-grange-web.jpg" class="pictBG" />
+</div>
+<!-- 
+
+Surcouche interaction
+
+ajouter la classe .dialog pour l'effet de texte BD
+
+ajouter la classe .hide pour masquer l'élément
+
+ajouter la classe .dev pour avoir un fond rouge transparent
+
+ajouter la classe .clickZone pour avoir le curseur
+
+-->
+<div class="templateOverlay">
+    <!-- Lien vers un autre template -->
+    <div id="cadavreGriss" class="clickZone" style="width: 5%;height: 24%;margin-left: 60.5%;margin-top: 17%;"></div>
+    
+    <!-- interaction du template -->
+    <div id="grangeSang" class="clickZone" style="width: 15%;height: 6%;margin-left: 58%;margin-top: 52%;"></div>
+    <div id="grangePoeme" class="clickZone" style="width: 3%;height: 4%;margin-left: 41%;margin-top: 44.5%;"></div>
+    <div id="grangeBalais" class="clickZone" style="width: 15%;height: 3%;margin-left: 40%;margin-top: 54%;"></div>
+    
+    <!-- indices -->
+    <div class="indice dialog arrondi hide" id="infoGrangeSang" style="margin-top: 51%;margin-left: 68%;">Il a perdu beaucoup de sang, le foin en a absorbé une grosse partie.</div>    
+    <div class="indice dialog arrondi hide" id="infoGrangePoeme" style="margin-left: 45%;margin-top: 46%;">C'est un papier chiffoné. On dirait des adieux ou un poème.</div>
+    <div class="indice dialog arrondi hide" id="infoGrangeBalais" style="margin-left: 41%;margin-top: 57%;">Ce balais brisé a surement été utilisé pour le battre.</div>
+
+</div>
+
+<!-- ambiance -->
+<audio loop autoplay>
+  <source src="sounds/market_mod.mp3" type="audio/mpeg">
+</audio>
+<audio loop autoplay>
+  <source src="sounds/fermetroupeau.mp3" type="audio/mpeg">
+</audio>
+<audio loop autoplay>
+  <source src="sounds/ferme.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    // met le volume moins fort (intérieur
+    $("audio").each(function() {
+        $(this).get()[0].volume = 0.5;
+    });
+    
+    // Voir le cadavre de Griss
+    EventListenersManager.registerEvent("click", "#cadavreGriss", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z5/I2/C3/c3-cadavrebarde1.html");
+    });
+    
+    // indice poème 
+    EventListenersManager.registerEvent("click", "#grangePoeme", function() {
+        // Indique que ce papier chiffoné est un poème
+        TemplateManager.showIndice("#infoGrangePoeme");        
+        // L'utilisateur connait l'instrument de l'intérieur 2
+        ComicManager.userKnow("i2-poeme");
+    });
+    
+    // indice balais cassé
+    EventListenersManager.registerEvent("click", "#grangeBalais", function() {
+        // Indique que le balais a servis pour battre Griss
+        TemplateManager.showIndice("#infoGrangeBalais");        
+        // L'utilisateur connait les papiers de l'intérieur 2
+        ComicManager.userKnow("i2-balais");
+    });
+    
+    // indice sang
+    EventListenersManager.registerEvent("click", "#grangeSang", function() {
+        // Indique qu'il y a beaucoup de sang
+        TemplateManager.showIndice("#infoGrangeSang");
+        
+        // L'utilisateur connait l'ornement de l'intérieur 2
+        ComicManager.userKnow("i2-sang");
+    });
+    
+    // ajout du bouton retour
+    TemplateManager.addButtonRetour("templates/zones/Z5/z5-ferme.html");
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

@@ -71,6 +71,7 @@ TemplateManager.LoadTemplateZ4 = function() {
 TemplateManager.LoadTemplateZ5 = function() {
     TemplateManager.LoadTemplateHMTL("templates/zones/Z5/z5-ferme.html");
 }
+
 /**
  * Appelle le template de la forge
  */
@@ -78,6 +79,12 @@ TemplateManager.LoadTemplateZ6 = function() {
     TemplateManager.LoadTemplateHMTL("templates/zones/Z6/z6_marche.html");
 }
 
+/**
+ * Appelle le template du port
+ */
+TemplateManager.LoadTemplateZ7 = function() {
+    TemplateManager.LoadTemplateHMTL("templates/zones/Z7/z7-port.html");
+}
 
 
 

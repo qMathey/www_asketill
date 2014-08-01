@@ -203,7 +203,7 @@ WebglSceneMaker.loadVikingHarbor = function() {
 			mesh.scale.set(4,4,4);
 			mesh.position.set(5.26, 6.84, 94.85);
 			mesh.rotation.set(0, 1.50, 0) ;
-			
+			mesh.zone = "port";
 		// ajoute la mesh à la scène
 		WebglSceneManager.scene.add(mesh);
 			

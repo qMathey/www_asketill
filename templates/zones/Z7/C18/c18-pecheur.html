@@ -1,0 +1,34 @@
+<div class="conversationWrapper">
+    <div class="personnageTitle dialog info arrondi">
+        <h3>Rafli Ragnvald</h3>
+        <p class="role">Pécheur</p>
+        <p class="salutation conversation">Laissez-moi tranquille étranger. Je n'ai que faire de vos histoires.</p>
+    </div>
+    <div class="convesationTextWrapper">
+
+        <div class="clear"></div>
+    </div>
+    <!-- image de fond -->
+    <div class="conversationBG">
+        <img src="templates/zones/Z7/C18/c18-pecheur-web.jpg" class="pictBG"/>
+    </div>
+
+    <div class="clear"></div>
+</div>
+<!-- ambiance -->
+<audio loop autoplay>
+  <source src="sounds/portmouettes.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    // BOUTON DE RETOUR
+    TemplateManager.addButtonRetour("templates/zones/Z7/z7-port.html");
+    
+    // Charge la conversation 
+    ComicManager.loadConversation("narative/rafli.xml");
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

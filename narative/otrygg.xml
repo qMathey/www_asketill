@@ -1,36 +1,50 @@
 <conversation>
     <dialog id="c14_01">
         <question>
-            Question forgeron 1 magna condimentum, eu molestie sem bibendum. Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Vous êtes le sage de ces lieux ? Dîtes moi, comment puis-je faire pour m'innoncenter ?
         </question> 
         <reponse>
-            Reponse forgeron Vestibulum et lacus fringilla, vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. In eget augue commodo, condimentum mauris vel, auctor tellus. Quisque volutpat venenatis cursus. Curabitur elementum sit amet augue eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus rutrum, nibh quis porta aliquet, dolor tortor condimentum libero, et accumsan nisl nisi id nisi. Praesent suscipit ante ut tristique interdum. Vestibulum dapibus in metus at egestas. Praesent auctor sodales tellus, ut facilisis quam commodo id.
+            Seul, tu découvriras la vérité. Tu dois aller voir tous les villageois de cette splendide île et faire apparaître la vérité! Les vrais habitants d'Asketill t'aideront, je me méfierai des colonisateurs!
         </reponse>
     </dialog>
     <dialog id="c14_02">
         <question>
-            Question forgeron 2 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Pourquoi m'avez-vous sauvé face au chef et son fils ?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Il est aisé de vous accusez mais personne ne possède la preuve de vos actes! Gils, le fils du chef, veut votre mort alors qu'il est bien content de voir la belle Inga accessible à ses envies... Vous devriez vous méfier de lui, cette mort ne lui profite que trop.
         </reponse>
     </dialog>
     <dialog id="c14_03">
         <question>
-            Question forgeron 3 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            N'avez-vous pas des visions qui puissent m'orienter ?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Hahaha pauvre fou ! ça ne fonctionne pas ainsi. Mes visions n'apparaîssent pas quand je le désirs mais quand Freyr le décide! Il peut s'agire du passé, du présent comme du futur ! Une chose est sûr néanmoins... vous n'êtes pas ici par hasard, nous sommes à l'aube d'un grand changement à Asketill!
         </reponse>
     </dialog>
-	<!--
-    <dialog id="cX_04" mustKnow="indice_i4_dague">
+    <dialog id="c14_10" mustKnow="c2_01">
         <question>
-            La dague que vous posséder ressemble étrangement à la dague utilisée pour blesser le barde
+            Le fils du chef dit se méfier de vous, savez-vous pourquoi ?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Gils ? Hahahaha! Ce chiot ne pense qu'à couper des têtes. Il ne sait pas utiliser sa cervelle, tout comme le reste de sa horde. Lui et les siens étaient peut-être un mal nécessaire pour cette île mais cette terre a assez souffert en leur nom. Je pense qu'ils doivent s'en aller... Définitivement. 
         </reponse>
     </dialog>
-	-->
+    <dialog id="c14_11" mustKnow="c3-langue">
+        <question>
+            Le cadavre avait la langue verte et vous semblez vous y connaître en potion et alchimie.
+        </question> 
+        <reponse>
+            Je vois voit venir étranger, je dois vous avouer que j’ai fourni le barde avec une potion… il voulait quelque chose qui le rende « performant »… voyez-vous?… pour faire honneur à sa femme… Mais je doute que ma potion lui ait laissé une telle trace… un poison aurait pu laisser une marque mais alors pourquoi le pendre?  vous devriez vous adresser à quelqu’un qui se connaît en poisons… J’ai entendu qu’un expert de cela traîne à la taverne il a peut-être quelque chose à voir avec ça…
+        </reponse>
+    </dialog>
+    <dialog id="c14_11" mustKnow="z2-statue">
+        <question>
+            Quelle étrange statue se dresse derrière vous... 
+        </question> 
+        <reponse>
+            Je vois voit venir étranger, je dois vous avouer que j’ai fourni le barde avec une potion… il voulait quelque chose qui le rende « performant »… voyez-vous?… pour faire honneur à sa femme… Mais je doute que ma potion lui ait laissé une telle trace… un poison aurait pu laisser une marque mais alors pourquoi le pendre?  vous devriez vous adresser à quelqu’un qui se connaît en poisons… J’ai entendu qu’un expert de cela traîne à la taverne il a peut-être quelque chose à voir avec ça…
+        </reponse>
+    </dialog>
 </conversation>

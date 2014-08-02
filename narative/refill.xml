@@ -15,12 +15,12 @@
             Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
         </reponse>
     </dialog>
-    <dialog id="c4_03">
+    <dialog id="c4_10">
         <question>
-            Question forgeron 3 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+		Vous m'avez l'air soucieux Refill.
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+		Oh que oui, on m'a volé une grande somme d'argent, je soupçonne un de mes employés ou le prisonnier qui ce trouve dans notre prison sur la coline, pouriez-vous m'aidé etranger ?
         </reponse>
     </dialog>
 	<!--

@@ -17,10 +17,10 @@
     </dialog>
     <dialog id="c1_03">
         <question>
-            Question forgeron 3 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Vous semblez fatigué mon seigneur, allez-vous bien ?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Mon heure viendra, tôt ou tard mais il semble que mon départ pour le Valhalla est proche. Mon cadet, Gils prendra ma place et abreuvera notre meute du sang de nos ennemis. <br /><br />
         </reponse>
     </dialog>
 	<!--

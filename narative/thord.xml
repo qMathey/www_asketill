@@ -1,26 +1,26 @@
 <conversation>
     <dialog id="c13_01">
         <question>
-            Question forgeron 1 magna condimentum, eu molestie sem bibendum. Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Profane ? Pourquoi serais-je un profane ? 
         </question> 
         <reponse>
-            Reponse forgeron Vestibulum et lacus fringilla, vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. In eget augue commodo, condimentum mauris vel, auctor tellus. Quisque volutpat venenatis cursus. Curabitur elementum sit amet augue eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus rutrum, nibh quis porta aliquet, dolor tortor condimentum libero, et accumsan nisl nisi id nisi. Praesent suscipit ante ut tristique interdum. Vestibulum dapibus in metus at egestas. Praesent auctor sodales tellus, ut facilisis quam commodo id.
+            Vous êtes suspecté d'un crime odieux ! Si tel est le cas, alors vos actes sont une insulte aux runes sacrées.
         </reponse>
     </dialog>
     <dialog id="c13_02">
         <question>
-            Question forgeron 2 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Pourquoi restez-vous dehors ? Vous semblez semblez geler sur place !
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Mon rôle est de garder les runes sacrées. Il s'agit d'un grand honeur après de longues années de combats aurpsè de mon père, le chef du village. Un jour, peut-être, remplacerai-je mon père pour gouverner le village.
         </reponse>
     </dialog>
     <dialog id="c13_03">
         <question>
-            Question forgeron 3 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Vous semblez brave, peut-être avez vous une idée de qui pourrait m'aider à m'innocenter ?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Vous devriez parlez à Otryy le Sage, il doit être ici, à la place du chaudron près des arbres anciens. Ces visions conseillent mon père depuis notre arrivée. Il pourra peut-être vous aidez bien que je me sois toujours méfier de ce vieux corbeau! Si vous parlez à mon frère, Gils, je vous conseillerai de ne pas l'énerver... Ce jeune mâle à tendance à décapiter sans raison. 
         </reponse>
     </dialog>
     <dialog id="c13_04" mustKnow="z1-runes">
@@ -28,7 +28,7 @@
             Vous savez à quoi correspondent les runes qui sont auprès de vous ?
         </question> 
         <reponse>
-            Ces runes racontent l'histoire de l'île des corbeaux. Cet endroit abritait autrefois un clan unis, d'êtres intelligents et sournois dont l'étrange rituel était de vivre parmis les bêtes sauvages. Mon père a chassé ces êtres impures et nous vivons sur ces terres depuis.
+            Ces runes racontent l'histoire de l'île des corbeaux. Cet endroit abritait autrefois un clan unis, d'êtres intelligents et sournois dont l'étrange rituel était de vivre parmis les bêtes sauvages. Notre meute est arrivée par les mers et nous avons chassé ces êtres impures. Nous vivons sur ces terres depuis, nous exploitons jusqu'à la dernière ressource que referme l'île puis nous irons ailleurs. C’est le cycle même de la vie que de détruire et épuiser pour mieux purifier les terres… 
         </reponse>
     </dialog>
 </conversation>

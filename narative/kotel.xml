@@ -9,7 +9,7 @@
     </dialog>
     <dialog id="c19_02">
         <question>
-		Votre tête me dit quelque chose, on c'est déjà vue ?
+		Votre tête me dit quelque chose, on s'est déjà vu ?
         </question> 
         <reponse>
 		Oui vous êtes arrivé par bateau, vous m'aviez confié que le Barde vous devait une importante somme d'argent et je me doute que c'est pour cela que vous l'avez tué! Assassin! 
@@ -17,10 +17,10 @@
     </dialog>
     <dialog id="c19_03">
         <question>
-		Vous avez la un bien beau bateau, les voiles sont neuves non ?
+		Vous avez là un bien beau bateau... On dirait même que les voiles sont neuves, non ?
         </question> 
         <reponse>
-		Oui est alors ?,  Mêle-toi de tes affaires l'étranger !
+		Oui est alors ? Mêle-toi de tes affaires l'étranger !
         </reponse>
     </dialog>
 	<!--

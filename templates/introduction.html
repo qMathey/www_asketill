@@ -1,3 +1,4 @@
+<div id="skipIntro" class="info dialog arrondi grow">Passer l'introduction</div>
 <div id="introImages">
 	
 </div>
@@ -5,3 +6,9 @@
 
 </div>
 <div id="introAudio"></div>
+
+<script type="text/javascript">
+    EventListenersManager.registerEvent("click", "#skipIntro", function() {
+        ComicManager.$introWrapper.trigger("introFinished");
+    });
+</script>

@@ -310,7 +310,9 @@ ComicManager.loadConversation = function ( URL ) {
             
         var $xml = $(reponse).find("conversation");
         
-        var arrayQuestion = [];
+        var arrayQuestions = [];
+        var arrayQuestionsAnciennes = [];
+        var arrayQuestionsNouvelles = []
         
         // pour chaque dialogue
         $(reponse).find("dialog").each(function(key, value) {
@@ -335,12 +337,12 @@ ComicManager.loadConversation = function ( URL ) {
                 };
                 // si la question n'est pas connue de l'utilisateur,
                 // on la marque comme isNew = true (par défaut non)
-                // et on l'insère au début du tableau
+                // et on l'insère dans le tableau des nouvelles questions
                 if( ! ComicManager.doesUserKnow(question.id) ){
                     question.isNew = true;
-                    arrayQuestion.unshift(question);
-                }else { // sinon on met la question à la fin
-                    arrayQuestion.push(question);
+                    arrayQuestionsNouvelles.push(question);
+                }else { // sinon on met la question dans le tableau des anciennes questions
+                    arrayQuestionsAnciennes.push(question);
                 } // else
             }// if
         }); // dialog
@@ -348,28 +350,37 @@ ComicManager.loadConversation = function ( URL ) {
         // vide les questions qui peuvent exister
         $(".convesationTextWrapper").html("");
         
+        // On assemble les questions dans un seul array
+        for(var i = 0; i < arrayQuestionsNouvelles.length; i ++){
+            arrayQuestions.push(arrayQuestionsNouvelles[i]);
+        }
+        
+        for(var i = 0; i < arrayQuestionsAnciennes.length; i ++){
+            arrayQuestions.push(arrayQuestionsAnciennes[i]);
+        }
+        
         // ajoute les questions à la conversation
-        for(var i = 0; i < arrayQuestion.length; i++){
+        for(var i = 0; i < arrayQuestions.length; i++){
             // la question
             var $question = $("<div>");
                 $question.addClass("question")
                          .addClass("conversation")
-                         .data("id", arrayQuestion[i].id);
+                         .data("id", arrayQuestions[i].id);
             
             // le titre de la question
             var $titre = $("<div>");
                 $titre.addClass("titre")
-                $titre.html(arrayQuestion[i].question);
+                $titre.html(arrayQuestions[i].question);
             
             // si la question est nouvelle, on lui ajoute la classe strong
-            if(arrayQuestion[i].isNew){
+            if(arrayQuestions[i].isNew){
                 $titre.addClass("strong");
             }
             
             // la réponse à la question
             var $reponse = $("<div>");
                 $reponse.addClass("reponse");
-                $reponse.html(arrayQuestion[i].reponse);
+                $reponse.html(arrayQuestions[i].reponse);
             
             $question.append($titre)
                      .append($reponse);

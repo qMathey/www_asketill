@@ -1,7 +1,7 @@
 <conversation>
     <dialog id="c19_01">
         <question>
-            Est-il possible de repartir ? Je dois rejoindre au plus vite la côte.
+		Est-il possible de repartir ? Je dois rejoindre au plus vite la côte.
         </question> 
         <reponse>
         Je me doutais que vous finirez par venir me voir. Vous voulez repartir ? Hélas mon bateau ne sera pas prêt avant deux jours. Je ne peux rien faire pour vous et je ne veux pas être impliqué dans vos histoires.
@@ -9,18 +9,18 @@
     </dialog>
     <dialog id="c19_02">
         <question>
-            Question forgeron 2 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+		Votre tête me dit quelque chose, on c'est déjà vue ?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+		Oui vous êtes arrivé par bateau, vous m'aviez confié que le Barde vous devait une importante somme d'argent et je me doute que c'est pour cela que vous l'avez tué! Assassin! 
         </reponse>
     </dialog>
     <dialog id="c19_03">
         <question>
-            Question forgeron 3 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+		Vous avez la un bien beau bateau, les voiles sont neuves non ?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+		Oui est alors ?,  Mêle-toi de tes affaires l'étranger !
         </reponse>
     </dialog>
 	<!--

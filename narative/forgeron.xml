@@ -1,34 +1,43 @@
 <conversation>
     <dialog id="c10_01">
         <question>
-            Question forgeron 1 magna condimentum, eu molestie sem bibendum. Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Vous vous entendiez bien avec le barde qui s'est fait assassiné ?
         </question> 
         <reponse>
-            Reponse forgeron Vestibulum et lacus fringilla, vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. In eget augue commodo, condimentum mauris vel, auctor tellus. Quisque volutpat venenatis cursus. Curabitur elementum sit amet augue eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus rutrum, nibh quis porta aliquet, dolor tortor condimentum libero, et accumsan nisl nisi id nisi. Praesent suscipit ante ut tristique interdum. Vestibulum dapibus in metus at egestas. Praesent auctor sodales tellus, ut facilisis quam commodo id.
+            Non, ce cabot chantait des imbélicités en plus de faire mal aux oreilles. Je ne traînais plus à la taverne depuis quelques temps à cause de lui.
         </reponse>
     </dialog>
     <dialog id="c10_02">
         <question>
-            Question forgeron 2 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Vous êtes seul ici ? Votre maison est immense.
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Ma femme et mon fils sont sur le continent pour régler des affaires de familles. Je reste ici car j'ai une grosse commande d'arme à ornorer.
         </reponse>
     </dialog>
     <dialog id="c10_03">
         <question>
-            Question forgeron 3 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            A votre avis, qui a bien pu commettre le crime dont on m'accuse ?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Je ne pense pas que vous soyez coupable. La meute n'acceptait pas que Griss soit accepté parmis eux. Je ne mettrai pas ma main au four mais je dirais que c'est un Loup qui s'est débarassé de lui.
         </reponse>
     </dialog>
-    <dialog id="c10_04" mustKnow="indice_i4_dague">
+    <dialog id="c10_10" mustKnow="indice_i4_dague">
         <question>
-            La dague que vous posséder ressemble étrangement à la dague utilisée pour blesser le barde
+            La dague que vous posséder ressemble étrangement à la dague utilisée pour blesser le barde. Que faisiez-vous hier soir ?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Hier soir ? Euh oui j'étais occupé... Comment dire. Bon, j'étais en companie de Slyna. Mais ne dîtes rien ! Même si elle ne confirme pas que nous étions ensemble, je n'ai rien à voir avec le meurtre du barde !
+        </reponse>
+    </dialog>
+    
+    <dialog id="c10_11" mustKnow="c15_02">
+        <question>
+            Votre gilet, c'est du mouton, non ? Le fermier se plaint qu'il lui manque un mouton ! 
+        </question> 
+        <reponse>
+            Ce gilet ? ah euh... Non je l'ai acheté à Kotel après en échange d'une dague. Pourquoi tuerai-je le mouton d'un ami ?
         </reponse>
     </dialog>
 </conversation>

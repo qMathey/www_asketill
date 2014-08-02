@@ -23,6 +23,15 @@
             Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
         </reponse>
     </dialog>
+    
+    <dialog id="c8_1o" mustKnow="c10_10">
+        <question>
+            Que faisiez-vous hier soir ? 
+        </question> 
+        <reponse>
+            Oulalah garçon, vous me soupçonnez ? J'étais en compagnie d'un rustre mais je suis passée maîtraisse dans l'art de manier un marteau.
+        </reponse>
+    </dialog>
 	<!--
     <dialog id="cX_04" mustKnow="indice_i4_dague">
         <question>

@@ -67,11 +67,11 @@ ajouter la classe .clickZone pour avoir le curseur
     // Clique sur le mouton caché
     EventListenersManager.registerEvent("click", "#fermeMouton", function() {
        AudioManager.loadAndPlaySound("sounds/chevre_quentin.mp3");
+       ComicManager.userKnow("z5-mouton1");
     });
     
     // Clique sur le chien
     EventListenersManager.registerEvent("click", "#fermeChien", function() {
-        console.log("chien court sound!");
        AudioManager.loadAndPlaySound("sounds/chienCourt.mp3");
     });
    

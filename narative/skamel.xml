@@ -1,29 +1,45 @@
 <conversation>
     <dialog id="c15_01">
         <question>
-            Question forgeron 1 magna condimentum, eu molestie sem bibendum. Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+ Il y a un mort dans votre grange, vous n'avez rien remarqué hier soir ?!
         </question> 
         <reponse>
-            Reponse forgeron Vestibulum et lacus fringilla, vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. In eget augue commodo, condimentum mauris vel, auctor tellus. Quisque volutpat venenatis cursus. Curabitur elementum sit amet augue eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus rutrum, nibh quis porta aliquet, dolor tortor condimentum libero, et accumsan nisl nisi id nisi. Praesent suscipit ante ut tristique interdum. Vestibulum dapibus in metus at egestas. Praesent auctor sodales tellus, ut facilisis quam commodo id.
+            Euh non... Je dormais car j'étais fatigué. Vous savez, travailler avec les bêtes, c'est épuisant!
         </reponse>
     </dialog>
     <dialog id="c15_02">
         <question>
-            Question forgeron 2 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Vous semblez paniqué au millieu de vos mouton. Est-ce que tout va bien ? 
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Je possède 11 moutons ici, et il m'en manque deux ! S'il-vous-plaît, aidez-moi à les retrouver! 
         </reponse>
     </dialog>
     <dialog id="c15_03">
         <question>
-            Question forgeron 3 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Vos bêtes et vous semblez avoir une relation assez proche.
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            L'élavage est ma passion depuis que je sais marcher. C'est aussi lucratif. Je possédais d'autres fermes avec les Loups mais j'ai dois les abondonner quand la meute se déplace. Vous devez trouver ça ironique un Loup qui s'occupe du bétail, non ? Hahaha, de toute manière je me porte vers l’avenir et je sais bien que les méthodes doivent évoluer avec le temps. Le commerce sera la prochaine vraie prochaine Conquête pour quiconque pourra s’imposer et je compte bien en tirer profiter avec mes fermes.
         </reponse>
     </dialog>
-	<!--
+    <dialog id="c15_10" mustKnow="z5-mouton1">
+        <question>
+            J'ai trouvé un de vos moutons derrière votre ferme.
+        </question> 
+        <reponse>
+            Ah ? Je parie que c'est Frimja, cette petite se cache sans arrêt! Merci étranger ! Mais il me manque toujours un mouton...
+        </reponse>
+    </dialog>
+    <dialog id="c15_11" mustKnow="c10_11">
+        <question>
+            Solgi possède un gilet en peau de mouton, c'est peut-être lui qui vous a pris un mouton pour réaliser son habit ?
+        </question> 
+        <reponse>
+            Vraiment ? Ah, je me doutais bien que ce vieux corbeau me causerait des ennuis ! Il paiera pour cet affront !
+        </reponse>
+    </dialog>
+    <!--
     <dialog id="c15_04" mustKnow="indice_i4_dague">
         <question>
             La dague que vous posséder ressemble étrangement à la dague utilisée pour blesser le barde

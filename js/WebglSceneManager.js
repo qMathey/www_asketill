@@ -74,7 +74,7 @@ WebglSceneManager.init = function() {
 	WebglSceneMaker.buildScene();
 	
 	// Ajoute le module de statistiques
-	WebglSceneManager.addStatistics();
+	//WebglSceneManager.addStatistics();
 	
 	// ajoute une sphère de test
 	//WebglSceneManager.addTestSphere();

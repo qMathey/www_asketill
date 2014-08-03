@@ -173,6 +173,24 @@ EventListenersManager.addConversationEventListeners = function() {
         
         // Ajoute la question dans la base de connaissance de l'utilisateur
         ComicManager.userKnow($(this).data("id"));
+        
+        // on vérifie si il y a de nouvelles questions
+        var arrayQuestions = ComicManager.synchronousGetConversationFromXML( ComicManager.currentConversationOpen );
+        var arrayNewQuestions = [];
+        for( var i = 0; i < arrayQuestions.length; i++) {
+            // si il y a une nouvelle questoins, alors on l'ajoute au début de la conversation
+            if(arrayQuestions[i].isNew == true){
+                arrayNewQuestions.push(arrayQuestions[i]);
+            }
+        }
+        
+        // si il y a de nouvelles réponses
+        if(arrayNewQuestions.length > 0) {
+            // insère donc uniquement les nouvelles questions
+            ComicManager.insertConversationFromData(arrayNewQuestions, true);
+        
+        } // if
+        
     });
 }
 

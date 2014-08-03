@@ -15,8 +15,8 @@ ComicManager.$introWrapper = undefined;
 ComicManager.$xml = undefined;
 ComicManager.introCurrentSlide = 0;
 ComicManager.introMaxSlide = 0;
-
 ComicManager.userKnowledge = [];
+ComicManager.currentConversationOpen = '';
 
 // Static methods
 /**
@@ -211,9 +211,8 @@ ComicManager.addIntroSounds = function ( $xml ) {
 	// rend muet tous les sons
 	AudioManager.muteAllSounds();
 		
+        // s'execute après 400 ms
 	setTimeout(function() {
-
-
 		// si la balise audio est spécifiée, alors on ajoute les sons à la page
 		if($xml.find("audios").length > 0){
 			// pour chaque élément audio spécifié, on ajoute une balise audio
@@ -243,16 +242,16 @@ ComicManager.addIntroSounds = function ( $xml ) {
  * Affiche la case suivante de l'intro
  */
 ComicManager.introDisplayNextCase = function () {
-	// incremente intro current slide
-	ComicManager.introCurrentSlide ++;
-	// si la slide courante est plus petite 
-	if(ComicManager.introCurrentSlide < ComicManager.introMaxSlide) {
-		// on affiche la slide suivante
-		ComicManager.introDisplayCase(ComicManager.introCurrentSlide);
-	} else {
-		// si on tente de dépasser le nombre max de slide, c'est que nous avons terminé l'intro
-		ComicManager.$introWrapper.trigger("introFinished");
-	} // else
+    // incremente intro current slide
+    ComicManager.introCurrentSlide ++;
+    // si la slide courante est plus petite 
+    if(ComicManager.introCurrentSlide < ComicManager.introMaxSlide) {
+            // on affiche la slide suivante
+            ComicManager.introDisplayCase(ComicManager.introCurrentSlide);
+    } else {
+            // si on tente de dépasser le nombre max de slide, c'est que nous avons terminé l'intro
+            ComicManager.$introWrapper.trigger("introFinished");
+    } // else
 }
 
 /**
@@ -305,14 +304,38 @@ ComicManager.userKnow = function ( $newItem ) {
  * @returns void
  */
 ComicManager.loadConversation = function ( URL ) {
+    
+    // on note la conversation courante ouverte
+    ComicManager.currentConversationOpen = URL;
+    
+    var arrayQuestions = ComicManager.synchronousGetConversationFromXML( URL );
+    
+    // insère dans le template les questions
+    ComicManager.insertConversationFromData ( arrayQuestions );
+        
+    // ajoute les événements associés aux conversations
+    EventListenersManager.addConversationEventListeners();
+}
+
+/**
+ * 
+ * @param {type} URL l'url de la conversation
+ * @returns {Array) arrayQuestions}
+ */
+ComicManager.synchronousGetConversationFromXML = function ( URL ) {
+    
+    var arrayQuestions = []; // variable de retour
+    var arrayQuestionsAnciennes = [];
+    var arrayQuestionsNouvelles = [];
+    
     // chargement ajax du XML
-    $.get(URL, function(reponse) {
+    $.ajax({ url: URL, 
+        async: false,
+        dataType: 'xml',
+        success: function(reponse) {
             
         var $xml = $(reponse).find("conversation");
         
-        var arrayQuestions = [];
-        var arrayQuestionsAnciennes = [];
-        var arrayQuestionsNouvelles = []
         
         // pour chaque dialogue
         $(reponse).find("dialog").each(function(key, value) {
@@ -348,7 +371,7 @@ ComicManager.loadConversation = function ( URL ) {
         }); // dialog
         
         // vide les questions qui peuvent exister
-        $(".convesationTextWrapper").html("");
+        //$(".convesationTextWrapper").html("");
         
         // On assemble les questions dans un seul array
         for(var i = 0; i < arrayQuestionsNouvelles.length; i ++){
@@ -359,51 +382,77 @@ ComicManager.loadConversation = function ( URL ) {
             arrayQuestions.push(arrayQuestionsAnciennes[i]);
         }
         
-        // ajoute les questions à la conversation
-        for(var i = 0; i < arrayQuestions.length; i++){
-            // la question
-            var $question = $("<div>");
-                $question.addClass("question")
-                         .addClass("conversation")
-                         .attr("data-id", arrayQuestions[i].id);
+    }});
+    
+    return arrayQuestions;
+}
+
+/**
+ * Ajoute la conversation par rapport aux questions reçues
+ * @param {array} arrayQuestion
+ * @returns {undefined}
+ */
+ComicManager.insertConversationFromData = function(  arrayQuestions, isNewQuestions  ){
+    // si le paramètre isNewQuestions n'est pas renseigné, on le met à false par défaut
+    if(isNewQuestions == undefined )
+        isNewQuestions = false;
+    // indique si la méthode a inséré de nouvelles question
+    var hasInsertedNewQuestion = false;
+    
+    // ajoute les questions à la conversation
+    for(var i = 0; i < arrayQuestions.length; i++){
+        // la question
+        var $question = $("<div>");
+            $question.addClass("question")
+                     .addClass("conversation")
+                     .attr("data-id", arrayQuestions[i].id);
+
+        // le titre de la question
+        var $titre = $("<div>");
+            $titre.addClass("titre")
+            $titre.html(arrayQuestions[i].question);
+
+        // si la question est nouvelle, on lui ajoute la classe strong
+        if(arrayQuestions[i].isNew){
+            $titre.addClass("strong");
+        }
+
+        // la réponse à la question
+        var $reponse = $("<div>");
+            $reponse.addClass("reponse");
+            $reponse.html(arrayQuestions[i].reponse);
+
+        // ajoute le titre et la reéponse à la question
+        $question.append($titre)
+                 .append($reponse);
+         
+        // si la question n'est pas déjà affichée
+        if ( $('.convesationTextWrapper [data-id="'+arrayQuestions[i].id+'"]').length <=  0) {
+            // Ajoute les éléments dans la page
+            // Si la question est nouvelle, on l'insère au début (prepend) sinon après (append)
+            if ( isNewQuestions == true ) {
+                // ajoute au début la question
+                $(".convesationTextWrapper").prepend($question);
+            }// if
+            else {
+                // ajoute à la fin la question
+                $(".convesationTextWrapper").append($question);
+            }// else
             
-            // le titre de la question
-            var $titre = $("<div>");
-                $titre.addClass("titre")
-                $titre.html(arrayQuestions[i].question);
-            
-            // si la question est nouvelle, on lui ajoute la classe strong
-            if(arrayQuestions[i].isNew){
-                $titre.addClass("strong");
-            }
-            
-            // la réponse à la question
-            var $reponse = $("<div>");
-                $reponse.addClass("reponse");
-                $reponse.html(arrayQuestions[i].reponse);
-            
-            $question.append($titre)
-                     .append($reponse);
-            
-            // ajoute les éléments dans la page
-            $(".convesationTextWrapper").append($question);
-        }// for
+            // indique l'insertion de nouvelles questions
+            hasInsertedNewQuestion = true;
+        }// if
+    }// for
+    // Si de nouvelles questions ont bien été ajoutées
+    if( hasInsertedNewQuestion ) {
         // évite les problèmes d'affichage
         $(".convesationTextWrapper").append('<div class="clear"></div>');
-        
+
         // cache la conversation
         $(".convesationTextWrapper").hide();
-        
+
         // dispose le template
         TemplateManager.disposeTemplate();
+    }// if
         
-        // ajoute les événements associés aux conversations
-        EventListenersManager.addConversationEventListeners();
-        
-        
-    }).fail(function() {
-        // on fail
-        alert("XML spécifié "+URL+" INTROUVABLE.");
-    });
-    
 }

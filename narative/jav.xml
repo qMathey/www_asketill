@@ -1,26 +1,50 @@
 <conversation>
     <dialog id="c20_01">
         <question>
-            Question forgeron 1 magna condimentum, eu molestie sem bibendum. Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+           On m’accuse du meurtre du Barde et j’ai appris qu’on vous à capturé sur la scène du crime! Que faisiez vous sur place?! Parlez! 
         </question> 
         <reponse>
-            Reponse forgeron Vestibulum et lacus fringilla, vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. In eget augue commodo, condimentum mauris vel, auctor tellus. Quisque volutpat venenatis cursus. Curabitur elementum sit amet augue eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus rutrum, nibh quis porta aliquet, dolor tortor condimentum libero, et accumsan nisl nisi id nisi. Praesent suscipit ante ut tristique interdum. Vestibulum dapibus in metus at egestas. Praesent auctor sodales tellus, ut facilisis quam commodo id.
+            Je suis un voleur... à votre avis? Je dépouillais ce sale Loup mais je me suis bien fait avoir... Cette salope m’a dit qu’il avait de l’argent, qu’il était riche, mais que dalle! Il n’avait que ses poèmes à la con sur lui!
         </reponse>
     </dialog>
-    <dialog id="c20_02">
+    <dialog id="c20_02" mustKnow="c20_01">
         <question>
-            Question forgeron 2 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Salope?… Qui vous a parlé de Griss ?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Personne, je ne vous dirai rien sale fouineur, au moins je ne serai pas le seul à perdre ma tête demain! hahaha!
         </reponse>
     </dialog>
-    <dialog id="c20_03">
+    <dialog id="c20_03" mustKnow="c20_02">
         <question>
-            Question forgeron 3 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Arrêtez! votre vie est en jeu! Je peux peut-être nous sauver tous les deux si nous découvrons qui voulait le Barde mort! 
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Peu importe ce que vous découvrirez! Je suis un homme mort, vous ne comprenez pas? Tout ceci nous dépasse, vous et moi, nous ne sommes rien pour ces Loups stupides...
+        </reponse>
+    </dialog>
+    <dialog id="c20_04" mustKnow="c20_03">
+        <question>
+            Vous voulez dire que vous n'êtes pas un Loup ? Êtes-vous de ceux qu'on appelle les Corbeaux ?
+        </question> 
+        <reponse>
+            Je ne l’étais pas auparavant, j’étais juste un homme honnête travaillant dans cet île, puis ces brutes sont arrivés et nous habitants avons tous perdu quelque chose...
+        </reponse>
+    </dialog>
+    <dialog id="c20_05" mustKnow="c20_04">
+        <question>
+            Vous? Qu’avez-vous perdu?
+        </question> 
+        <reponse>
+            Moi… j’ai perdu mon métier… Je travaillais le bois comme personne dans le royaume... Ces idiots ont rasé le meilleur bois de cet île afin de construire ce taudis démesuré qui leur sert de maison… ils m’ont forcé à construire cette demeure par dessus un lieu sacré de l’île puis ils ont détruit ma maison. Depuis je vole pour vivre et je vis pour les voir tomber...
+        </reponse>
+    </dialog>
+    <dialog id="c20_06" mustKnow="c20_04">
+        <question>
+            Que puis-je faire pour prouver notre innocence?
+        </question> 
+        <reponse>
+            Notre innoncence ? Il n'y a rien que vous puissiez faire pour moi étranger, mais si vous souhaitez faire du bien à Asketill, accusez un Loup.
         </reponse>
     </dialog>
 	<!--

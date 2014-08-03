@@ -1,30 +1,31 @@
 <conversation>
     <dialog id="c8_01">
         <question>
-            Question forgeron 1 magna condimentum, eu molestie sem bibendum. Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
         </question> 
         <reponse>
-            Reponse forgeron Vestibulum et lacus fringilla, vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. In eget augue commodo, condimentum mauris vel, auctor tellus. Quisque volutpat venenatis cursus. Curabitur elementum sit amet augue eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus rutrum, nibh quis porta aliquet, dolor tortor condimentum libero, et accumsan nisl nisi id nisi. Praesent suscipit ante ut tristique interdum. Vestibulum dapibus in metus at egestas. Praesent auctor sodales tellus, ut facilisis quam commodo id.
         </reponse>
     </dialog>
     <dialog id="c8_02">
         <question>
-            Question forgeron 2 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
         </reponse>
     </dialog>
     <dialog id="c8_03">
         <question>
-            Question forgeron 3 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
         </reponse>
     </dialog>
-    
-    <dialog id="c8_1o" mustKnow="c10_10">
+    <dialog id="c8_10" mustKnow="c14_11">
+        <question>
+            Otrygg m'a dit qu'une personne était experte en poison ici à la taverne. Vous avez une idée de qui il s'agit ?
+        </question> 
+        <reponse>
+            Je ne sais pas... Mais maintenant que vous me parlez de poison, je me rappelle avoir vu Hansa verser quelque chose dans le verre de Griss.
+        </reponse>
+    </dialog>
+    <dialog id="c8_11" mustKnow="c10_10">
         <question>
             Que faisiez-vous hier soir ? 
         </question> 

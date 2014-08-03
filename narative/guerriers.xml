@@ -1,28 +1,46 @@
 <conversation>
     <dialog id="c9_01">
         <question>
-            Question forgeron 1 magna condimentum, eu molestie sem bibendum. Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Qui êtes-vous ?
         </question> 
         <reponse>
-            Reponse forgeron Vestibulum et lacus fringilla, vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. In eget augue commodo, condimentum mauris vel, auctor tellus. Quisque volutpat venenatis cursus. Curabitur elementum sit amet augue eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus rutrum, nibh quis porta aliquet, dolor tortor condimentum libero, et accumsan nisl nisi id nisi. Praesent suscipit ante ut tristique interdum. Vestibulum dapibus in metus at egestas. Praesent auctor sodales tellus, ut facilisis quam commodo id.
+            (Le Lion) : Nous sommes les lames de Freyr! Nous combattons pour le plus offrant. Nous sommes ici à la demande de quelqu'un pour régler une histoire. 
         </reponse>
     </dialog>
     <dialog id="c9_02">
         <question>
-            Question forgeron 2 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Vos collègues ne prêtent même pas attention à moi ! Toi là, avec ton bracelet de serpent, tu n'as rien à me dire ?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            (Le Lion) : Il est très réservé et il ne parle qu’en de rares occasions. C'est un expert en poisons! Il est aussi le plus craint des mercenaires de la région.
         </reponse>
     </dialog>
     <dialog id="c9_03">
         <question>
-            Question forgeron 3 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Et lui, avec sa tête de sanglier ? Rien non plus ?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            (Le Lion) :  Sanglier est né et a été élevé par des animaux de la forêt. Je pense qu’il est l'un des mystérieux enfants du dieu Freyr.
         </reponse>
     </dialog>
+    <dialog id="c9_04">
+        <question>
+            Je vois que celui avec la queue de renard à bien son compte.
+        </question> 
+        <reponse>
+            (Le Lion) :  Ahahah, oui il encore jeune! Il s'agit de mon plus jeune enfant, tous mes autres fils sont morts au combat... Il ne tient pas l’alcool et il est trop frêle pour être un vrai guerrier! Néanmoins, il m'est utile car il est très rapide, agile et possède un très bon instinct.
+        </reponse>
+    </dialog>
+    
+    <dialog id="c9_05">
+        <question>
+            Que savez-vous sur le meurtre du barde ?
+        </question> 
+        <reponse>
+            (Le Lion) :  Pas grand chose, à part qu'il a été pendu et poignardé. On s'en fout des histoires locales, c'est leur problème, pas le notre.
+        </reponse>
+    </dialog>
+    
 	<!--
     <dialog id="cX_04" mustKnow="indice_i4_dague">
         <question>

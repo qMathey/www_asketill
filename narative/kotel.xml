@@ -23,6 +23,14 @@
 		Oui est alors ? Mêle-toi de tes affaires l'étranger !
         </reponse>
     </dialog>
+    <dialog id="c19_10" mustKnow="c18_02">
+        <question>
+            Le pécheur m'a dit que ce matin, vous avez échangé des mots ce matin avec une femme ? Qui était-ce et à quel propos ?
+        </question> 
+        <reponse>
+            Ce vieux volatile vous raconte n'importe quoi! Il ne peut presque rien voir alors comment aurait-il pu savoir ce que je faisais ce matin ? Je travaillais sur mon bateau, seul.
+        </reponse>
+    </dialog>
 	<!--
     <dialog id="c19_04" mustKnow="indice_i4_dague">
         <question>

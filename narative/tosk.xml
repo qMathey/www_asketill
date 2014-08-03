@@ -21,13 +21,13 @@
     </dialog>
     <dialog id="c16_06">
         <question>C’est un bien joli manteau que vous avez là pour un mendiant…</question> 
-        <reponse>OUIIIII TOSK aimer la fourrure… JE PISSE DANS LE PUITS!!! hahaha! Manteau… un vieux souvenir! 
+        <reponse>OUIIIII TOSK aimer la fourrure… JE PISSE DANS LE PUIT!!! hahaha! Manteau… un vieux souvenir! 
 Mais TOOOOSK n’est pas un mendiant… TOOOOSK est ROI! TOOOSK Le Grand! TOOOSK le Beau… TOSK est moooooooooooort ahahaha!
 </reponse>
     </dialog>
     <dialog id="c16_07">
         <question>Vos tatouages me sont familiers… </question> 
-        <reponse>… TOSK? (regarde ses tatouages) Gnaaaaaaaa! bouahahahaah (se met à pleurer) Je vous déteste étranger… pourquoi me faitez-vous cela? Je jetterai votre tête dans le puit et je pisserai dedans! hahahaha TOOOOOOSK ? gnaaaaaaa! (S’endort)</reponse>
+        <reponse>… TOSK? (regarde ses tatouages) Gnaaaaaaaa! bouahahahaah (se met à pleurer) Je vous déteste étranger… pourquoi me faîtes-vous cela? Je jetterai votre tête dans le puit et je pisserai dedans! hahahaha TOOOOOOSK ? gnaaaaaaa! (S’endort)</reponse>
     </dialog>
 	<!--
     <dialog id="cX_04" mustKnow="indice_i4_dague">

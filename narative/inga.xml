@@ -1,34 +1,43 @@
 <conversation>
     <dialog id="c11_01">
         <question>
-            Question forgeron 1 magna condimentum, eu molestie sem bibendum. Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Pourquoi m'accusez-vous du meurtre de votre maris ? Je ne me rappelle de rien !
         </question> 
         <reponse>
-            Reponse forgeron Vestibulum et lacus fringilla, vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. In eget augue commodo, condimentum mauris vel, auctor tellus. Quisque volutpat venenatis cursus. Curabitur elementum sit amet augue eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus rutrum, nibh quis porta aliquet, dolor tortor condimentum libero, et accumsan nisl nisi id nisi. Praesent suscipit ante ut tristique interdum. Vestibulum dapibus in metus at egestas. Praesent auctor sodales tellus, ut facilisis quam commodo id.
+            Je vous ai vu à la taverne, vous engulant comme des bêtes à propos de la dette qu'il vous devait !
         </reponse>
     </dialog>
-    <dialog id="c11_02">
+    <dialog id="c11_02" mustKnow="c11_01">
         <question>
-            Question forgeron 2 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Une dette envers moi ? Combien ? 
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Je ne sais pas. Griss, mon maris *snif", a toujours su s'occuper de moi. Nous avions tout ce dont j'avais besoins... Mais à cause de brigands comme VOUS ! Il n'arrivait plus à maintenir notre vie comme avant... Il s'est endetté et maintenant il est MORT!
         </reponse>
     </dialog>
-    <dialog id="c11_03">
+    <dialog id="c11_03" mustKnow="c11_02">
         <question>
-            Question forgeron 3 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Je n'ai rien à voir avec tout ça !
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            J'espère que Gils s'occupera de vous, menteur ! On devrait vous noyez comme une bête !
         </reponse>
     </dialog>
-    <dialog id="c11_04" mustKnow="i5-instrument">
+    <dialog id="c11_10" mustKnow="i5-instrument">
         <question>
             Je remarque que l'instrument de votre mari est cassé. Comment cela est-il arrivé ?
         </question> 
         <reponse>
             On me l'a rapporté ce matin. C'est tout ce qu'il me reste de lui et c'est vous qui l'avez cassé en tabassant Griss! 
+        </reponse>
+    </dialog>
+    
+    <dialog id="c11_11" mustKnow="i5-ornement">
+        <question>
+            Ce crâne aux plumes que vous posésdez, c'est vous qui les fabriquez ?
+        </question> 
+        <reponse>
+            Ce... quoi ? Oh non, il s'agit d'un cadeau d'un amis. 
         </reponse>
     </dialog>
 </conversation>

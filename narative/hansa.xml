@@ -1,26 +1,26 @@
 <conversation>
     <dialog id="c5_01">
         <question>
-            Question forgeron 1 magna condimentum, eu molestie sem bibendum. Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Cette bière est pour moi ? Je n'ai rien commandé.
         </question> 
         <reponse>
-            Reponse forgeron Vestibulum et lacus fringilla, vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. In eget augue commodo, condimentum mauris vel, auctor tellus. Quisque volutpat venenatis cursus. Curabitur elementum sit amet augue eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus rutrum, nibh quis porta aliquet, dolor tortor condimentum libero, et accumsan nisl nisi id nisi. Praesent suscipit ante ut tristique interdum. Vestibulum dapibus in metus at egestas. Praesent auctor sodales tellus, ut facilisis quam commodo id.
+            Il s'agit probablement de votre dernière bière, alors savourez-là étranger.
         </reponse>
     </dialog>
     <dialog id="c5_02">
         <question>
-            Question forgeron 2 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Vous m'avez vu hier soir ?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Non, je n'ai pas souvenir de vous avoir vu. C'est probablement Rignes qui vous a servis si vous étiez là.
         </reponse>
     </dialog>
     <dialog id="c5_03">
         <question>
-            Question forgeron 3 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Vous regrettez la mort du barde ?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Je... Je n'avais rien contre Griss. Mais ces chansons étaient... dénuées de sens. Je préfère les chansons de Vermundr! Ses chants sont si bons.
         </reponse>
     </dialog>
     
@@ -32,6 +32,24 @@
             Pfouaf! Ce lieu est devenu horriblement dégoutant! Les anciens propriétaires avaient bien plus de goût! Refill trouve drôle de mettre des animaux morts dans tous les coins alors que ça attires les bêtes. 
         </reponse>
     </dialog>
+    
+    <dialog id="c5_11" mustKnow="c4_10">
+        <question>
+            J'ai entendu dire que votre patron s'est fait volé une grosse somme d'argent. Vous avez quelque chose à voir avec ce vol ?
+        </question> 
+        <reponse>
+            Comment?! Comment osez-vous, espèce de rustre! Je n'ai jamais volé de ma vie et je ne vais pas commencer aujourd'hui! Si vous voulez enquêtez, regarder avec cette vieille peau de Grans. Elle trainait vers la caisse hier soir.
+        </reponse>
+    </dialog>
+    <dialog id="c5_12" mustKnow="c8_10">
+        <question>
+            Quelqu’un ici dit vous avoir vue verser quelque chose dans la boisson du barde! Dites-moi ce que c’était!
+        </question> 
+        <reponse>
+            Quoi?! TISSU de mensonges ! Qui ose m’accuser de la sorte! Dites-le moi! Je... Vous ne m’aurez pas, vous êtes un sacré fouineur étranger... Je me demande si ce n’est pas plutôt vous qui... mmmm... Je vous conseille de ne pas m’accuser car je soutiendrai la version d’Inga si l’on me demande! Vous ne jouerez pas avec moi!
+        </reponse>
+    </dialog>
+    
 	<!--
     <dialog id="cX_04" mustKnow="indice_i4_dague">
         <question>

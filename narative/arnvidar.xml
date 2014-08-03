@@ -1,29 +1,37 @@
 <conversation>
     <dialog id="c15_01">
         <question>
-            J'aime les bananes.
+            Vous n’avez pas l’air très en forme? ...
         </question> 
         <reponse>
-		Moi aussi ahah
+            Je ne dors plus très bien ces temps...
         </reponse>
     </dialog>
-    <dialog id="c15_02">
+    <dialog id="c15_02" mustKnow="c15_01">
         <question>
-            Question forgeron 2 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Quelque chose vous tracasse?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Ce ne sont pas vos affaires...
         </reponse>
     </dialog>
-    <dialog id="c15_03">
+    <dialog id="c15_03" mustKnow="c15_02">
         <question>
-            Question forgeron 3 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Vous n’êtes pas très bavard? 
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            C’est peut-être vous qui parlez un peu trop...
         </reponse>
     </dialog>
-    <dialog id="c15_04" mustKnow="z3-ornement">
+    <dialog id="c15_04" mustKnow="c15_03">
+        <question>
+            Vous donnez l’impression de cacher quelque chose...
+        </question> 
+        <reponse>
+            Tout le monde a quelque chose à cacher, vous le premier...
+        </reponse>
+    </dialog>
+    <dialog id="c15_10" mustKnow="z3-ornement">
         <question>
             Qui réalise les ornements comme sur votre cabanne ?
         </question> 
@@ -31,4 +39,14 @@
             C'est bien moi, je suis le seul chasseur présent sur cette île... Elles servent à protéger mon esprit de visions cauchemardesques. 
         </reponse>
     </dialog>
+    
+    <dialog id="c15_11" mustKnow="c11_11">
+        <question>
+            Inga m'a parlé de l'ornement que vous lui avez offert. 
+        </question> 
+        <reponse>
+            Vous passez donc du temps chez Inga et le Barde, elle m’a parlé de vous...? hum... Inga vous a dit quelque chose?  elle n’est pas celle que j’aimais... Je ne sais pas ce qu’elle a pu vous dire mais je ne souhaite pas être mêlé à leur histoire... Allez vous en! 
+        </reponse>
+    </dialog>
+    
 </conversation>

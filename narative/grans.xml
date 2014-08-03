@@ -9,10 +9,10 @@
     </dialog>
     <dialog id="c12_02">
         <question>
-            Pourquoi n'êtes-vous pas avec votre maris ?
+            Pourquoi n'êtes-vous pas avec votre mari ?
         </question> 
         <reponse>
-            Cela fait bien longtemps que mon maris ne s'intéresse plus à moi. Il passe la plus part de ses nuits avec l'autre trainée à la taverne. Pauvre imbécile.
+            Cela fait bien longtemps que mon mari ne s'intéresse plus à moi. Il passe la plus part de ses nuits avec l'autre trainée à la taverne. Pauvre imbécile.
         </reponse>
     </dialog>
     <dialog id="c12_03">
@@ -29,7 +29,7 @@
             Vous ne devriez pas travailler alors ?
         </question> 
         <reponse>
-            Je réconforte Inga. Cette belle petite en a bien besoins après le meurtre de son maris ! Et je me fiche pas mal de ce qu'un loup domestique comme Refill peut penser!
+            Je réconforte Inga. Cette belle petite en a bien besoins après le meurtre de son mari ! Et je me fiche pas mal de ce qu'un loup domestique comme Refill peut penser!
         </reponse>
     </dialog>
     

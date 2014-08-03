@@ -1,10 +1,10 @@
 <conversation>
     <dialog id="c11_01">
         <question>
-            Pourquoi m'accusez-vous du meurtre de votre maris ? Je ne me rappelle de rien !
+            Pourquoi m'accusez-vous du meurtre de votre mari ? Je ne me rappelle de rien !
         </question> 
         <reponse>
-            Je vous ai vu à la taverne, vous engulant comme des bêtes à propos de la dette qu'il vous devait !
+            Je vous ai vu à la taverne vous engulant comme des bêtes à propos de la dette qu'il vous devait !
         </reponse>
     </dialog>
     <dialog id="c11_02" mustKnow="c11_01">
@@ -12,7 +12,7 @@
             Une dette envers moi ? Combien ? 
         </question> 
         <reponse>
-            Je ne sais pas. Griss, mon maris *snif", a toujours su s'occuper de moi. Nous avions tout ce dont j'avais besoins... Mais à cause de brigands comme VOUS ! Il n'arrivait plus à maintenir notre vie comme avant... Il s'est endetté et maintenant il est MORT!
+            Je ne sais pas. Griss, mon mari *snif", a toujours su s'occuper de moi. Nous avions tout ce dont j'avais besoin... Mais à cause de brigands comme VOUS, il n'arrivait plus à maintenir notre vie comme avant... Il s'est endetté et maintenant il est MORT!
         </reponse>
     </dialog>
     <dialog id="c11_03" mustKnow="c11_02">
@@ -28,13 +28,13 @@
             Je remarque que l'instrument de votre mari est cassé. Comment cela est-il arrivé ?
         </question> 
         <reponse>
-            On me l'a rapporté ce matin. C'est tout ce qu'il me reste de lui et c'est vous qui l'avez cassé en tabassant Griss! 
+            On me l'a rapporté ce matin. C'est tout ce qu'il me reste de lui et c'est vous qui l'avez cassé en le tabassant! 
         </reponse>
     </dialog>
     
     <dialog id="c11_11" mustKnow="i5-ornement">
         <question>
-            Ce crâne aux plumes que vous posésdez, c'est vous qui les fabriquez ?
+            Ce crâne aux plumes que vous posésdez, c'est vous qui l fabriquez ?
         </question> 
         <reponse>
             Ce... quoi ? Oh non, il s'agit d'un cadeau d'un amis. 

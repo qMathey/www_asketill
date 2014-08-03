@@ -20,7 +20,7 @@
             Vous pensez que j'ai pu tuer le barde ?
         </question> 
         <reponse>
-            Ahahaha, petit... C'est ridicule que ces Loups vous accuse parce que vous êtes un étranger. Les loups eux-même viennent d'ailleurs... La sagesse qui accompagnait les grands guerriers conquérents d'autrefois s'est perdue au travers des âges... Seuls les brutes sanguinaires s'étindront un jour ou l'autre.
+            Ahahaha, petit... C'est ridicule que ces Loups vous accuse parce que vous êtes un étranger. Les loups eux-même viennent d'ailleurs... La sagesse qui accompagnait les grands guerriers conquérents d'autrefois s'est perdue au travers des âges... Seules les brutes sanguinaires s'éteindront un jour ou l'autre.
         </reponse>
     </dialog>
     <dialog id="c18_10" mustKnow="c18_03">

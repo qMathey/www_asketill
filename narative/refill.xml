@@ -4,7 +4,7 @@
             Vous savez quelque chose à propos du meurtre dont on m'accuse ?
         </question> 
         <reponse>
-            Vous êtes dans de sales draps, c'est tout ce que je sais. Vous voulez que je vous serve quelque chose =
+            Vous êtes dans de sales draps, c'est tout ce que je sais. Vous voulez que je vous serve quelque chose ?
         </reponse>
     </dialog>
     <dialog id="c4_02">
@@ -12,7 +12,7 @@
             La décoration des lieux est... surprenante.
         </question> 
         <reponse>
-            Haha! Oui, je suis très fière de cet endroit. Je l'ai battis de mes mains! La taxidermie est un passe-temps que j'affectionne avec le temps.
+            Haha! Oui, je suis très fière de cet endroit. Je l'ai battis de mes mains! La taxidermie est un passe-temps que j'affectionne avec le temps. Alors, qu'est-ce que je vous sers ?
         </reponse>
     </dialog>
     <dialog id="c4_10">
@@ -20,7 +20,7 @@
 		Vous m'avez l'air soucieux Refill.
         </question> 
         <reponse>
-		Oh que oui, on m'a volé une grande somme d'argent, je soupçonne un de mes employés ou le prisonnier qui ce trouve dans notre prison sur la coline, pouriez-vous m'aidé etranger ?
+		Oh que oui, on m'a volé une grande somme d'argent, je soupçonne un de mes employés ou le prisonnier qui ce trouve dans notre prison sur la coline, pouriez-vous m'aidé etranger ? Commencez par prendre un verre!
         </reponse>
     </dialog>
     
@@ -33,14 +33,60 @@
         </reponse>
     </dialog>
     
-    <dialog id="c4_11" mustKnow="z4-enseigne">
+    <dialog id="c4_12" mustKnow="z4-enseigne">
         <question>
             L'enseigne a l'extérieur montre une gravure d'une plume noir. Quel rapport avec les Loups ?
         </question> 
         <reponse>
-            Une enseigne? Ah derrière! Oui, c'est que euh... Je l'ai trouvée et je l'ai mise pour attirer mes clients vu que cette île est investées de corbeaux.
+            Une enseigne? Ah derrière! Oui, c'est que euh... Je l'ai trouvée et je l'ai mise pour attirer mes clients vu que cette île est investées de corbeaux. Alors, vous le prenez ou non ce verre ?
         </reponse>
     </dialog>
+    
+    <dialog id="c4_13" mustKnow="c4_10">
+        <question>
+            Je suis désolé je n'ai pas trouvé qui a voulé dans la caisse...
+        </question> 
+        <reponse>
+            Nous sommes deux mon amis. Bon, je vous sers un verre ?
+        </reponse>
+    </dialog>
+    
+    <dialog id="c4_14" mustKnow="c4_10">
+        <question>
+            Vermundr, le nouveau barde, a volé dans la caisse, j'en suis sûr!
+        </question> 
+        <reponse>
+            Vous êtes certains ? Je n'aurais jamais pensé à lui! Bon puisque vous m'avez aidé, je vais vous dire un truc : La nuit du meurtre, l'ancien barde, Griss, est sorti car il ne se sentait pas bien. Le marin l'a précédé car il devait vérifier l'arrimage de son navire puis vous êtes vous aussi sorti précipitamment.
+        </reponse>
+    </dialog>
+    
+    <dialog id="c4_15" mustKnow="c4_10">
+        <question>
+            Une de vos serveuses a volé dans la caisse, j'en suis sûr!
+        </question> 
+        <reponse>
+            Vous êtes certains ? Je n'aurais jamais pensé à elles! Bon puisque vous m'avez aidé, je vais vous dire un truc : La nuit du meurtre, l'ancien barde, Griss, est sorti car il ne se sentait pas bien. Le marin l'a précédé car il devait vérifier l'arrimage de son navire puis vous êtes vous aussi sorti précipitamment.
+        </reponse>
+    </dialog>
+    
+    <dialog id="c4_16" mustKnow="c4_10">
+        <question>
+            Grans la cuisinière, a volé dans la caisse, j'en suis sûr!
+        </question> 
+        <reponse>
+            Vous êtes certains ? Je n'aurais jamais pensé à elle! Bon puisque vous m'avez aidé, je vais vous dire un truc : La nuit du meurtre, l'ancien barde, Griss, est sorti car il ne se sentait pas bien. Le marin l'a précédé car il devait vérifier l'arrimage de son navire puis vous êtes vous aussi sorti précipitamment.
+        </reponse>
+    </dialog>
+    
+    <dialog id="c4_17" mustKnow="c4_10">
+        <question>
+            Jav Lars, le prisionnier, a volé dans la caisse, j'en suis sûr!
+        </question> 
+        <reponse>
+            Je le savais! Merci bien étranger. Je peux vous offir quelque chose ?
+        </reponse>
+    </dialog>
+    
 	<!--
     <dialog id="cX_04" mustKnow="indice_i4_dague">
         <question>

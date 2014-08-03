@@ -4,7 +4,7 @@
         <p class="role">Tavernier</p>
         <p class="salutation conversation">Qu'est-ce que je vous sers ?</p>
     </div>
-    <div class="convesationTextWrapper">
+    <div class="convesationTextWrapper refillConversation">
 
         <div class="clear"></div>
     </div>
@@ -29,6 +29,94 @@
     
     // Charge la conversation 
     ComicManager.loadConversation("narative/refill.xml");
+    
+    // redispose le template après 3.4s
+    setTimeout( function() { TemplateManager.disposeTemplate(); }, 3005);
+    
+    // quand on clique sur C4_10 on redispose le template après 3.4s
+    EventListenersManager.registerEvent("click", '[data-id="c4_10"]', function() {
+        // redispose le template après 3.4s
+        setTimeout( function() { TemplateManager.disposeTemplate(); }, 3005);
+    });
+    
+    // question à réponse multiple
+    EventListenersManager.registerEvent("click", '[data-id="c4_13"]', function() {
+        refillRemoveChoices( "c4_13" );
+    });
+    
+    EventListenersManager.registerEvent("click", '[data-id="c4_14"]', function() {
+        refillRemoveChoices( "c4_14" );
+    });
+    
+    EventListenersManager.registerEvent("click", '[data-id="c4_15"]', function() {
+        refillRemoveChoices( "c4_15" );
+    });
+    
+    EventListenersManager.registerEvent("click", '[data-id="c4_16"]', function() {
+        refillRemoveChoices( "c4_16" );
+    });
+    
+    EventListenersManager.registerEvent("click", '[data-id="c4_17"]', function() {
+        refillRemoveChoices( "c4_17" );
+    });
+    
+    EventListenersManager.registerEvent("click", '[data-id="c4_17"]', function() {
+        refillRemoveChoices( "c4_17" );
+    });
+    
+   // supprime les choix si l'utilisateur en a deja choisi un
+   if(ComicManager.doesUserKnow("c4_13")){
+       setTimeout(function() { refillRemoveChoices( "c4_13" ) } , 500);
+   }
+   if(ComicManager.doesUserKnow("c4_14")){
+       setTimeout(function() { refillRemoveChoices( "c4_14" ) } , 500);
+   }
+   if(ComicManager.doesUserKnow("c4_15")){
+       setTimeout(function() { refillRemoveChoices( "c4_15") } , 500);
+   }
+   if(ComicManager.doesUserKnow("c4_16")){
+       setTimeout(function() { refillRemoveChoices( "c4_16" ) } , 500);
+   }
+   if(ComicManager.doesUserKnow("c4_17")){
+       setTimeout(function() { refillRemoveChoices( "c4_17" ) } , 500);
+   }
+   
+   EventListenersManager.registerEvent("click", ".refillConversation .question", function() {
+        if(ComicManager.doesUserKnow("c4_13")){
+            setTimeout(function() { refillRemoveChoices( "c4_13" ) } , 3005);
+        }
+        if(ComicManager.doesUserKnow("c4_14")){
+            setTimeout(function() { refillRemoveChoices( "c4_14" ) } , 3005);
+        }
+        if(ComicManager.doesUserKnow("c4_15")){
+            setTimeout(function() { refillRemoveChoices( "c4_15") } , 3005);
+        }
+        if(ComicManager.doesUserKnow("c4_16")){
+            setTimeout(function() { refillRemoveChoices( "c4_16" ) } , 3005);
+        }
+        if(ComicManager.doesUserKnow("c4_17")){
+            setTimeout(function() { refillRemoveChoices( "c4_17" ) } , 3005);
+        }
+   })
+    
+    function refillRemoveChoices( $userChoice ) {
+        
+        if($userChoice != "c4_13")
+            $('[data-id="c4_13"]').remove();
+        
+        if($userChoice != "c4_14")
+            $('[data-id="c4_14"]').remove();
+        
+        if($userChoice != "c4_15")
+            $('[data-id="c4_15"]').remove();
+        
+        if($userChoice != "c4_16")
+            $('[data-id="c4_16"]').remove();
+        
+        if($userChoice != "c4_17")
+            $('[data-id="c4_17"]').remove();
+        
+    }
     
     // Jouer un son
     //AudioManager.loadAndPlaySound("URL");

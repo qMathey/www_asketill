@@ -12,7 +12,7 @@
             Pourquoi restez-vous dehors ? Vous semblez semblez geler sur place !
         </question> 
         <reponse>
-            Mon rôle est de garder les runes sacrées. Il s'agit d'un grand honeur après de longues années de combats aurpsè de mon père, le chef du village. Un jour, peut-être, remplacerai-je mon père pour gouverner le village.
+            Mon rôle est de garder les runes sacrées. Il s'agit d'un grand honeur après de longues années de combats auprès de mon père, le chef du village. Un jour, peut-être, remplacerais-je mon père pour gouverner le village.
         </reponse>
     </dialog>
     <dialog id="c13_03">
@@ -20,7 +20,7 @@
             Vous semblez brave, peut-être avez-vous une idée de qui pourrait m'aider à m'innocenter ?
         </question> 
         <reponse>
-            Vous devriez parlez à Otryy le Sage, il doit être ici, à la place du chaudron près des arbres anciens. Ces visions conseillent mon père depuis notre arrivée. Il pourra peut-être vous aidez bien que je me sois toujours méfier de ce vieux corbeau! Si vous parlez à mon frère, Gils, je vous conseillerai de ne pas l'énerver... Ce jeune mâle à tendance à décapiter sans raison. 
+            Vous devriez parlez à Otryy le Sage, il doit être ici, à la place du chaudron près des arbres anciens. Ces visions conseillent mon père depuis notre arrivée. Il pourra peut-être vous aider bien que je me sois toujours méfié de ce vieux corbeau! Si vous parlez à mon frère, Gils, je vous conseillerais de ne pas l'énerver... Ce jeune mâle à tendance à décapiter sans raison. 
         </reponse>
     </dialog>
     <dialog id="c13_04" mustKnow="z1-runes">
@@ -28,7 +28,7 @@
             Vous savez à quoi correspondent les runes qui sont auprès de vous ?
         </question> 
         <reponse>
-            Ces runes racontent l'histoire de l'île des corbeaux. Cet endroit abritait autrefois un clan unis, d'êtres intelligents et sournois dont l'étrange rituel était de vivre parmis les bêtes sauvages. Notre meute est arrivée par les mers et nous avons chassé ces êtres impures. Nous vivons sur ces terres depuis, nous exploitons jusqu'à la dernière ressource que referme l'île puis nous irons ailleurs. C’est le cycle même de la vie que de détruire et épuiser pour mieux purifier les terres… 
+            Ces runes racontent l'histoire de l'île des corbeaux. Cet endroit abritait autrefois un clan uni, d'êtres intelligents et sournois dont l'étrange rituel était de vivre parmis les bêtes sauvages. Notre meute est arrivée par les mers et nous avons chassé ces êtres impures. Nous vivons sur ces terres depuis, nous exploitons jusqu'à la dernière ressource que renferme l'île puis nous irons ailleurs. C’est le cycle même de la vie que de détruire et épuiser pour mieux purifier les terres.
         </reponse>
     </dialog>
 </conversation>

@@ -4,7 +4,7 @@
 Pourquoi ne m'avez pas condamné ? 
         </question> 
         <reponse>
-            Griss, notre barde, était une jueune louvetaux... Il chantait notre gloire à tous et mérite justice. Si Otryy, notre sage, dit vrai, vous pourrez prouver votre innoncence. Aussi mince cette chance soit-elle... 
+            Griss, notre barde, était un jeune louveteaux... Il chantait notre gloire à tous et mérite justice. Si Otrygg, notre sage, dit vrai, vous pourrez prouver votre innoncence. Aussi mince cette chance soit-elle. 
         </reponse>
     </dialog>
     <dialog id="c1_02">
@@ -12,8 +12,8 @@ Pourquoi ne m'avez pas condamné ?
             Vous avez une idée de qui aurait pu tuer votre barde ?
         </question> 
         <reponse>
-            Hahaha! Griss n'était peut-être pas le chanteur le plus doué... N'importe qui dans le village aurait pu vouloir s'en débarasser à cause de voix, comment dire... "particulière". Les corps peuvent se déchirer pour un rien ici à Asketill mais sache qu'aucun meurtre ne reste impunis sous mon règne!
-            A toi de mener l'enquête étranger! Tu as jusqu'à la fin du jours pour prouver que tu n'es pas la cause de ce malheure! Tu devrais aller voir le cadavre dans la grange comme tout bon investigateur le ferait. 
+            Hahaha! Griss n'était peut-être pas le chanteur le plus doué... N'importe qui dans le village aurait pu vouloir s'en débarasser à cause de sa voix, comment dire... "particulière". Les corps peuvent se déchirer pour un rien ici à Asketill mais sache qu'aucun meurtre ne reste impuni sous mon règne!
+            A toi de mener l'enquête étranger! Tu as jusqu'à la fin du jours pour prouver que tu n'es pas la cause de ce malheur! Tu devrais aller voir le cadavre dans la grange comme tout bon investigateur le ferait. 
         </reponse>
     </dialog>
     
@@ -22,7 +22,7 @@ Pourquoi ne m'avez pas condamné ?
             Comment êtes-vous devenu le chef du village ?
         </question> 
         <reponse>
-            Je viens d'une lignée de valeureux guerriers Loups et je suis fière d'être né pour conquérir. Je suis venu sur cette île et j'ai débarrasé les sauvages qui s'y trouvaient. Voilà d'innombrables lunes que la paix est en ces lieux mais ça ne saurait changer... Mon instinct me prépare à nouveau à la guerre. 
+            Je viens d'une lignée de valeureux guerriers Loups et je suis fière d'être né pour conquérir. Je suis venu sur cette île et j'ai débarrasé les sauvages qui s'y trouvaient. Voilà d'innombrables lunes que la paix est en ces lieux mais ça ne saurait durer... Mon instinct me prépare à nouveau à la guerre. 
             Mon heure viendra, tôt ou tard mais il semble que mon départ pour le Valhalla est proche. Mon cadet, Gils prendra ma place et abreuvera notre meute du sang de nos ennemis.
         </reponse>
     </dialog>

@@ -4,8 +4,8 @@
             Pourquoi vouloir ma mort ? je n'ai rien fait ! 
         </question> 
         <reponse>
-            Rien fait ? Inga vous accuse d'avoir tué son mari, c'en est bien assez pour moi pour vous tuer ! Quoique, vous m'avez rendu un fier service en nous débarassons du barde. Inga peut maintenant être mienne! Je la vois déjà à mes cotés, marchant sur les cadavres de mes conquêtes!
-            Je ne sais pas pourquoi mon père a accepté de vous laisser la vie sauve, sans doute à cause d'Otrygg. Ce vieux volatile n'a pas pu fermer sa gueule! Je me méfiais de lui mais peu importe, d'ici la nuit, votre tête servira de repas à bêtes! 
+            Rien fait ? Inga vous accuse d'avoir tué son mari, c'en est bien assez pour moi pour vous tuer ! Quoique, vous m'avez rendu un fier service en nous débarassant du barde. Inga peut maintenant être mienne! Je la vois déjà à mes cotés, marchant sur les cadavres de mes conquêtes!
+            Je ne sais pas pourquoi mon père a accepté de vous laisser la vie sauve, sans doute à cause d'Otrygg. Ce vieux volatile n'a pas pu fermer sa gueule! Je me méfiais de lui mais peu importe, d'ici la nuit, votre tête servira de repas aux bêtes! 
         </reponse>
     </dialog>
     <dialog id="c2_02">
@@ -24,20 +24,20 @@
             Que veux-tu dire étranger ? Tu m'accuses d'avoir tuer notre barde ?! PAR ODIN,  JE VAIS TE TUER DÈS QUE MON PÈRE M'EN LAISSERA L'OCCASION!!!
         </reponse>
     </dialog>
-    <dialog id="c2_03" mustKnow="c1_03">
+    <dialog id="c2_04" mustKnow="c1_03">
         <question>
             Votre père parle de vous comme son succèsseur. Vous comptez prendre sa place ?
         </question> 
         <reponse>
-            Ça ne m'intéresse pas de régenter ce petit village composés de faibles. Cela fait longtemps que je rève de voir beaucoup d'entre eux découpé avec leurs têtes plantées sur nos lances !
+            Ça ne m'intéresse pas de régenter ce petit village composé de faibles. Cela fait longtemps que je rève de voir beaucoup d'entre eux découpé avec leurs têtes plantées sur nos lances !
         </reponse>
     </dialog>
-    <dialog id="c2_04" mustKnow="i1-casque">
+    <dialog id="c2_05" mustKnow="i1-casque">
         <question>
             Que pouvez-vous me dire à propos du casque près de votre père, celui avec les plumes de corbeau ?
         </question> 
         <reponse>
-            C'est ma plus grande fièrté ! Celle où mon père m'a laisser décapiter ma première tête ! Si ça ne tenait qu'à moi, j'aurais laisser pourrir la tête du "Grand Corbeau" qui s'y trouvait.
+            C'est ma plus grande fierté ! Celle où mon père m'a laissé décapiter ma première tête ! Si ça ne tenait qu'à moi, j'aurais laisser pourrir la tête du "Grand Corbeau" qui s'y trouvait.
         </reponse>
     </dialog>
 </conversation>

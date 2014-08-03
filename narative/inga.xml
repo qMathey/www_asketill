@@ -34,10 +34,10 @@
     
     <dialog id="c11_11" mustKnow="i5-ornement">
         <question>
-            Ce crâne aux plumes que vous posésdez, c'est vous qui l fabriquez ?
+            Ce crâne aux plumes que vous possédez, c'est vous qui l'avez fabriqué?
         </question> 
         <reponse>
-            Ce... quoi ? Oh non, il s'agit d'un cadeau d'un amis. 
+            Ce... quoi ? Oh non, il s'agit d'un cadeau d'un ami. 
         </reponse>
     </dialog>
 </conversation>

@@ -179,29 +179,6 @@ WebglSceneManager.disposeScene = function () {
 	}
 }
 /**
- * Initialise les controls Trackball pour la camera
- */
-WebglSceneManager.initTrackballControls = function () {
-	// Instancie les contrôles
-	WebglSceneManager.controls = new THREE.TrackballControls( WebglSceneManager.camera, WebglSceneManager.renderer.domElement );
-	// Paramètre les controles
-	WebglSceneManager.controls.rotateSpeed = 1.0;
-	WebglSceneManager.controls.zoomSpeed = 1.2;
-	WebglSceneManager.controls.panSpeed = 0.8;
-
-	WebglSceneManager.controls.noZoom = false;
-	WebglSceneManager.controls.noPan = true;
-	WebglSceneManager.controls.noRoll = true;
-	WebglSceneManager.controls.noRotate  = false;
-
-	WebglSceneManager.controls.staticMoving = false;
-	WebglSceneManager.controls.dynamicDampingFactor = 0.3;
-
-	WebglSceneManager.controls.keys = [ 65, 83, 68 ];
-	// ajoute un e
-	WebglSceneManager.controls.addEventListener( 'change', WebglSceneManager.render ); // appel à la méthode WebglSceneManager.render()
-}
-/**
  * Initialise les controls Orbit pour la camera
  */
 WebglSceneManager.initOrbitControls = function () {
@@ -216,6 +193,9 @@ WebglSceneManager.initOrbitControls = function () {
 	
 	WebglSceneManager.controls.minDistance = 150;
 	WebglSceneManager.controls.maxDistance = 400;
+        
+        // restrictions des controles
+	WebglSceneManager.controls.noPan = true;
 }
 
 /**

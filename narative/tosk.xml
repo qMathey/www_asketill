@@ -1,6 +1,6 @@
 <conversation>
     <dialog id="c16_01">
-        <question>J’imagine vous êtes Tosk…</question> 
+        <question>J’imagine que vous êtes Tosk…</question> 
         <reponse>TOOOOOOOSK? Qui TOOOOOOSK?… Bonjour… gnaaaaaaa!</reponse>
     </dialog>
     <dialog id="c16_02">
@@ -16,7 +16,7 @@
         <reponse>TOOOOSK sait tout… TOOOOSK va te dire… mmmmm… TOI!… mmm… non pas toi… LUI ! OUI C’était bien lui! gnaaaaa TOSK MEEEEEEEEEENT hahahaha!</reponse>
     </dialog>
     <dialog id="c16_05">
-        <question>Essayez de vous rappeler de cette nuit! ma vie en dépend!</question> 
+        <question>Essayez de vous rappeler de cette nuit! Ma vie en dépend!</question> 
         <reponse>TOOOOSK gnaaa! VOUS mourir? … TOOOSK triste… mais … TOOOOOSK s’en fiche ahahah! MENSONGE! Tosk vous veut vivant… TOOOOSK a peur mais il vous dira la vérité… TOOOOOSk est tout nu sous le manteau hahahhaha! </reponse>
     </dialog>
     <dialog id="c16_06">
@@ -27,7 +27,7 @@ Mais TOOOOSK n’est pas un mendiant… TOOOOSK est ROI! TOOOSK Le Grand! TOOOSK
     </dialog>
     <dialog id="c16_07">
         <question>Vos tatouages me sont familiers… </question> 
-        <reponse>… TOSK? (regarde ses tatouages) Gnaaaaaaaa! bouahahahaah (se met à pleurer) Je vous déteste étranger… pourquoi me faitez-vous cela? Je jetterai votre tête dans le puits et je pisserai dedans! hahahaha TOOOOOOSK ? gnaaaaaaa! (S’endort)</reponse>
+        <reponse>… TOSK? (regarde ses tatouages) Gnaaaaaaaa! bouahahahaah (se met à pleurer) Je vous déteste étranger… pourquoi me faitez-vous cela? Je jetterai votre tête dans le puit et je pisserai dedans! hahahaha TOOOOOOSK ? gnaaaaaaa! (S’endort)</reponse>
     </dialog>
 	<!--
     <dialog id="cX_04" mustKnow="indice_i4_dague">

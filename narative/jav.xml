@@ -25,7 +25,7 @@
     </dialog>
     <dialog id="c20_04" mustKnow="c20_03">
         <question>
-            Vous voulez dire que vous n'êtes pas un Loup ? Êtes-vous de ceux qu'on appelle les Corbeaux ?
+            Vous voulez dire que vous n'êtes pas un Loup ? Faîtes-vous partie d'un autre clan?
         </question> 
         <reponse>
             Je ne l’étais pas auparavant, j’étais juste un homme honnête travaillant dans cet île, puis ces brutes sont arrivés et nous habitants avons tous perdu quelque chose...

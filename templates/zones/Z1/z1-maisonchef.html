@@ -23,7 +23,7 @@ ajouter la classe .clickZone pour avoir le curseur
     <!-- Lien vers un autre template -->
     <div id="interieurSalleTrone" class="clickZone" style="width: 12%;height: 21%;margin-left: 38%;margin-top: 27%;">
     </div><div id="conversationThord" class="clickZone" style="width: 12%;height: 40%;margin-left: 10%;margin-top: 29%;"></div>
-    <div id="prisonTemple" class="clickZone" style="width:6%;height: 10%;margin-left: 88%;margin-top: 33%;"></div>
+    <div id="prisonTemple" class="" style="position:absolute;width:6%;height: 10%;margin-left: 88%;margin-top: 33%;"></div>
     
     <!-- interaction du template -->
     <div id="corbeauMaisonChef" class="clickZone" style="width: 3%;height: 7%;margin-left: 16%;margin-top: 14%;"></div>
@@ -52,10 +52,17 @@ ajouter la classe .clickZone pour avoir le curseur
         TemplateManager.LoadTemplateHMTL("templates/zones/Z1/C13/c13-thordgardien1.html");
     });
     
-    // intérieur de la prison
-    EventListenersManager.registerEvent("click", "#prisonTemple", function() {
-        TemplateManager.LoadTemplateHMTL("templates/zones/Z1/I6/i6-prison.html");
-    });
+    // si l'utilisateur a parlé à Slyna (la courtisane), alors il peut accéder à la prison
+    if(ComicManager.doesUserKnow("c8_03")){
+        
+        // ajoute la zone cliquable de la prison
+        $("#prisonTemple").addClass("clickZone");
+        
+        // intérieur de la prison
+        EventListenersManager.registerEvent("click", "#prisonTemple", function() {
+            TemplateManager.LoadTemplateHMTL("templates/zones/Z1/I6/i6-prison.html");
+        });
+    }// if
     
      // Clique sur le corbeau
     EventListenersManager.registerEvent("click", "#corbeauMaisonChef", function() {

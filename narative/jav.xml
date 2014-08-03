@@ -1,10 +1,10 @@
 <conversation>
     <dialog id="c20_01">
         <question>
-           On m’accuse du meurtre du Barde et j’ai appris qu’on vous à capturé sur la scène du crime! Que faisiez vous sur place?! Parlez! 
+           On m’accuse du meurtre du Barde et j’ai appris qu’on vous a capturé sur la scène du crime! Que faisiez-vous sur place?! Parlez! 
         </question> 
         <reponse>
-            Je suis un voleur... à votre avis? Je dépouillais ce sale Loup mais je me suis bien fait avoir... Cette salope m’a dit qu’il avait de l’argent, qu’il était riche, mais que dalle! Il n’avait que ses poèmes à la con sur lui!
+            Je suis un voleur... à votre avis? Je dépouillais ce sale Loup mais je me suis bien fait avoir. Cette salope m’a dit qu’il avait de l’argent, qu’il était riche, mais que dalle! Il n’avait que ses poèmes à la con sur lui!
         </reponse>
     </dialog>
     <dialog id="c20_02" mustKnow="c20_01">
@@ -17,7 +17,7 @@
     </dialog>
     <dialog id="c20_03" mustKnow="c20_02">
         <question>
-            Arrêtez! votre vie est en jeu! Je peux peut-être nous sauver tous les deux si nous découvrons qui voulait le Barde mort! 
+            Arrêtez! votre vie est en jeu! Je peux peut-être nous sauver tous les deux si nous découvrons qui voulait la mort du barde! 
         </question> 
         <reponse>
             Peu importe ce que vous découvrirez! Je suis un homme mort, vous ne comprenez pas? Tout ceci nous dépasse, vous et moi, nous ne sommes rien pour ces Loups stupides...
@@ -28,7 +28,7 @@
             Vous voulez dire que vous n'êtes pas un Loup ? Faîtes-vous partie d'un autre clan?
         </question> 
         <reponse>
-            Je ne l’étais pas auparavant, j’étais juste un homme honnête travaillant dans cet île, puis ces brutes sont arrivés et nous habitants avons tous perdu quelque chose...
+            Je ne l’étais pas auparavant, j’étais juste un homme honnête travaillant sur cette île, puis ces brutes sont arrivées et nous, habitants, avons tous perdu quelque chose...
         </reponse>
     </dialog>
     <dialog id="c20_05" mustKnow="c20_04">
@@ -36,7 +36,7 @@
             Vous? Qu’avez-vous perdu?
         </question> 
         <reponse>
-            Moi… j’ai perdu mon métier… Je travaillais le bois comme personne dans le royaume... Ces idiots ont rasé le meilleur bois de cet île afin de construire ce taudis démesuré qui leur sert de maison… ils m’ont forcé à construire cette demeure par dessus un lieu sacré de l’île puis ils ont détruit ma maison. Depuis je vole pour vivre et je vis pour les voir tomber...
+            Moi… j’ai perdu mon métier… Je travaillais le bois comme personne dans le royaume... Ces idiots ont rasé le meilleur bois de cette île afin de construire ce taudis démesuré qui leur sert de maison. Ils m’ont forcé à construire cette demeure par dessus un lieu sacré de l’île puis ils ont détruit ma maison. Depuis je vole pour vivre et je vis pour les voir tomber...
         </reponse>
     </dialog>
     <dialog id="c20_06" mustKnow="c20_04">

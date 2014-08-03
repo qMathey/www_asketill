@@ -4,7 +4,7 @@
             Vous avez déjà pris la place du barde mort ? Vous ne perdez pas de temps!
         </question> 
         <reponse>
-            Ohoh doucement! Je comprend que vous me suspectiez mais je n'ai aucun rapport avec ce qui s'est passé, contrairement à vous! Griss et moi étions amis même si nos points de vue divergeaient. Notre passion, la musique nous réunissait quoi qu'il arrive. Je regrette qu'il soit parti ainsi, il ne le méritait pas...
+            Ohoh doucement! Je comprends que vous me suspectiez mais je n'ai aucun rapport avec ce qui s'est passé, contrairement à vous! Griss et moi étions amis même si nos points de vue divergeaient. Notre passion, la musique nous réunissait quoi qu'il arrive. Je regrette qu'il soit parti ainsi, il ne le méritait pas...
         </reponse>
     </dialog>
     <dialog id="c7_02">
@@ -12,7 +12,7 @@
             Vous chantez des airs différents de Griss ?
         </question> 
         <reponse>
-            Oui, nous avions lui et moi une approche différente de la musique. Lui se voulait moderne et chantait à la gloire des Loups alors que moi, je privilégie les chants ancestraux de l'île. Les histoires d'autrefois sont bien plus belles à l'oreilles que les récits de conquête qu'on entendait de lui.
+            Oui, nous avions lui et moi une approche différente de la musique. Lui se voulait moderne et chantait à la gloire des Loups alors que moi, je privilégie les chants ancestraux de l'île. Les histoires d'autrefois sont bien plus belles à l'oreille que les récits de conquête qu'on entendait de lui.
         </reponse>
     </dialog>
     <dialog id="c7_03" mustKnow="c7_02">
@@ -20,7 +20,7 @@
             J'imgine que vos chants ne plaise pas à tout le monde, si ?
         </question> 
         <reponse>
-            Une partie des habitants de l'île ne comprennent pas ce que je chante. Je dirais qu'ils sont simplement des ignares. Je reçois néanmoins un très bon accueil de la plupart des honnêtes gens d'ici. On dirait qu'ils apprécient les ondes des anciennes traditions. Je ne dirais pas qu'il détestaient l'ancien barde mais presque...
+            Une partie des habitants de l'île ne comprennent pas ce que je chante. Je dirais qu'ils sont simplement des ignares. Je reçois néanmoins un très bon accueil de la plupart des honnêtes gens d'ici. On dirait qu'ils apprécient les ondes des anciennes traditions. Je ne dirais pas qu'ils détestaient l'ancien barde mais presque...
         </reponse>
     </dialog>
     <dialog id="c7_10" mustKnow="c4_10">

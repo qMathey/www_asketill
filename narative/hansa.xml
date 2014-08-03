@@ -12,7 +12,7 @@
             Vous m'avez vu hier soir ?
         </question> 
         <reponse>
-            Non, je n'ai pas souvenir de vous avoir vu. C'est probablement Rignes qui vous a servis si vous étiez là.
+            Non, je n'ai pas souvenir de vous avoir vu. C'est probablement Rignes qui vous a servi si vous étiez là.
         </reponse>
     </dialog>
     <dialog id="c5_03">
@@ -29,7 +29,7 @@
             Quelle drôle d'idée ces annimaux empaillés!
         </question> 
         <reponse>
-            Pfouaf! Ce lieu est devenu horriblement dégoutant! Les anciens propriétaires avaient bien plus de goût! Refill trouve drôle de mettre des animaux morts dans tous les coins alors que ça attires les bêtes. 
+            Pfouaf! Ce lieu est devenu horriblement dégoutant! Les anciens propriétaires avaient bien plus de goût! Refill trouve drôle de mettre des animaux morts dans tous les coins alors que ça attire les bêtes. 
         </reponse>
     </dialog>
     
@@ -38,15 +38,15 @@
             J'ai entendu dire que votre patron s'est fait volé une grosse somme d'argent. Vous avez quelque chose à voir avec ce vol ?
         </question> 
         <reponse>
-            Comment?! Comment osez-vous, espèce de rustre! Je n'ai jamais volé de ma vie et je ne vais pas commencer aujourd'hui! Si vous voulez enquêtez, regarder avec cette vieille peau de Grans. Elle trainait vers la caisse hier soir.
+            Comment?! Comment osez-vous, espèce de rustre! Je n'ai jamais volé de ma vie et je ne vais pas commencer aujourd'hui! Si vous voulez enquêter, regardez avec cette vieille peau de Grans. Elle trainait vers la caisse hier soir.
         </reponse>
     </dialog>
     <dialog id="c5_12" mustKnow="c8_10">
         <question>
-            Quelqu’un ici dit vous avoir vue verser quelque chose dans la boisson du barde! Dites-moi ce que c’était!
+            Quelqu’un ici dit vous avoir vu verser quelque chose dans la boisson du barde! Dites-moi ce que c’était!
         </question> 
         <reponse>
-            Quoi?! TISSU de mensonges ! Qui ose m’accuser de la sorte! Dites-le moi! Je... Vous ne m’aurez pas, vous êtes un sacré fouineur étranger... Je me demande si ce n’est pas plutôt vous qui... mmmm... Je vous conseille de ne pas m’accuser car je soutiendrai la version d’Inga si l’on me demande! Vous ne jouerez pas avec moi!
+            Quoi?! TISSU de mensonges ! Qui ose m’accuser de la sorte! Dites-le moi! Je... Vous ne m’aurez pas, vous êtes un sacré fouineur étranger... Je me demande si ce n’est pas plutôt vous qui... mmmm... Je vous conseille de ne pas m’accuser car je soutiendrai la version d’Inga si on me le demande! Vous ne jouerez pas avec moi!
         </reponse>
     </dialog>
     

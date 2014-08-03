@@ -4,8 +4,8 @@
             Euh... Bonjour, que faîtes-vous ici ?
         </question> 
         <reponse>
-            Je travail ici. Mon rôle est de satisfaire et de mettre à l'aise les clients des lieux. 
-            Je suis particulièrement douées dans mon domaine, en particuliers pour les jeux étranges de certains vieux guerriers...
+            Je travaille ici. Mon rôle est de satisfaire et de mettre à l'aise les clients des lieux. 
+            Je suis particulièrement douée dans mon domaine, en particulier pour les jeux étranges de certains vieux guerriers...
         </reponse>
     </dialog>
     <dialog id="c8_02">
@@ -21,7 +21,7 @@
             Vous ne voulez pas m'aider ? On veut ma tête!
         </question> 
         <reponse>
-            J'ai vu ce foutu voleur rôder dans le coin, vous devriez trouver un moyen d’aller lui parler car il est pas mal au courant de tout ce qui se passe sur cet île... Il a été attrapé en fouillant les affaires du barde après que Skamel ait été cherché de l'aide après la découverte de Griss pendu. 
+            J'ai vu ce foutu voleur rôder dans le coin, vous devriez trouver un moyen d’aller lui parler car il est pas mal au courant de tout ce qui se passe sur cette île... Il a été attrapé en fouillant les affaires du barde après que Skamel ait été chercher de l'aide après la découverte de Griss pendu. 
         </reponse>
     </dialog>
     <dialog id="c8_10" mustKnow="c14_11">

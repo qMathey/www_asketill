@@ -12,7 +12,7 @@
             La décoration des lieux est... surprenante.
         </question> 
         <reponse>
-            Haha! Oui, je suis très fière de cet endroit. Je l'ai battis de mes mains! La taxidermie est un passe-temps que j'affectionne avec le temps. Alors, qu'est-ce que je vous sers ?
+            Haha! Oui, je suis très fier de cet endroit. Je l'ai batti de mes mains! La taxidermie est un passe-temps que j'affectionne de plus en plus. Alors, qu'est-ce que je vous sers ?
         </reponse>
     </dialog>
     <dialog id="c4_10">
@@ -20,7 +20,7 @@
 		Vous m'avez l'air soucieux Refill.
         </question> 
         <reponse>
-		Oh que oui, on m'a volé une grande somme d'argent, je soupçonne un de mes employés ou le prisonnier qui ce trouve dans notre prison sur la coline, pouriez-vous m'aidé etranger ? Commencez par prendre un verre!
+		Oh que oui, on m'a volé une grande somme d'argent, je soupçonne un de mes employés ou le prisonnier qui ce trouve dans notre prison sur la colline, pourriez-vous m'aider étranger ? Commencez par prendre un verre!
         </reponse>
     </dialog>
     
@@ -35,10 +35,10 @@
     
     <dialog id="c4_12" mustKnow="z4-enseigne">
         <question>
-            L'enseigne a l'extérieur montre une gravure d'une plume noir. Quel rapport avec les Loups ?
+            L'enseigne à l'extérieur montre une gravure d'une plume noire. Quel rapport avec les Loups ?
         </question> 
         <reponse>
-            Une enseigne? Ah derrière! Oui, c'est que euh... Je l'ai trouvée et je l'ai mise pour attirer mes clients vu que cette île est investées de corbeaux. Alors, vous le prenez ou non ce verre ?
+            Une enseigne? Ah derrière! Oui, c'est que euh... Je l'ai trouvée et je l'ai mise pour attirer mes clients vu que cette île est infestée de corbeaux. Alors, vous le prenez ou non ce verre ?
         </reponse>
     </dialog>
     
@@ -56,7 +56,7 @@
             Vermundr, le nouveau barde, a volé dans la caisse, j'en suis sûr!
         </question> 
         <reponse>
-            Vous êtes certains ? Je n'aurais jamais pensé à lui! Bon puisque vous m'avez aidé, je vais vous dire un truc : La nuit du meurtre, l'ancien barde, Griss, est sorti car il ne se sentait pas bien. Le marin l'a précédé car il devait vérifier l'arrimage de son navire puis vous êtes vous aussi sorti précipitamment.
+            Vous êtes certnain ? Je n'aurais jamais pensé à lui! Bon puisque vous m'avez aidé, je vais vous dire un truc : La nuit du meurtre, l'ancien barde, Griss, est sorti car il ne se sentait pas bien. Le marin l'a précédé car il devait vérifier l'arrimage de son navire puis vous êtes vous aussi sorti précipitamment.
         </reponse>
     </dialog>
     
@@ -65,7 +65,7 @@
             Une de vos serveuses a volé dans la caisse, j'en suis sûr!
         </question> 
         <reponse>
-            Vous êtes certains ? Je n'aurais jamais pensé à elles! Bon puisque vous m'avez aidé, je vais vous dire un truc : La nuit du meurtre, l'ancien barde, Griss, est sorti car il ne se sentait pas bien. Le marin l'a précédé car il devait vérifier l'arrimage de son navire puis vous êtes vous aussi sorti précipitamment.
+            Vous êtes certnain ? Je n'aurais jamais pensé à elles! Bon puisque vous m'avez aidé, je vais vous dire un truc : La nuit du meurtre, l'ancien barde, Griss, est sorti car il ne se sentait pas bien. Le marin l'a précédé car il devait vérifier l'arrimage de son navire puis vous êtes vous aussi sorti précipitamment.
         </reponse>
     </dialog>
     
@@ -74,7 +74,7 @@
             Grans la cuisinière, a volé dans la caisse, j'en suis sûr!
         </question> 
         <reponse>
-            Vous êtes certains ? Je n'aurais jamais pensé à elle! Bon puisque vous m'avez aidé, je vais vous dire un truc : La nuit du meurtre, l'ancien barde, Griss, est sorti car il ne se sentait pas bien. Le marin l'a précédé car il devait vérifier l'arrimage de son navire puis vous êtes vous aussi sorti précipitamment.
+            Vous êtes certnain ? Je n'aurais jamais pensé à elle! Bon puisque vous m'avez aidé, je vais vous dire un truc : La nuit du meurtre, l'ancien barde, Griss, est sorti car il ne se sentait pas bien. Le marin l'a précédé car il devait vérifier l'arrimage de son navire puis vous êtes vous aussi sorti précipitamment.
         </reponse>
     </dialog>
     

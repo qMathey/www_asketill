@@ -23,6 +23,15 @@
             Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
         </reponse>
     </dialog>
+    
+    <dialog id="c5_10" mustKnow="i3-ecureuil">
+        <question>
+            Quelle drôle d'idée ces annimaux empaillés!
+        </question> 
+        <reponse>
+            Pfouaf! Ce lieu est devenu horriblement dégoutant! Les anciens propriétaires avaient bien plus de goût! Refill trouve drôle de mettre des animaux morts dans tous les coins alors que ça attires les bêtes. 
+        </reponse>
+    </dialog>
 	<!--
     <dialog id="cX_04" mustKnow="indice_i4_dague">
         <question>

@@ -1,26 +1,42 @@
 <conversation>
     <dialog id="c18_01">
         <question>
-            Question forgeron 1 magna condimentum, eu molestie sem bibendum. Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Vous avez des problèmes de vue ?
         </question> 
         <reponse>
-            Reponse forgeron Vestibulum et lacus fringilla, vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. In eget augue commodo, condimentum mauris vel, auctor tellus. Quisque volutpat venenatis cursus. Curabitur elementum sit amet augue eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus rutrum, nibh quis porta aliquet, dolor tortor condimentum libero, et accumsan nisl nisi id nisi. Praesent suscipit ante ut tristique interdum. Vestibulum dapibus in metus at egestas. Praesent auctor sodales tellus, ut facilisis quam commodo id.
+            Je suis presque aveugle. Vous savez... Je suis tellement vieux que je ne me souviens même plus de mon âge...
         </reponse>
     </dialog>
-    <dialog id="c18_02">
+    <dialog id="c18_02" mustKnow="c18_01">
         <question>
-            Question forgeron 2 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Vous n'avez donc rien vu...
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Vu ? Non... Mais j'ai entendu ce matin une femme s'enrager contre mon amis Kotel, ce matin. Je n'ai pas pu distinguer quoi que ce soit...
         </reponse>
     </dialog>
     <dialog id="c18_03">
         <question>
-            Question forgeron 3 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Vous pensez que j'ai pu tuer le barde ?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Ahahaha, petit... C'est ridicule que ces Loups vous accuse parce que vous êtes un étranger. Les loups eux-même viennent d'ailleurs... La sagesse qui accompagnait les grands guerriers conquérents d'autrefois s'est perdue au travers des âges... Seuls les brutes sanguinaires s'étindront un jour ou l'autre.
+        </reponse>
+    </dialog>
+    <dialog id="c18_10" mustKnow="c18_03">
+        <question>
+            Vous parlez des Loups ? Il y a-t-il d'autres clans ici ?
+        </question> 
+        <reponse>
+            Il n'y a que des hommes sanguinaires sur cette île. Le temps des vieux clans est révolus et ceux qui subsitent aujourd'hui me font peur. Griss, le barde, apportait du sang neuf à cette meute. Je regrette qu'il soit parti rejoindre le Valhalla... Au moins il échappera au funeste destin de ces lieux.
+        </reponse>
+    </dialog>
+    <dialog id="c18_11" mustKnow="c18_10">
+        <question>
+            De quel destin funeste parlez-vous ?
+        </question> 
+        <reponse>
+            Une guerre se prépare, c'est évident mais peu importe... Quand les loups quitteront Asketill, je serais bien mort ou alors mon âme restera à roder autours de ce vieux port.
         </reponse>
     </dialog>
 	<!--

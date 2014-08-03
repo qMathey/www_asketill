@@ -4,7 +4,7 @@
 		Est-il possible de repartir ? Je dois rejoindre au plus vite la côte.
         </question> 
         <reponse>
-        Je me doutais que vous finirez par venir me voir. Vous voulez repartir ? Hélas mon bateau ne sera pas prêt avant deux jours. Je ne peux rien faire pour vous et je ne veux pas être impliqué dans vos histoires.
+        Je me doutais que vous finiriez par venir me voir. Vous voulez repartir ? Hélas mon bateau ne sera pas prêt avant deux jours. Je ne peux rien faire pour vous et je ne veux pas être impliqué dans vos histoires.
         </reponse>
     </dialog>
     <dialog id="c19_02">
@@ -20,15 +20,15 @@
 		Vous avez là un bien beau bateau... On dirait même que les voiles sont neuves, non ?
         </question> 
         <reponse>
-		Oui est alors ? Mêle-toi de tes affaires l'étranger !
+		Oui et alors ? Mêle-toi de tes affaires l'étranger !
         </reponse>
     </dialog>
     <dialog id="c19_10" mustKnow="c18_02">
         <question>
-            Le pécheur m'a dit que ce matin, vous avez échangé des mots ce matin avec une femme ? Qui était-ce et à quel propos ?
+            Le pécheur m'a dit que ce matin, vous avez échangé des mots avec une femme ? Qui était-ce et à quel propos ?
         </question> 
         <reponse>
-            Ce vieux volatile vous raconte n'importe quoi! Il ne peut presque rien voir alors comment aurait-il pu savoir ce que je faisais ce matin ? Je travaillais sur mon bateau, seul.
+            Ce vieux volatile vous raconte n'importe quoi! Il ne peut presque rien voir, alors comment aurait-il pu savoir ce que je faisais ce matin ? Je travaillais sur mon bateau, seul.
         </reponse>
     </dialog>
 	<!--

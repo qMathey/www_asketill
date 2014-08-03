@@ -1,26 +1,34 @@
 <conversation>
     <dialog id="c7_01">
         <question>
-            Question forgeron 1 magna condimentum, eu molestie sem bibendum. Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Vous avez déjà pris la place du barde mort ? Vous ne perdez pas de temps!
         </question> 
         <reponse>
-            Reponse forgeron Vestibulum et lacus fringilla, vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. In eget augue commodo, condimentum mauris vel, auctor tellus. Quisque volutpat venenatis cursus. Curabitur elementum sit amet augue eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus rutrum, nibh quis porta aliquet, dolor tortor condimentum libero, et accumsan nisl nisi id nisi. Praesent suscipit ante ut tristique interdum. Vestibulum dapibus in metus at egestas. Praesent auctor sodales tellus, ut facilisis quam commodo id.
+            Ohoh doucement! Je comprend que vous me suspectiez mais je n'ai aucun rapport avec ce qui s'est passé, contrairement à vous! Griss et moi étions amis même si nos points de vue divergeaient. Notre passion, la musique nous réunissait quoi qu'il arrive. Je regrette qu'il soit parti ainsi, il ne le méritait pas...
         </reponse>
     </dialog>
     <dialog id="c7_02">
         <question>
-            Question forgeron 2 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            Vous chantez des airs différents de Griss ?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Oui, nous avions lui et moi une approche différente de la musique. Lui se voulait moderne et chantait à la gloire des Loups alors que moi, je privilégie les chants ancestraux de l'île. Les histoires d'autrefois sont bien plus belles à l'oreilles que les récits de conquête qu'on entendait de lui.
         </reponse>
     </dialog>
-    <dialog id="c7_03">
+    <dialog id="c7_03" mustKnow="c7_02">
         <question>
-            Question forgeron 3 magna fringilla, eu vehicula sem fringilla, Nulla ornare sem a risus varius, a feugiat lacus egestas. Donec ac dolor luctus.
+            J'imgine que vos chants ne plaise pas à tout le monde, si ?
         </question> 
         <reponse>
-            Reponse forgeron risus et lacus egestas. vehicula dolor at, rutrum ipsum. Vivamus vitae diam suscipit, placerat orci eu, sollicitudin justo. Cras pretium blandit sagittis. 
+            Une partie des habitants de l'île ne comprennent pas ce que je chante. Je dirais qu'ils sont simplement des ignares. Je reçois néanmoins un très bon accueil de la plupart des honnêtes gens d'ici. On dirait qu'ils apprécient les ondes des anciennes traditions. Je ne dirais pas qu'il détestaient l'ancien barde mais presque...
+        </reponse>
+    </dialog>
+    <dialog id="c7_10" mustKnow="c4_10">
+        <question>
+            Le tavernier se plaint d'avoir été volé, vous savez quelque chose à ce propos ?
+        </question> 
+        <reponse>
+            Haha, ce Loup s'est fait volé ? C'est bien fait pour lui!
         </reponse>
     </dialog>
 	<!--

@@ -1,7 +1,7 @@
 <conversation>
     <dialog id="c10_01">
         <question>
-            Vous vous entendiez bien avec le barde qui s'est fait assassiné ?
+            Vous vous entendiez bien avec le barde qui s'est fait assassiner ?
         </question> 
         <reponse>
             Non, ce cabot chantait des imbélicités en plus de faire mal aux oreilles. Je ne traînais plus à la taverne depuis quelques temps à cause de lui.
@@ -12,7 +12,7 @@
             Vous êtes seul ici ? Votre maison est immense.
         </question> 
         <reponse>
-            Ma femme et mon fils sont sur le continent pour régler des affaires de familles. Je reste ici car j'ai une grosse commande d'arme à ornorer.
+            Ma femme et mon fils sont sur le continent pour régler des affaires de familles. Je reste ici car j'ai une grosse commande d'armes à honorer.
         </reponse>
     </dialog>
     <dialog id="c10_03">
@@ -20,7 +20,7 @@
             A votre avis, qui a bien pu commettre le crime dont on m'accuse ?
         </question> 
         <reponse>
-            Je ne pense pas que vous soyez coupable. La meute n'acceptait pas que Griss soit accepté parmis eux. Je ne mettrai pas ma main au four mais je dirais que c'est un Loup qui s'est débarassé de lui.
+            Je ne pense pas que vous soyez coupable. La meute n'acceptait pas que Griss soit accepté parmi eux. Je ne mettrai pas ma main au four mais je dirais que c'est un Loup qui s'est débarassé de lui.
         </reponse>
     </dialog>
     <dialog id="c10_10" mustKnow="indice_i4_dague">
@@ -37,7 +37,7 @@
             Votre gilet, c'est du mouton, non ? Le fermier se plaint qu'il lui manque un mouton ! 
         </question> 
         <reponse>
-            Ce gilet ? ah euh... Non je l'ai acheté à Kotel après en échange d'une dague. Pourquoi tuerai-je le mouton d'un ami ?
+            Ce gilet ? ah euh... Non je l'ai acheté à Kotel en échange d'une dague. Pourquoi tuerai-je le mouton d'un ami ?
         </reponse>
     </dialog>
 </conversation>

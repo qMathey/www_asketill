@@ -170,7 +170,7 @@ EventListenersManager.addConversationEventListeners = function() {
         $(this).find(".reponse").css("height", "0px");
         // anime l'ouverture
         $(this).find(".reponse").animate({
-            height:reponseHeight+"px"
+            height:(reponseHeight+10)+"px"
         });
         
         // enleve la classe strong si elle était présente

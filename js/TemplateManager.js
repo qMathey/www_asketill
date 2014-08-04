@@ -157,7 +157,6 @@ TemplateManager.disposeTemplate = function() {
         
         // en cas d'echec (height == 0), recommencer après 30ms (problème du à la pile d'exécution)
         if(height == 0 || width == 0 ||  $("#html_content .wrapper_pictBG img").width() == 0) {
-            console.log("Template redisposé après echec");
             $(".templateOverlay").delay(30).queue(function() {
                 TemplateManager.disposeTemplate();
             })

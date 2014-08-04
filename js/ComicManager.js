@@ -99,8 +99,13 @@ ComicManager.intro = function() {
 
 		// Actualise l'affichage de WebGL
 		$("#html_wrapper").fadeOut(function() {
+			if( WebglSceneManager.canUserPlayWebgl ) {
 				// Affiche la scène ThreeJS
 				WebglSceneManager.showWebglScene();
+			}
+			else {
+				TemplateManager.LoadTemplateHMTL("templates/zones/z0-carteAsketill.html");
+			}
 		});
 	});
         

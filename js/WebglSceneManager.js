@@ -38,69 +38,62 @@ WebglSceneManager.zoneForge = undefined;
  */
 WebglSceneManager.init = function() {
 
-	if( WebglSceneManager.canUserPlayWebgl ) {
-
-		try { 
-			   
-			// on dispose la scène (au cas où ça ne serait pas fait)
-			WebglSceneManager.disposeScene();
-				
-			// Instancie un renderer
-			WebglSceneManager.renderer = new THREE.WebGLRenderer({ antialiasing: true }); 
-			// paramètre le renderer
-			WebglSceneManager.renderer.setSize(WebglSceneManager.canvasWidth, WebglSceneManager.canvasHeight);
-			WebglSceneManager.renderer.setClearColor( 0xffffff, 1 ); // background #fff
-			// attache le renderer à l'élément DOM
-			$("#webgl_wrapper").append(WebglSceneManager.renderer.domElement);
-			 
-			// Instancie la scène
-			WebglSceneManager.scene = new THREE.Scene();
+	try { 
+		   
+		// on dispose la scène (au cas où ça ne serait pas fait)
+		WebglSceneManager.disposeScene();
 			
-			// Instancie la caméra
-			WebglSceneManager.camera = new THREE.PerspectiveCamera(
-				WebglSceneManager.VIEW_ANGLE,
-				WebglSceneManager.aspectRatio,
-				WebglSceneManager.NEAR,
-				WebglSceneManager.FAR  );
-			// ajoute la caméra à la scène
-			WebglSceneManager.scene.add( WebglSceneManager.camera );
-			// recule la camera
-			WebglSceneManager.camera.position.z = 300;
-			WebglSceneManager.camera.position.y = 100;
-				
-			// Initialise les controles trackball
-			//WebglSceneManager.initTrackballControls();
-			WebglSceneManager.initOrbitControls();
-				
-				// Initialise les controles de picking (survol des objets)
-				WebglSceneManager.addPickingControls();
+		// Instancie un renderer
+		WebglSceneManager.renderer = new THREE.WebGLRenderer({ antialiasing: true }); 
+		// paramètre le renderer
+		WebglSceneManager.renderer.setSize(WebglSceneManager.canvasWidth, WebglSceneManager.canvasHeight);
+		WebglSceneManager.renderer.setClearColor( 0xffffff, 1 ); // background #fff
+		// attache le renderer à l'élément DOM
+		$("#webgl_wrapper").append(WebglSceneManager.renderer.domElement);
+		 
+		// Instancie la scène
+		WebglSceneManager.scene = new THREE.Scene();
+		
+		// Instancie la caméra
+		WebglSceneManager.camera = new THREE.PerspectiveCamera(
+			WebglSceneManager.VIEW_ANGLE,
+			WebglSceneManager.aspectRatio,
+			WebglSceneManager.NEAR,
+			WebglSceneManager.FAR  );
+		// ajoute la caméra à la scène
+		WebglSceneManager.scene.add( WebglSceneManager.camera );
+		// recule la camera
+		WebglSceneManager.camera.position.z = 300;
+		WebglSceneManager.camera.position.y = 100;
 			
-			// Appelle le constructeur de scène
-			WebglSceneMaker.buildScene();
+		// Initialise les controles trackball
+		//WebglSceneManager.initTrackballControls();
+		WebglSceneManager.initOrbitControls();
 			
-			// Ajoute le module de statistiques
-			//WebglSceneManager.addStatistics();
+			// Initialise les controles de picking (survol des objets)
+			WebglSceneManager.addPickingControls();
+		
+		// Appelle le constructeur de scène
+		WebglSceneMaker.buildScene();
+		
+		// Ajoute le module de statistiques
+		//WebglSceneManager.addStatistics();
+		
+		// ajoute une sphère de test
+		//WebglSceneManager.addTestSphere();
+		
+		// ajoute une lumière (point lumineux)
+		WebglSceneManager.addPointLight();
 			
-			// ajoute une sphère de test
-			//WebglSceneManager.addTestSphere();
-			
-			// ajoute une lumière (point lumineux)
-			WebglSceneManager.addPointLight();
-				
-				// initialise l'horloge 
-				WebglSceneManager.clock = new THREE.Clock();
-			
-			// 1er appel de mise à jour
-			WebglSceneManager.updateScene();
-			   
-		}
-		catch(exception){
-			WebglSceneManager.canUserPlayWebgl = false;
-			TemplateManager.LoadTemplateHMTL("templates/zones/z0-carteAsketill.html");
-		}
+			// initialise l'horloge 
+			WebglSceneManager.clock = new THREE.Clock();
+		
+		// 1er appel de mise à jour
+		WebglSceneManager.updateScene();
+		   
 	}
-	else {
-		TemplateManager.LoadTemplateHMTL("templates/zones/z0-carteAsketill.html");
+	catch(exception){
+		WebglSceneManager.canUserPlayWebgl = false;
 	}
 }
 

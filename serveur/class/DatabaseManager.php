@@ -49,7 +49,7 @@ class DatabaseManager {
         $query = $this->pdoConnector->query( $query );
         $query->setFetchMode(PDO::FETCH_OBJ);
         
-        $returnArray = [];
+        $returnArray = array();
         
         // Nous traitons les résultats en boucle
         while( $row = $query->fetch() )

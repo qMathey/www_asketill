@@ -1,0 +1,66 @@
+<!-- image de fond -->
+<div class="wrapper_pictBG">
+    <img src="templates/zones/z0-carteAsketill-web.jpg" class="pictBG" />
+</div>
+<!-- 
+
+Surcouche interaction
+
+ajouter la classe .dialog pour l'effet de texte BD
+
+ajouter la classe .hide pour masquer l'élément
+
+ajouter la classe .dev pour avoir un fond rouge transparent
+
+ajouter la classe .clickZone pour avoir le curseur
+
+-->
+<div class="templateOverlay">
+    <!-- Lien vers un autre template -->
+    <div id="zoneMaisonChef" class="clickZone" style="width: 14%;height: 14%;margin-left: 66%;margin-top: 5%;"></div>
+    <div id="zoneForetAncienne" class="clickZone" style="width: 22%;height: 9%;margin-left: 38%;margin-top: 7%;"></div>
+    <div id="zoneCabanne" class="clickZone" style="width: 10%;height: 11%;margin-left: 24%;margin-top: 27%;"></div>
+    <div id="zonePuit" class="clickZone" style="width: 18%;height: 17%;margin-left: 43%;margin-top: 38%;"></div>
+    <div id="zoneFerme" class="clickZone" style="width: 12%;height: 15%;margin-left: 70%;margin-top: 43%;"></div>
+    <div id="zoneMarche" class="clickZone" style="width: 19%;height: 17%;margin-left: 21%;margin-top: 40%;"></div>
+    <div id="zonePort" class="clickZone" style="width: 12%;height: 12%;margin-left: 21%;margin-top: 57%;"></div>
+</div>
+
+
+
+<!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    // Zone de la maison chef
+    EventListenersManager.registerEvent("click", "#zoneMaisonChef", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z1/z1-maisonchef.html");
+    });
+    // Zone de la cabanne
+    EventListenersManager.registerEvent("click", "#zoneForetAncienne", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z2/z2-foretancienne.html");
+    });
+    // Zone de la fôret ancienne
+    EventListenersManager.registerEvent("click", "#zoneCabanne", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z3/z3-cabanne.html");
+    });
+    // Zone du puit
+    EventListenersManager.registerEvent("click", "#zonePuit", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z4/z4-placepuits.html");
+    });
+    // Zone de la ferme
+    EventListenersManager.registerEvent("click", "#zoneFerme", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z5/z5-ferme.html");
+    });
+    // Zone du marché
+    EventListenersManager.registerEvent("click", "#zoneMarche", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z6/z6_marche.html");
+    });
+    // Zone du port
+    EventListenersManager.registerEvent("click", "#zonePort", function() {
+        TemplateManager.LoadTemplateHMTL("templates/zones/Z7/z7-port.html");
+    });
+    
+    
+    // Jouer un son
+    //AudioManager.loadAndPlaySound("URL");
+</script>

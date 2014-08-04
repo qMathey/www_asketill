@@ -110,8 +110,17 @@ TemplateManager.LoadTemplateHMTL = function ( templateURL ) {
             $("#html_content").prepend('<div class="btn_retour_map grow" title="retourner sur le carte"></div>');
             
             $("#html_content").show();
-            // dispose le template quand les contenus HMTL sont affichés
+			
+			
+			// Spécificité pour Safari, il faut noter le margin top initiale sur toutes les clickZones
+			$(".templateOverlay .clickZone").each(function() {
+				var currentMarginTop = $(this).position().top / $(this).parent().height() * 100;
+				$(this).attr("data-initialMarginTop", currentMarginTop);
+			});
+			
+			// dispose le template quand les contenus HMTL sont affichés
             TemplateManager.disposeTemplate();
+            
             $("#html_content").hide();
             
             // affiche les contenus
@@ -133,13 +142,17 @@ TemplateManager.disposeTemplate = function() {
         
         var width = $("#html_wrapper").width();
         var height = $("#html_wrapper").height();
+		
+		// reset styles
+		$(".templateOverlay").attr("style", "");
+		$("#html_content .wrapper_pictBG").attr("style", "");
         
         $("#html_content .wrapper_pictBG").css("width", width+"px");
         $("#html_content .wrapper_pictBG").css("height", height+"px");
         
         // surcouche interaction du template
         $(".templateOverlay").css("width", $("#html_content .wrapper_pictBG img").width()+"px");
-        $(".templateOverlay").css("height", height+"px");
+        $(".templateOverlay").css("height", $("#html_content .wrapper_pictBG img").height()+"px");
         $(".templateOverlay").css("margin-left", (width - $(".templateOverlay").width()) / 2 +"px");
         
         // en cas d'echec (height == 0), recommencer après 30ms (problème du à la pile d'exécution)
@@ -149,7 +162,16 @@ TemplateManager.disposeTemplate = function() {
                 TemplateManager.disposeTemplate();
             })
         }
-        
+		
+		// Spécificité pour Safari, il faut le recalculer
+		if ( navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1 ) {
+				$(".templateOverlay .clickZone").each(function() {
+					var width = $(this).parent().width();    // get the width of div.container
+					var safariMarginTopPX = width * parseInt($(this).attr("data-initialMarginTop")) / 100; 
+					$(this).css("margin-top", Math.abs(safariMarginTopPX)+"px");
+				});
+			} // if
+			
     } catch (exception){
         //...
     }

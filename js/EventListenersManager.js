@@ -34,6 +34,9 @@ EventListenersManager.init = function () {
         
         // Quand on clique sur le bouton retour pour afficher la map
         $(document).on("click", ".btn_retour_map", function() {
+		
+			if( WebglSceneManager.canUserPlayWebgl ) {
+		
             // affiche la carte
             $("#html_wrapper").fadeOut(function() {
                     // Affiche la scène ThreeJS
@@ -43,6 +46,9 @@ EventListenersManager.init = function () {
                     // supprime l'info d'endroit précédent
                     TemplateManager.previousLocation = undefined;
             });
+			} else { // l'utilisateur ne peut pas afficher la carte 3D, alors on lui affiche la carte 2D
+				TemplateManager.LoadTemplateHMTL("templates/zones/z0-carteAsketill.html");
+			}// else
         });
         
         // Quand on clique sur le bouton retour pour afficher un template

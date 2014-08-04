@@ -164,12 +164,14 @@ TemplateManager.disposeTemplate = function() {
 		
 		// Spécificité pour Safari, il faut le recalculer
 		if ( navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1 ) {
-				$(".templateOverlay .clickZone").each(function() {
-					var width = $(this).parent().width();    // get the width of div.container
-					var safariMarginTopPX = width * parseInt($(this).attr("data-initialMarginTop")) / 100; 
+			$(".templateOverlay .clickZone").each(function() {
+				var width = $(this).parent().width();    // get the width of div.container
+				var safariMarginTopPX = width * parseInt($(this).attr("data-initialMarginTop")) / 100; 
+				if(safariMarginTopPX != 0) {
 					$(this).css("margin-top", Math.abs(safariMarginTopPX)+"px");
-				});
-			} // if
+				}
+			});
+		} // if
 			
     } catch (exception){
         //...

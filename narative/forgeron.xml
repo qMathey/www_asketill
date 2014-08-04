@@ -32,7 +32,7 @@
         </reponse>
     </dialog>
     
-    <dialog id="c10_11" mustKnow="c15_02">
+    <dialog id="c10_11" mustKnow="c15_03">
         <question>
             Votre gilet, c'est du mouton, non ? Le fermier se plaint qu'il lui manque un mouton ! 
         </question> 

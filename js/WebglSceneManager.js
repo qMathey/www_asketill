@@ -38,8 +38,10 @@ WebglSceneManager.zoneForge = undefined;
  */
 WebglSceneManager.init = function() {
         try {
+           
 	// on dispose la scène (au cas où ça ne serait pas fait)
 	WebglSceneManager.disposeScene();
+        
 	// Instancie un renderer
 	WebglSceneManager.renderer = new THREE.WebGLRenderer({ antialiasing: true }); 
 	// paramètre le renderer
@@ -47,7 +49,7 @@ WebglSceneManager.init = function() {
 	WebglSceneManager.renderer.setClearColor( 0xffffff, 1 ); // background #fff
 	// attache le renderer à l'élément DOM
 	$("#webgl_wrapper").append(WebglSceneManager.renderer.domElement);
-	
+	 
 	// Instancie la scène
 	WebglSceneManager.scene = new THREE.Scene();
 	
@@ -87,7 +89,7 @@ WebglSceneManager.init = function() {
 	
 	// 1er appel de mise à jour
 	WebglSceneManager.updateScene();
-        
+           
         }
         catch(exception){
             WebglSceneManager.canUserPlayWebgl = false;

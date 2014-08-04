@@ -62,9 +62,19 @@ Menu.toggle = function () {
 	// check if menu is visible
 	if(Menu.$wrapper().data("isVisible") ){
 		Menu.hide();
+                
+                // si les controles webGL sont définis, on les actives
+                if(WebglSceneManager.controls != undefined) {
+                    WebglSceneManager.controls.enabled = true;
+                }
 	} // if
 	else {
 		Menu.show();
+                
+                // si les controles webGL sont définis, on les desactive
+                if(WebglSceneManager.controls != undefined) {
+                    WebglSceneManager.controls.enabled = false;
+                }
 	} // else
 }
 

@@ -143,7 +143,14 @@
         
         // masque les portraits à accuser
         $(".portraitsAccusations").fadeOut(function() {
-            // quand l'animation est finie, on met un texte aleatoire de fin
+            // quand l'animation est finie
+            
+             // si les controles webGL sont définis, on les desactive
+            if(WebglSceneManager.controls != undefined) {
+                WebglSceneManager.controls.enabled = false;
+            }
+            
+            // On met un texte aleatoire de fin
             
             // spécificité, si on s'accuse soi-même, on a un text spécifique
             if(accusedCharater == "etranger"){

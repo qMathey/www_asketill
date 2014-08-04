@@ -432,7 +432,7 @@ ComicManager.insertConversationFromData = function(  arrayQuestions, isNewQuesti
             // Si la question est nouvelle, on l'insère au début (prepend) sinon après (append)
             if ( isNewQuestions == true ) {
                 // ajoute au début la question et l'affiche après 
-                $(".convesationTextWrapper").prepend($question.hide().delay(3000).fadeIn(2000));
+                $(".convesationTextWrapper").append($question.hide().delay(3000).fadeIn(2000));
             }// if
             else {
                 // ajoute à la fin la question

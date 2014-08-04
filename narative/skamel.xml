@@ -1,13 +1,21 @@
 <conversation>
     <dialog id="c15_01">
         <question>
- Il y a un mort dans votre grange, vous n'avez rien remarqué hier soir ?!
+            Vos bêtes et vous semblez avoir une relation assez proche.
         </question> 
         <reponse>
-            Euh non... Je dormais car j'étais fatigué. Vous savez, travailler avec les bêtes, c'est épuisant!
+            L'élavage est ma passion depuis que je sais marcher. C'est aussi lucratif. Je possédais d'autres fermes avec les Loups mais j'ai dois les abondonner quand la meute se déplace. 
         </reponse>
     </dialog>
-    <dialog id="c15_02">
+    <dialog id="c15_02" mustKnow="c15_01">
+        <question>
+            un Loup qui s'occupe du bétail ?
+        </question> 
+        <reponse>
+            Vous devez trouver ça ironique? Hahaha, de toute manière je me porte vers l’avenir et je sais bien que les méthodes doivent évoluer avec le temps. Le commerce sera la prochaine vraie prochaine conquête pour quiconque pourra s’imposer et je compte bien en tirer profiter avec mes fermes.
+        </reponse>
+    </dialog>
+    <dialog id="c15_03">
         <question>
             Vous semblez paniqué au millieu de vos mouton. Est-ce que tout va bien ? 
         </question> 
@@ -15,12 +23,12 @@
             Je possède 11 moutons ici, et il m'en manque deux ! S'il-vous-plaît, aidez-moi à les retrouver! 
         </reponse>
     </dialog>
-    <dialog id="c15_03">
+    <dialog id="c15_04">
         <question>
-            Vos bêtes et vous semblez avoir une relation assez proche.
+ Il y a un mort dans votre grange, vous n'avez rien remarqué hier soir ?!
         </question> 
         <reponse>
-            L'élavage est ma passion depuis que je sais marcher. C'est aussi lucratif. Je possédais d'autres fermes avec les Loups mais j'ai dois les abondonner quand la meute se déplace. Vous devez trouver ça ironique un Loup qui s'occupe du bétail, non ? Hahaha, de toute manière je me porte vers l’avenir et je sais bien que les méthodes doivent évoluer avec le temps. Le commerce sera la prochaine vraie prochaine Conquête pour quiconque pourra s’imposer et je compte bien en tirer profiter avec mes fermes.
+            Euh non... Je dormais car j'étais fatigué. Vous savez, travailler avec les bêtes, c'est épuisant!
         </reponse>
     </dialog>
     <dialog id="c15_10" mustKnow="z5-mouton1">

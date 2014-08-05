@@ -39,7 +39,7 @@ Un meurtre a eu lieu dans votre grange pendant la nuit et vous n'avez rien remar
          Euh non... Vous savez, travailler avec les bêtes c'est épuisant! J'ai le sommeil lourd et j'étais fatigué. J'ai dû dormir comme une pierre!
         </reponse>
     </dialog>
-	    <dialog id="c15_06">
+	    <dialog id="c15_06" mustKnow="c15_05">
         <question>
 		D'accord... Mais que pensez-vous alors de ce meurtre? Des pistes que je pourrai suivre?
         </question> 

@@ -18,6 +18,7 @@
 <script type="text/javascript">
     
     $(".repriseJeu").hide().delay(1000).fadeIn();
+	
     
     // Préchage la scène WebGL de façon asynchrone
     setTimeout( function() {
@@ -30,10 +31,15 @@
         location.reload();
     });
     
-    // Si on
+    // Si on clique sur continuer
     EventListenersManager.registerEvent("click", ".continuerJeu", function() {
-        // Affiche la scène ThreeJS
-        WebglSceneManager.showWebglScene();
+		if( WebglSceneManager.canUserPlayWebgl ) {
+			// Affiche la scène ThreeJS
+			WebglSceneManager.showWebglScene();
+		} else {
+			// sinon affiche le template de la carte 2D
+			TemplateManager.LoadTemplateHMTL("templates/zones/z0-carteAsketill.html");
+		} // else
     });
     
     // Jouer un son

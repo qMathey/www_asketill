@@ -4,7 +4,7 @@
             Vous vous entendiez bien avec le barde qui s'est fait assassiner ?
         </question> 
         <reponse>
-            Non, ce cabot chantait des imbélicités en plus de faire mal aux oreilles. Je ne traînais plus à la taverne depuis quelques temps à cause de lui.
+            Non, ce cabot chantait des imbécilités en plus de faire mal aux oreilles! Je ne traînais que peu à la taverne depuis quelques temps à cause de lui!
         </reponse>
     </dialog>
     <dialog id="c10_02">
@@ -12,7 +12,7 @@
             Vous êtes seul ici ? Votre maison est immense.
         </question> 
         <reponse>
-            Ma femme et mon fils sont sur le continent pour régler des affaires de familles. Je reste ici car j'ai une grosse commande d'armes à honorer.
+            Ma femme et mon fils sont sur le continent chez leur grand-mère pour régler des affaires de famille. Je reste ici car j'ai une assez grosse commande d'armes à honorer.
         </reponse>
     </dialog>
     <dialog id="c10_03">
@@ -20,24 +20,32 @@
             A votre avis, qui a bien pu commettre le crime dont on m'accuse ?
         </question> 
         <reponse>
-            Je ne pense pas que vous soyez coupable. La meute n'acceptait pas que Griss soit accepté parmi eux. Je ne mettrai pas ma main au four mais je dirais que c'est un Loup qui s'est débarassé de lui.
+            Je ne pense pas que vous soyez coupable. Une partie de la meute ne digérait pas que Griss soit accepté parmi eux. Je ne mettrai pas ma main au four mais je dirais que c'est un Loup qui s'est débarassé de lui.
+        </reponse>
+    </dialog>
+	 <dialog id="c10_04" mustKnow="c10_03">
+        <question>
+         Une partie de la meute? Pouvez-vous préciser?
+        </question> 
+        <reponse>
+		Déjà leur Matriarche n'arrêtait pas de pestifèrer à propos du jeune Loup, sinon les 2 Gardiens n'étaient pas très fiers d'accueillir un simple barde dans leur meute de guerriers. C'est une famille plutôt tordue ces 4 là vous savez... Gardarr était un des seuls à reconnaître Griss comme un des leurs, à mon avis la vieillesse y est pour quelque chose.
         </reponse>
     </dialog>
     <dialog id="c10_10" mustKnow="indice_i4_dague">
         <question>
-            La dague que vous posséder ressemble étrangement à la dague utilisée pour blesser le barde. Que faisiez-vous hier soir ?
+            La dague que vous posséder ressemble étrangement à la dague utilisée pour blesser le barde... Que faisiez-vous hier soir ?
         </question> 
         <reponse>
-            Hier soir ? Euh oui j'étais occupé... Comment dire. Bon, j'étais en companie de Slyna. Mais ne dîtes rien ! Même si elle ne confirme pas que nous étions ensemble, je n'ai rien à voir avec le meurtre du barde !
+            Hier soir ? Euh oui j'étais occupé... Comment dire? Je me consolais de l'absence de ma femme, j'étais en compagnie de Slyna à la taverne. Mais ne dîtes rien s'il vous plaît! Je n'ai rien à voir avec le meurtre du barde je vous le jure!
         </reponse>
     </dialog>
     
     <dialog id="c10_11" mustKnow="c15_03">
         <question>
-            Votre gilet, c'est du mouton, non ? Le fermier se plaint qu'il lui manque un mouton ! 
+            Votre gilet semble bien neuf, c'est du mouton, non ? Le fermier se plaint qu'il lui manque un mouton! 
         </question> 
         <reponse>
-            Ce gilet ? ah euh... Non je l'ai acheté à Kotel en échange d'une dague. Pourquoi tuerais-je le mouton d'un ami ?
+            Ce gilet ? je l'ai acheté à Kotel en échange d'une dague. Arrêtez de me suspecter de tous les maux de ce maudit village! Cet idiot de fermier n'a qu'à mieux prendre soin de ses bêtes!
         </reponse>
     </dialog>
 </conversation>

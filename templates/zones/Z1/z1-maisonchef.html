@@ -52,8 +52,8 @@ ajouter la classe .clickZone pour avoir le curseur
         TemplateManager.LoadTemplateHMTL("templates/zones/Z1/C13/c13-thordgardien1.html");
     });
     
-    // si l'utilisateur a parlé à Slyna (la courtisane) ou refill (tavernier), alors il peut accéder à la prison
-    if(ComicManager.doesUserKnow("c8_03") || ComicManager.doesUserKnow("c4_10")){
+    // si l'utilisateur a parlé à Slyna (la courtisane) ou refill (tavernier) ou encore à Skamel (Fermier), alors il peut accéder à la prison
+    if(ComicManager.doesUserKnow("c8_03") || ComicManager.doesUserKnow("c4_10") || ComicManager.doesUserKnow("c15_06")){
         
         // ajoute la zone cliquable de la prison
         $("#prisonTemple").addClass("clickZone");

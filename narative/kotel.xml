@@ -1,7 +1,7 @@
 <conversation>
     <dialog id="c19_01">
         <question>
-	Est-il possible de repartir ? Je dois rejoindre au plus vite la côte.
+		Est-il possible de repartir ? Je dois rejoindre au plus vite la côte.
         </question> 
         <reponse>
         Je me doutais que vous finiriez par venir me voir. Vous voulez repartir ? Hélas mon bateau ne sera pas prêt avant deux jours. Je ne peux rien faire pour vous et je ne veux pas être impliqué dans vos histoires.
@@ -33,10 +33,10 @@
     </dialog>	
 	<dialog id="c19_05">
         <question>
-		Vous avez là un bien beau bateau... On dirait même que les voiles sont neuves, non ?
+		Que pouvez vous me dire à propos des Loups? il y a-t-il vraiment d'autres clans sur cet île?
         </question> 
         <reponse>
-		Oui et alors ? Mêle-toi de tes affaires l'étranger !
+		Je n'ai jamais été très intéressé par les clans et leurs luttes futiles, je n'ai donc jamais pris part à leur conflit. Je regrette que les habitants de cet île se déchirent encore autour du passé. Mon bateau en tout cas sera toujours là pour le plus offrant et pour ce qui me sera le plus profitable le moment venu...
         </reponse>
     </dialog>	
     <dialog id="c19_10" mustKnow="c18_02">

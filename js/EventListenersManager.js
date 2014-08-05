@@ -115,16 +115,16 @@ EventListenersManager.addHomepageEventListeners = function () {
                         }, 300);
                        
 		});
-		// Masque la scène ThreeJS
-		WebglSceneManager.hideWebglScene();
+			// Masque la scène ThreeJS
+			WebglSceneManager.hideWebglScene();
                 
             }
             else {
-                /*
+                
                 ComicManager.userKnowledge = userknowledgeFromStorage;
                 // appelle directement le template repriseJeu
                 TemplateManager.LoadTemplateHMTL("templates/repriseJeu.html");                
-                */
+                
             } // else
 		
 		

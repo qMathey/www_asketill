@@ -90,44 +90,40 @@ EventListenersManager.init = function () {
  */
 EventListenersManager.addHomepageEventListeners = function () {
 	// BD Quand on clique sur "Démarrer l'aventure"
-	$(document).on("click", "#startAdventure", function() {
-            console.log("click homepage!")
+	$(document).on("click", "#startAdventure", function() {           
             
-            
-            // arrête l'animation de neige
-            if(snowStorm != undefined) {
-                snowStorm.stop();
-            }
-           
-            // Est-ce que l'utilisateur a joué ?
-            var userknowledgeFromStorage = StorageManager.getItem("userKnowledge");
-            if(userknowledgeFromStorage == null){
-                
-                // fadeOut, commence l'intro
-                $(this).fadeOut(function() {
-                        
+		// arrête l'animation de neige
+		if(snowStorm != undefined) {
+			snowStorm.stop();
+		}
+	   
+		// Est-ce que l'utilisateur a joué ?
+		var userknowledgeFromStorage = StorageManager.getItem("userKnowledge");
+		if(userknowledgeFromStorage == null){
+			
+		// fadeOut, commence l'intro
+		$(this).fadeOut(function() {
+				
 			// Lance l'introduction
 			ComicManager.intro();
-                        
+						
 			// Préchage la scène WebGL de façon asynchrone
-                        setTimeout( function() {
-                            WebglSceneManager.init();
-                        }, 300);
-                       
+			setTimeout( function() {
+				WebglSceneManager.init();
+			}, 300);
+			   
 		});
-			// Masque la scène ThreeJS
-			WebglSceneManager.hideWebglScene();
-                
-            }
-            else {
-                
-                ComicManager.userKnowledge = userknowledgeFromStorage;
-                // appelle directement le template repriseJeu
-                TemplateManager.LoadTemplateHMTL("templates/repriseJeu.html");                
-                
-            } // else
-		
-		
+		// Masque la scène ThreeJS
+		WebglSceneManager.hideWebglScene();
+			
+		}
+		else {
+			
+			ComicManager.userKnowledge = userknowledgeFromStorage;
+			// appelle directement le template repriseJeu
+			TemplateManager.LoadTemplateHMTL("templates/repriseJeu.html");                
+			
+		} // else
 	});
 }
 

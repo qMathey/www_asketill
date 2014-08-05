@@ -1,18 +1,18 @@
 <conversation>
     <dialog id="c14_01">
         <question>
-            Vous êtes le sage de ces lieux ? Dîtes-moi, comment puis-je faire pour m'innocenter ?
+            Vous êtes le sage de ces lieux ? Dîtes-moi, Que puis-je faire pour m'innocenter ?
         </question> 
         <reponse>
-            Seul, tu découvriras la vérité. Tu dois aller voir tous les villageois de cette splendide île et faire apparaître la vérité! Les vrais habitants d'Asketill t'aideront, je me méfierais des colonisateurs!
+          Toi seul découvriras la vérité. Va voir tous les villageois de cette splendide île et fais apparaître la vérité! Les vrais habitants d'Asketill t'aideront et méfie-toi des envahisseurs!
         </reponse>
     </dialog>
     <dialog id="c14_02">
         <question>
-            Pourquoi m'avez-vous sauvé face au chef et son fils ?
+            Pourquoi m'avez-vous sauvé face au chef et son dingue de fils ?
         </question> 
         <reponse>
-            Il est aisé de vous accuser mais personne ne possède la preuve de vos actes! Gils, le fils du chef, veut votre mort alors qu'il est bien content de voir la belle Inga accessible à ses envies... Vous devriez vous méfier de lui, cette mort ne lui profite que trop.
+            Il est facile de vous accuser mais personne ne possède la preuve de vos actes! Gils, le fils du chef, veut votre mort car cela mettrait fin à l'enquête autour du meurtre de Griss. Vous devriez vous méfier de lui, cette mort ne lui profite que trop, il ne cachait pas son amour pour la femme de Griss, maintenant convenablement devenue veuve...
         </reponse>
     </dialog>
     <dialog id="c14_03">

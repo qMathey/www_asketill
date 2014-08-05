@@ -11,23 +11,23 @@
         <question>Avez-vous vu ou entendu quelque chose la nuit du meurtre? </question> 
         <reponse>? OUIIIII Toooosk a entendu le loup…. Tooooosk a entendu le vent…. Tosk a vu l’étranger! Tosk avait faim et il a mangé du bon poisson! Gentil l’homme qui me nourrit! TOOOOOSK puuuuuuuuue ! gnaaaaa!</reponse>
     </dialog>
-    <dialog id="c16_04">
+    <dialog id="c16_04" mustKnow="c10_03">
         <question>Qui vous a nourri la nuit du meurtre? </question> 
         <reponse>TOOOOSK sait tout… TOOOOSK va te dire… mmmmm… TOI!… mmm… non pas toi… LUI ! OUI C’était bien lui! gnaaaaa TOSK MEEEEEEEEEENT hahahaha!</reponse>
     </dialog>
-    <dialog id="c16_05">
+    <dialog id="c16_05" mustKnow="c10_04">
         <question>Essayez de vous rappeler de cette nuit! Ma vie en dépend!</question> 
         <reponse>TOOOOSK gnaaa! VOUS mourir? … TOOOSK triste… mais … TOOOOOSK s’en fiche ahahah! MENSONGE! Tosk vous veut vivant… TOOOOSK a peur mais il vous dira la vérité… TOOOOOSk est tout nu sous le manteau hahahhaha! </reponse>
     </dialog>
     <dialog id="c16_06">
         <question>C’est un bien joli manteau que vous avez là pour un mendiant…</question> 
-        <reponse>OUIIIII TOSK aimer la fourrure… JE PISSE DANS LE PUIT!!! hahaha! Manteau… un vieux souvenir! 
+        <reponse>OUIIIII TOSK aimer la fourrure… JE PISSE DANS LE PUITS!!! hahaha! Manteau… un vieux souvenir! 
 Mais TOOOOSK n’est pas un mendiant… TOOOOSK est ROI! TOOOSK Le Grand! TOOOSK le Beau… TOSK est moooooooooooort ahahaha!
 </reponse>
     </dialog>
     <dialog id="c16_07">
         <question>Vos tatouages me sont familiers… </question> 
-        <reponse>… TOSK? (regarde ses tatouages) Gnaaaaaaaa! bouahahahaah (se met à pleurer) Je vous déteste étranger… pourquoi me faîtes-vous cela? Je jetterai votre tête dans le puit et je pisserai dedans! hahahaha TOOOOOOSK ? gnaaaaaaa! (S’endort)</reponse>
+        <reponse>… TOSK? (regarde ses tatouages) Gnaaaaaaaa! bouahahahaah (se met à pleurer) Je vous déteste étranger… pourquoi me faîtes-vous cela? Je jeterai votre tête dans le puits et je pisserai dedans! hahahaha TOSK ? gnaaaa! ZZZZZ (S’endort)</reponse>
     </dialog>
 	<!--
     <dialog id="cX_04" mustKnow="indice_i4_dague">

@@ -47,6 +47,22 @@
             Je suis peut-être malvoyant mais je ne suis pas aveugle. Des sombres jours se dessinent à l'horizon, c'est évident! mais peu importe... Quand les Loups quitteront Asketill, je serais probablement déjà mort et alors mon âme restera à roder autour de ce vieux port. Allez continuer votre enquête et je vous le souhaite... de garde votre tête...
         </reponse>
     </dialog>
+	<dialog id="c18_12" mustKnow="c16_04">
+        <question>
+		Vous n'auriez pas donné du poisson à Tosk le Sale la nuit du meurtre?
+        </question> 
+        <reponse>
+      	Je ne crois pas, ce pauvre fou ne sait pas ce qu'il dit, à votre place je ne donnerai que peu d'importance aux dires d'un vieux fou et rétardé! Une vraie honte ce pauvre fou... Et dire qu'il est tout ce qu'il reste de la famille du Grand Corbeau...
+        </reponse>
+    </dialog>
+	<dialog id="c18_13" mustKnow="c18_12">
+        <question>
+		Le Grand Corbeau? qui était-ce?
+        </question> 
+        <reponse>
+      	C'était un guerrier sauvage et mystique, l'ancien Chef de ce village avant que le vieux Loup Gardarr ne laisse son fils le décapiter... Un vrai spectacle en pleine place du puits. Si vous voulez savoir plus sur le Grand Corbeau demandez à Gardarr où à Otrygg, hélas la mémoire me fait défaut pour vous en dire plus...
+        </reponse>
+    </dialog>
 	<!--
     <dialog id="c18_04" mustKnow="indice_i4_dague">
         <question>

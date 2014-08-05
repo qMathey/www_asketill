@@ -25,10 +25,10 @@
     </dialog>
     <dialog id="c20_04" mustKnow="c20_03">
         <question>
-            Vous voulez dire que vous n'êtes pas un Loup ? Faîtes-vous partie d'un autre clan?
+            Vous voulez dire que vous n'êtes pas un Loup? Faîtes-vous partie d'un autre clan?
         </question> 
         <reponse>
-            Je ne l’étais pas auparavant, j’étais juste un homme honnête travaillant sur cette île, puis ces brutes sont arrivées et nous, habitants, avons tous perdu quelque chose...
+         Je ne suis en tout cas pas un de ces Loups imbéciles! J’étais juste un homme honnête travaillant sur cette île, puis ces brutes sont arrivées et nous, habitants, avons tous perdu quelque chose...
         </reponse>
     </dialog>
     <dialog id="c20_05" mustKnow="c20_04">
@@ -39,12 +39,19 @@
             Moi… j’ai perdu mon métier… Je travaillais le bois comme personne dans le royaume... Ces idiots ont rasé le meilleur bois de cette île afin de construire ce taudis démesuré qui leur sert de maison. Ils m’ont forcé à construire cette demeure par dessus un lieu sacré de l’île puis ils ont détruit ma maison. Depuis je vole pour vivre et je vis pour les voir tomber...
         </reponse>
     </dialog>
-    <dialog id="c20_06" mustKnow="c20_04">
+    <dialog id="c20_06" mustKnow="c20_05">
         <question>
             Que puis-je faire pour prouver notre innocence?
         </question> 
         <reponse>
             Notre innoncence ? Il n'y a rien que vous puissiez faire pour moi étranger, mais si vous souhaitez faire du bien à Asketill, accusez un Loup.
+        </reponse>
+    </dialog> <dialog id="c20_07" mustKnow="c20_06">
+        <question>
+        Vous pensez à un Loup en particulier?
+        </question> 
+        <reponse>
+        "Le porte-monnaie"... ça leur fera beaucoup de mal... Celui qui gère leurs comptes, ce bon vieux Skamel est certainement mêlé à cet histoire de toute façon... vous ne trouvez pas cela bizarre qu'il n'ait rien entendu la nuit du meurtre? De plus, lui qui prend autant soin de ses bêtes, vous pensez vraiment qu'il aurait laissé sa grange ouverte? S'il ne l'a pas tué lui-même, il est au moins complice! Il était bien reveillé en tout cas lors que je suis allé vider les poches de Griss! Allez lui forcer un peu la main, il va sûrement craquer et vous dire quelque chose d'utile!
         </reponse>
     </dialog>
 	<!--

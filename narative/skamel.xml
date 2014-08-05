@@ -1,34 +1,50 @@
 <conversation>
     <dialog id="c15_01">
         <question>
-            Vos bêtes et vous semblez avoir une relation assez proche.
+            Vous semblez avoir une relation assez proche avec vos bêtes.
         </question> 
         <reponse>
-            L'élavage est ma passion depuis que je sais marcher. C'est aussi lucratif. Je possédais d'autres fermes avec les Loups mais j'ai dois les abondonner quand la meute se déplace. 
+            L'élèvage est ma passion depuis que je sais marcher, je viens d'une lignée d'éleveurs très connu dans le royaume. 
         </reponse>
     </dialog>
-    <dialog id="c15_02" mustKnow="c15_01">
+	<dialog id="c15_02" mustKnow="c15_01">
         <question>
-            un Loup qui s'occupe du bétail ?
+         Avez-vous toujours vécu dans ces terres?
         </question> 
         <reponse>
-            Vous devez trouver ça ironique? Hahaha, de toute manière je me porte vers l’avenir et je sais bien que les méthodes doivent évoluer avec le temps. Le commerce sera la prochaine vraie prochaine conquête pour quiconque pourra s’imposer et je compte bien en tirer profiter avec mes fermes.
+        Je vivais sur le continent jusqu'au jour où les Loups sont arrivés, ils ont décimé nos fermes et tout détruit sur leur passage. Je les ai rejoint par dépit et j'ai décidé d'adapter mon métier à leur manière de vivre. Je possède encore d'autres fermes sur les terres conquises par les Loups, quand la meute se déplace je plante une ferme sur les terres laissées vidées de leurs habitants, c'est un bon système économique en soi... Si ce n'est que les Loups ne laissent jamais les terres en bon état. Cela demande énormément d'investissements...
         </reponse>
     </dialog>
-    <dialog id="c15_03">
+    <dialog id="c15_03" mustKnow="c15_02">
         <question>
-            Vous semblez paniqué au millieu de vos mouton. Est-ce que tout va bien ? 
+         Vous êtes donc un Loup qui s'occupe du bétail ?
         </question> 
         <reponse>
-            Je possède 11 moutons ici, et il m'en manque deux ! S'il-vous-plaît, aidez-moi à les retrouver! 
+            Vous devez trouver ça ironique? Hahaha, je me porte vers l’avenir et je sais bien que nos méthodes doivent évoluer avec le temps. Le commerce sera la vraie prochaine conquête pour quiconque saura s’imposer et je compte bien en tirer profit avec mes fermes.
         </reponse>
     </dialog>
     <dialog id="c15_04">
         <question>
- Il y a un mort dans votre grange, vous n'avez rien remarqué hier soir ?!
+         Vous avez l'air inquiet avec vous moutons... vous les comptez?
         </question> 
         <reponse>
-            Euh non... Je dormais car j'étais fatigué. Vous savez, travailler avec les bêtes, c'est épuisant!
+        Vous êtes perspicace étranger.En effet, Je possède 11 moutons, et il m'en manque deux depuis hier soir! S'il-vous-plaît, aidez-moi à retrouver mes bêtes chéries! 
+        </reponse>
+    </dialog>
+    <dialog id="c15_05">
+        <question>
+Un meurtre a eu lieu dans votre grange pendant la nuit et vous n'avez rien remarqué?!
+        </question> 
+        <reponse>
+         Euh non... Vous savez, travailler avec les bêtes c'est épuisant! J'ai le sommeil lourd et j'étais fatigué. J'ai dû dormir comme une pierre!
+        </reponse>
+    </dialog>
+	    <dialog id="c15_06">
+        <question>
+		D'accord... Mais que pensez-vous alors de ce meurtre? Des pistes que je pourrai suivre?
+        </question> 
+        <reponse>
+         C'est toujours malheureux de voir un jeune Loup comme Griss faire face à un si funeste destin. Sachez que peu l'appréciaient, même parmi les Loups, mais à mon avis il ne méritait pas un tel sort. Tout ce que je sais, c'est qu'un voleur du nom de Jav Lars a été arrêté sur les lieux du crime et jété à la prison de la maison du Chef. Vous devriez peut-être essayer de lui parler mais faites attention, apparement c'est un homme violent... même derrière les barreaux.
         </reponse>
     </dialog>
     <dialog id="c15_10" mustKnow="z5-mouton1">
@@ -36,7 +52,7 @@
             J'ai trouvé un de vos moutons derrière votre ferme.
         </question> 
         <reponse>
-            Ah ? Je parie que c'est Frimja, cette petite se cache sans arrêt! Merci étranger ! Mais il me manque toujours un mouton...
+            Ah ? Je parie que c'est Frimja, cette petite se cache sans arrêt! Merci étranger! Mais il me manque toujours un mouton...
         </reponse>
     </dialog>
     <dialog id="c15_11" mustKnow="c10_11">
@@ -44,7 +60,16 @@
             Solgi possède un gilet en peau de mouton, c'est peut-être lui qui vous a pris un mouton pour réaliser son habit ?
         </question> 
         <reponse>
-            Vraiment ? Ah, je me doutais bien que ce vieux corbeau me causerait des ennuis ! Il paiera pour cet affront !
+            Vraiment? Ah, je me doutais bien que ce vieux corbeau me causerait des ennuis ! Il paiera pour cet affront !
+        </reponse>
+    </dialog>
+	    <dialog id="c15_12" mustKnow="c20_07">
+        <question>
+         J'ai été parler au voleur et tout ce qu'il m'a dit vous pointe comme complice! Vous n'avez pas fermé à clé votre grange alors que vous aimez tant vos moutons? Vous n'avez rien entendu? BALIVERNES!
+		 Dites-moi la vérité maintenant!!!
+        </question> 
+        <reponse>
+        Ce maudit voleur! j'aurais dû laisser mon chien le dévorer vivant! Je n'ai pas tué ce pauvre barde, j'ai été payé pour mettre ma grange à disposition hier soir, on m'a dit qu'on allait juste tabasser quelqu'un et lui apprendre une leçon, je ne pensais pas qu'on irait jusqu'à le tuer! Croyez-moi étranger je n'ai tué personne! Ce village est un nid de rapaces et de prédateurs, je ne vous dirai plus rien! Allez voir Otrygg, il voit tout dans le Chaudron et il est sûrement mêlé à tout ça, rien ne se passe dans ce village sans qu'il le sache!
         </reponse>
     </dialog>
     <!--

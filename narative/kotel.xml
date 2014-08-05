@@ -12,23 +12,39 @@
 		Votre tête me dit quelque chose, on s'est déjà vu ?
         </question> 
         <reponse>
-		Oui vous êtes arrivé par bateau, vous m'aviez confié que le Barde vous devait une importante somme d'argent et je me doute que c'est pour cela que vous l'avez tué! Assassin! 
+		Oui bien sûr, vous êtes arrivé par bateau imbécile...
         </reponse>
     </dialog>
-    <dialog id="c19_03">
+	<dialog id="c19_03">
+        <question>
+		Vous aurais-je parlé de la raison de ma venue sur cet île dans le bateau?
+        </question> 
+        <reponse>
+		 euh... mmmm... oui, vous étiez plutôt bavard à ce sujet en effet! Vous m'aviez confié que le Barde vous devait une importante somme d'argent et je me doute que c'est pour cela que vous l'avez tué! Assassin!
+        </reponse>
+    </dialog>
+    <dialog id="c19_04">
+        <question>
+		Vous avez là un beau bateau... On dirait même que les voiles sont neuves, non ?
+        </question> 
+        <reponse>
+		Oui et alors ? Mêle-toi de tes affaires l'étranger !
+        </reponse>
+    </dialog>	
+	<dialog id="c19_05">
         <question>
 		Vous avez là un bien beau bateau... On dirait même que les voiles sont neuves, non ?
         </question> 
         <reponse>
 		Oui et alors ? Mêle-toi de tes affaires l'étranger !
         </reponse>
-    </dialog>
+    </dialog>	
     <dialog id="c19_10" mustKnow="c18_02">
         <question>
-            Le pécheur m'a dit que ce matin, vous avez échangé des mots avec une femme ? Qui était-ce et à quel propos ?
+            Le pêcheur a dit vous avoir entendu vous disputer avec un femme ce matin, qui était-ce?
         </question> 
         <reponse>
-            Ce vieux volatile vous raconte n'importe quoi! Il ne peut presque rien voir, alors comment aurait-il pu savoir ce que je faisais ce matin ? Je travaillais sur mon bateau, seul.
+            Ce vieux Loup vous raconte n'importe quoi! Il doit être aussi sourd qu'il est aveugle! Ce n'était pas une dispute mais bien les cris de joie d'un femme enfin satisfaite! hahaha!
         </reponse>
     </dialog>
 	<!--

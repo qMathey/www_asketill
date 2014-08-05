@@ -1,34 +1,42 @@
 <conversation>
     <dialog id="c18_01">
         <question>
-            Vous avez des problèmes de vue ?
+            Avez-vous des problèmes de vue?
         </question> 
         <reponse>
-            Je suis presque aveugle. Vous savez... Je suis tellement vieux que je ne me souviens même plus de mon âge...
+       	Vous savez... Je suis tellement vieux que je ne me souviens même plus de mon âge... J'ai commencé à perdre la vue il y a fort longtemps, depuis je ne vois que des silhouettes et des mouvements, c'est largement suffisant pour un simple pêcheur comme moi.
         </reponse>
     </dialog>
     <dialog id="c18_02" mustKnow="c18_01">
         <question>
-            Vous n'avez donc rien vu...
+            Vous n'avez donc rien vu la nuit du meurtre...
         </question> 
         <reponse>
-            Vu ? Non... Mais j'ai entendu ce matin une femme s'enrager contre mon amis Kotel, ce matin. Je n'ai pas pu distinguer quoi que ce soit...
+            Vu ? Non... Mais j'ai aperçu ce matin une silhouette plutôt féminine traîner près du bâteau...  Je n'ai pas pu distinguer qui que ce soit... mais une chose est sûre ils ne semblaient pas en très bon termes... 
         </reponse>
     </dialog>
     <dialog id="c18_03">
         <question>
-            Vous pensez que j'ai pu tuer le barde ?
+         Pensez-vous que j'ai pu tuer le barde ?
         </question> 
         <reponse>
-            Ahahaha, petit... C'est ridicule que ces Loups vous accuse parce que vous êtes un étranger. Les loups eux-même viennent d'ailleurs... La sagesse qui accompagnait les grands guerriers conquérents d'autrefois s'est perdue au travers des âges... Seules les brutes sanguinaires s'éteindront un jour ou l'autre.
+         hum... vous savez étranger... C'est ridicule ce que Les Loups en haut des marches vous font à mon avis, sachant qu'eux-mêmes viennent d'ailleurs... La sagesse qu'accompagnait les grands guerriers conquérants d'autrefois s'est perdue au travers des âges... Les brutes sanguinaires que les Loups sont devenus s'éteindront un jour ou l'autre au fil du temps. 
+        </reponse>
+    </dialog>
+	 <dialog id="c18_04" mustKnow="c18_03">
+        <question>
+		Et vous dans tout ça?
+        </question> 
+        <reponse>
+        moi?... Je ne sais même plus si on me considère toujours un des leurs... Je n'ai plus trop intérêt aux affaires de la meute et je doute qu'ils souhaitent le conseil d'un vieillard malvoyant...
         </reponse>
     </dialog>
     <dialog id="c18_10" mustKnow="c18_03">
         <question>
-            Vous parlez des Loups ? Il y a-t-il d'autres clans ici ?
+      	Il y a-t-il d'autres clans ici ?
         </question> 
         <reponse>
-            Il n'y a que des hommes sanguinaires sur cette île. Le temps des vieux clans est révolus et ceux qui subsitent aujourd'hui me font peur. Griss, le barde, apportait du sang neuf à cette meute. Je regrette qu'il soit parti rejoindre le Valhalla... Au moins il échappera au funeste destin de ces lieux.
+           Les temps des vieux clans est révolu, mais certains refuseront toujours de l'admettre... et ceux qui subsitent aujourd'hui me font déjà peur. Griss le barde apportait du sang neuf et moins barbare à cette meute, je regrette qu'il ait connu un destin si tragique... Au moins il échappera au funeste destin de ces lieux et les jour noirs qui suivront..
         </reponse>
     </dialog>
     <dialog id="c18_11" mustKnow="c18_10">
@@ -36,7 +44,7 @@
             De quel destin funeste parlez-vous ?
         </question> 
         <reponse>
-            Une guerre se prépare, c'est évident mais peu importe... Quand les loups quitteront Asketill, je serais bien mort ou alors mon âme restera à roder autours de ce vieux port.
+            Je suis peut-être malvoyant mais je ne suis pas aveugle. Des sombres jours se dessinent à l'horizon, c'est évident! mais peu importe... Quand les Loups quitteront Asketill, je serais probablement déjà mort et alors mon âme restera à roder autour de ce vieux port. Allez continuer votre enquête et je vous le souhaite... de garde votre tête...
         </reponse>
     </dialog>
 	<!--

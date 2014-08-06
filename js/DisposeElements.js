@@ -28,7 +28,7 @@ DisposeElements.init = function () {
 	// dispose le template
 	TemplateManager.disposeTemplate();
 	
-	setTimeout("
+	setTimeout(function() {  TemplateManager.disposeTemplate(); }, 500 );
 	
 }
 

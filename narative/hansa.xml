@@ -35,18 +35,18 @@
     
     <dialog id="c5_11" mustKnow="c4_10">
         <question>
-            J'ai entendu dire que votre patron s'est fait volé une grosse somme d'argent. Vous avez quelque chose à voir avec ce vol ?
+         J'ai entendu dire que votre patron s'est fait voler une grosse somme d'argent. Avez-vous quelque chose à voir avec ce vol ?
         </question> 
         <reponse>
-            Comment?! Comment osez-vous, espèce de rustre! Je n'ai jamais volé de ma vie et je ne vais pas commencer aujourd'hui! Si vous voulez enquêter, regardez avec cette vieille peau de Grans. Elle trainait vers la caisse hier soir.
+        Pardon?! Comment osez-vous, espèce de rustre! Je n'ai jamais volé de ma vie et je ne vais pas commencer aujourd'hui! Si vous voulez enquêter, regardez avec cette vieille peau de Grans. Elle trainait vers la caisse hier soir.
         </reponse>
     </dialog>
     <dialog id="c5_12" mustKnow="c8_10">
         <question>
-            Quelqu’un ici dit vous avoir vu verser quelque chose dans la boisson du barde! Dites-moi ce que c’était!
+         Quelqu’un ici dit vous avoir vu verser quelque chose dans la boisson du barde! Dites-moi ce que c’était!
         </question> 
         <reponse>
-            Quoi?! TISSU de mensonges ! Qui ose m’accuser de la sorte! Dites-le moi! Je... Vous ne m’aurez pas, vous êtes un sacré fouineur étranger... Je me demande si ce n’est pas plutôt vous qui... mmmm... Je vous conseille de ne pas m’accuser car je soutiendrai la version d’Inga si on me le demande! Vous ne jouerez pas avec moi!
+         Quoi?! TISSU de mensonges ! Qui ose m’accuser de la sorte! Dites-le moi! Je... Vous ne m’aurez pas, vous êtes un sacré fouineur étranger... Je me demande si ce n’est pas plutôt vous qui... mmmm... Je vous conseille de ne pas m’accuser car je soutiendrai la version d’Inga si on me le demande! Vous ne jouerez pas avec moi!
         </reponse>
     </dialog>
 	<dialog id="c5_13" mustKnow="c4_12">
@@ -64,6 +64,14 @@
         </question> 
         <reponse>
        Il avait les meilleures intentions, mais pour maintenir son secret, il me cacha pendant des années dans ces caves humides. Ma propre maison est devenue ma prison... et cela je ne peux lui pardonner. Si je n'avais pas réussi à m'enfuir dans la forêt voisine et si Otrygg ne m'y avait pas trouvée, je serais probablement morte là-dessous. Je travaille ici sous une autre identité, je vous dirai un jour peut-être mon vrai nom... Si cela peut vous aider, sachez qu'aucun des Lames de Freyr est sorti de la taverne la nuit du meurtre. Je dois retourner travailler, je vous souhaite bonne chance pour votre enquête étranger! 
+        </reponse>
+    </dialog>
+	<dialog id="c5_15" mustKnow="c1_10">
+        <question>
+        Je vous ai dénoncée auprès de Gardarr... Je suis navré mais je dois mettre toutes les chances de mon côté pour sauver ma peau...
+        </question> 
+        <reponse>
+        *snif snif* Même si cela entraîne la mort de 3 personnes autour de vous? Refill n'est pas si mauvais que ça comparé à vous! *snif* Les gens de votre sorte sont les pires monstres, je voterai pour qu'on vous coupe la tête! Vous allez regretter ce que vous avez fait, vous croyez que les Loups sont tordus? attendez de voir la vengeance des Corbeaux! Laissez-moi en paix!
         </reponse>
     </dialog>
     

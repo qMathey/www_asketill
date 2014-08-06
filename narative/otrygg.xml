@@ -41,10 +41,41 @@
     </dialog>
     <dialog id="c14_12" mustKnow="z2-statue">
         <question>
-            Quelle étrange statue se dresse derrière vous... 
+        Quelle étrange statue se dresse derrière vous... 
         </question> 
         <reponse>
            Personne ne connaît l’origine ou ce qu’elle représente... J'ai pu traduire une partie des écritures anciennes qui y sont gravées, il s'agirait comme d'un avertissement d’un ancien guerrier mort pour quiconque vit sur l’île.
+        </reponse>
+    </dialog>
+	<dialog id="c14_13" mustKnow="c5_13">
+        <question>
+         Hansa m'a parlé du secret qu'elle partage avec vous et Refill...
+        </question> 
+        <reponse>
+		Oui je le sais, j'ai des yeux partout à Asketill. Je ne suis pas très content qu'elle vous ait confié tout cela mais je pense que vous saurez faire le bon choix et garder tout cela dans l'ombre.
+        </reponse>
+    </dialog>
+	<dialog id="c14_14" mustKnow="c14_13">
+        <question>
+        L'ombre... vous me semblez pas mal tirer les ficelles en cachette par ici en effet. Je suis certain que vous en savez bien plus que vous n'en voulez me dévoiler...
+        </question> 
+        <reponse>
+		Mais quel serait alors l'intérêt cher étranger de vous en dévoiler trop! Vous-même devez suivre votre chemin, c'est bien pour cela que je vous ai gardé la vie sauve. Ce sont vos choix qui vont façonner la manière dont Asketill abordera son avenir. Continuez votre enquête, Hansa n'est peut-être pas la seule à vous cacher encore des secrets par ici... 
+        </reponse>
+    </dialog>
+	<dialog id="c14_15" mustKnow="c1_10">
+        <question>
+        J'ai dit la vérité à Gardarr concernant le secret de Hansa et votre implication. Je n'aime pas être manipulé comme vous essayez de le faire et ça va peut-être me sauver...
+        </question> 
+        <reponse>
+		Étrange choix en effet, mais croyez-moi, il n'aura pas d'incidence sur ce je prépare pour ces Loups! Par contre, VOUS auriez mieux fait de choisir le bon camp... Mes beaux corbeaux vont festoyer en s'abreuvant du sang de vos entrailles une fois tout ceci terminé...
+        </reponse>
+		<dialog id="c14_16" mustKnow="c15_10">
+        <question>
+        Le chasseur dit souffrir de visions étranges qui l'empêchent de dormir, vous pensez qu'elles ont un lien quelconque avec le Chaudron? Pouvez vous l'aider?
+        </question> 
+        <reponse>
+		humpf!... déjà?! hem... Nous devons tous et chacun porter nos propres fardeaux, ne vous inquiètez pas des affaires de ce jeune homme solitaire, je l'aiderai le moment venu. Concentrez-vous plutôt sur vos problèmes...
         </reponse>
     </dialog>
 </conversation>

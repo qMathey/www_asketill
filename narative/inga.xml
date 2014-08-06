@@ -48,7 +48,7 @@
          Ce... quoi? Oh non, il s'agit d'un cadeau d'un bon ami qui tenait à me l'offrir... C'est un homme si attentionné. 
         </reponse>
     </dialog>
-	  <dialog id="c11_11" mustKnow="c15_11">
+	  <dialog id="c11_12" mustKnow="c15_11">
         <question>
         Arnvidar le Chasseur m'a avoué entretenir une relation avec vous! Ce crâne est un totem qu'il utilise pour mieux dormir la nuit, c'est la preuve qu'il dort ici! Vous cachez bien plus que vous n'en donnez l'air, arrêtez votre numéro de veuve epleurée et dites-moi la vérité!
         </question> 

@@ -25,10 +25,10 @@
     </dialog>
     <dialog id="c7_10" mustKnow="c4_10">
         <question>
-            Le tavernier se plaint d'avoir été volé, vous savez quelque chose à ce propos ?
+         Le tavernier se plaint d'avoir été volé, vous savez quelque chose à ce propos ?
         </question> 
         <reponse>
-            Haha, ce Loup s'est fait volé ? C'est bien fait pour lui!
+         Haha, ce Loup s'est fait voler ? C'est bien fait pour lui!
         </reponse>
     </dialog>
 	<!--

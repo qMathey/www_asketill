@@ -26,6 +26,15 @@ Pourquoi ne m'avez pas condamné ?
             Mon heure viendra, tôt ou tard mais il semble que mon départ pour le Valhalla est proche. Mon cadet, Gils prendra ma place et abreuvera notre meute du sang de nos ennemis.
         </reponse>
     </dialog>
+	
+	  <dialog id="c1_10" mustKnow="c5_14">
+        <question>
+        Ceci pourrait vous intéresser... Hansa est en fait la fille des anciens propiétaires de La Plume Noire, Refill vous l'a caché depuis des années en complicité avec Otrygg votre conseiller, J'espère que vous vous souviendrez de ma coopération envers les Loups lors que vous me jugerez demain. 
+        </question> 
+        <reponse>
+        QUOI?! Je ne suis entouré que par des sales menteurs et manipulateurs! Je me doutais bien que ce vieux Otrygg ne m'était pas autant fidèle qu'il le semblait mais Refill! Un des nôtres! Ma douce Grans avait raison je n'aurais dû admettre que des guerriers dans ma meute! J'espère que ceci n'est pas un sale tour de votre part étranger. Je menèrai ma propre enquête et déciderai du sort de ces trois-là le moment venu.
+        </reponse>
+    </dialog>
     <!--
     <dialog id="c1_04">
         <question>

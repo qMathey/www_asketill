@@ -20,13 +20,13 @@
 		Vous m'avez l'air soucieux Refill.
         </question> 
         <reponse>
-		Oh que oui, on m'a volé une grande somme d'argent, je soupçonne un de mes employés ou le prisonnier qui ce trouve dans notre prison sur la colline, pourriez-vous m'aider étranger ? Commencez par prendre un verre!
+		Oh que oui ivrogne d'ailleurs! On m'a volé une grande somme d'argent hier soir et je soupçonne un de mes employés (Grans, Rignes, Hansa et Vermundr) ou ce maudit voleur qu'ils ont envoyé à la prison. Pourriez-vous m'aider à enquêter étranger? Commencez par prendre un verre!
         </reponse>
     </dialog>
     
     <dialog id="c4_11" mustKnow="c5_10">
         <question>
-            Votre jolie serveuse n'aime pas trop votre goût en matière de décoration.
+         Votre jolie serveuse n'aime pas trop votre goût en matière de décoration.
         </question> 
         <reponse>
          Hansa? Je ne comprends pas pourquoi elle vous a dit ça... Je me suis toujours si bien occupé d'elle.
@@ -43,49 +43,80 @@
     </dialog>
     <dialog id="c4_13" mustKnow="c4_10">
         <question>
-            Je suis désolé je n'ai pas trouvé qui a volé dans la caisse...
+         - REFUSER, Je suis désolé je n'ai pas trouvé qui a volé dans la caisse et je ne souhaite pas d'avantage me mêler de cette histoire...
         </question> 
         <reponse>
-            Nous sommes deux mon amis. Bon, je vous sers un verre ?
+         Vous avez bien raison, vous êtes déjà pas mal mêlé à des sales affaires par ici! ha ha ha! Bon, je vous sers un verre?
         </reponse>
     </dialog>
-    
-    <dialog id="c4_14" mustKnow="c4_10">
+    <dialog id="c4_14" mustKnow="c7_10">
         <question>
-            Vermundr, le nouveau barde, a volé dans la caisse, j'en suis sûr!
+         - VERMUNDR, le nouveau barde, a volé dans la caisse, j'en suis sûr!
         </question> 
         <reponse>
-            Vous êtes certnain ? Je n'aurais jamais pensé à lui! Bon puisque vous m'avez aidé, je vais vous dire un truc : La nuit du meurtre, l'ancien barde, Griss, est sorti car il ne se sentait pas bien. Le marin l'a précédé car il devait vérifier l'arrimage de son navire puis vous êtes vous aussi sorti précipitamment.
+        Vous êtes certain ? Je n'aurais jamais pensé à lui! Bon puisque vous m'avez aidé, je vais vous dire un truc : La nuit du meurtre, l'ancien barde, Griss, est sorti car il ne se sentait pas bien. Le marin l'a précédé car il devait vérifier l'arrimage de son navire puis vous êtes vous aussi sorti précipitamment. Mais peut-être d'autres que je n'ai pas vu partir sont sortis aussi...
         </reponse>
     </dialog>
-    
-    <dialog id="c4_15" mustKnow="c4_10">
+    <dialog id="c4_15" mustKnow="c6_10">
         <question>
-            Une de vos serveuses a volé dans la caisse, j'en suis sûr!
+         - RIGNES, l'une de vos serveuses a volé dans la caisse, j'en suis sûr!
         </question> 
         <reponse>
-            Vous êtes certnain ? Je n'aurais jamais pensé à elles! Bon puisque vous m'avez aidé, je vais vous dire un truc : La nuit du meurtre, l'ancien barde, Griss, est sorti car il ne se sentait pas bien. Le marin l'a précédé car il devait vérifier l'arrimage de son navire puis vous êtes vous aussi sorti précipitamment.
+         Quoi?! Vous êtes certain ? Je n'aurais jamais pensé à elle! Bon puisque vous m'avez aidé, je vais vous dire un truc : La nuit du meurtre, l'ancien barde, Griss, est sorti car il ne se sentait pas bien. Le marin l'a précédé car il devait vérifier l'arrimage de son navire puis vous êtes vous aussi sorti précipitamment. Mais peut-être d'autres que je n'ai pas vu partir sont sortis aussi...
         </reponse>
     </dialog>
-    
-    <dialog id="c4_16" mustKnow="c4_10">
+	<dialog id="c4_15" mustKnow="c5_11">
         <question>
-            Grans la cuisinière, a volé dans la caisse, j'en suis sûr!
+         - HANSA, l'une de vos serveuses a volé dans la caisse, j'en suis sûr!
         </question> 
         <reponse>
-            Vous êtes certnain ? Je n'aurais jamais pensé à elle! Bon puisque vous m'avez aidé, je vais vous dire un truc : La nuit du meurtre, l'ancien barde, Griss, est sorti car il ne se sentait pas bien. Le marin l'a précédé car il devait vérifier l'arrimage de son navire puis vous êtes vous aussi sorti précipitamment.
+         Quoi?! Cette pauvre créature? je ne sais pas si je vous crois étranger... Je n'aurais jamais pensé à elle! Vous avez au moins essayé et je vous en remercie. Un conseil, si vous le pouvez, examinez bien le corps de la victime cela pourrait vous aider à trouver un coupable... si ce n'est pas vous qui l'avez fait...
         </reponse>
     </dialog>
-    
-    <dialog id="c4_17" mustKnow="c4_10">
+    <dialog id="c4_16" mustKnow="c12_06">
         <question>
-            Jav Lars, le prisionnier, a volé dans la caisse, j'en suis sûr!
+         - GRANS la cuisinière, a volé dans la caisse, j'en suis sûr!
         </question> 
         <reponse>
-            Je le savais! Merci bien étranger. Je peux vous offir quelque chose ?
+         Vous êtes certain ? Je suis conscient qu'elle ne m'aimait pas trop mais je n'aurais jamais pensé à elle! Bon puisque vous m'avez aidé, je vais vous dire un truc : La nuit du meurtre, l'ancien barde, Griss, est sorti car il ne se sentait pas bien. Le marin l'a précédé car il devait vérifier l'arrimage de son navire puis vous êtes vous aussi sorti précipitamment. Mais peut-être d'autres que je n'ai pas vu partir sont sortis aussi...
+        </reponse>
+    </dialog>  
+    <dialog id="c4_17" mustKnow="c20_08">
+        <question>
+        - JAV LARS, le prisonnier, a volé dans la caisse, j'en suis sûr!
+        </question> 
+        <reponse>
+         Je le savais! Plutôt évident comme déduction... Merci bien étranger. Je peux vous offir quelque chose ?
+        </reponse>
+    </dialog>
+	<dialog id="c4_18" mustKnow="c5_13">
+        <question>
+        Vous n'avez pas été tout-à-fait honnête envers moi concernant "La Plume Noire"... Hansa m'a tout dit! Enfermer une pauvre fillette de la sorte, vous êtes un monstre!
+        </question> 
+        <reponse>
+        Quoi?! Mais pourquoi a-t-elle parlé? Je vous en prie n'en dites rien à Gardarr, je crains qu'il ne me tue ainsi qu'Hansa et Otrygg pour cet affront! Je ne voulais que la protèger, vous savez ce que ces rustres font à ces gamines?! Qu'auriez-vous fait à ma place? Aidez-nous à garder cela secret, je vous dirai tout ce que je sais! 
+        </reponse>
+    </dialog>
+	<dialog id="c4_19" mustKnow="c4_18">
+        <question>
+        Les langues se délient enfin, Je vous écoute alors...
+        </question> 
+        <reponse>
+    	Le soir du meurtre vous étiez bien trop ivre pour tuer qui que ce soit! En revanche d'autres personnes sont peut-être parties en même temps que le Barde, vous devriez regarder de ce côté là... Je me souviens que Gils, Kotel, Solgi, Inga, Grans et Rafli étaient tous partis à ce moment, je ne saurais vous dire s'ils sont partis en même temps mais j'espère que cela vous aidera... Ne nous dénoncez pas à Gardarr, Je ne voterai pas contre vous si on me le demande en échange de votre silence!
+        </reponse>
+    </dialog>
+	<dialog id="c4_20" mustKnow="c1_10">
+        <question>
+        J'ai tout dit à Gardarr, je pense que vous devez payer pour ce que vous avez fait à Hansa. Je ne pense pas en revanche qu'il ira jusqu'à vous tuer tous les 3 pour le moment...
+        </question> 
+        <reponse>
+    	Infâme! vous avez osé! vous n'avez pas de parole, Je ferai tout pour qu'on vous coupe la tête! Sortez de ma taverne et n'y mettez plus jamais les pieds!
         </reponse>
     </dialog>
     
+	
+	
+	
 	<!--
     <dialog id="cX_04" mustKnow="indice_i4_dague">
         <question>

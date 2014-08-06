@@ -25,8 +25,10 @@ DisposeElements.init = function () {
 	// Dispose la sc�ne threeJS
 	WebglSceneManager.disposeScene();
         
-        // dispose le template
-        TemplateManager.disposeTemplate();
+	// dispose le template
+	TemplateManager.disposeTemplate();
+	
+	setTimeout("
 	
 }
 

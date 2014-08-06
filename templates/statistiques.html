@@ -5,7 +5,7 @@
 <div class="templateOverlay">
     
     <div class="portraitsStatistiques">
-        <div style="text-align:center;margin:30px 0px;" class="dialog"><span class="info">Découvrez ceux dont les internautes suspectent le plus !</span></div>
+        <div style="text-align:center;margin:30px 0px;" class="dialog info arrondi"><span>Découvrez ceux qui sont les plus suspectés par les internautes ! Cliquez sur un personnage et découvrez pourquoi il a été accusé !</span></div>
         
     </div>
     <div class="details">
@@ -125,27 +125,35 @@
             
         })
         
-        
+        // Récupère les raisons du suspect
         $.get("serveur/bootstrap.php?action=getRaisonFromSuspect", {
             "suspectID" : $(this).attr("data-suspectName")
         }, function(reponse) {
-
+			// Si nous avons une réponse du serveur
              var $xml = $(reponse);
-             console.log($xml);
+			 // compteur d'accusation
+             var countAccusation = 0;
              
-             
+			// pour chaque raison présente dans le XML
              $xml.find("raison").each(function() {
                 
+				// On insère une accusation sur la page
                 $accusation = $("<div>");
                 $accusation.addClass("dialog")
                            .addClass("accusation")
                            .html('"'+$(this).text()+'"')
-                 // ajoute l'accusation aux détails présents
-                 $(".details").prepend($accusation);
+                // ajoute l'accusation aux détails présents
+                $(".details").prepend($accusation);
+				 
+				// incrémente le compteur d'accusation
+				countAccusation ++;
                  
              });
              
-             
+			// si il n'y a pas encore d'acte d'accusation, on affiche un message
+            if(countAccusation == 0){
+				$(".details").prepend("<div class=\"info dialog accusation\">Personne n'a écrit d'accusation à l'encontre de ce personnage.</div>");
+			}
              
         }) 
     });

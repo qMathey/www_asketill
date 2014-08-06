@@ -1,43 +1,59 @@
 <conversation>
     <dialog id="c11_01">
         <question>
-            Pourquoi m'accusez-vous du meurtre de votre mari ? Je ne me rappelle de rien !
+         Pourquoi m'accusez-vous du meurtre de votre mari ? Je ne me souviens de rien, mais je ne suis pas un assassin!
         </question> 
         <reponse>
-            Je vous ai vu à la taverne vous engulant comme des bêtes à propos de la dette qu'il vous devait !
+        Je vous ai vu à la taverne vous engeulant comme des loups enragés! Puis vous êtes parti derrière lui lorsqu'il a voulu quitter la taverne!
         </reponse>
     </dialog>
-    <dialog id="c11_02" mustKnow="c11_01">
+    <dialog id="c11_02" mustKnow="c19_03">
         <question>
-            Une dette envers moi ? Combien ? 
+        Selon le marin Kotel, votre mari me devait une importante somme d'argent. Que savez-vous à ce sujet?
         </question> 
         <reponse>
-            Je ne sais pas. Griss, mon mari *snif", a toujours su s'occuper de moi. Nous avions tout ce dont j'avais besoin... Mais à cause de brigands comme VOUS, il n'arrivait plus à maintenir notre vie comme avant... Il s'est endetté et maintenant il est MORT!
+		QUOI?... Cet idiot de Kotel vous a dit ça? mmm...
+		*snif snif* Cela explique pourquoi il était si tendu ces derniers temps mon Griss, C'est pour cela que vous l'avez tué n'est-ce pas? Vous m'avez pris mon cher mari pour de l'argent! *snif snif*
         </reponse>
     </dialog>
     <dialog id="c11_03" mustKnow="c11_02">
         <question>
-            Je n'ai rien à voir avec tout ça !
+         Je n'ai rien à voir avec tout ça je vous dis !
         </question> 
         <reponse>
-            J'espère que Gils s'occupera de vous, menteur ! On devrait vous noyez comme une bête !
+         J'espère que Gils s'occupera de vous, menteur! Il ferait tout pour moi ce beau Loup, je lui dirai de vous faire souffrir!
+        </reponse>
+    </dialog>
+	    <dialog id="c11_04" mustKnow="c11_01">
+        <question>
+        Cela ne prouve rien bonne femme! Vous n'avez aucune preuve contre moi!
+        </question> 
+        <reponse>
+        Comment-osez vous?! C'est à cause de brigands comme VOUS qu'il s'est sûrement endetté et maintenant il est MORT! *snif* Il n'arrivait plus à maintenir notre luxueux niveau vie... et vous avez profité de sa détresse et l'amour qu'il portait à me combler! Respectez mon deuil et allez vous-en!
         </reponse>
     </dialog>
     <dialog id="c11_10" mustKnow="i5-instrument">
         <question>
-            Je remarque que l'instrument de votre mari est cassé. Comment cela est-il arrivé ?
+         Je remarque que l'instrument de votre mari est cassé. Comment cela est-il arrivé ?
         </question> 
         <reponse>
-            On me l'a rapporté ce matin. C'est tout ce qu'il me reste de lui et c'est vous qui l'avez cassé en le tabassant! 
+         On me l'a rapporté ce matin. C'est tout ce qu'il me reste de lui et c'est vous qui l'avez cassé en le tabassant! 
         </reponse>
     </dialog>
-    
     <dialog id="c11_11" mustKnow="i5-ornement">
         <question>
-            Ce crâne aux plumes que vous possédez, c'est vous qui l'avez fabriqué?
+        Ce crâne aux plumes que vous possédez, c'est vous qui l'avez fabriqué?
         </question> 
         <reponse>
-            Ce... quoi ? Oh non, il s'agit d'un cadeau d'un ami. 
+         Ce... quoi? Oh non, il s'agit d'un cadeau d'un bon ami qui tenait à me l'offrir... C'est un homme si attentionné. 
+        </reponse>
+    </dialog>
+	  <dialog id="c11_11" mustKnow="c15_11">
+        <question>
+        Arnvidar le Chasseur m'a avoué entretenir une relation avec vous! Ce crâne est un totem qu'il utilise pour mieux dormir la nuit, c'est la preuve qu'il dort ici! Vous cachez bien plus que vous n'en donnez l'air, arrêtez votre numéro de veuve epleurée et dites-moi la vérité!
+        </question> 
+        <reponse>
+        Vous avez bien du cran à me parler de la sorte! Je dois avouer que vous êtes plus coriace que vous en avez l'air mais quoique vous pensez avoir découvert personne ne vous croira ici de toute façon. Tous les hommes finissent toujours par faire ce que je veux! Je ne vous en dirai pas d'avantage mais sachez que fouiner dans cette île n'amène rien de bon. Votre tête finira dans un sceau, je vous le garantis!
         </reponse>
     </dialog>
 </conversation>

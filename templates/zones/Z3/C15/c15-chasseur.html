@@ -33,6 +33,12 @@
     
     // Charge la conversation 
     ComicManager.loadConversation("narative/arnvidar.xml");
+	
+	
+	// si l'utilisateur embête trop arnvidar, celui-ci tue le joueur d'une flèche.
+    EventListenersManager.registerEvent("click", '[data-id="c15_12"]', function() {
+        TemplateManager.LoadTemplateHMTL("templates/mortFlecheTransperce.html");
+    });
     
     // Jouer un son
     //AudioManager.loadAndPlaySound("URL");

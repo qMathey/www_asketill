@@ -1,0 +1,35 @@
+  <!-- image de fond -->
+<div class="narativeBackground">
+	<img src="images/logoAsketill.jpg" class="pictBG"/>
+</div>
+<div class="templateOverlay">
+    
+	<div class="dialog info arrondi" style="text-align:center;margin-top:5%;left:10%;right:10%;position:absolute;z-index:10;">
+		<div style="font-size:40px;">Vous vous videz de votre sang, transpercé par une flèche!</div>
+		<div class="recommencerJeu grow" style="cursor:pointer;margin-top:30px">Recommencer le jeu</div>
+	</div>
+</div>
+  
+  <!-- Evenements sur le template -->
+<script type="text/javascript">
+    
+    //$("#html_wrapper").css("background-color", "#000");
+    //setTimeout(function() { $(".templateOverlay").css("background-color", "#000"); }, 300);
+	
+    // supprime les informations enregistrée
+    StorageManager.clear();
+    
+    // Jouer un son après 1 seconde (mort)
+    setTimeout(function() {
+        AudioManager.loadAndPlaySound("sounds/death.mp3");
+    }, 1000)
+    
+    // supprime le bouton de retour en arrière
+    setTimeout(function() { $(".btn_retour_map").fadeOut() }, 1000);
+    
+    // Si on clique sur "Recommencer le jeu"
+    EventListenersManager.registerEvent("click", ".dialog.info .recommencerJeu", function() {
+        location.reload();
+    });
+    //AudioManager.loadAndPlaySound("URL");
+</script>

@@ -18,10 +18,18 @@
     </dialog>
     <dialog id="c2_03">
         <question>
-            Vous m'accusez, alors qu'il semble que ce crime vous profite ! C'est vous qui avez tué le barde ! 
+         Vous m'accusez, alors que tout semble indiquer que ce crime vous profite ! J'en suis certain! C'est vous qui avez tué le barde ! 
         </question> 
         <reponse>
-            Que veux-tu dire étranger ? Tu m'accuses d'avoir tuer notre barde ?! PAR ODIN,  JE VAIS TE TUER DÈS QUE MON PÈRE M'EN LAISSERA L'OCCASION!!!
+         Que veux-tu dire étranger? Tu m'accuses d'avoir tué cet imbécile de barde?! GARE À TES PROCHAINES PAROLES! PAR ODIN, JE VAIS TE TUER SI TU ME PARLES ENCORE DE LA SORTE! 
+        </reponse>
+	</dialog>
+	<dialog id="c2_06" mustKnow="c2_03">
+        <question>
+         ha ha ha Je n'ai pas peur de vous! VOUS ÊTES UN SALE MEURTRIER! 
+        </question> 
+        <reponse>
+         Vous l'aurez voulu!
         </reponse>
     </dialog>
     <dialog id="c2_04" mustKnow="c1_03">

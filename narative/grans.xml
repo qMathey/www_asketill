@@ -1,35 +1,34 @@
 <conversation>
     <dialog id="c12_01">
         <question>
-            Que faîtes-vous sur l'île ?
+            Quel est votre rôle sur l'île ?
         </question> 
         <reponse>
-            Pardon ?! Je suis la femme du chef ! Je cuisine à la taverne pour nourrir la meute. 
+        Ce ne sont pas vos oignons! Je suis la femme du chef!
         </reponse>
     </dialog>
-    <dialog id="c12_02">
+    <dialog id="c12_02" mustKnow="c12_01">
         <question>
             Pourquoi n'êtes-vous pas avec votre mari ?
         </question> 
         <reponse>
-            Cela fait bien longtemps que mon mari ne s'intéresse plus à moi. Il passe la plupart de ses nuits avec l'autre trainée à la taverne. Pauvre imbécile.
+         Cela fait bien longtemps que mon mari ne s'intéresse plus à moi. Il passe la plupart de ses nuits avec l'autre trainée à la taverne. Pauvre imbécile. Moi Je cuisine à la taverne pour nourrir la meute. Je suis la Matriarche des Loups, mère de Gils et Thord, gardiens du Trône et des runes d'Asketill. Vous me devez le respect étranger!
         </reponse>
     </dialog>
-    <dialog id="c12_03">
+    <dialog id="c12_03" >
         <question>
             Êtiez-vous proche du barde ? 
         </question> 
         <reponse>
-            Non, Griss n'aurait jamais dû être accepté dans la meute. Il était faible tout comme l'est ce chien domestiqué de Refill. Les Loups sont des êtres sauvages qui doivent conquérir les terres! Nous n'avons rien à faire sur cette île maudite!
+         Non, sans vouloir vexer ma pauvre Inga, Griss n'aurait jamais dû être accepté dans la meute. Il était faible tout comme l'est ce chien domestiqué de Refill. Les Loups se doivent de retourner à leur état sauvage et conquérir des nouvelles terres! Nous devons quitter ce rustre îlot froid et lancer la prochaine Grande Conquête... ce n'est pas en admettant des louveteaux siffleurs que nous allons renforcer notre clan!
         </reponse>
     </dialog>
-    
-    <dialog id="c12_04" mustKnow="c12_01">
+    <dialog id="c12_04" mustKnow="c12_02">
         <question>
-            Vous ne devriez pas travailler alors ?
+         D'accord, d'arccord! Vous ne devriez pas travailler à la taverne alors ? Refill ne doit pas trop apprécier votre absence...
         </question> 
         <reponse>
-            Je réconforte Inga. Cette belle petite en a bien besoin après le meurtre de son mari ! Et je me fiche pas mal de ce qu'un loup domestique comme Refill peut penser!
+        Je réconforte Inga. Cette belle petite en a bien besoin après le meurtre de son mari ! Et je me fiche pas mal de ce qu'un loup domestique comme Refill peut penser!
         </reponse>
     </dialog>
     
@@ -38,7 +37,7 @@
             Vous qui êtes ici depuis longtemps, qui aurait pu tuer le barde ?
         </question> 
         <reponse>
-            À part vous ? Je ne vois pas. À Asketill, les choses peuvent vite dégénerer. Moi-même j'aurais pu me débarasser de ce lutin. Arrêtez de me faire perdre mon temps, partez!
+            À part vous ? Je ne vois pas. À Asketill, les choses peuvent vite dégénerer. Moi-même j'aurais pu me débarasser de ce lutin pour moins que rien. La mort rôde dans chaque coin de cette terre maudite et souvent elle nous pousse aux plus bas tréfonds de nos âmes affaiblies... maintenant arrêtez de me faire perdre mon temps, partez!
         </reponse>
     </dialog>
 	<!--

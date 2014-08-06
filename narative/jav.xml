@@ -54,6 +54,14 @@
         "Le porte-monnaie"... ça leur fera beaucoup de mal... Celui qui gère leurs comptes, ce bon vieux Skamel est certainement mêlé à cette histoire de toute façon... vous ne trouvez pas cela bizarre qu'il n'ait rien entendu la nuit du meurtre? De plus, lui qui prend autant soin de ses bêtes, vous pensez vraiment qu'il aurait laissé sa grange ouverte? S'il ne l'a pas tué lui-même, il est au moins complice! Il était bien reveillé en tout cas lors que je suis allé vider les poches de Griss! Allez lui forcer un peu la main, il va sûrement craquer et vous dire quelque chose d'utile!
         </reponse>
     </dialog>
+	<dialog id="c20_08" mustKnow="c4_10">
+        <question>
+        Le Tavernier Refill a été victime d'un vol... de toute logique, il vous soupçonne. Que pouvez-vous dire pour votre défense?
+        </question> 
+        <reponse>
+        Croyez-vous vraiment que je serai resté sur l'île et que je serais allé faire les poches d'un barde mort si j'avais volé auparavant une somme pareille? Il faudrait être idiot ou fou pour agir de la sorte! hahaha!
+		</reponse>
+    </dialog>
 	<!--
     <dialog id="cX_04" mustKnow="indice_i4_dague">
         <question>

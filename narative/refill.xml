@@ -4,7 +4,7 @@
             Vous savez quelque chose à propos du meurtre dont on m'accuse ?
         </question> 
         <reponse>
-            Vous êtes dans de sales draps, c'est tout ce que je sais. Vous voulez que je vous serve quelque chose ?
+         Vous êtes dans des sales draps, c'est tout ce que je sais. Cela ne m'arrange pas trop que Grans soit partie consoler la veuve du barde, je n'ai plus personne en cuisine et je suis débordé! Vous voulez que je vous serve quelque chose alors?
         </reponse>
     </dialog>
     <dialog id="c4_02">
@@ -12,7 +12,7 @@
             La décoration des lieux est... surprenante.
         </question> 
         <reponse>
-            Haha! Oui, je suis très fier de cet endroit. Je l'ai batti de mes mains! La taxidermie est un passe-temps que j'affectionne de plus en plus. Alors, qu'est-ce que je vous sers ?
+         Haha! Oui, je suis très fier de cet endroit. Je l'ai rebatti de mes propres mains! Conserver ces petits animaux morts est un passe-temps que j'affectionne de plus en plus. Je trouve que ces petites bêtes égaient les froides terres d'Asketill ainsi que l'esprit de mes visiteurs... Ce jeune chasseur solitaire me fournit des plutôt belles pièces de la forêt, vous ne trouvez pas? Alors, qu'est-ce que je vous sers étranger?
         </reponse>
     </dialog>
     <dialog id="c4_10">
@@ -29,19 +29,18 @@
             Votre jolie serveuse n'aime pas trop votre goût en matière de décoration.
         </question> 
         <reponse>
-            Hansa? Je ne comprends pas pourquoi elle vous a dit ça... Je me suis toujours bien occupé d'elle.
+         Hansa? Je ne comprends pas pourquoi elle vous a dit ça... Je me suis toujours si bien occupé d'elle.
         </reponse>
     </dialog>
     
     <dialog id="c4_12" mustKnow="z4-enseigne">
         <question>
-            L'enseigne à l'extérieur montre une gravure d'une plume noire. Quel rapport avec les Loups ?
+         L'autre enseigne à l'extérieur montre une gravure d'une plume noire. Ce n'est pas vous qui avez bâti cette taverne?
         </question> 
         <reponse>
-            Une enseigne? Ah derrière! Oui, c'est que euh... Je l'ai trouvée et je l'ai mise pour attirer mes clients vu que cette île est infestée de corbeaux. Alors, vous le prenez ou non ce verre ?
+         Une enseigne? Ah derrière! Oui, c'est... "la Plume Noire", Hansa tenait tant à garder ce vieux bout de bois, je n'ai pas pu le lui refuser. C'était l'ancien nom du taudis qui leur servait de taverne à ces Corbeaux... Je suis très fier de ce que cet endroit est devenu depuis que je l'ai repris.
         </reponse>
     </dialog>
-    
     <dialog id="c4_13" mustKnow="c4_10">
         <question>
             Je suis désolé je n'ai pas trouvé qui a volé dans la caisse...

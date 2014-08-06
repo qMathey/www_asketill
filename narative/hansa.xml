@@ -49,6 +49,23 @@
             Quoi?! TISSU de mensonges ! Qui ose m’accuser de la sorte! Dites-le moi! Je... Vous ne m’aurez pas, vous êtes un sacré fouineur étranger... Je me demande si ce n’est pas plutôt vous qui... mmmm... Je vous conseille de ne pas m’accuser car je soutiendrai la version d’Inga si on me le demande! Vous ne jouerez pas avec moi!
         </reponse>
     </dialog>
+	<dialog id="c5_13" mustKnow="c4_12">
+        <question>
+         Refill m'a parlé de "La Plume Noire", vous semblez tenir au passé de cette taverne, pouvez-vous me raconter l'histoire derrière celle-ci?
+        </question> 
+        <reponse>
+        Si vous voulez... Je n'ai pas l'habitude de parler de cela mais vous me semblez honnête. Gardez mon secret s'il-vous-plaît...
+		Je suis la fille des anciens propiétaires de "La Plume Noire"... mes parents, ils ont été massacrés lors de la Conquête, il y a 20 ans alors que je n'étais qu'une petite fille. J'ai survécu en me cachant dans un vieux tonneau à la cave. La Plume fût alors offerte à Refill pour en faire une taverne digne des Loups, c'est ainsi qu'il me trouva et devînt mon sauveur mais aussi mon bourreau. Sachant les horreurs que les autres Loups me feraient subir, il me cacha dans la noirceur des caves pendant des années avant qu'Otrygg ne s'en aperçoive, depuis c'est un secret que nous gardons à nous trois... Otrygg s'en sert pour manipuler Refill à sa guise car il redoute que le Chef ne prenne sa bonté pour de la faiblesse et le considère un traître.
+        </reponse>
+    </dialog>
+	<dialog id="c5_14" mustKnow="c5_13">
+        <question>
+        Hansa, je suis désolé de l'apprendre... vous avez dit que Refill était votre borreau aussi, que vouliez-vous dire par cela?
+        </question> 
+        <reponse>
+       Il avait les meilleures intentions, mais pour maintenir son secret, il me cacha pendant des années dans ces caves humides. Ma propre maison est devenue ma prison... et cela je ne peux lui pardonner. Si je n'avais pas réussi à m'enfuir dans la forêt voisine et si Otrygg ne m'y avait pas trouvée, je serais probablement morte là-dessous. Je travaille ici sous une autre identité, je vous dirai un jour peut-être mon vrai nom... Si cela peut vous aider, sachez qu'aucun des Lames de Freyr est sorti de la taverne la nuit du meurtre. Je dois retourner travailler, je vous souhaite bonne chance pour votre enquête étranger! 
+        </reponse>
+    </dialog>
     
 	<!--
     <dialog id="cX_04" mustKnow="indice_i4_dague">

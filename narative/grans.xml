@@ -40,6 +40,14 @@
             À part vous ? Je ne vois pas. À Asketill, les choses peuvent vite dégénerer. Moi-même j'aurais pu me débarasser de ce lutin pour moins que rien. La mort rôde dans chaque coin de cette terre maudite et souvent elle nous pousse aux plus bas tréfonds de nos âmes affaiblies... maintenant arrêtez de me faire perdre mon temps, partez!
         </reponse>
     </dialog>
+	<dialog id="c12_06" mustKnow="c4_10">
+        <question>
+        Le Tavernier Refill Öl a été victime d'un vol assez conséquent et il m'a demandé d'enquêter auprès de ses employés. La serveuse Hansa dit vous avoir vu traîner près de la caisse, que pouvez-vous me dire à ce sujet?
+        </question> 
+        <reponse>
+         Je ne vous dois aucune explication sale étranger! Je trouve cela amusant que vous m'accusiez de la sorte alors que je suis la femme du Chef de ce village... La Matriarche des Loups. Vous voyez je suis la femme la plus riche de ces terres... je n'ai en aucun cas besoin de m'adonner à de si bases besognes... Mais soyez sûr je ne manquerai pas de vous accuser à votre tour le moment venu... il aurait été plus sage de vous taire.
+        </reponse>
+    </dialog>
 	<!--
     <dialog id="c12_04" mustKnow="indice_i4_dague">
         <question>

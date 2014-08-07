@@ -70,6 +70,7 @@
         <reponse>
 		Étrange choix en effet, mais croyez-moi, il n'aura pas d'incidence sur ce je prépare pour ces Loups! Par contre, VOUS auriez mieux fait de choisir le bon camp... Mes beaux corbeaux vont festoyer en s'abreuvant du sang de vos entrailles une fois tout ceci terminé...
         </reponse>
+	</dialog>
 		<dialog id="c14_16" mustKnow="c15_10">
         <question>
         Le chasseur dit souffrir de visions étranges qui l'empêchent de dormir, vous pensez qu'elles ont un lien quelconque avec le Chaudron? Pouvez vous l'aider?

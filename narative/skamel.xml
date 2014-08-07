@@ -1,5 +1,5 @@
 <conversation>
-    <dialog id="c15_01">
+    <dialog id="c17_01">
         <question>
             Vous semblez avoir une relation assez proche avec vos bêtes.
         </question> 
@@ -7,7 +7,7 @@
             L'élèvage est ma passion depuis que je sais marcher, je viens d'une lignée d'éleveurs très connu dans le royaume. 
         </reponse>
     </dialog>
-	<dialog id="c15_02" mustKnow="c15_01">
+	<dialog id="c17_02" mustKnow="c17_01">
         <question>
          Avez-vous toujours vécu dans ces terres?
         </question> 
@@ -15,7 +15,7 @@
         Je vivais sur le continent jusqu'au jour où les Loups sont arrivés, ils ont décimé nos fermes et tout détruit sur leur passage. Je les ai rejoint par dépit et j'ai décidé d'adapter mon métier à leur manière de vivre. Je possède encore d'autres fermes sur les terres conquises par les Loups, quand la meute se déplace je plante une ferme sur les terres laissées vidées de leurs habitants, c'est un bon système économique en soi... Si ce n'est que les Loups ne laissent jamais les terres en bon état. Cela demande énormément d'investissements...
         </reponse>
     </dialog>
-    <dialog id="c15_03" mustKnow="c15_02">
+    <dialog id="c17_03" mustKnow="c17_02">
         <question>
          Vous êtes donc un Loup qui s'occupe du bétail ?
         </question> 
@@ -23,7 +23,7 @@
             Vous devez trouver ça ironique? Hahaha, je me porte vers l’avenir et je sais bien que nos méthodes doivent évoluer avec le temps. Le commerce sera la vraie prochaine conquête pour quiconque saura s’imposer et je compte bien en tirer profit avec mes fermes.
         </reponse>
     </dialog>
-    <dialog id="c15_04">
+    <dialog id="c17_04">
         <question>
          Vous avez l'air inquiet avec vous moutons... vous les comptez?
         </question> 
@@ -31,7 +31,7 @@
         Vous êtes perspicace étranger.En effet, Je possède 11 moutons, et il m'en manque deux depuis hier soir! S'il-vous-plaît, aidez-moi à retrouver mes bêtes chéries! 
         </reponse>
     </dialog>
-    <dialog id="c15_05">
+    <dialog id="c17_05">
         <question>
 Un meurtre a eu lieu dans votre grange pendant la nuit et vous n'avez rien remarqué?!
         </question> 
@@ -39,7 +39,7 @@ Un meurtre a eu lieu dans votre grange pendant la nuit et vous n'avez rien remar
          Euh non... Vous savez, travailler avec les bêtes c'est épuisant! J'ai le sommeil lourd et j'étais fatigué. J'ai dû dormir comme une pierre!
         </reponse>
     </dialog>
-	    <dialog id="c15_06" mustKnow="c15_05">
+	    <dialog id="c17_06" mustKnow="c17_05">
         <question>
 		D'accord... Mais que pensez-vous alors de ce meurtre? Des pistes que je pourrai suivre?
         </question> 
@@ -47,7 +47,7 @@ Un meurtre a eu lieu dans votre grange pendant la nuit et vous n'avez rien remar
          C'est toujours malheureux de voir un jeune Loup comme Griss faire face à un si funeste destin. Sachez que peu l'appréciaient, même parmi les Loups, mais à mon avis il ne méritait pas un tel sort. Tout ce que je sais, c'est qu'un voleur du nom de Jav Lars a été arrêté sur les lieux du crime et jété à la prison de la maison du Chef. Vous devriez peut-être essayer de lui parler mais faites attention, apparement c'est un homme violent... même derrière les barreaux.
         </reponse>
     </dialog>
-    <dialog id="c15_10" mustKnow="z5-mouton1">
+    <dialog id="c17_10" mustKnow="z5-mouton1">
         <question>
             J'ai trouvé un de vos moutons derrière votre ferme.
         </question> 
@@ -55,7 +55,7 @@ Un meurtre a eu lieu dans votre grange pendant la nuit et vous n'avez rien remar
             Ah ? Je parie que c'est Frimja, cette petite se cache sans arrêt! Merci étranger! Mais il me manque toujours un mouton...
         </reponse>
     </dialog>
-    <dialog id="c15_11" mustKnow="c10_11">
+    <dialog id="c17_11" mustKnow="c10_11">
         <question>
             Solgi possède un gilet en peau de mouton, c'est peut-être lui qui vous a pris un mouton pour réaliser son habit ?
         </question> 
@@ -63,7 +63,7 @@ Un meurtre a eu lieu dans votre grange pendant la nuit et vous n'avez rien remar
             Vraiment? Ah, je me doutais bien que ce vieux corbeau me causerait des ennuis ! Il paiera pour cet affront !
         </reponse>
     </dialog>
-	    <dialog id="c15_12" mustKnow="c20_07">
+	    <dialog id="c17_12" mustKnow="c20_07">
         <question>
          J'ai été parler au voleur et tout ce qu'il m'a dit vous pointe comme complice! Vous n'avez pas fermé à clé votre grange alors que vous aimez tant vos moutons? Vous n'avez rien entendu? BALIVERNES!
 		 Dites-moi la vérité maintenant!!!
@@ -73,7 +73,7 @@ Un meurtre a eu lieu dans votre grange pendant la nuit et vous n'avez rien remar
         </reponse>
     </dialog>
     <!--
-    <dialog id="c15_04" mustKnow="indice_i4_dague">
+    <dialog id="c17_04" mustKnow="indice_i4_dague">
         <question>
             La dague que vous posséder ressemble étrangement à la dague utilisée pour blesser le barde
         </question> 

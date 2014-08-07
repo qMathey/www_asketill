@@ -40,7 +40,7 @@
         </reponse>
     </dialog>
     
-    <dialog id="c10_11" mustKnow="c15_03">
+    <dialog id="c10_11" mustKnow="c17_04">
         <question>
             Votre gilet semble bien neuf, c'est du mouton, non ? Le fermier se plaint qu'il lui manque un mouton! 
         </question> 

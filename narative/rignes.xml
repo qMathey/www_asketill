@@ -1,18 +1,18 @@
 <conversation>
     <dialog id="c6_01">
         <question>
-		Votre visage m'est familier, je suis déjà venu ici ?
+		Excusez-moi, votre visage m'est familier mais j'ai que des vagues souvenirs depuis mon arrivé sur l'île? M'avez-vous déjà vu par ici?
         </question> 
         <reponse>
-		Ah vous revoilà, je suis surprise de vous revoir ici aprés toute l'hydromel que vous avez bu. Vous avez une sacré descente!
+		Ah oui vous revoilà, je suis surprise de vous revoir par ici aprés tout l'hydromel que vous avez bu hier soir! Vous avez une sacré descente!
         </reponse>
     </dialog>
     <dialog id="c6_02">
         <question>
-		Savez-vous pourquoi je suis venu sur cette île ?
+		Sauriez-vous pourquoi je suis venu sur cette île ?
         </question> 
         <reponse>
-		Oui, vous m'aviez vaguement expliqué qu'une personne sur l'île vous devait beaucoup d'argent.
+		Oui, vous m'aviez vaguement expliqué qu'une personne sur l'île vous devait beaucoup d'argent. Mais désolé, je ne me souviens vraiment pas qui c'était...
         </reponse>
     </dialog>
     <dialog id="c6_03">
@@ -38,6 +38,15 @@
         </question> 
         <reponse>
             Vous avez bien eu raison mon bon monsieur. Il n'est pas prudent de dénoncer à tort et à travers. Si je peux vous aider : Il y a quelques jours, la femme de Griss, Inga, tentait d'amadouer quelques types à la taverne. Je n'aime pas trop cette peste!
+        </reponse>
+    </dialog>
+	
+    <dialog id="c6_12" mustKnow="c19_03">
+        <question>
+        Le marin m'a dit qu'apparement ça serait le Barde qui me devait tout cet argent... Vous souvenez vous si c'était lui dont je vous ai parlé?
+        </question> 
+        <reponse>
+        Le marin... mmm le Barde... C'est étrange ça ne me revient toujours pas qui c'était mais j'en suis presque certaine qu'il ne s'agissait pas de Griss... désolé j'étais debordée cette nuit et je n'ai du vous écouter que d'une oreille. 
         </reponse>
     </dialog>
 </conversation>

@@ -1,26 +1,26 @@
 <conversation>
     <dialog id="c13_01">
         <question>
-            Profane ? Pourquoi serais-je un profane ? 
+         Profane ? Pourquoi serais-je un profane ? 
         </question> 
         <reponse>
-            Vous êtes suspecté d'un crime odieux ! Si tel est le cas, alors vos actes sont une insulte aux runes sacrées.
+        Vous êtes suspecté d'un crime odieux ! Si tel est le cas, alors vos actes sont une insulte aux runes sacrées.
         </reponse>
     </dialog>
     <dialog id="c13_02">
         <question>
-            Pourquoi restez-vous dehors ? Vous semblez semblez geler sur place !
+        Pourquoi restez-vous dehors ? Vous semblez semblez geler sur place !
         </question> 
         <reponse>
-            Mon rôle est de garder les runes sacrées. Il s'agit d'un grand honeur après de longues années de combats auprès de mon père, le chef du village. Un jour, peut-être, remplacerais-je mon père pour gouverner le village.
+        Mon rôle est de garder les runes sacrées et de protèger le haut plateau de l'arrivée d'indésirables tels que vous... Les Escaliers Glacés sont là pour prévenir les moins vertueux d'accèder à la partie sacrée de l'île... Il s'agit d'un grand honneur après de longues années de batailles auprès de mon père, le chef du village. Un jour, peut-être, je prendrai la place de mon père et gouvernerai de manière juste ces terres.
         </reponse>
     </dialog>
-    <dialog id="c13_03">
+    <dialog id="c13_03" mustKnow="c13_02">
         <question>
-            Vous semblez brave, peut-être avez-vous une idée de qui pourrait m'aider à m'innocenter ?
+         Vous semblez brave, peut-être avez-vous une idée de qui pourrait m'aider à m'innocenter ?
         </question> 
         <reponse>
-            Vous devriez parlez à Otryy le Sage, il doit être ici, à la place du chaudron près des arbres anciens. Ces visions conseillent mon père depuis notre arrivée. Il pourra peut-être vous aider bien que je me sois toujours méfié de ce vieux corbeau! Si vous parlez à mon frère, Gils, je vous conseillerais de ne pas l'énerver... Ce jeune mâle à tendance à décapiter sans raison. 
+         Vous devriez parlez à Otryy le Sage, il traîne non loin d'ici, à la place du Chaudron dans les Bois des Anciens. Ces visions conseillent mon père depuis notre arrivée. Il pourra peut-être vous aider bien que je me sois toujours méfié de ce vieux borgne! Si vous parlez à mon frère, Gils, je vous conseillerais de ne pas l'énerver... Ce jeune mâle à tendance à décapiter sans raison. Vous êtes prévenu!
         </reponse>
     </dialog>
     <dialog id="c13_04" mustKnow="z1-runes">
@@ -28,7 +28,15 @@
             Vous savez à quoi correspondent les runes qui sont auprès de vous ?
         </question> 
         <reponse>
-            Ces runes racontent l'histoire de l'île des corbeaux. Cet endroit abritait autrefois un clan uni, d'êtres intelligents et sournois dont l'étrange rituel était de vivre parmis les bêtes sauvages. Notre meute est arrivée par les mers et nous avons chassé ces êtres impures. Nous vivons sur ces terres depuis, nous exploitons jusqu'à la dernière ressource que renferme l'île puis nous irons ailleurs. C’est le cycle même de la vie que de détruire et épuiser pour mieux purifier les terres.
+         Ces runes racontent l'histoire de l'île des Corbeaux. Cet endroit abritait autrefois un clan uni, peuplé d'êtres malins et sournois dont l'étrange rituel était de vivre parmi les bêtes comme des sauvages. Notre meute est arrivée par les mers et nous avons chassé ces êtres impures. Nous vivons sur ces terres depuis, nous les exploiterons jusqu'à la dernière ressource qu'elles renferment puis nous irons ailleurs. C’est le cycle même de la vie que de détruire et épuiser pour mieux purifier les terres.
+        </reponse>
+    </dialog>
+	 <dialog id="c13_05" mustKnow="z2-statue">
+        <question>
+         J'ai vu des Runes similaires sur la statue gélée dans les Bois des Anciens, que racontent-elles selon vous?
+        </question> 
+        <reponse>
+         Nous ne savons pas du tout qui cette statue représente, j'adorerais percer le mystère de ces runes un jour. Pour le moment, tout ce que nous avons pu traduire est une sorte d'avertissement... comme une mise en garde à quiconque s'installerait ici... Loup ou Corbeau, je pense qu'un destin tragique attend quiconque s'attarde bien trop sur cet île maudite. J'espère que ce ne sont que des histoires... 
         </reponse>
     </dialog>
 </conversation>

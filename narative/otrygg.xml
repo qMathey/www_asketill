@@ -36,7 +36,7 @@
             Le cadavre avait la langue verte et vous semblez vous y connaître en potion et alchimie.
         </question> 
         <reponse>
-            Je vous vois venir étranger, je dois vous avouer que j’ai fourni le barde avec une potion. il voulait quelque chose qui le rende « performant ». Voyez-vous? … pour faire honneur à sa femme. Mais je doute que ma potion lui ait laissé une telle trace. Un poison aurait pu laisser une marque mais alors pourquoi le pendre?  Vous devriez vous adresser à quelqu’un qui se connaît en poisons. J’ai entendu qu’un expert de cela traîne à la taverne, il a peut-être quelque chose à voir avec ça.
+         Je vous vois venir étranger, je dois vous avouer que j’ai fourni le barde avec une potion. il voulait quelque chose qui le rende « performant ». Voyez-vous? … pour faire honneur à sa femme. Mais je doute que ma potion lui ait laissé une telle trace. Un poison aurait pu laisser une marque pareille mais alors pourquoi le pendre?  Vous devriez vous adresser à quelqu’un qui se connaît en poisons. Slyna La Courtisane m'a parlé d'un expert de cela qui traîne à la taverne, il a peut-être quelque chose à voir avec ça... Je me demande bien qui a pu aller les chercher ces guerriers qui sont récemment arrivés sur l'île...
         </reponse>
     </dialog>
     <dialog id="c14_12" mustKnow="z2-statue">
@@ -76,7 +76,15 @@
         Le chasseur dit souffrir de visions étranges qui l'empêchent de dormir, vous pensez qu'elles ont un lien quelconque avec le Chaudron? Pouvez vous l'aider?
         </question> 
         <reponse>
-		humpf!... déjà?! hem... Nous devons tous et chacun porter nos propres fardeaux, ne vous inquiètez pas des affaires de ce jeune homme solitaire, je l'aiderai le moment venu. Concentrez-vous plutôt sur vos problèmes...
+		humpf!... les visions? déjà?! hem... que dis-je! Nous devons tous et chacun porter nos propres fardeaux, ne vous inquiètez pas des affaires de ce jeune oiseau, je l'aiderai le moment venu. Concentrez-vous plutôt sur vos problèmes et laissez-le en paix c'est un homme perturbé aimant la solitude. Qui sait comment il pourrait réagir si vous le dérangez trop...
+        </reponse>
+    </dialog>
+		<dialog id="c14_17" mustKnow="c18_13">
+        <question>
+        J'ai entendu parler du Grand Corbeau... J'imagine vous en savez quelque chose à son propos...
+        </question> 
+        <reponse>
+		Quelque chose? J'étais au plus près de lui lors de son règne... c'était un être complexe, impitoyable et pur à la fois, nul n'a dirigé Asketill aussi droitement mais aussi durement que cet homme. J'étais heureux de voir Gardarr arriver et prendre sa place... au départ en tout cas. Je pensais que les Loups nous sortiraient de notre état sauvage et qu'une nouvelle ère commencerait ici, mais il n'a apporté qu'un autre type de sauvagerie... un mal en remplaçant un autre. Son esprit, lui, n'a jamais quitté ces terres... Tel l'air que l'on respire, sa présence nous observe de mille yeux et son souffle, mêlé au vent, me murmure encore les sombres histoires des jours à venir...
         </reponse>
     </dialog>
 </conversation>

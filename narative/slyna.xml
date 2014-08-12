@@ -1,43 +1,43 @@
 <conversation>
     <dialog id="c8_01">
         <question>
-            Euh... Bonjour, que faîtes-vous ici ?
+         Euh... Bonjour, que faîtes-vous ici ?
         </question> 
         <reponse>
-            Je travaille ici. Mon rôle est de satisfaire et de mettre à l'aise les clients des lieux. 
-            Je suis particulièrement douée dans mon domaine, en particulier pour les jeux étranges de certains vieux guerriers...
+         Je suis là pour accompagner ceux qui ont besoin de compagnie on va dire...  mon rôle est de satisfaire et de mettre à l'aise les clients des lieux. 
+         Je suis particulièrement douée dans mon domaine, en particulier pour les jeux étranges de certains vieux guerriers...
         </reponse>
     </dialog>
     <dialog id="c8_02">
         <question>
-            Étiez-vous en compagnie hier soir ?
+         Étiez-vous "accompagnée" hier soir ?
         </question> 
         <reponse>
-            Hé! Doucement petit, mes affaires ne regardent que moi. 
+        Une femme comme moi est rarement seule...  Hé! Doucement petite fouine, mes affaires ne regardent que moi. 
         </reponse>
     </dialog>
     <dialog id="c8_03">
         <question>
-            Vous ne voulez pas m'aider ? On veut ma tête!
+         Pouvez-vous m'aider ? On veut ma tête!
         </question> 
         <reponse>
-            J'ai vu ce foutu voleur rôder dans le coin, vous devriez trouver un moyen d’aller lui parler car il est pas mal au courant de tout ce qui se passe sur cette île... Il a été attrapé en fouillant les affaires du barde après que Skamel ait été chercher de l'aide après la découverte de Griss pendu. 
+         Pauvre créature! Bien pourrie la loi de ce village, que de punir injustement le premier étranger venu! J'ai vu ce foutu voleur Jav Lars rôder dans le coin hier soir, vous devriez trouver un moyen d’aller lui parler car il est pas mal au courant de tout ce qui se passe sur cette île... Il a été attrapé en fouillant les affaires du barde qu'on a retrouvé mort à la ferme de l'amoureux des bêtes et on l'a jeté en prison à la maison du Chef. 
         </reponse>
     </dialog>
     <dialog id="c8_10" mustKnow="c14_11">
         <question>
-            Otrygg m'a dit qu'une personne était experte en poison ici à la taverne. Vous avez une idée de qui il s'agit ?
+         Otrygg le vieux sage m'a dit qu'un expert en poisons serait ici à la taverne. Vous avez une idée de qui il parlait ?
         </question> 
         <reponse>
-            Je ne sais pas... Mais maintenant que vous me parlez de poison, je me rappelle avoir vu Hansa verser quelque chose dans le verre de Griss.
+         il vous a dit ça?... étrange, je ne me souviens pas d'avoir parlé à ce vieux Corbeau borgne... Cela doit-être un de ces nouveaux ivrognes de guerriers... Mais maintenant que vous me parlez de poison, je me rappelle avoir vu Hansa verser quelque chose dans le verre de Griss...
         </reponse>
     </dialog>
     <dialog id="c8_11" mustKnow="c10_10">
         <question>
-            Votre nom m'a été rapporté concernant mon affaire, que faisiez-vous hier soir ? 
+         Votre nom m'a été rapporté concernant mon affaire, que faisiez-vous hier soir ? 
         </question> 
         <reponse>
-            Oulalah garçon, vous me soupçonnez ? J'étais en compagnie d'un rustre mais je suis passée maîtraisse dans l'art de manier un marteau.
+         Oulalah chéri(e), vous me soupçonnez ? J'étais en compagnie d'un rustre et je suis passée maîtresse dans l'art de manier le marteau, le reste ne te concerne pas...
         </reponse>
     </dialog>
 	<!--

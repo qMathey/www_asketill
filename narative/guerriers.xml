@@ -4,43 +4,77 @@
             Qui êtes-vous ?
         </question> 
         <reponse>
-            (Le Lion) : Nous sommes les lames de Freyr! Nous combattons pour le plus offrant. Nous sommes ici à la demande de quelqu'un pour régler une histoire. 
+            (Le Lion) : Je suis le Lion, meneur de cette confrérie que vous voyez à table! Nous sommes les lames de Freyr! Nous combattons pour les plus offrants et justes. Nous sommes ici à la demande d'un commanditaire pour régler une histoire...
         </reponse>
     </dialog>
+	    <dialog id="c9_06" mustKnow="c09_01">
+        <question>
+        Cela me semble bien vague tout ça...
+        </question> 
+        <reponse>
+        (Le Lion) :  Vous en savez autant que nous à vrai dire... Nous avons été mandatés de nous rendre ici et attendre des instructions le moment venu. Le commanditaire tenait à la plus haute discrétion et la paye est assez bonne alors nous attendons...
+        </reponse>
+    </dialog>
+	<dialog id="c9_07" mustKnow="c09_06">
+        <question>
+        Les Lames de Freyr?, sympa comme nom! vous semblez plutot fier de le porter...
+        </question> 
+        <reponse>
+        (Le Lion) :  C'est le plus grand bonheur de mener les quêtes de notre grand dieu de la nature. La plupart nous craignent et d'autres même nous venèrent! Sur le continent, notre nom était symbole de peur et de justice. Nous sommes devenus des mercenaires avec le temps ; l'époque des héros d'autrefois est révolue. Il faut bien pouvoir vivre dans ce monde tourmenté... Je peux vous dire que quiconque nous a fait venir ici doit bien en avoir les moyens et nous payera une belle somme d'argent quoiqu'il en soit. 
+        </reponse>
+    </dialogue>
     <dialog id="c9_02">
         <question>
-            Vos collègues ne prêtent même pas attention à moi ! Toi là, avec ton bracelet de serpent, tu n'as rien à me dire ?
+         Vos collègues ne me prêtent la moindre attention, toi-là avec tes brassards en serpent, tu n'as rien à me dire ?
         </question> 
         <reponse>
-            (Le Lion) : Il est très réservé et il ne parle qu’en de rares occasions. C'est un expert en poisons! Il est aussi le plus craint des mercenaires de la région.
+		(Le Serpent) : mmmmph... grrrrr....
+        (Le Lion) : Hahah le Serpent? Il est très réservé et il ne parle qu’en de très rares occasions. C'est un expert en poisons! Il est aussi le plus craint des mercenaires du royaume. Sauvage et sournois... c'est un honneur de me battre aux côtés de ce terrible reptile!
         </reponse>
     </dialog>
-    <dialog id="c9_03">
+    <dialog id="c9_03" mustKnow="c9_02">
         <question>
-            Et lui, avec sa tête de sanglier ? Rien non plus ?
+         Et lui, le grassouillet qui dévore ce poulet? Rien non plus ?
         </question> 
         <reponse>
-            (Le Lion) :  Sanglier est né et a été élevé par des animaux de la forêt. Je pense qu’il est l'un des mystérieux enfants du dieu Freyr.
+         (Le Lion) :  Oh lui c'est le Sanglier! Il ne parle jamais en mangeant et il ne fait que manger... Ne vous laissez pas berner par sa petite taille, il est rapide et puissant! Vous dévriez le voir au combat, il a tant de grâce... On dit qu'il est né dans les bois et a été élevé par des animaux de la forêt. Je pense qu’il est l'un des mystérieux enfants de notre dieu Freyr.
         </reponse>
     </dialog>
-    <dialog id="c9_04">
+    <dialog id="c9_04" mustKnow="c9_03">
         <question>
-            Je vois que celui avec la queue de renard à bien son compte.
+         Je vois que celui avec la queue de renard à bien eu son compte.
         </question> 
         <reponse>
-            (Le Lion) :  Ahahah, oui il encore jeune! Il s'agit de mon plus jeune enfant, tous mes autres fils sont morts au combat... Il ne tient pas l’alcool et il est trop frêle pour être un vrai guerrier! Néanmoins, il m'est utile car il est très rapide, agile et possède un très bon instinct.
+        (Le Lion) :  Ahahah, oui une vraie honte! Il s'agit de mon plus jeune enfant, tous mes autres fils sont morts au combat... Il ne tient pas l’alcool et il est trop frêle pour être un vrai guerrier! Néanmoins, il est rapide, agile et possède un très bon instinct. Nous lui avons donné recémment son nom de Lame de Freyr, nous l'avons accueilli comme Le Renard. Ce n'est pas glorieux mais nous savons tous que ce n'est pas le nom qui fait le guerrier... un jour il devra faire ses preuves!
         </reponse>
-    </dialog>
-    
+    </dialog>   
     <dialog id="c9_05">
         <question>
-            Que savez-vous sur le meurtre du barde ?
+         Que savez-vous sur le meurtre du barde ?
         </question> 
         <reponse>
             (Le Lion) :  Pas grand chose, à part qu'il a été pendu et poignardé. On s'en fout des histoires locales, c'est leur problème, pas le notre.
         </reponse>
     </dialog>
-    
+	<dialog id="c9_10" mustKnow="c8_10">
+        <question>
+         Le barde a peut-être été empoisonné... et votre ami ici, le Serpent, se trouve être un expert en poisons... drôle de coincidence vous ne trouvez pas?
+        </question> 
+        <reponse>
+        (Le Lion) :  Rahh étranger! rien n'est coincidence dans ce monde! si le Serpent avait vraiment voulu tuer ce barde il n'aurait pas laissé la moindre trace, je vois rappele que c'est un maître en la matière...
+		(Le Serpent) :  mmmmph... grrr... ha ha ha... Je trouve cela amusant petit(e) mais sache que je n'ai rien à voir là-dedans, drôle de mystère tout de même... de quelle couleur semblait sa langue?
+        </reponse>
+    </dialog> 
+    <dialog id="c9_11" mustKnow="c9_10">
+        <question>
+        Elle était plutôt verte et légérement gonglée... Avez-vous une idée de ce qui aurait pu laisser une telle trace? Je sais que le Sage lui avait fourni une potion pour l'aider à combler sa femme...
+        </question> 
+        <reponse>
+        (Le Lion) :  ha! je me doutais que ce drôle d'oiseau n'était pas un véritable homme hahaha! pas avec une voix pareille... 
+		(Le sanglier) : ha ha ha ! Oiseauuuuu?? Mangeeeeeer... RIGNES par ici du poulet! ha ha ha!
+		(Le Serpent) :  mmmmph... Verte et gonflée? je ne pense pas que c'est un poison qui a tué ce barde... je dirais que cela est la trace d'un potion pour étourdir ou affaiblir quelqu'un. Sans voir le corps je ne peux vous aider d'avantage et j'ai bien trop parlé pour cette nuit, maintenant laissez-moi boire en silence!
+        </reponse>
+    </dialog> 
 	<!--
     <dialog id="cX_04" mustKnow="indice_i4_dague">
         <question>

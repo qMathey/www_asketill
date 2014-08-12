@@ -1,32 +1,40 @@
 <conversation>
     <dialog id="c2_01">
         <question>
-            Pourquoi vouloir ma mort ? je n'ai rien fait ! 
+        Pourquoi vouloir ma mort ? je n'ai rien fait ! 
         </question> 
         <reponse>
-            Rien fait ? Inga vous accuse d'avoir tué son mari, c'en est bien assez pour moi pour vous tuer ! Quoique, vous m'avez rendu un fier service en nous débarassant du barde. Inga peut maintenant être mienne! Je la vois déjà à mes cotés, marchant sur les cadavres de mes conquêtes!
-            Je ne sais pas pourquoi mon père a accepté de vous laisser la vie sauve, sans doute à cause d'Otrygg. Ce vieux volatile n'a pas pu fermer sa gueule! Je me méfiais de lui mais peu importe, d'ici la nuit, votre tête servira de repas aux bêtes! 
+            Rien fait ? Inga vous accuse d'avoir tué son mari, c'en est bien assez pour moi pour vous tuer! Quoique, vous m'avez rendu un fier service en nous débarassant du barde. Inga peut maintenant être mienne! Je la vois déjà à mes cotés, marchant sur les cadavres de mes ennemis! Je ne sais pas pourquoi mon père a accepté de vous laisser la vie sauve, sans doute à cause du vieux Otrygg. Ce sale volatile n'a pas pu fermer son bec! Je me méfierais de lui mais peu importe, d'ici la nuit, votre tête servira de repas aux bêtes! 
         </reponse>
     </dialog>
     <dialog id="c2_02">
         <question>
-            Quel est votre rôle ici ?
+        Quel est votre rôle ici ?
         </question> 
         <reponse>
-            Je garde le throne de mon père et j'exécute ses sentences. J'aime particulièrement détacher l'âme de mes ennemis de leurs corps et je me délecte de leur sang! Ma lamme, Fidroir, s'embellit à chaque effusion. Nous devrions partir et conquérir d'autres terres, remplies d'hommes et de femmes à renvoyer auprès d'Odin !
+         Je garde le trône de mon père et j'exécute ses sentences et ordres. J'aime particulièrement détacher l'âme de mes ennemis de leurs corps et je me délecte de leur sang! La décapitation est un si bel art!
+		 Ma lame, Fidroir, s'embellit à chaque effusion. J'aimerais partir de ce village et conquérir d'autres terres, remplies d'hommes et de femmes à renvoyer auprès d'Odin!
         </reponse>
     </dialog>
-    <dialog id="c2_03">
+	<dialog id="c2_03" mustKnow="c2_02">
+        <question>
+        Je vous trouve plutôt obsédé par l'idée de tuer à tout va...
+        </question> 
+        <reponse>
+        Depuis la première fois que j'ai pris une vie, je ne vis que pour cela. Je pouvais à peine soulever Fridoir, mais j'ai su, au moment même où j'ai vu cette première tête ensanglentée tomber, que j'étais né pour apporter la mort autour de moi.
+        </reponse>
+    </dialog>
+    <dialog id="c2_07">
         <question>
          Vous m'accusez, alors que tout semble indiquer que ce crime vous profite ! J'en suis certain! C'est vous qui avez tué le barde ! 
         </question> 
         <reponse>
-         Que veux-tu dire étranger? Tu m'accuses d'avoir tué cet imbécile de barde?! GARE À TES PROCHAINES PAROLES! PAR ODIN, JE VAIS TE TUER SI TU ME PARLES ENCORE DE LA SORTE! 
+         Que veux-tu dire étranger? Tu m'accuses d'avoir tué cet imbécile de barde?! GARE À TES PROCHAINES PAROLES! (Fridoir en main!) PAR ODIN, JE VAIS TE TUER SI TU ME PARLES ENCORE DE LA SORTE! 
         </reponse>
 	</dialog>
 	<dialog id="c2_06" mustKnow="c2_03">
         <question>
-         ha ha ha Je n'ai pas peur de vous! VOUS ÊTES UN SALE MEURTRIER! 
+         ha ha ha Je n'ai pas peur de vous ni de votre lame! VOUS ÊTES UN SALE MEURTRIER! 
         </question> 
         <reponse>
          Vous l'aurez voulu!
@@ -34,18 +42,18 @@
     </dialog>
     <dialog id="c2_04" mustKnow="c1_03">
         <question>
-            Votre père parle de vous comme son succèsseur. Vous comptez prendre sa place ?
+         Votre père parle de vous comme son succèsseur. Vous comptez prendre sa place ?
         </question> 
         <reponse>
-            Ça ne m'intéresse pas de régenter ce petit village composé de faibles. Cela fait longtemps que je rève de voir beaucoup d'entre eux découpé avec leurs têtes plantées sur nos lances !
+         Ça ne m'intéresse pas de régenter ce petit village composé de faibles. Cela fait longtemps que je rêve de voir beaucoup d'entre eux décapités, leurs têtes plantées sur nos lances !
         </reponse>
     </dialog>
     <dialog id="c2_05" mustKnow="i1-casque">
         <question>
-            Que pouvez-vous me dire à propos du casque près de votre père, celui avec les plumes de corbeau ?
+         Que pouvez-vous me dire à propos du casque près de votre père, celui avec les plumes de corbeau ?
         </question> 
         <reponse>
-            C'est ma plus grande fierté ! Celle où mon père m'a laissé décapiter ma première tête ! Si ça ne tenait qu'à moi, j'aurais laisser pourrir la tête du "Grand Corbeau" qui s'y trouvait.
+       	C'est ma plus grande fierté ! Celle où mon père m'a laissé décapiter ma première tête ! Si ça ne tenait qu'à moi, j'aurais laisser pourrir la tête du "Grand Corbeau" qui s'y trouvait dedans et l'exposer entre le chevereuil et l'ours mais mon père en a decidé autrement...
         </reponse>
     </dialog>
 </conversation>

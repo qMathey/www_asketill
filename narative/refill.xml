@@ -65,14 +65,6 @@
          Quoi?! Vous êtes certain ? Je n'aurais jamais pensé à elle! Bon puisque vous m'avez aidé, je vais vous dire un truc : La nuit du meurtre, l'ancien barde, Griss, est sorti car il ne se sentait pas bien. Le marin l'a précédé car il devait vérifier l'arrimage de son navire puis vous êtes vous aussi sorti précipitamment. Mais peut-être d'autres que je n'ai pas vu partir sont sortis aussi...
         </reponse>
     </dialog>
-	<dialog id="c4_15" mustKnow="c5_11">
-        <question>
-         - HANSA, l'une de vos serveuses a volé dans la caisse, j'en suis sûr!
-        </question> 
-        <reponse>
-         Quoi?! Cette pauvre créature? je ne sais pas si je vous crois étranger... Je n'aurais jamais pensé à elle! Vous avez au moins essayé et je vous en remercie. Un conseil, si vous le pouvez, examinez bien le corps de la victime cela pourrait vous aider à trouver un coupable... si ce n'est pas vous qui l'avez fait...
-        </reponse>
-    </dialog>
     <dialog id="c4_16" mustKnow="c12_06">
         <question>
          - GRANS la cuisinière, a volé dans la caisse, j'en suis sûr!
@@ -113,7 +105,14 @@
     	Infâme! vous avez osé! vous n'avez pas de parole, Je ferai tout pour qu'on vous coupe la tête! Sortez de ma taverne et n'y mettez plus jamais les pieds!
         </reponse>
     </dialog>
-    
+	<dialog id="c4_21" mustKnow="c5_11">
+        <question>
+         - HANSA, l'une de vos serveuses a volé dans la caisse, j'en suis sûr!
+        </question> 
+        <reponse>
+         Quoi?! Cette pauvre créature? je ne sais pas si je vous crois étranger... Je n'aurais jamais pensé à elle! Vous avez au moins essayé et je vous en remercie. Un conseil, si vous le pouvez, examinez bien le corps de la victime cela pourrait vous aider à trouver un coupable... si ce n'est pas vous qui l'avez fait...
+        </reponse>
+    </dialog>
 	
 	
 	

@@ -183,6 +183,19 @@ TemplateManager.disposeTemplate = function() {
         if( $(".convesationTextWrapper").length > 0 ){
             
             var conversationHeight = $(".convesationTextWrapper").height();
+			
+			var maxConversationHeight = $("#html_wrapper").height() - $(".personnageTitle").first().height() - 250;
+			
+			// Si la conversation est plus grand que la taille max de la conversatoin
+			if(conversationHeight >= maxConversationHeight) {
+				conversationHeight = maxConversationHeight;
+				$(".convesationTextWrapper").css("height", conversationHeight+"px")
+											 .css("overflow-y", "scroll");
+			}
+			else { // sinon retour à la normal
+				$(".convesationTextWrapper").css("height", "auto")
+											 .css("overflow-y", "auto");
+			}
             
             var marginTop = $("#html_wrapper").height() /2 - conversationHeight / 2;
 			

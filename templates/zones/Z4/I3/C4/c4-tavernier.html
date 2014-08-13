@@ -59,9 +59,9 @@
     EventListenersManager.registerEvent("click", '[data-id="c4_17"]', function() {
         refillRemoveChoices( "c4_17" );
     });
-    
-    EventListenersManager.registerEvent("click", '[data-id="c4_17"]', function() {
-        refillRemoveChoices( "c4_17" );
+	
+    EventListenersManager.registerEvent("click", '[data-id="c4_21"]', function() {
+        refillRemoveChoices( "c4_21" );
     });
     
    // supprime les choix si l'utilisateur en a deja choisi un
@@ -80,6 +80,9 @@
    if(ComicManager.doesUserKnow("c4_17")){
        setTimeout(function() { refillRemoveChoices( "c4_17" ) } , 500);
    }
+   if(ComicManager.doesUserKnow("c4_21")){
+       setTimeout(function() { refillRemoveChoices( "c4_21" ) } , 500);
+   }
    
    EventListenersManager.registerEvent("click", ".refillConversation .question", function() {
         if(ComicManager.doesUserKnow("c4_13")){
@@ -96,6 +99,9 @@
         }
         if(ComicManager.doesUserKnow("c4_17")){
             setTimeout(function() { refillRemoveChoices( "c4_17" ) } , 3005);
+        }
+        if(ComicManager.doesUserKnow("c4_21")){
+            setTimeout(function() { refillRemoveChoices( "c4_21" ) } , 3005);
         }
    })
     
@@ -115,6 +121,9 @@
         
         if($userChoice != "c4_17")
             $('[data-id="c4_17"]').remove();
+			
+        if($userChoice != "c4_21")
+            $('[data-id="c4_21"]').remove();
         
     }
     

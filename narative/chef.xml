@@ -13,26 +13,42 @@ Pourquoi ne m'avez vous pas condamné ?
         </question> 
         <reponse>
             Hahaha! Griss n'était peut-être pas le chanteur le plus doué... N'importe qui dans le village aurait pu vouloir s'en débarasser à cause de sa voix, comment dire... "particulière". Les corps peuvent se déchirer pour un rien ici à Asketill mais sache qu'aucun meurtre ne reste impuni sous mon règne!
-            A toi de mener l'enquête étranger! Tu as jusqu'à la fin du jours pour prouver que tu n'es pas la cause de ce malheur! Tu devrais aller voir le cadavre dans la grange comme tout bon investigateur le ferait. 
+            À toi de mener l'enquête étranger! T'as jusqu'à la fin du jour pour prouver que tu n'es pas la cause de ce malheur! Tu devrais aller voir le cadavr pour commencer dans la grange comme tout bon enquêteur le ferait. 
         </reponse>
     </dialog>
     
     <dialog id="c1_03">
         <question>
-            Comment êtes-vous devenu le chef du village ?
+        Comment êtes-vous devenu le chef du village ?
         </question> 
         <reponse>
-            Je viens d'une lignée de valeureux guerriers Loups et je suis fière d'être né pour conquérir. Je suis venu sur cette île et j'ai débarrasé les sauvages qui s'y trouvaient. Voilà d'innombrables lunes que la paix est en ces lieux mais ça ne saurait durer... Mon instinct me prépare à nouveau à la guerre. 
-            Mon heure viendra, tôt ou tard mais il semble que mon départ pour le Valhalla est proche. Mon cadet, Gils prendra ma place et abreuvera notre meute du sang de nos ennemis.
+            Je viens d'une lignée de valeureux guerriers Loups et je suis fièr d'être né pour conquérir. Je suis venu sur cet île et je l'ai débarrasé de la majorité des sauvages qui s'y trouvaient. Voilà d'innombrables lunes que la paix est en ces lieux mais ça ne saurait durer... Mon instinct me prépare à nouveau à la guerre. 
+         Mon heure viendra tôt ou tard... mais il semble depuis peu que mon départ pour le Valhalla est proche. Mon cadet, Gils prendra probablement ma place et abreuvera notre meute du sang de nos ennemis en mon nom!
         </reponse>
-    </dialog>
-	
+    </dialog>	
 	  <dialog id="c1_10" mustKnow="c5_14">
         <question>
         Ceci pourrait vous intéresser... Hansa est en fait la fille des anciens propiétaires de La Plume Noire, Refill vous l'a caché depuis des années en complicité avec Otrygg votre conseiller, J'espère que vous vous souviendrez de ma coopération envers les Loups lors que vous me jugerez demain. 
         </question> 
         <reponse>
         QUOI?! Je ne suis entouré que par des sales menteurs et manipulateurs! Je me doutais bien que ce vieux Otrygg ne m'était pas autant fidèle qu'il le semblait mais Refill! Un des nôtres! Ma douce Grans avait raison je n'aurais dû admettre que des guerriers dans ma meute! J'espère que ceci n'est pas un sale tour de votre part étranger. Je menèrai ma propre enquête et déciderai du sort de ces trois-là le moment venu.
+        </reponse>
+    </dialog>
+	
+	  <dialog id="c1_11" mustKnow="c18_13">
+        <question>
+        Qui était le Grand Corbeau?
+        </question> 
+        <reponse>
+        Qui vous a parlé de ça?... pfff peu importe, cet homme n'était qu'un sauvage assis sur un trône qui menait son peuple à sa perte. Je me suis fait un plaisir de le déloger de la hutte qui lui servait de "temple" et j'ai fait construire cette belle demeure par dessus son vieux tas de cailloux et de paille. Nous l'avons décapité comme exemple devant tout le village et jeté sa tête sa tête dans le puits, certains disent l'y voir encore flotter ha ha ha. Nous n'avons gardé que ce vieux casque enplummé là derrière comme seul souvenir de sa lignée décadente... enfin, j'oubliais presque cet imbécile de Tosk... c'est lui la vrai dernière relique des Corbeaux...
+        </reponse>
+    </dialog>
+	  <dialog id="c1_12" mustKnow="c1_13">
+        <question>
+        Tosk le Sale... un Corbeau?
+        </question> 
+        <reponse>
+        Oui ha ha ha, le dernier vrai Corbeau en fait! Un corbeau de sang, frère du Grand Corbeau disaient-ils! ha ha ha regardez-le se faire dessus! Je ne le laisse vivre que pour rappeler à ce village les idiots qui dirigéaient Asketill autrefois...
         </reponse>
     </dialog>
     <!--

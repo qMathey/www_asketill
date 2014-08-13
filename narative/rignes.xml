@@ -1,43 +1,50 @@
 <conversation>
     <dialog id="c6_01">
         <question>
-		Votre visage m'est familier, je suis déjà venu ici ?
+		Excusez-moi, votre visage m'est familier mais j'ai que des vagues souvenirs depuis mon arrivé sur l'île? M'avez-vous déjà vu par ici?
         </question> 
         <reponse>
-		Ah vous revoilà, je suis surprise de vous revoir ici aprés toute l'hydromel que vous avez bu. Vous avez une sacré descente!
+		Ah oui vous revoilà! je suis surprise de vous revoir par ici après tout l'hydromel que vous avez bu hier soir! Vous avez une sacrée descente!
         </reponse>
     </dialog>
     <dialog id="c6_02">
         <question>
-		Savez-vous pourquoi je suis venu sur cette île ?
+		Sauriez-vous pourquoi je suis venu sur cette île ?
         </question> 
         <reponse>
-		Oui, vous m'aviez vaguement expliqué qu'une personne sur l'île vous devait beaucoup d'argent.
+		Oui, vous m'aviez vaguement expliqué qu'une personne sur l'île vous devait beaucoup d'argent. Mais désolé, je ne me souviens vraiment pas de la personne en question...
         </reponse>
     </dialog>
     <dialog id="c6_03">
         <question>
-		Beaucoup de personnes sur cette île pensent que j'ai tué le barde qu'en pensez-vous ?
+		Beaucoup de personnes sur cette île pensent que j'ai tué le barde et vous, qu'en dites-vous ?
         </question> 
         <reponse>
-		Ah mon bon monsieur, avec ce que je vous ai servi hier soir, vous pouviez à peine vous levez, je suis sûre que vous n'y êtes pour rien !
+		Ah! mon bon monsieur, avec tout ce que je vous ai servi hier soir, vous pouviez à peine vous lever, je suis sûre que vous n'y êtes pour rien !
         </reponse>
     </dialog>
     <dialog id="c6_10" mustKnow="c4_10">
         <question>
-		Vous avez quelque chose a voir avec le vol dont Refill, le tavernier, m'a parlé ?
+		Avez-vous quelque chose à voir avec le vol d'une grande somme d'argent dont Refill, le tavernier, m'a parlé ?
         </question> 
         <reponse>
-		L'argent de qui ? ...  Ah non j'ai tout ce dont j'ai besoin ici! Je mène une vie simple et je ne saurais pas quoi faire de tout cet argent! Je soupçonne néanmoins ce nouveau barde, il ne m'inspire pas confiance !
+		Vol? argent de qui ? ...  Ah non j'ai tout ce dont j'ai besoin ici! Je mène une vie simple et je ne saurais pas quoi faire de tout cet argent! Je soupçonne néanmoins ce nouveau barde, il ne m'inspire pas confiance!
         </reponse>
     </dialog>
-    
     <dialog id="c6_11" mustKnow="c4_13">
         <question>
-            Je n'ai rien dit pour le vol à Refill. Ce ne sont pas mes affaires!
+         J'ai préferé ne pas me mêler à l'enquête sur le vol à la taverne. Ce ne sont pas mes affaires!
         </question> 
         <reponse>
-            Vous avez bien eu raison mon bon monsieur. Il n'est pas prudent de dénoncer à tort et à travers. Si je peux vous aider : Il y a quelques jours, la femme de Griss, Inga, tentait d'amadouer quelques types à la taverne. Je n'aime pas trop cette peste!
+        Vous avez bien eu raison mon bon monsieur. Il n'est pas prudent de dénoncer à tort et à travers. Si je peux vous aider : Il y a quelques jours, la femme de Griss, Inga, tentait d'amadouer quelques types à la taverne. Je n'aime pas trop cette peste!
+        </reponse>
+    </dialog>
+    <dialog id="c6_12" mustKnow="c19_03">
+        <question>
+        Le marin m'a dit qu'apparement ça serait le Barde qui me devait tout cet argent... Vous souvenez vous si c'était lui dont je vous ai parlé?
+        </question> 
+        <reponse>
+        Le marin... mmm le Barde... C'est étrange ça ne me revient toujours pas qui c'était mais j'en suis presque certaine qu'il ne s'agissait en tout cas pas de Griss... désolé j'étais debordée cette nuit et je n'ai dû vous écouter que d'une oreille. 
         </reponse>
     </dialog>
 </conversation>

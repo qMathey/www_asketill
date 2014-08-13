@@ -1,34 +1,59 @@
 <conversation>
     <dialog id="c7_01">
         <question>
-            Vous avez déjà pris la place du barde mort ? Vous ne perdez pas de temps!
+            Vous avez déjà pris la place du barde mort! Vous ne perdez pas de temps!
         </question> 
         <reponse>
-            Ohoh doucement! Je comprends que vous me suspectiez mais je n'ai aucun rapport avec ce qui s'est passé, contrairement à vous! Griss et moi étions amis même si nos points de vue divergeaient. Notre passion, la musique nous réunissait quoi qu'il arrive. Je regrette qu'il soit parti ainsi, il ne le méritait pas...
+            Oh oh doucement! Je comprends que vous me suspectiez mais je n'ai aucun rapport avec ce qui s'est passé, contrairement à vous! 
+			Griss et moi n'étions pas très proches et nos points de vue divergeaient, mais notre passion commune, la musique, nous réunissait quoi qu'il arrive. Je regrette qu'il soit parti ainsi, il ne le méritait pas...
         </reponse>
     </dialog>
     <dialog id="c7_02">
         <question>
-            Vous chantez des airs différents de Griss ?
+         En quoi vous opinions divergeaient? Vous chantez des airs différents de ceux de Griss ?
         </question> 
         <reponse>
-            Oui, nous avions lui et moi une approche différente de la musique. Lui se voulait moderne et chantait à la gloire des Loups alors que moi, je privilégie les chants ancestraux de l'île. Les histoires d'autrefois sont bien plus belles à l'oreille que les récits de conquête qu'on entendait de lui.
+        Oui, nous avions lui et moi une approche différente culturellement. Lui se voulait moderne et chantait à la gloire des Loups et leurs traditions barbares alors que moi, je privilégie les chants ancestraux de l'île. Les histoires d'autrefois sont bien plus douces à l'oreille que les récits de conquête dénoués de finesse qu'on entendait de lui.
         </reponse>
     </dialog>
     <dialog id="c7_03" mustKnow="c7_02">
         <question>
-            J'imgine que vos chants ne plaisent pas à tout le monde, si ?
+        J'imgine alors que vos chants ne plaisent pas à tout le monde, si ?
         </question> 
         <reponse>
-            Une partie des habitants de l'île ne comprennent pas ce que je chante. Je dirais qu'ils sont simplement des ignares. Je reçois néanmoins un très bon accueil de la plupart des honnêtes gens d'ici. On dirait qu'ils apprécient les ondes des anciennes traditions. Je ne dirais pas qu'ils détestaient l'ancien barde mais presque...
+         Une partie des habitants de l'île ne comprend pas ce que je chante, ce sont des simples ignorants... Je reçois néanmoins un très bon accueil de la plupart des honnêtes gens d'ici. On dirait qu'ils apprécient les odes aux anciennes traditions. Je ne dirais pas que les gens détestaient Griss mais disons que sa voix ne laissait personne indiffèrent...
         </reponse>
     </dialog>
     <dialog id="c7_10" mustKnow="c4_10">
         <question>
-         Le tavernier se plaint d'avoir été volé, vous savez quelque chose à ce propos ?
+         Le tavernier se plaint d'avoir été volé, savez-vous quelque chose à ce propos ?
         </question> 
         <reponse>
-         Haha, ce Loup s'est fait voler ? C'est bien fait pour lui!
+         Haha, ce Loup avare s'est fait voler ? C'est bien fait pour lui! Il aurait dû commencer par mieux payer ses employés hahaha... non que j'aie quelque chose à voir là-dedans! mais à force de donner tout son argent à la cause des Loups, il fallait bien que cela finisse par arriver...
+        </reponse>
+    </dialog>
+    <dialog id="c7_11" mustKnow="c4_13">
+        <question>
+         J'ai préferé ne pas me mêler à l'enquête sur le vol à la taverne. Même si je crois que vous ne m'avez pas dit tout ce que vous saviez à ce propos!
+		 </question> 
+        <reponse>
+		Vous avez bien fait de rester à l'écart de ces histoires. Je m'en fiche de ce que vous croyez, si je souhaitais gagner plus d'argent je ne serais certainement pas revenu chanter à Asketill!
+        </reponse>
+    </dialog>
+	<dialog id="c7_12" mustKnow="c7_11">
+        <question>
+         Si vous n'êtes pas là pour gagner de l'argent, quelles sont alors les raisons qui vous ont poussé à revenir ici?
+		 </question> 
+        <reponse>
+		Disons que j'avais le mal du pays et je sentais qu'Asketill avait profondément de retrouver ses vraies valeurs. En arrivant, je me suis rendu compte que j'avais vu juste... Cet île en avait bien besoin.
+        </reponse>
+    </dialog>
+		<dialog id="c7_13" mustKnow="c7_12">
+        <question>
+		Qu'est-ce qui vous fait penser que vous êtes le mieux placé pour cela?
+		</question> 
+        <reponse>
+		Otrygg Le sage et moi avons largement étudié les traditions de cet île et les écrits des runes que nos ancêtres nous ont laissé comme guidance. Même si nous n'avons pas encore tout découvert, nous pensons que les habitants de cet île ne vivent plus de la manière que les dieux le souhaitent et pour cela nous allons droit à la destruction. Ragnarök, la fin des temps nous attend si nous ne revenons pas au respect des lois des dieux...
         </reponse>
     </dialog>
 	<!--

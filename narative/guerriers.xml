@@ -22,7 +22,7 @@
         <reponse>
         (Le Lion) :  C'est le plus grand bonheur de mener les quêtes de notre grand dieu de la nature. La plupart nous craignent et d'autres même nous venèrent! Sur le continent, notre nom était symbole de peur et de justice. Nous sommes devenus des mercenaires avec le temps ; l'époque des héros d'autrefois est révolue. Il faut bien pouvoir vivre dans ce monde tourmenté... Je peux vous dire que quiconque nous a fait venir ici doit bien en avoir les moyens et nous payera une belle somme d'argent quoiqu'il en soit. 
         </reponse>
-    </dialogue>
+    </dialog>
     <dialog id="c9_02">
         <question>
          Vos collègues ne me prêtent la moindre attention, toi-là avec tes brassards en serpent, tu n'as rien à me dire ?
